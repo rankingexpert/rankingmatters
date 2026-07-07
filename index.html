@@ -152,7 +152,7 @@ HTML
         .metric-item p { font-size: 0.85rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.05em; font-weight: 600; }
         .hero-visual { position: relative; width: 100%; height: 550px; border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow); }
         .hero-img { width: 100%; height: 100%; object-fit: cover; filter: brightness(0.9); transition: var(--transition); }
-        .hero-badge { position: absolute; top: 32px; right: 32px; padding: 12px 24px; border-radius: 100px; font-weight: 700; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.05em; display: flex; align-items: center; gap: 8px; z-index: 10; }
+        .hero-badge { position: absolute; top: 32px; right: 32px; padding: 12px 24px; border-radius: 100px; font-weight: 700; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.05em; display: flex; align-items: center; gap: 8px; z-index: 10; background: rgba(0,0,0,0.6); color: #fff; backdrop-filter: blur(8px); }
         .badge-dot { width: 8px; height: 8px; background: #10b981; border-radius: 50%; box-shadow: 0 0 12px #10b981; }
 
         /* Mouse Glow / Parallax Frame */
@@ -361,993 +361,872 @@ HTML
             .pricing-grid { grid-template-columns: 1fr; max-width: 550px; margin: 0 auto; }
         }
         @media(max-width: 992px) {
-            .hero-wrapper, .about-grid, .contact-grid, .ba-grid, .case-grid { grid-template-columns: 1fr; }
-            .hero-visual { height: 400px; }
-            .about-visual { height: 450px; }
-            .timeline-container::before { left: 32px; }
-            .timeline-node { left: 32px; transform: translateX(-50%); }
-            .timeline-step { grid-template-columns: 1fr; gap: 40px; margin-bottom: 64px; }
-            .timeline-step:nth-child(odd) .timeline-content { text-align: left; align-items: flex-start; }
-            .timeline-step:nth-child(even) .timeline-content, .timeline-step:nth-child(odd) .timeline-content { grid-column: 1; padding-left: 80px; }
+            .hero-wrapper { grid-template-columns: 1fr; text-align: center; }
+            .hero-desc { margin-left: auto; margin-right: auto; }
+            .btn-group { justify-content: center; }
+            .hero-metrics { max-width: 600px; margin: 64px auto 0; }
+            .hero-visual { height: 450px; }
+            .about-grid, .contact-grid, .ba-grid, .case-grid { grid-template-columns: 1fr; gap: 48px; }
+            .about-visual { height: 400px; }
+            .timeline-container::before { left: 24px; }
+            .timeline-step { grid-template-columns: 1fr; gap: 32px; margin-bottom: 64px; }
+            .timeline-node { left: 24px; transform: translateX(-50%); }
+            .timeline-step:nth-child(even) .timeline-content, .timeline-step:nth-child(odd) .timeline-content { grid-column: 1; text-align: left; padding-left: 64px; align-items: flex-start; }
+            .timeline-content p { max-width: 100%; }
             .footer-grid { grid-template-columns: repeat(2, 1fr); }
-            header .nav-menu { display: none; }
-            header .burger { display: block; }
         }
-        @media(max-width: 600px) {
-            .why-grid, .services-grid, .reviews-grid, .blog-grid, .tools-grid, .cert-grid, .footer-grid { grid-template-columns: 1fr; }
+        @media(max-width: 768px) {
+            .nav-menu { display: none; position: absolute; top: 90px; left: 0; width: 100%; background: var(--surface-pure); border-bottom: 1px solid var(--border); flex-direction: column; padding: 40px; gap: 24px; text-align: center; }
+            .nav-menu.active { display: flex; }
+            .burger { display: block; }
+            .why-grid, .services-grid, .reviews-grid, .blog-grid, .tools-grid, .cert-grid { grid-template-columns: 1fr; }
+            .footer-grid { grid-template-columns: 1fr; }
         }
     </style>
 </head>
 <body class="dark-mode">
 
+    <!-- Scroll Progress -->
     <div id="scroll-progress"></div>
 
+    <!-- Loader -->
     <div id="loader">
-        <div class="loader-logo">RANKING<span>MATTERS</span></div>
+        <div class="loader-logo">Ranking<span>Matters</span></div>
     </div>
 
+    <!-- Mouse Glow System -->
     <div id="mouse-glow"></div>
 
-    <header id="global-header">
+    <!-- Header / Sticky Nav -->
+    <header>
         <div class="container nav-container">
-            <a href="#" class="logo">RANKING<span>MATTERS</span></a>
-            <ul class="nav-menu" id="nav-menu">
-                <li><a href="#home" class="nav-link active">Home</a></li>
+            <a href="#" class="logo">Ranking<span>Matters</span></a>
+            <ul class="nav-menu">
+                <li><a href="#" class="nav-link active">Home</a></li>
                 <li><a href="#about" class="nav-link">About</a></li>
                 <li><a href="#services" class="nav-link">Services</a></li>
-                <li><a href="#portfolio" class="nav-link">Case Studies</a></li>
-                <li><a href="#faq" class="nav-link">FAQ</a></li>
-                <li><a href="#blog" class="nav-link">Insights</a></li>
+                <li><a href="#case-studies" class="nav-link">Results</a></li>
+                <li><a href="#pricing" class="nav-link">Pricing</a></li>
                 <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
             <div class="nav-actions">
-                <button class="theme-btn" id="theme-toggle" aria-label="Toggle Interface Theme Color">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
-                </button>
-                <a href="#contact" class="btn btn-primary" style="padding: 12px 24px; font-size: 0.85rem;">Free SEO Audit</a>
-                <button class="burger" id="menu-burger" aria-label="Toggle Mobile Menu" aria-expanded="false">
-                    <span></span><span></span><span></span>
+                <button class="theme-btn" id="theme-toggle" aria-label="Toggle Theme">🌓</button>
+                <a href="#contact" class="btn btn-secondary" style="padding: 10px 20px; font-size: 0.85rem;">Free Audit</a>
+                <button class="burger" id="menu-toggle" aria-label="Toggle Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
                 </button>
             </div>
         </div>
     </header>
 
-    <main id="main-content">
-
-        <section id="home" style="padding-top: 180px; padding-bottom: 100px;">
-            <div class="blob" style="width: 500px; height: 500px; background: var(--primary); top: -100px; left: -100px;"></div>
-            <div class="container hero-wrapper">
-                <div class="hero-text-panel">
-                    <h1 class="hero-title">Rank Your Business <span class="text-gradient">#1 on Google Maps</span></h1>
-                    <p class="hero-desc">Partner with Ranking Matters, the leading local SEO expert Lahore business owners trust. Rank #1 on Google Maps, dominate the local map pack ranking, optimize your Google Business Profile, fix GMB suspension issues, and generate high-converting buyer leads to explode your local phone calls and inbound revenue.</p>
-                    <div class="btn-group">
-                        <a href="#contact" class="btn btn-primary">Book Free SEO Audit</a>
-                        <a href="https://wa.me/923314349664" class="btn btn-accent" target="_blank" rel="noopener">WhatsApp Consultation</a>
-                        <a href="tel:+923314349664" class="btn btn-secondary">Call Directly</a>
-                    </div>
-                    <div class="hero-metrics">
-                        <div class="metric-item">
-                            <h4 class="counter" data-target="350">0</h4>
-                            <p>Map Positions Won</p>
-                        </div>
-                        <div class="metric-item">
-                            <h4 class="counter" data-target="87">0</h4>
-                            <p>Call Volume Growth %</p>
-                        </div>
-                        <div class="metric-item">
-                            <h4 class="counter" data-target="180">0</h4>
-                            <p>Lahore Businesses Ranked</p>
-                        </div>
-                    </div>
+    <!-- Hero Section -->
+    <section id="home">
+        <div class="blob" style="width: 500px; height: 500px; background: var(--primary); top: 10%; left: -10%;"></div>
+        <div class="container hero-wrapper">
+            <div class="hero-content">
+                <h1 class="hero-title">Dominate Google Maps. <span class="text-gradient">Explode Your Local Revenue.</span></h1>
+                <p class="hero-desc">We use advanced georadial proximity mapping, precision schema architecture, and bulletproof GMB optimization to rank your business where high-intent buyers are looking.</p>
+                <div class="btn-group">
+                    <a href="#contact" class="btn btn-primary">Claim Your Map Spot Now</a>
+                    <a href="#services" class="btn btn-secondary">Explore Our Arsenal</a>
                 </div>
-                <div class="hero-visual-panel">
-                    <div class="hero-visual">
-                        <div class="hero-badge glass"><span class="badge-dot"></span>Live Tracking</div>
-                        <img src="https://images.unsplash.com/photo-1579202673506-ca3ce28943ef?auto=format&fit=crop&w=800&q=85" fetchpriority="high" alt="Google Maps local SEO 3-pack analytics dashboard dashboard" class="hero-img">
+                <div class="hero-metrics">
+                    <div class="metric-item">
+                        <h4 class="counter" data-target="87">0%</h4>
+                        <p>Avg Call Volume Boost</p>
+                    </div>
+                    <div class="metric-item">
+                        <h4 class="counter" data-target="150">0+</h4>
+                        <p>GMB Suspensions Fixed</p>
+                    </div>
+                    <div class="metric-item">
+                        <h4 class="counter" data-target="12">0M+</h4>
+                        <p>Leads Generated</p>
                     </div>
                 </div>
             </div>
-        </section>
+            <div class="hero-visual">
+                <div class="hero-badge"><span class="badge-dot"></span>Live Map Pack Specialist</div>
+                <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80" alt="Local SEO Analytics Dashboard" class="hero-img">
+            </div>
+        </div>
+    </section>
 
-        <section id="about" style="background: var(--surface-pure);">
-            <div class="container about-grid">
-                <div class="about-visual">
-                    <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=800&q=80" alt="Professional Local SEO consultant reviewing hyper-local ranking grids" class="about-image">
+    <!-- About Section -->
+    <section id="about" class="glass" style="border-left:none; border-right:none; border-radius:0;">
+        <div class="container about-grid">
+            <div class="about-visual">
+                <img src="https://images.unsplash.com/photo-1579202673506-ca3ce28943ef?auto=format&fit=crop&w=800&q=85" alt="Data Analysis and Local SEO Mapping Strategy" class="about-image">
+            </div>
+            <div class="about-text">
+                <span class="about-tag">Who We Are</span>
+                <h2 class="section-title" style="text-align: left; font-size: 2.75rem;">Rankings Are Completely Useless Without Inbound Revenue.</h2>
+                <p><strong>Ranking Matters</strong> is a performance-driven local SEO and digital optimization agency specializing in helping local businesses claim the #1 spot on Google Maps. We focus entirely on hyper-local search engine optimization, reverse-engineering Google’s local algorithms using deep georadial mapping and custom JSON-LD semantic architecture.</p>
+                <p>Whether you need complete Google Business Profile optimization, systematic citation cleanup, or critical GMB suspension recovery, we build data-driven local assets engineered to turn casual online searchers into direct customer phone calls and predictable revenue.</p>
+                <a href="#contact" class="btn btn-accent">Work With Us</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Me -->
+    <section>
+        <div class="container">
+            <h2 class="section-title">Engineered For <span class="text-gradient">Local Domination</span></h2>
+            <p class="section-subtitle">Why leading contractors, home service giants, and retail brands partner with us to scale their local visibility.</p>
+            <div class="why-grid">
+                <div class="card glass why-card">
+                    <div class="icon-box">01</div>
+                    <h3>Georadial Mapping</h3>
+                    <p>We systematically expand your search radius across multiple target zip codes and neighborhoods, not just outside your office door.</p>
                 </div>
-                <div class="about-text">
-                    <span class="about-tag">Algorithmic Mastery Only</span>
-                    <h2 class="section-title" style="text-align: left; margin-bottom: 32px;">How Ranking Matters Builds Unfair Local Search Dominance for Your Business</h2>
-                    <p>Standard SEO strategies ignore local distance dynamics. The Ranking Matters method targets Google's core local algorithms, optimizing your business presence across exact coordinates to beat your competitors within your target area radius.</p>
-                    
-                    <div class="why-grid">
-                        <div class="why-card">
-                            <div class="icon-box">01</div>
-                            <h3>Georadial Mapping</h3>
-                            <p>Advanced grid-based coordinate monitoring overrides standard proximity constraints to widen your 3-pack reach.</p>
-                        </div>
-                        <div class="why-card">
-                            <div class="icon-box">02</div>
-                            <h3>CRO Funnels</h3>
-                            <p>Rankings mean nothing without conversion. Every structural interface element is pixel-tuned to drive phone calls.</p>
-                        </div>
-                        <div class="why-card">
-                            <div class="icon-box">03</div>
-                            <h3>Semantic Schema</h3>
-                            <p>Injected nested JSON-LD microdata scripts build dense entity relation networks directly into search crawlers.</p>
-                        </div>
-                    </div>
+                <div class="card glass why-card">
+                    <div class="icon-box">02</div>
+                    <h3>GMB Suspension Recovery</h3>
+                    <p>Got hit with a hard or soft suspension? We locate the exact algorithmic triggers, clean up contaminated data, and get you reinstated fast.</p>
+                </div>
+                <div class="card glass why-card">
+                    <div class="icon-box">03</div>
+                    <h3>Semantic Schema Build</h3>
+                    <p>We hardcode tailored local JSON-LD semantic markups directly into your site structure, making your relevance crystal clear to crawlers.</p>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section id="services">
-            <div class="blob" style="width: 600px; height: 600px; background: var(--accent); bottom: -100px; right: -100px;"></div>
-            <div class="container">
-                <h2 class="section-title">High-Impact Services</h2>
-                <p class="section-subtitle">Tailored, performance-driven structural solutions designed to seize search absolute visibility.</p>
-                <div class="services-grid">
-                    <div class="card glass service-card">
-                        <span class="service-icon">📍</span>
-                        <h3>Google Business Profile Optimization</h3>
-                        <p>Complete algorithmic reconstruction of structural business data parameters for optimized proximity validation.</p>
-                        <ul class="service-features">
-                            <li>Proximity Signal Weight Management</li>
-                            <li>Category Association Structuring</li>
-                            <li>Keyword Density Balancing</li>
-                        </ul>
-                    </div>
-                    <div class="card glass service-card">
-                        <span class="service-icon">🗺️</span>
-                        <h3>Google Maps Ranking Mastery</h3>
-                        <p>Push past boundaries and seize visibility inside the elite Google Local 3-Pack across your entire target operational radius.</p>
-                        <ul class="service-features">
-                            <li>Local Search Grid Calibration</li>
-                            <li>Behavioral Interaction Layering</li>
-                            <li>Inbound Proximity Flow Injection</li>
-                        </ul>
-                    </div>
-                    <div class="card glass service-card">
-                        <span class="service-icon">🔎</span>
-                        <h3>Local Keyword Research</h3>
-                        <p>Pinpoint commercial intent query clusters matching explicit local buyer transactional behavior profiles.</p>
-                        <ul class="service-features">
-                            <li>Search Volatility Auditing</li>
-                            <li>Transactional Intent Grouping</li>
-                            <li>Competitive Gap Isolation</li>
-                        </ul>
-                    </div>
-                    <div class="card glass service-card">
-                        <span class="service-icon">⛓️</span>
-                        <h3>Hyper-Local Citation Building</h3>
-                        <p>Establish high-authority structural citations across specialized geo-relevant listing databases.</p>
-                        <ul class="service-features">
-                            <li>Manual Directory Insertion</li>
-                            <li>Absolute NAP Consistency Verification</li>
-                            <li>Duplicate Suppressive Cleanup</li>
-                        </ul>
-                    </div>
-                    <div class="card glass service-card">
-                        <span class="service-icon">📝</span>
-                        <h3>Localized Content Marketing</h3>
-                        <p>Generate highly localized structural landing pages focused entirely on neighborhood level entities.</p>
-                        <ul class="service-features">
-                            <li>Geographic Keyword Targeting</li>
-                            <li>Contextual Inbound Link Building</li>
-                            <li>Schema Entity Integration</li>
-                        </ul>
-                    </div>
-                    <div class="card glass service-card">
-                        <span class="service-icon">⭐</span>
-                        <h3>Review Acquisition Architecture</h3>
-                        <p>Deploy ethical, automated interaction models designed to safely accelerate premium customer reviews.</p>
-                        <ul class="service-features">
-                            <li>Feedback Pipelines</li>
-                            <li>Sentiment Distribution Mapping</li>
-                            <li>Review Factor Acceleration</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="process" style="background: var(--surface-pure);">
-            <div class="container">
-                <h2 class="section-title">The Operational Blueprint</h2>
-                <p class="section-subtitle">A highly precise pipeline meticulously structured to ensure milestone validation and sustainable scaling.</p>
-                <div class="timeline-container">
-                    <div class="timeline-step">
-                        <div class="timeline-node">01</div>
-                        <div class="card glass timeline-content">
-                            <h3>Discovery & Data Harvesting</h3>
-                            <p>We begin by deep auditing your profile history, scraping real competitor listing architectures, analyzing target geolocations, and tracking localized keyword volatility scores.</p>
-                        </div>
-                    </div>
-                    <div class="timeline-step">
-                        <div class="timeline-node">02</div>
-                        <div class="card glass timeline-content">
-                            <h3>Structural Engineering & Cleanup</h3>
-                            <p>This phase aggressively purges conflicting citation structures, fixes multi-location formatting variables, ensures absolute NAP synchronization across premium databases, and addresses data anomalies.</p>
-                        </div>
-                    </div>
-                    <div class="timeline-step">
-                        <div class="timeline-node">03</div>
-                        <div class="card glass timeline-content">
-                            <h3>Hyper-Local Expansion</h3>
-                            <p>We deploy optimized local landing structures, inject multi-layered JSON-LD schema graphs into system codes, and configure custom localized target maps extensions to widen search grids.</p>
-                        </div>
-                    </div>
-                    <div class="timeline-step">
-                        <div class="timeline-node">04</div>
-                        <div class="card glass timeline-content">
-                            <h3>Conversion Maximization</h3>
-                            <p>Once map position tracking stabilizes, our focus pivots entirely toward user interaction monitoring, optimizing click-to-call mechanics, setting up automated review pipes, and refining customer retention paths.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="industries">
-            <div class="container">
-                <h2 class="section-title">Niche Domain Specialization</h2>
-                <p class="section-subtitle">We deploy targeted local systems specifically calibrated for highly competitive service market sectors.</p>
-                <div class="industries-container">
-                    <div class="industry-pill glass">Law Firms</div>
-                    <div class="industry-pill glass">Dentists</div>
-                    <div class="industry-pill glass">Doctors & Clinics</div>
-                    <div class="industry-pill glass">Plumbers & Electricians</div>
-                    <div class="industry-pill glass">Roofers & HVAC Specialists</div>
-                    <div class="industry-pill glass">Real Estate Brokerages</div>
-                    <div class="industry-pill glass">Home Services Contractors</div>
-                    <div class="industry-pill glass">E-commerce Pickups</div>
-                </div>
-            </div>
-        </section>
-
-        <section id="portfolio" style="background: var(--surface-pure);">
-            <div class="container">
-                <h2 class="section-title">Empirical Case Studies</h2>
-                <p class="section-subtitle">Real validation. Explore data assets tracking metric escalations across verified search campaigns.</p>
-                
-                <div class="portfolio-filter">
-                    <button class="filter-btn active" data-filter="all">All Sectors</button>
-                    <button class="filter-btn" data-filter="home-services">Home Services</button>
-                    <button class="filter-btn" data-filter="medical">Medical & Dental</button>
-                </div>
-
-                <div class="portfolio-grid">
-                    <div class="portfolio-card show" data-category="home-services">
-                        <div class="portfolio-img-box">
-                            <img src="https://workspace.ru/upload/articles/3c2/ajw5mac7nsjjfe71ooqxqvkxet52jgti.jpg" alt="Home services business visibility expansion chart setup">
-                        </div>
-                        <div class="portfolio-meta">
-                            <span class="portfolio-client">Lahore HVAC & Smart Cooling</span>
-                            <span class="portfolio-growth">+340% Calls</span>
-                        </div>
-                        <h3>Monopolizing Proximity Grids Across 15 Neighborhood Clusters</h3>
-                    </div>
-                    <div class="portfolio-card show" data-category="medical">
-                        <div class="portfolio-img-box">
-                            <img src="https://t3.ftcdn.net/jpg/16/06/01/60/360_F_1606016028_xyFQQB62aEGrC3W9ZmSAW67cX3qTopXO.jpg" alt="Dental clinic local pack map position tracking view">
-                        </div>
-                        <div class="portfolio-meta">
-                            <span class="portfolio-client">Gulberg Cosmetic Dental Clinic</span>
-                            <span class="portfolio-growth">Rank #1 Overall</span>
-                        </div>
-                        <h3>Dominating Premium Neighborhood High-Value Demographics</h3>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="before-after">
-            <div class="container">
-                <h2 class="section-title">Crystalline Transparency</h2>
-                <p class="section-subtitle">Observe structural metric transformations across algorithmic visibility index parameters.</p>
-                <div class="ba-grid">
-                    <div class="ba-container">
-                        <img src="https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?auto=format&fit=crop&w=800&q=80" alt="Google Maps search visibility grid mapping before local optimization framework">
-                        <div class="ba-label">Before Strategy Ingestion</div>
-                    </div>
-                    <div class="ba-container">
-                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80" alt="Perfect green search map pack density chart showing maximum local conversion dominance">
-                        <div class="ba-label after">After Ranking Matters Deployment</div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="cases" style="background: var(--surface-pure);">
-            <div class="container">
-                <h2 class="section-title">Analytical Structural Deep Dives</h2>
-                <p class="section-subtitle">Real strategies. Tangible capital growth vectors across real local business models.</p>
-                <div class="case-grid">
-                    <div class="card glass case-card">
-                        <span class="portfolio-client">Multi-Location Medical Practice</span>
-                        <h3>Escalating Local Patient Acquisition Channels Across Urban Segments</h3>
-                        <p>We engineered a localized search mapping structure across multiple medical clinics, removing structural database fragmentation while deploying geofenced target clusters. This targeted visibility setup secured consistent top map rankings and drastically lowered traditional user search drop-offs.</p>
-                        <div class="case-stats">
-                            <div>
-                                <div class="case-stat-val">4.9x</div>
-                                <div class="case-stat-lbl">Inquiry Multiplier</div>
-                            </div>
-                            <div>
-                                <div class="case-stat-val">12 Days</div>
-                                <div class="case-stat-lbl">Activation Lag</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card glass case-card">
-                        <span class="portfolio-client">Elite Corporate Law Chambers</span>
-                        <h3>Reclaiming Map Positions by Resolving Toxic Citation Anomalies</h3>
-                        <p>Historic data contamination and overlapping directory listings triggered a severe internal search filter mismatch on the client's map profile. Our technical team purged over 180 conflicting citation records, recalibrating the primary entity coordinates to safely trigger local ranking signals within 30 days.</p>
-                        <div class="case-stats">
-                            <div>
-                                <div class="case-stat-val">#1</div>
-                                <div class="case-stat-lbl">Map Pack Slot</div>
-                            </div>
-                            <div>
-                                <div class="case-stat-val">-63%</div>
-                                <div class="case-stat-lbl">Acquisition CPA</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="pricing">
-            <div class="container">
-                <h2 class="section-title">Data-Driven Capital Plans</h2>
-                <p class="section-subtitle">No multi-year lockups. Pure performance-focused monthly search assets engineered for scaling operations.</p>
-                
-                <div class="pricing-toggle">
-                    <span>Monthly Structural billing</span>
-                    <label class="switch">
-                        <input type="checkbox" id="billing-cycle">
-                        <span class="slider"></span>
-                    </label>
-                    <span>Annual Allocation <span style="color:var(--accent); font-size:0.85rem; font-weight:700;">(Save 20%)</span></span>
-                </div>
-
-                <div class="pricing-grid">
-                    <div class="card glass pricing-card">
-                        <div>
-                            <div class="plan-name">Local Core Visibility</div>
-                            <div class="plan-desc">Perfect framework optimized for expanding service businesses targeting single city sectors.</div>
-                            <div class="plan-price"><span class="price-val" data-monthly="25000" data-annual="20000">25000</span><span> PKR/mo</span></div>
-                            <ul class="plan-features">
-                                <li>Single Google Business Profile Management</li>
-                                <li>Up to 40 Premium Citation Structures</li>
-                                <li>NAP Consistency Verification Array</li>
-                                <li>Monthly Visibility Tracking Report</li>
-                            </ul>
-                        </div>
-                        <a href="#contact" class="btn btn-secondary">Initiate Foundation Plan</a>
-                    </div>
-                    <div class="card glass pricing-card popular">
-                        <div>
-                            <div class="plan-name">Proximity Market Dominator</div>
-                            <div class="plan-desc">Engineered for expanding enterprises demanding saturation across competitive geographic matrices.</div>
-                            <div class="plan-price"><span class="price-val" data-monthly="45000" data-annual="36000">45000</span><span> PKR/mo</span></div>
-                            <ul class="plan-features">
-                                <li>Advanced Grid-Based Cluster Expansion</li>
-                                <li>Custom Local Structured Microdata Scripts</li>
-                                <li>Competitor Link Profiling & Hijacking</li>
-                                <li>Active Review Acquisition Engine Integration</li>
-                            </ul>
-                        </div>
-                        <a href="#contact" class="btn btn-primary">Acquire Dominator Strategy</a>
-                    </div>
-                    <div class="card glass pricing-card">
-                        <div>
-                            <div class="plan-name">Enterprise Omni-Location Engine</div>
-                            <div class="plan-desc">Custom algorithmic matrix tracking framework tailored for multi-branch corporate empires.</div>
-                            <div class="plan-price">Custom</div>
-                            <ul class="plan-features">
-                                <li>Unlimited Cross-Regional Profiles</li>
-                                <li>Dedicated Core Engineering Allocation</li>
-                                <li>Custom Looker Studio Performance Suites</li>
-                                <li>API-Driven Database Synchronization</li>
-                            </ul>
-                        </div>
-                        <a href="#contact" class="btn btn-secondary">Request Custom Consultation</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="testimonials" style="background: var(--surface-pure);">
-            <div class="container">
-                <div class="testimonial-outer">
-                    <div class="testimonial-wrapper">
-                        <div class="testimonial-track" id="testimonial-track">
-                            <div class="testimonial-slide">
-                                <div class="testimonial-avatar" style="background: #3b82f6;"></div>
-                                <p class="testimonial-quote">"Working on our digital mapping setups fundamentally changed how our firm tracks nearby corporate clients. The absolute dedication to technical schema markup mapping and link profiles secured us continuous organic search stability."</p>
-                                <div class="testimonial-author">Kamran Shah</div>
-                                <div class="testimonial-role">Managing Director, Shah Legal Chambers</div>
-                            </div>
-                            <div class="testimonial-slide">
-                                <div class="testimonial-avatar" style="background: #10b981;"></div>
-                                <p class="testimonial-quote">"The citation cleanup pipeline resolved our historic location discrepancies flawlessly. Our localized dental patient inquiries multiplied rapidly, proving that clean code metrics dictate real conversion velocity."</p>
-                                <div class="testimonial-author">Dr. Amna Mahmood</div>
-                                <div class="testimonial-role">Chief Orthodontist, Apex Dental Group</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="slider-controls">
-                        <button class="slider-btn" id="prev-slide" aria-label="View Previous Testimonial Matrix">←</button>
-                        <button class="slider-btn" id="next-slide" aria-label="View Next Testimonial Matrix">→</button>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="reviews">
-            <div class="container">
-                <div class="reviews-summary">
-                    <div style="text-align: center;">
-                        <div class="rating-huge">5.0</div>
-                        <div class="rating-stars">★★★★★</div>
-                        <div style="font-size:0.9rem; color:var(--text-muted); font-weight:600; text-transform:uppercase; letter-spacing:0.05em;">50+ Client Verifications</div>
-                    </div>
-                    <p style="max-width: 500px; color: var(--text-muted); line-height: 1.6; font-size:1.05rem;">Our services maintain flawless ratings across local networks, validating our commitment to transparent system execution and absolute precision metrics.</p>
-                </div>
-
-                <div class="reviews-grid">
-                    <div class="card glass review-card">
-                        <div class="review-header">
-                            <div class="reviewer-info">
-                                <div class="reviewer-img">ZA</div>
-                                <div>
-                                    <div class="reviewer-name">Zain Alavi</div>
-                                    <div class="reviewer-meta">Founder, Alavi Logistics</div>
-                                </div>
-                            </div>
-                            <span style="color:#f59e0b;">★★★★★</span>
-                        </div>
-                        <p class="review-text">"The geo-radial grid strategies gave us complete visibility in high-competition zones. Highly recommended for any serious business owner seeking actual phone call conversions instead of empty reporting metrics."</p>
-                    </div>
-                    <div class="card glass review-card">
-                        <div class="review-header">
-                            <div class="reviewer-info">
-                                <div class="reviewer-img">MH</div>
-                                <div>
-                                    <div class="reviewer-name">Mariam Haroon</div>
-                                    <div class="reviewer-meta">Verified Business Owner</div>
-                                </div>
-                            </div>
-                            <span style="color:#f59e0b;">★★★★★</span>
-                        </div>
-                        <p class="review-text">"Absolute structural integrity. The technical link schemas built for our clinic have created an unassailable organic positioning barrier against modern clinic aggregators."</p>
-                    </div>
-                    <div class="card glass review-card">
-                        <div class="review-header">
-                            <div class="reviewer-info">
-                                <div class="reviewer-img">OK</div>
-                                <div>
-                                    <div class="reviewer-name">Omer Khan</div>
-                                    <div class="reviewer-meta">Operations lead</div>
-                                </div>
-                            </div>
-                            <span style="color:#f59e0b;">★★★★★</span>
-                        </div>
-                        <p class="review-text">"Ranking Matters transformed our home services search profiles completely. We went from trailing local map listings to monopolizing entire sector grids."</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="skills" style="background: var(--surface-pure);">
-            <div class="container">
-                <h2 class="section-title">Core Engineering Proficiencies</h2>
-                <p class="section-subtitle">The analytical execution capability driving high-performance organic search visibility assets.</p>
-                <div class="skills-grid">
-                    <div class="skill-item">
-                        <h4><span>Entity-Based Semantic Graph Construction</span> <span>96%</span></h4>
-                        <div class="skill-bar-bg"><div class="skill-bar-fill" data-width="96%"></div></div>
-                    </div>
-                    <div class="skill-item">
-                        <h4><span>Proximity Algorithmic Decoupling</span> <span>92%</span></h4>
-                        <div class="skill-bar-bg"><div class="skill-bar-fill" data-width="92%"></div></div>
-                    </div>
-                    <div class="skill-item">
-                        <h4><span>Conversion Psychology Architecture (CRO)</span> <span>89%</span></h4>
-                        <div class="skill-bar-bg"><div class="skill-bar-fill" data-width="89%"></div></div>
-                    </div>
-                    <div class="skill-item">
-                        <h4><span>Database Link Injection Engineering</span> <span>94%</span></h4>
-                        <div class="skill-bar-bg"><div class="skill-bar-fill" data-width="94%"></div></div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="certifications">
-            <div class="container">
-                <h2 class="section-title">Architectural Credentials</h2>
-                <p class="section-subtitle">Verified professional validations confirming data mastery across primary search ecosystem parameters.</p>
-                <div class="cert-grid">
-                    <div class="card glass cert-card">
-                        <div class="cert-icon">🎓</div>
-                        <h4>Google Analytics IQ</h4>
-                        <p>Data Stream Synthesis</p>
-                    </div>
-                    <div class="card glass cert-card">
-                        <div class="cert-icon">🛡️</div>
-                        <h4>Advanced SEO Expert</h4>
-                        <p>Structural Semantics</p>
-                    </div>
-                    <div class="card glass cert-card">
-                        <div class="cert-icon">⚙️</div>
-                        <h4>Technical Schema Specialist</h4>
-                        <p>JSON-LD Microdata Node Structures</p>
-                    </div>
-                    <div class="card glass cert-card">
-                        <div class="cert-icon">💎</div>
-                        <h4>UX Core Architecture</h4>
-                        <p>Behavioral Optimization Patterns</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="stack" style="background: var(--surface-pure);">
-            <div class="container">
-                <h2 class="section-title">Enterprise Diagnostic Ecosystem</h2>
-                <p class="section-subtitle">We deploy premium data instruments to accurately monitor structural search integrity and listing grids.</p>
-                <div class="tools-grid">
-                    <div class="card glass tool-card">
-                        <div class="tool-avatar-box">SM</div>
-                        <h4>Semrush Enterprise</h4>
-                    </div>
-                    <div class="card glass tool-card">
-                        <div class="tool-avatar-box">AH</div>
-                        <h4>Ahrefs Webmaster</h4>
-                    </div>
-                    <div class="card glass tool-card">
-                        <div class="tool-avatar-box">SC</div>
-                        <h4>Search Console APIs</h4>
-                    </div>
-                    <div class="card glass tool-card">
-                        <div class="tool-avatar-box">LS</div>
-                        <h4>Local Falcon Grids</h4>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="faq">
-            <div class="container">
-                <h2 class="section-title">Strategic System Insights <span class="serif">(FAQ)</span></h2>
-                <p class="section-subtitle">Clear, analytical explanations regarding local visibility acceleration and core processes.</p>
-                <div class="faq-max">
-                    <div class="faq-item">
-                        <button class="faq-trigger" aria-expanded="false">
-                            <span>How exactly do you calculate local visibility expansion velocity?</span>
-                            <span class="faq-icon-state">+</span>
-                        </button>
-                        <div class="faq-panel">
-                            <div class="faq-panel-content">
-                                <p>Local expansion velocity is measured by executing grid-based georadial position checks across specific coordinate nodes. By tracking positional variance on regular interval cycles, we calculate precise search acquisition speeds within target radius setups.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="faq-item">
-                        <button class="faq-trigger" aria-expanded="false">
-                            <span>Will your system conflict with active broad organic ranking campaigns?</span>
-                            <span class="faq-icon-state">+</span>
-                        </button>
-                        <div class="faq-panel">
-                            <div class="faq-panel-content">
-                                <p>No. Our frameworks are custom engineered to run fully aligned with global SEO strategies. While standard workflows drive long-tail informational visibility, our system focuses purely on anchoring localized transactional signals to capture immediate geographic buyer demand.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="faq-item">
-                        <button class="faq-trigger" aria-expanded="false">
-                            <span>What parameters govern your hyper-local NAP structural auditing?</span>
-                            <span class="faq-icon-state">+</span>
-                        </button>
-                        <div class="faq-panel">
-                            <div class="faq-panel-content">
-                                <p>Our structural parameters isolate characters, space variances, corporate name syntax inconsistencies, and duplicate system listings across authoritative map directories. This data sanitization pipeline helps establish trusted listing signals for map search crawlers.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="blog" style="background: var(--surface-pure);">
-            <div class="container">
-                <h2 class="section-title">The Organic Knowledge Base</h2>
-                <p class="section-subtitle">Algorithmic technical intelligence from the bleeding edge of search landscape engineering.</p>
-                <div class="blog-grid">
-                    <div class="blog-card">
-                        <div class="blog-img-cover">
-                            <img src="https://images.unsplash.com/photo-1542831371-29b0f74f9713?auto=format&fit=crop&w=800&q=80" alt="Local Proximity Algorithms Engineering Core Overview">
-                        </div>
-                        <span class="blog-date">June 24, 2026</span>
-                        <h3>Deconstructing Local Proximity Filter Algorithms</h3>
-                        <p>An in-depth analysis looking into the core mathematical models governing proximity search loops, spatial indexing grids, and transactional data weighting loops inside Google Maps engine updates.</p>
-                    </div>
-                    <div class="card glass blog-card" style="padding:0; background:transparent; border:none; box-shadow:none;">
-                        <div class="blog-img-cover">
-                            <img src="https://images.unsplash.com/photo-1504639725590-34d0984388bd?auto=format&fit=crop&w=800&q=80" alt="Advanced JSON-LD nested schema microdata rendering frame">
-                        </div>
-                        <span class="blog-date">May 11, 2026</span>
-                        <h3>Advanced Nested JSON-LD Entity Relation Injection</h3>
-                        <p>How deploying semantic nested microdata parameters can bypass classic authority tracking loops, accelerating top search tier placement via clean entity clarity loops.</p>
-                    </div>
-                    <div class="blog-card">
-                        <div class="blog-img-cover">
-                            <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=800&q=80" alt="Database cleanup interface pipeline tracking metrics">
-                        </div>
-                        <span class="blog-date">March 08, 2026</span>
-                        <h3>Purging Structural Citation Fragmentation Anomalies</h3>
-                        <p>A step by step practical guide detailing exactly how to clean complex legacy database syntax inconsistencies, identifying duplicate entry profiles, and deploying programmatic cleanup structures to regain rank momentum.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="contact">
-            <div class="container contact-grid">
-                <div>
-                    <h2 class="contact-panel-title">Let's Audit Your Search Footprint</h2>
-                    <p class="contact-lead-desc">Stop letting competitors capture target consumer traffic in your primary radius zones. Secure your custom visibility strategy report now.</p>
-                    <ul class="contact-channel-list">
-                        <li class="contact-channel-item">
-                            <div class="channel-icon-circle">✉️</div>
-                            <div>
-                                <div class="channel-label">Direct Inbox</div>
-                                <a href="mailto:shanyaqoob730@gmail.com" class="channel-value">shanyaqoob730@gmail.com</a>
-                            </div>
-                        </li>
-                        <li class="contact-channel-item">
-                            <div class="channel-icon-circle">📞</div>
-                            <div>
-                                <div class="channel-label">Direct Secure Mobile</div>
-                                <a href="tel:+923314349664" class="channel-value">+92 331 4349664</a>
-                            </div>
-                        </li>
+    <!-- Services Section -->
+    <section id="services" class="glass" style="border-left:none; border-right:none; border-radius:0;">
+        <div class="container">
+            <h2 class="section-title">Our Tactical <span class="text-gradient">SEO Services</span></h2>
+            <p class="section-subtitle">Data-backed scaling strategies deployed precisely to hijack high-intent customer leads from your top local competitors.</p>
+            <div class="services-grid">
+                <!-- Service 1 -->
+                <div class="card glass service-card">
+                    <span class="service-icon">📍</span>
+                    <h3>Google Business Profile Optimization</h3>
+                    <p>Complete structural builds and monthly optimization mechanics designed to securely place your profile into the coveted Google 3-Pack.</p>
+                    <ul class="service-features">
+                        <li>Keyword Category Structuring</li>
+                        <li>Geo-Targeted Asset Stacking</li>
+                        <li>Continuous Audit Maintenance</li>
                     </ul>
                 </div>
-                <div class="card glass form-box">
-                    <form id="audit-form" action="#" method="POST" onsubmit="event.preventDefault(); alert('Free Audit Request Registered Successfully.');">
-                        <div class="form-row-grid">
-                            <div class="form-element">
-                                <label for="form-name">Your Full Name</label>
-                                <input type="text" id="form-name" class="form-control" placeholder="E.g., Hamza Rahman" required>
-                            </div>
-                            <div class="form-element">
-                                <label for="form-email">Corporate Email Address</label>
-                                <input type="email" id="form-email" class="form-control" placeholder="shanyaqoob730@gmail.com" value="shanyaqoob730@gmail.com" required>
-                            </div>
-                        </div>
-                        <div class="form-row-grid">
-                            <div class="form-element">
-                                <label for="form-phone">Direct Contact Number</label>
-                                <input type="tel" id="form-phone" class="form-control" placeholder="E.g., +92 331 4349664" required>
-                            </div>
-                            <div class="form-element">
-                                <label for="form-bizname">Registered Business Name</label>
-                                <input type="text" id="form-bizname" class="form-control" placeholder="E.g., Apex Medical Center" required>
-                            </div>
-                        </div>
-                        <div class="form-element">
-                            <label for="form-website">Active Digital Asset URL (Optional)</label>
-                            <input type="url" id="form-website" class="form-control" placeholder="E.g., https://mybusiness.com">
-                        </div>
-                        <button type="submit" class="btn btn-accent" style="width: 100%; justify-content: center; border-radius: var(--radius-sm);">Transmit Core Audit Request Pipeline</button>
-                    </form>
+                <!-- Service 2 -->
+                <div class="card glass service-card">
+                    <span class="service-icon">🔧</span>
+                    <h3>GMB Suspension & Recovery</h3>
+                    <p>Emergency restoration services for suspended accounts. We diagnose guidelines violations, rewrite business representations, and file rapid appeals.</p>
+                    <ul class="service-features">
+                        <li>Contamination Data Cleanup</li>
+                        <li>Address & Document Auditing</li>
+                        <li>Direct Google Support Pipeline</li>
+                    </ul>
+                </div>
+                <!-- Service 3 -->
+                <div class="card glass service-card">
+                    <span class="service-icon">🏗️</span>
+                    <h3>Local Citation Engineering</h3>
+                    <p>Building flawless tier-1 business citations and structural directories while aggressively fixing historical name, address, and phone variations.</p>
+                    <ul class="service-features">
+                        <li>Aggressive Inconsistent NAP Cleanup</li>
+                        <li>Premium Local Network Placement</li>
+                        <li>Hyper-Localized Backlink Auditing</li>
+                    </ul>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-    </main>
+    <!-- Process Timeline Section -->
+    <section>
+        <div class="container">
+            <h2 class="section-title">The Blueprint To <span class="text-gradient">The Top Spot</span></h2>
+            <p class="section-subtitle">Our calculated, step-by-step optimization roadmap that forces algorithmic growth and predictable market dominance.</p>
+            <div class="timeline-container">
+                <div class="timeline-step">
+                    <div class="timeline-node">1</div>
+                    <div class="card glass timeline-content">
+                        <h3>Deep Structural Audit</h3>
+                        <p>We trace listing contamination issues, keyword-stuffing triggers, tracking errors, and rank leaks across the web map landscape.</p>
+                    </div>
+                </div>
+                <div class="timeline-step">
+                    <div class="timeline-node">2</div>
+                    <div class="card glass timeline-content">
+                        <h3>Georadial Mapping Deployment</h3>
+                        <p>We configure localized semantic web footers, custom coordinate structures, and JSON-LD markup to map and expand search authority.</p>
+                    </div>
+                </div>
+                <div class="timeline-step">
+                    <div class="timeline-node">3</div>
+                    <div class="card glass timeline-content">
+                        <h3>Radical Authority Scaling</h3>
+                        <p>Deploying specialized review capture automation networks and hyper-local backlinking assets to force algorithmic visibility gains.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <!-- Target Industries Layout -->
+    <section class="glass" style="border-left:none; border-right:none; border-radius:0;">
+        <div class="container">
+            <h2 class="section-title">Industries We <span class="text-gradient">Completely Dominate</span></h2>
+            <p class="section-subtitle">Our strategies are perfectly fine-tuned for high-value business models requiring real-time inbound commercial calls.</p>
+            <div class="industries-container">
+                <div class="card glass industry-pill">HVAC & Mechanical</div>
+                <div class="card glass industry-pill">Emergency Plumbing</div>
+                <div class="card glass industry-pill">Home Contracting & Roofing</div>
+                <div class="card glass industry-pill">Premium Bridal Studios</div>
+                <div class="card glass industry-pill">Commercial Janitorial Services</div>
+                <div class="card glass industry-pill">Real Estate Brokerages</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Filterable Portfolio / Live Metrics -->
+    <section id="case-studies">
+        <div class="container">
+            <h2 class="section-title">Real Proven <span class="text-gradient">Client Results</span></h2>
+            <p class="section-subtitle">Verifiable map pack rank improvements, call acceleration data, and market takeover metrics across our portfolio.</p>
+            <div class="portfolio-filter">
+                <button class="filter-btn active" data-filter="all">All Profiles</button>
+                <button class="filter-btn" data-filter="home-services">Home Services</button>
+                <button class="filter-btn" data-filter="retail">Boutique & Retail</button>
+            </div>
+            <div class="portfolio-grid">
+                <!-- Case 1 -->
+                <div class="card glass portfolio-card show" data-category="home-services">
+                    <div class="portfolio-img-box">
+                        <img src="https://images.unsplash.com/photo-1581094288338-2314dddb7eed?auto=format&fit=crop&w=600&q=80" alt="HVAC Dispatch Routing Operations">
+                    </div>
+                    <div class="portfolio-meta">
+                        <span class="portfolio-client">Ricky's Heating & Cooling</span>
+                        <span class="portfolio-growth">+142% Calls</span>
+                    </div>
+                    <h3>GMB Optimization & Regional Map Radius Expansion</h3>
+                </div>
+                <!-- Case 2 -->
+                <div class="card glass portfolio-card show" data-category="retail">
+                    <div class="portfolio-img-box">
+                        <img src="https://images.unsplash.com/photo-1594552072238-b8a33785b261?auto=format&fit=crop&w=600&q=80" alt="Luxury Studio Visual Asset Elements">
+                    </div>
+                    <div class="portfolio-meta">
+                        <span class="portfolio-client">Noor Bridal Studio</span>
+                        <span class="portfolio-growth">#1 Position</span>
+                    </div>
+                    <h3>High-End Luxury Visual Stacking & Urdu Local Search Alignment</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Case Studies Analytics Integration -->
+    <section class="glass" style="border-left:none; border-right:none; border-radius:0;">
+        <div class="container">
+            <div class="case-grid">
+                <div class="card glass case-card">
+                    <span style="font-size: 2.5rem;">🏢</span>
+                    <h3>A.M. Janitorial Services</h3>
+                    <p>Listing hit with an aggressive hard suspension due to historical keyword-stuffing metadata errors. We identified the systemic conflict markers, executed a total data cleanup protocol, filed a targeted appeal, and successfully completely restored the profile within 72 hours.</p>
+                    <div class="case-stats">
+                        <div>
+                            <div class="case-stat-val">100%</div>
+                            <div class="case-stat-lbl">Profile Restored</div>
+                        </div>
+                        <div>
+                            <div class="case-stat-val">0</div>
+                            <div class="case-stat-lbl">Data Loss Risk</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card glass case-card">
+                    <span style="font-size: 2.5rem;">🏗️</span>
+                    <h3>Attic World LLC</h3>
+                    <p>Faced absolute zero visibility in hyper-competitive surrounding service areas. Deployed customized geo-radial landing pages and structurally linked localized coordinate schema maps, boosting direct inbound organic phone leads across 14 additional regional zip codes.</p>
+                    <div class="case-stats">
+                        <div>
+                            <div class="case-stat-val">+89%</div>
+                            <div class="case-stat-lbl">Inbound Leads</div>
+                        </div>
+                        <div>
+                            <div class="case-stat-val">14</div>
+                            <div class="case-stat-lbl">Zip Codes Captured</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing System -->
+    <section id="pricing">
+        <div class="container">
+            <h2 class="section-title">Predictable <span class="text-gradient">ROI Pricing</span></h2>
+            <p class="section-subtitle">No long-term contracts. No useless vanity metrics. Just pure, aggressive optimization mechanics built to scale local businesses.</p>
+            <div class="pricing-toggle">
+                <span>Monthly Rate</span>
+                <label class="switch">
+                    <input type="checkbox" id="billing-toggle">
+                    <span class="slider"></span>
+                </label>
+                <span>Annual Saver <style>.pricing-toggle span:last-child::after{content:' (-20%)'; color:var(--accent); font-size:0.85rem; font-weight:700;}</style></span>
+            </div>
+            <div class="pricing-grid">
+                <!-- Plan 1 -->
+                <div class="card glass pricing-card">
+                    <div>
+                        <div class="plan-name">Local Spark</div>
+                        <p class="plan-desc">Perfect for small brick-and-mortar storefronts looking to capture immediate local traffic.</p>
+                        <div class="plan-price">$499<span>/mo</span></div>
+                        <ul class="plan-features">
+                            <li>Google Business Profile Setup</li>
+                            <li>Targeted Core Citation Building</li>
+                            <li>Standard Geo-Tag Asset Postings</li>
+                            <li>Monthly Core Rank Monitoring</li>
+                        </ul>
+                    </div>
+                    <a href="#contact" class="btn btn-secondary">Get Started</a>
+                </div>
+                <!-- Plan 2 -->
+                <div class="card glass pricing-card popular">
+                    <div>
+                        <div class="plan-name">Map Dominator</div>
+                        <p class="plan-desc">Engineered for service area businesses and contractors targeting rapid regional growth.</p>
+                        <div class="plan-price">$899<span>/mo</span></div>
+                        <ul class="plan-features">
+                            <li>Advanced Georadial Mapping</li>
+                            <li>Tailored Local Schema Deployment</li>
+                            <li>Deep Tier-1 Citation Cleanup</li>
+                            <li>Suspension Guard Monitoring</li>
+                        </ul>
+                    </div>
+                    <a href="#contact" class="btn btn-primary">Dominate Locally</a>
+                </div>
+                <!-- Plan 3 -->
+                <div class="card glass pricing-card">
+                    <div>
+                        <div class="plan-name">Enterprise Market Takeover</div>
+                        <p class="plan-desc">For multi-location corporate entities wanting complete market takeover across multiple cities.</p>
+                        <div class="plan-price">$1799<span>/mo</span></div>
+                        <ul class="plan-features">
+                            <li>Multi-Profile Network Structuring</li>
+                            <li>High-Stakes Priority Support Line</li>
+                            <li>Custom Organic Landing Pages</li>
+                            <li>Premium Dedicated Link Campaign</li>
+                        </ul>
+                    </div>
+                    <a href="#contact" class="btn btn-secondary">Contact Enterprise</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Slider -->
+    <section class="glass" style="border-left:none; border-right:none; border-radius:0;">
+        <div class="container">
+            <h2 class="section-title">What Our Partner <span class="text-gradient">Networks Say</span></h2>
+            <p class="section-subtitle">Real feedback from business owners experiencing true organic growth and operational scaling.</p>
+            <div class="testimonial-outer">
+                <div class="testimonial-wrapper">
+                    <div class="testimonial-track" id="testimonial-track">
+                        <div class="testimonial-slide">
+                            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=200&q=80" alt="Client Testimonial Feature" class="testimonial-avatar">
+                            <p class="testimonial-quote">"Our business map profile listing was completely invisible past a 2-mile radius. Within just 60 days of partnering with Ranking Matters, we were actively receiving calls from neighborhoods we could never organically reach before."</p>
+                            <div class="testimonial-author">Sarah Jenkins</div>
+                            <div class="testimonial-role">Marketing Director, Comfort HVAC Group</div>
+                        </div>
+                        <div class="testimonial-slide">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&q=80" alt="Client Business Owner Representative" class="testimonial-avatar">
+                            <p class="testimonial-quote">"After dealing with a sudden, devastating profile suspension that crippled our call volumes, Arslan identified the issue instantly and got us back online in days. Absolute lifesaver."</p>
+                            <div class="testimonial-author">David Miller</div>
+                            <div class="testimonial-role">Founder, AM Cleaners Network</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slider-controls">
+                    <button class="slider-btn" id="slide-prev">←</button>
+                    <button class="slider-btn" id="slide-next">→</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Google Reviews Placement -->
+    <section>
+        <div class="container">
+            <div class="reviews-summary">
+                <div class="rating-huge">5.0</div>
+                <div>
+                    <div class="rating-stars">★★★★★</div>
+                    <p style="color: var(--text-muted); font-weight: 600;">Based on 85+ Live Verified Google Business Reviews</p>
+                </div>
+            </div>
+            <div class="reviews-grid">
+                <div class="card glass review-card">
+                    <div class="review-header">
+                        <div class="reviewer-info">
+                            <div class="reviewer-img">TM</div>
+                            <div>
+                                <div class="reviewer-name">Thomas Matthews</div>
+                                <div class="reviewer-meta">Local Guide • 5 Stars</div>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="review-text">Professional local SEO specialist. Their tracking audits and schema configuration directly generated high-value leads within weeks of implementation.</p>
+                </div>
+                <div class="card glass review-card">
+                    <div class="review-header">
+                        <div class="reviewer-info">
+                            <div class="reviewer-img">AK</div>
+                            <div>
+                                <div class="reviewer-name">Asim Khan</div>
+                                <div class="reviewer-meta">Business Owner • 5 Stars</div>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="review-text">Best GMB optimization experts in Lahore. Highly knowledgeable in algorithm shifts, link auditing, and profile restoration mechanics.</p>
+                </div>
+                <div class="card glass review-card">
+                    <div class="review-header">
+                        <div class="reviewer-info">
+                            <div class="reviewer-img">BR</div>
+                            <div>
+                                <div class="reviewer-name">Brian Rogers</div>
+                                <div class="reviewer-meta">Operations Lead • 5 Stars</div>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="review-text">They managed our data expansion cleanly across hundreds of spreadsheet tracks. Excellent ongoing reporting frameworks and reliable communications.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Matrix -->
+    <section class="glass" style="border-left:none; border-right:none; border-radius:0;">
+        <div class="container">
+            <h2 class="section-title">Our Technical <span class="text-gradient">Competence Matrix</span></h2>
+            <p class="section-subtitle">We don't guess. We program and execute clean architectures to force algorithmic compliance.</p>
+            <div class="skills-grid">
+                <div class="skill-item">
+                    <h4><span>GMB Troubleshooting & Verification Mastery</span><span>98%</span></h4>
+                    <div class="skill-bar-bg"><div class="skill-bar-fill" data-width="98%"></div></div>
+                </div>
+                <div class="skill-item">
+                    <h4><span>Georadial Proximity Optimization Architecture</span><span>95%</span></h4>
+                    <div class="skill-bar-bg"><div class="skill-bar-fill" data-width="95%"></div></div>
+                </div>
+                <div class="skill-item">
+                    <h4><span>Local JSON-LD Semantic Web Programming</span><span>92%</span></h4>
+                    <div class="skill-bar-bg"><div class="skill-bar-fill" data-width="92%"></div></div>
+                </div>
+                <div class="skill-item">
+                    <h4><span>Inconsistent Directory Data Remediation</span><span>96%</span></h4>
+                    <div class="skill-bar-bg"><div class="skill-bar-fill" data-width="96%"></div></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Brand Certifications -->
+    <section>
+        <div class="container">
+            <div class="cert-grid">
+                <div class="card glass cert-card">
+                    <div class="cert-icon">🎓</div>
+                    <h4>Google Certified</h4>
+                    <p>Advanced Digital Platform Expert</p>
+                </div>
+                <div class="card glass cert-card">
+                    <div class="cert-icon">📈</div>
+                    <h4>Enterprise SEO</h4>
+                    <p>Large-Scale Matrix Data Tracking</p>
+                </div>
+                <div class="card glass cert-card">
+                    <div class="cert-icon">⚛️</div>
+                    <h4>Web Dev Build</h4>
+                    <p>React & Netlify Frontend Specialist</p>
+                </div>
+                <div class="card glass cert-card">
+                    <div class="cert-icon">🛡️</div>
+                    <h4>Risk Management</h4>
+                    <p>GMB Enforcement Guidelines Audits</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEO Enterprise Tools -->
+    <section class="glass" style="border-left:none; border-right:none; border-radius:0;">
+        <div class="container">
+            <h2 class="section-title">Enterprise Tools We Deploy</h2>
+            <p class="section-subtitle">We analyze your tracking footprint with the most premium analytical systems in the industry.</p>
+            <div class="tools-grid">
+                <div class="card glass tool-card">
+                    <div class="tool-avatar-box">Ah</div>
+                    <h4>Ahrefs Pro</h4>
+                </div>
+                <div class="card glass tool-card">
+                    <div class="tool-avatar-box">Sm</div>
+                    <h4>Semrush Matrix</h4>
+                </div>
+                <div class="card glass tool-card">
+                    <div class="tool-avatar-box">Sc</div>
+                    <h4>Screaming Frog</h4>
+                </div>
+                <div class="card glass tool-card">
+                    <div class="tool-avatar-box">Wh</div>
+                    <h4>BrightLocal</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Accordion Component -->
+    <section id="faq">
+        <div class="container">
+            <h2 class="section-title">Frequently Asked <span class="text-gradient">Questions</span></h2>
+            <p class="section-subtitle">Clear, straightforward answers about local search optimization mechanics and profile security.</p>
+            <div class="faq-max">
+                <div class="faq-item">
+                    <button class="faq-trigger">What causes a sudden Google Business Profile suspension? <span class="faq-icon-state">+</span></button>
+                    <div class="faq-panel">
+                        <div class="faq-panel-content">Suspensions are usually triggered by aggressive name changes (keyword stuffing), changing address markers to unverified locations, data mismatch fields across directories, or sudden system sweeps targeting specific high-risk local service categories.</div>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-trigger">How do you increase the map ranking radius? <span class="faq-icon-state">+</span></button>
+                    <div class="faq-panel">
+                        <div class="faq-panel-content">We scale proximity metrics by building geo-contextual relevance through structured backend coordinates, locally optimized landing page networks, nested schema configurations, and hyper-targeted contextual link profiles.</div>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-trigger">Do you require long-term mandatory contracts? <span class="faq-icon-state">+</span></button>
+                    <div class="faq-panel">
+                        <div class="faq-panel-content">No, all our optimization campaigns run on flexible month-to-month commitments. We believe in keeping your business based entirely on transparent performance, calls generated, and verifiable ROI.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Editorial Preview Grid -->
+    <section id="blog" class="glass" style="border-left:none; border-right:none; border-radius:0;">
+        <div class="container">
+            <h2 class="section-title">Our Local <span class="text-gradient">SEO Insights</span></h2>
+            <p class="section-subtitle">Algorithmic guidelines break downs, optimization deep-dives, and technical tutorials to keep you ahead.</p>
+            <div class="blog-grid">
+                <!-- Post 1 -->
+                <div class="card glass blog-card">
+                    <div class="blog-img-cover">
+                        <img src="https://images.unsplash.com/photo-1432821596592-e2c18b78144f?auto=format&fit=crop&w=500&q=80" alt="Local SEO Optimization Blogging Concept">
+                    </div>
+                    <span class="blog-date">Local Strategy</span>
+                    <h3>How to Overcome Proximity Algorithmic Restrictions</h3>
+                    <p>Discover the exact steps required to claim maps package positioning outside your immediate physical operational zip code location safely.</p>
+                </div>
+                <!-- Post 2 -->
+                <div class="card glass blog-card">
+                    <div class="blog-img-cover">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=500&q=80" alt="Data Analytics Visualization Matrix">
+                    </div>
+                    <span class="blog-date">Suspension Guide</span>
+                    <h3>The Ultimate Playbook for Rapid GMB Reinstatements</h3>
+                    <p>A calculated walkthrough mapping out how to prepare clean official documentation to resolve hard Google Business suspensions smoothly.</p>
+                </div>
+                <!-- Post 3 -->
+                <div class="card glass blog-card">
+                    <div class="blog-img-cover">
+                        <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=500&q=80" alt="Advanced Coding Metadata Schema Structure">
+                    </div>
+                    <span class="blog-date">Technical Schema</span>
+                    <h3>Mastering JSON-LD Setup for Local Business Growth</h3>
+                    <p>Learn how to precisely embed coordinate points and semantic relationship links into website codebases to speed up page crawl tracking.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Contact Infrastructure -->
+    <section id="contact">
+        <div class="container contact-grid">
+            <div class="contact-panel-info">
+                <h2 class="contact-panel-title">Let’s Claim Your <span class="text-gradient">Local Market</span></h2>
+                <p class="contact-lead-desc">Fill out our structural audit intake frame. We’ll analyze your local mapping visibility footprint completely free of charge and provide clear scaling routes.</p>
+                <ul class="contact-channel-list">
+                    <li class="contact-channel-item">
+                        <div class="channel-icon-circle">📞</div>
+                        <div>
+                            <div class="channel-label">Direct Growth Line</div>
+                            <a href="tel:+923001234567" class="channel-value">+92 300 1234567</a>
+                        </div>
+                    </li>
+                    <li class="contact-channel-item">
+                        <div class="channel-icon-circle">✉️</div>
+                        <div>
+                            <div class="channel-label">Secure Matrix Inbox</div>
+                            <a href="mailto:growth@rankingmatters.pk" class="channel-value">growth@rankingmatters.pk</a>
+                        </div>
+                    </li>
+                    <li class="contact-channel-item">
+                        <div class="channel-icon-circle">📍</div>
+                        <div>
+                            <div class="channel-label">Operational Hub</div>
+                            <div class="channel-value" style="font-weight: 500;">Thokar, Lahore, Pakistan</div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="card glass form-box">
+                <form id="audit-form" action="#" method="POST">
+                    <div class="form-row-grid">
+                        <div class="form-element">
+                            <label for="client-name">Your Full Name</label>
+                            <input type="text" id="client-name" name="name" class="form-control" placeholder="Arslan" required>
+                        </div>
+                        <div class="form-element">
+                            <label for="client-email">Business Email</label>
+                            <input type="email" id="client-email" name="email" class="form-control" placeholder="name@company.com" required>
+                        </div>
+                    </div>
+                    <div class="form-element">
+                        <label for="business-name">Registered Business Title</label>
+                        <input type="text" id="business-name" name="business_name" class="form-control" placeholder="e.g. Ricky's Heating and Cooling" required>
+                    </div>
+                    <div class="form-element">
+                        <label for="listing-url">Google Maps Share Link (If Suspended, Leave Blank)</label>
+                        <input type="url" id="listing-url" name="maps_url" class="form-control" placeholder="https://maps.google.com/?cid=...">
+                    </div>
+                    <div class="form-element">
+                        <label for="project-notes">Core Ranking Roadblocks or Operational Target Areas</label>
+                        <textarea id="project-notes" name="notes" class="form-control" rows="5" placeholder="Tell us about suspension states, ranking leaks, or multi-location expansion targets..."></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary" style="width: 100%;">Generate My Free Local Mapping Audit Blueprint</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modern Footer Systems -->
     <footer>
         <div class="container footer-grid">
             <div class="footer-brand">
-                <a href="#" class="logo">RANKING<span>MATTERS</span></a>
-                <p>High-performance local search visibility engine architectures built with mathematical proximity signal precision.</p>
+                <a href="#" class="logo">Ranking<span>Matters</span></a>
+                <p>Advanced algorithmic optimization mechanics engineered explicitly to scale inbound customer commercial phone calls and local visibility indicators.</p>
             </div>
             <div class="footer-col">
-                <h4>System Domains</h4>
+                <h4>Core Weaponry</h4>
                 <ul class="footer-links">
-                    <li><a href="#about">Core Infrastructure</a></li>
-                    <li><a href="#services">Visibility Modules</a></li>
-                    <li><a href="#portfolio">Empirical Validation</a></li>
-                    <li><a href="#pricing">Capital Allocation</a></li>
+                    <li><a href="#services">Maps Pack Expansion</a></li>
+                    <li><a href="#services">Suspension Recovery Hub</a></li>
+                    <li><a href="#services">Local Citation Mapping</a></li>
+                    <li><a href="#services">JSON-LD Data Structures</a></li>
                 </ul>
             </div>
             <div class="footer-col">
-                <h4>Algorithmic Modules</h4>
+                <h4>Company Info</h4>
                 <ul class="footer-links">
-                    <li><a href="#services">GBP Engineering</a></li>
-                    <li><a href="#services">Schema Graphing</a></li>
-                    <li><a href="#services">Proximity Expansion</a></li>
-                    <li><a href="#services">Citation Harvesting</a></li>
+                    <li><a href="#about">About Our Network</a></li>
+                    <li><a href="#case-studies">Success Metrics Data</a></li>
+                    <li><a href="#blog">Editorial Articles</a></li>
+                    <li><a href="#pricing">ROI Scaling Packages</a></li>
                 </ul>
             </div>
             <div class="footer-col">
-                <h4>Nodes</h4>
+                <h4>Legal Bounds</h4>
                 <ul class="footer-links">
-                    <li><a href="#faq">Knowledge Base Documentation</a></li>
-                    <li><a href="#blog">System Logs (Blog)</a></li>
+                    <li><a href="#">Privacy Framework</a></li>
+                    <li><a href="#">Terms of Engagement</a></li>
+                    <li><a href="#">Google Compliance</a></li>
                 </ul>
             </div>
         </div>
         <div class="container footer-base">
-            <div class="footer-copyright">&copy; 2026 Ranking Matters. All Rights Specially Reserved. Managed by Senior UX Core Teams.</div>
+            <div class="footer-copyright">&copy; 2026 Ranking Matters. All Rights Reserved. Engineered for Performance Local Marketers.</div>
         </div>
     </footer>
 
+    <!-- Floating Fixed Navigation Controls -->
     <div id="fixed-actions-container">
-        <a href="#contact" class="sticky-action-trigger sticky-btn-audit">Request Free Audit</a>
-        <button class="sticky-action-trigger sticky-btn-top" id="back-to-top" aria-label="Return to System Top Area">↑</button>
+        <a href="#contact" class="sticky-action-trigger sticky-btn-audit">🚀 Request Audit</a>
+        <button class="sticky-action-trigger sticky-btn-top" id="back-to-top" aria-label="Scroll to Top">↑</button>
     </div>
 
+    <!-- JavaScript - Dynamic Engine -->
     <script>
-        // System Loader Management
-        window.addEventListener('load', () => {
-            const loader = document.getElementById('loader');
-            if (loader) {
-                loader.style.opacity = '0';
-                setTimeout(() => {
-                    loader.style.visibility = 'hidden';
-                }, 600);
-            }
-            initializeSkillsAnimation();
-        });
-
-        // Interface Themes Toggle Module
-        const bodyElement = document.body;
-        const themeToggleBtn = document.getElementById('theme-toggle');
-        if (themeToggleBtn) {
-            themeToggleBtn.addEventListener('click', () => {
-                if (bodyElement.classList.contains('dark-mode')) {
-                    bodyElement.classList.replace('dark-mode', 'light-mode');
-                    themeToggleBtn.innerHTML = `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>`;
-                } else {
-                    bodyElement.classList.replace('light-mode', 'dark-mode');
-                    themeToggleBtn.innerHTML = `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>`;
-                }
-            });
-        }
-
-        // Mobile Application Menu Display Engine
-        const burgerBtn = document.getElementById('menu-burger');
-        const navigationMenu = document.getElementById('nav-menu');
-        if (burgerBtn && navigationMenu) {
-            burgerBtn.addEventListener('click', () => {
-                const menuExpandedState = burgerBtn.getAttribute('aria-expanded') === 'true';
-                burgerBtn.setAttribute('aria-expanded', !menuExpandedState);
-                navigationMenu.style.display = menuExpandedState ? 'none' : 'flex';
-                if(!menuExpandedState) {
-                    navigationMenu.style.flexDirection = 'column';
-                    navigationMenu.style.position = 'absolute';
-                    navigationMenu.style.top = '90px';
-                    navigationMenu.style.left = '0';
-                    navigationMenu.style.width = '100%';
-                    navigationMenu.style.background = 'var(--surface-pure)';
-                    navigationMenu.style.padding = '40px';
-                    navigationMenu.style.borderBottom = '1px solid var(--border)';
-                    navigationMenu.style.gap = '24px';
-                    navigationMenu.style.zIndex = '900';
-                } else {
-                    navigationMenu.removeAttribute('style');
-                }
-            });
-        }
-
-        // Scroll Performance and Interface Indicators Monitoring Loop
-        const globalHeaderFrame = document.getElementById('global-header');
-        const scrollProgressIndicator = document.getElementById('scroll-progress');
-        const returnToTopActionBtn = document.getElementById('back-to-top');
-        const contentSectionsArray = document.querySelectorAll('main > section');
-        const menuNavigationLinks = document.querySelectorAll('.nav-link');
-
-        window.addEventListener('scroll', () => {
-            const currentVerticalScrollOffset = window.scrollY;
-            const absoluteTotalScrollableHeight = document.documentElement.scrollHeight - window.innerHeight;
+        document.addEventListener('DOMContentLoaded', () => {
             
-            // Progress Bar Width Controller Logic
-            if(absoluteTotalScrollableHeight > 0 && scrollProgressIndicator) {
-                const calculatedScrollPercentage = (currentVerticalScrollOffset / absoluteTotalScrollableHeight) * 100;
-                scrollProgressIndicator.style.width = calculatedScrollPercentage + '%';
-            }
+            // Loader Dismissal Mechanism
+            const loader = document.getElementById('loader');
+            window.addEventListener('load', () => {
+                setTimeout(() => {
+                    loader.style.opacity = '0';
+                    loader.style.visibility = 'hidden';
+                    // Trigger skill bar animation upon loading page asset arrays
+                    triggerSkillAnimations();
+                }, 400);
+            });
 
-            // Header Visual Transitions Controller
-            if (globalHeaderFrame) {
-                if(currentVerticalScrollOffset > 50) {
-                    globalHeaderFrame.style.padding = '10px 0';
-                    globalHeaderFrame.style.boxShadow = '0 10px 30px rgba(0,0,0,0.2)';
+            // Smooth Scroll Progress Metric
+            window.addEventListener('scroll', () => {
+                const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+                const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+                const scrolled = (winScroll / height) * 100;
+                document.getElementById('scroll-progress').style.width = scrolled + '%';
+                
+                // Back to Top button toggles visibility indicators cleanly
+                const btt = document.getElementById('back-to-top');
+                if (window.scrollY > 600) {
+                    btt.classList.add('show');
                 } else {
-                    globalHeaderFrame.style.padding = '0';
-                    globalHeaderFrame.style.boxShadow = 'none';
-                }
-            }
-
-            // Return to Top Trigger Visibility Controller
-            if (returnToTopActionBtn) {
-                if(currentVerticalScrollOffset > 600) {
-                    returnToTopActionBtn.classList.add('show');
-                } else {
-                    returnToTopActionBtn.classList.remove('show');
-                }
-            }
-
-            // Active Menu Link Status Tracker Controller
-            let currentActiveSectionId = '';
-            contentSectionsArray.forEach(sectionItem => {
-                const sectionTopBoundingOffset = sectionItem.offsetTop - 120;
-                const sectionTotalHeightValue = sectionItem.offsetHeight;
-                if(currentVerticalScrollOffset >= sectionTopBoundingOffset && currentVerticalScrollOffset < (sectionTopBoundingOffset + sectionTotalHeightValue)) {
-                    currentActiveSectionId = sectionItem.getAttribute('id');
+                    btt.classList.remove('show');
                 }
             });
 
-            if(currentActiveSectionId) {
-                menuNavigationLinks.forEach(linkObj => {
-                    linkObj.classList.remove('active');
-                    if(linkObj.getAttribute('href') === '#' + currentActiveSectionId) {
-                        linkObj.classList.add('active');
-                    }
-                });
-            }
-        });
-
-        if (returnToTopActionBtn) {
-            returnToTopActionBtn.addEventListener('click', () => {
+            // Back To Top Click Execution
+            document.getElementById('back-to-top').addEventListener('click', () => {
                 window.scrollTo({ top: 0, behavior: 'smooth' });
             });
-        }
 
-        // Mouse Trajectory Glow Coordinates Calculator Module
-        const mouseGlowEffectAsset = document.getElementById('mouse-glow');
-        if (mouseGlowEffectAsset) {
-            window.addEventListener('mousemove', (mouseMoveEvent) => {
-                mouseGlowEffectAsset.style.opacity = '1';
-                mouseGlowEffectAsset.style.left = mouseMoveEvent.clientX + 'px';
-                mouseGlowEffectAsset.style.top = mouseMoveEvent.clientY + 'px';
+            // Mobile Burger Menu Interface Controller
+            const menuToggle = document.getElementById('menu-toggle');
+            const navMenu = document.querySelector('.nav-menu');
+            menuToggle.addEventListener('click', () => {
+                navMenu.classList.toggle('active');
+                menuToggle.classList.toggle('active');
             });
-            window.addEventListener('mouseleave', () => {
-                mouseGlowEffectAsset.style.opacity = '0';
-            });
-        }
 
-        // Numerical Metric Increment Animation Engine Controller
-        const numericalCountObjects = document.querySelectorAll('.counter');
-        const intersectionCounterObserver = new IntersectionObserver((observedEntries, internalObserver) => {
-            observedEntries.forEach(itemEntry => {
-                if(itemEntry.isIntersecting) {
-                    const trackingElement = itemEntry.target;
-                    const endNumericTargetValue = parseInt(trackingElement.getAttribute('data-target'));
-                    let localizedStartingVal = 0;
-                    const transitionDurationFactor = Math.floor(2000 / endNumericTargetValue);
-                    const recursiveValueCounter = setInterval(() => {
-                        localizedStartingVal++;
-                        trackingElement.innerText = localizedStartingVal;
-                        if(localizedStartingVal >= endNumericTargetValue) {
-                            trackingElement.innerText = endNumericTargetValue + (endNumericTargetValue === 87 ? '%' : '+');
-                            clearInterval(recursiveValueCounter);
-                        }
-                    }, transitionDurationFactor);
-                    internalObserver.unobserve(trackingElement);
-                }
-            });
-        }, { threshold: 0.5 });
-        numericalCountObjects.forEach(countObj => intersectionCounterObserver.observe(countObj));
-
-        // Skill Array Fill Level Initialization Pipeline Logic
-        function initializeSkillsAnimation() {
-            const skillProgressBars = document.querySelectorAll('.skill-bar-fill');
-            const intersectionSkillObserver = new IntersectionObserver((observedBarEntries) => {
-                observedBarEntries.forEach(barEntry => {
-                    if (barEntry.isIntersecting) {
-                        const preciseTargetWidthValue = barEntry.target.getAttribute('data-width');
-                        barEntry.target.style.width = preciseTargetWidthValue;
-                    }
-                });
-            }, { threshold: 0.2 });
-            skillProgressBars.forEach(barItem => intersectionSkillObserver.observe(barItem));
-        }
-
-        // Segmented Portfolio Dataset Filter Engine Logic
-        const datasetFilterControlButtons = document.querySelectorAll('.filter-btn');
-        const localPortfolioItemCards = document.querySelectorAll('.portfolio-card');
-
-        datasetFilterControlButtons.forEach(buttonElement => {
-            buttonElement.addEventListener('click', () => {
-                datasetFilterControlButtons.forEach(btn => btn.classList.remove('active'));
-                buttonElement.classList.add('active');
-                
-                const selectedCategoryFilterString = buttonElement.getAttribute('data-filter');
-                
-                localPortfolioItemCards.forEach(cardItem => {
-                    if(selectedCategoryFilterString === 'all' || cardItem.getAttribute('data-category') === selectedCategoryFilterString) {
-                        cardItem.classList.add('show');
-                    } else {
-                        cardItem.classList.remove('show');
-                    }
-                });
-            });
-        });
-
-        // Toggleable Valuation Metric Billing Switch Controller Module FIXED
-        const cycleBillingToggleCheckbox = document.getElementById('billing-cycle');
-        const pricingDisplayValueElements = document.querySelectorAll('.price-val');
-
-        if (cycleBillingToggleCheckbox) {
-            cycleBillingToggleCheckbox.addEventListener('change', () => {
-                const isAnnualBillingCycleActive = cycleBillingToggleCheckbox.checked;
-                pricingDisplayValueElements.forEach(priceObject => {
-                    const contextValueTarget = isAnnualBillingCycleActive ? priceObject.getAttribute('data-annual') : priceObject.getAttribute('data-monthly');
-                    priceObject.innerText = contextValueTarget;
-                });
-            });
-        }
-
-        // Accordion-Driven Interactive FAQ Component Pipeline Module Logic
-        const faqInteractiveTriggersArray = document.querySelectorAll('.faq-trigger');
-        faqInteractiveTriggersArray.forEach(triggerBtnItem => {
-            triggerBtnItem.addEventListener('click', () => {
-                const associatedFaqItemWrapper = triggerBtnItem.parentElement;
-                const associatedTargetPanel = triggerBtnItem.nextElementSibling;
-                const isItemCurrentlyOpen = associatedFaqItemWrapper.classList.contains('open');
-                
-                // Reset surrounding elements
-                document.querySelectorAll('.faq-item').forEach(item => item.classList.remove('open'));
-                document.querySelectorAll('.faq-panel').forEach(panel => panel.style.maxHeight = null);
-                
-                if(!isItemCurrentlyOpen) {
-                    associatedFaqItemWrapper.classList.add('open');
-                    triggerBtnItem.setAttribute('aria-expanded', 'true');
-                    associatedTargetPanel.style.maxHeight = associatedTargetPanel.scrollHeight + "px";
+            // Theme Management Framework (Light / Dark Mode Router)
+            const themeToggle = document.getElementById('theme-toggle');
+            themeToggle.addEventListener('click', () => {
+                if (document.body.classList.contains('dark-mode')) {
+                    document.body.classList.remove('dark-mode');
+                    document.body.classList.add('light-mode');
                 } else {
-                    triggerBtnItem.setAttribute('aria-expanded', 'false');
+                    document.body.classList.remove('light-mode');
+                    document.body.classList.add('dark-mode');
                 }
             });
+
+            // Interactive Mouse Glow Tracking Asset
+            const glow = document.getElementById('mouse-glow');
+            document.addEventListener('mousemove', (e) => {
+                glow.style.opacity = '1';
+                glow.style.left = e.clientX + 'px';
+                glow.style.top = e.clientY + 'px';
+            });
+            document.addEventListener('mouseleave', () => {
+                glow.style.opacity = '0';
+            });
+
+            // Portfolio Filter Engine Matrix
+            const filterBtns = document.querySelectorAll('.filter-btn');
+            const portfolioCards = document.querySelectorAll('.portfolio-card');
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    filterBtns.forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+                    const target = btn.getAttribute('data-filter');
+                    
+                    portfolioCards.forEach(card => {
+                        if (target === 'all' || card.getAttribute('data-category') === target) {
+                            card.classList.add('show');
+                        } else {
+                            card.classList.remove('show');
+                        }
+                    });
+                });
+            });
+
+            // Dynamic Annual Discount Adjuster Component
+            const billingToggle = document.getElementById('billing-toggle');
+            const pricingVals = document.querySelectorAll('.plan-price');
+            const standardPrices = [499, 899, 1799];
+            billingToggle.addEventListener('change', () => {
+                pricingVals.forEach((p, idx) => {
+                    if (billingToggle.checked) {
+                        const discounted = Math.floor(standardPrices[idx] * 0.8);
+                        p.innerHTML = `$${discounted}<span>/mo</span>`;
+                    } else {
+                        p.innerHTML = `$${standardPrices[idx]}<span>/mo</span>`;
+                    }
+                });
+            });
+
+            // FAQ Accordion Transition Engine
+            const faqTriggers = document.querySelectorAll('.faq-trigger');
+            faqTriggers.forEach(t => {
+                t.addEventListener('click', () => {
+                    const parent = t.parentElement;
+                    const panel = t.nextElementSibling;
+                    const isOpen = parent.classList.contains('open');
+                    
+                    document.querySelectorAll('.faq-item').forEach(i => {
+                        i.classList.remove('open');
+                        i.querySelector('.faq-panel').style.maxHeight = null;
+                    });
+                    
+                    if (!isOpen) {
+                        parent.classList.add('open');
+                        panel.style.maxHeight = panel.scrollHeight + 'px';
+                    }
+                });
+            });
+
+            // Premium Testimonial Slider Mechanics Track Setup
+            const track = document.getElementById('testimonial-track');
+            const slides = document.querySelectorAll('.testimonial-slide');
+            let currIdx = 0;
+            document.getElementById('slide-next').addEventListener('click', () => {
+                if (currIdx < slides.length - 1) { currIdx++; } else { currIdx = 0; }
+                track.style.transform = `translateX(-${currIdx * 100}%)`;
+            });
+            document.getElementById('slide-prev').addEventListener('click', () => {
+                if (currIdx > 0) { currIdx--; } else { currIdx = slides.length - 1; }
+                track.style.transform = `translateX(-${currIdx * 100}%)`;
+            });
+
+            // Smooth Intersection Entry Numerical Counters
+            const counters = document.querySelectorAll('.counter');
+            const countObs = new IntersectionObserver((entries, obs) => {
+                entries.forEach(entry => {
+                    if(entry.isIntersecting) {
+                        const target = entry.target;
+                        const limit = parseInt(target.getAttribute('data-target'));
+                        let current = 0;
+                        const speed = limit / 40;
+                        const updater = setInterval(() => {
+                            current += speed;
+                            if(current >= limit) {
+                                target.innerText = (limit === 12) ? '12M+' : (limit === 150 ? '150+' : limit + '%');
+                                clearInterval(updater);
+                            } else {
+                                target.innerText = Math.floor(current) + (limit === 12 ? 'M+' : (limit === 150 ? '+' : '%'));
+                            }
+                        }, 25);
+                        obs.unobserve(target);
+                    }
+                });
+            }, { threshold: 0.5 });
+            counters.forEach(c => countObs.observe(c));
+
+            // Skill Progress Matrix Fill Automation Routine
+            function triggerSkillAnimations() {
+                const fillBars = document.querySelectorAll('.skill-bar-fill');
+                const skillObs = new IntersectionObserver((entries, obs) => {
+                    entries.forEach(entry => {
+                        if(entry.isIntersecting) {
+                            const bar = entry.target;
+                            bar.style.width = bar.getAttribute('data-width');
+                            obs.unobserve(bar);
+                        }
+                    });
+                }, { threshold: 0.2 });
+                fillBars.forEach(b => skillObs.observe(b));
+            }
         });
-
-        // Premium Loop Slider Module Infrastructure Architecture Logic Controller
-        const testimonialTrackFrame = document.getElementById('testimonial-track');
-        const individualSlidesArray = document.querySelectorAll('.testimonial-slide');
-        const backwardSlideTriggerBtn = document.getElementById('prev-slide');
-        const forwardSlideTriggerBtn = document.getElementById('next-slide');
-        
-        if (testimonialTrackFrame && individualSlidesArray.length > 0) {
-            let trackCurrentIndexPosition = 0;
-            const ultimateTotalSlidesCount = individualSlidesArray.length;
-
-            function renderTestimonialSlidePosition() {
-                testimonialTrackFrame.style.transform = `translateX(-${trackCurrentIndexPosition * 100}%)`;
-            }
-
-            if (forwardSlideTriggerBtn) {
-                forwardSlideTriggerBtn.addEventListener('click', () => {
-                    trackCurrentIndexPosition = (trackCurrentIndexPosition + 1) % ultimateTotalSlidesCount;
-                    renderTestimonialSlidePosition();
-                });
-            }
-
-            if (backwardSlideTriggerBtn) {
-                backwardSlideTriggerBtn.addEventListener('click', () => {
-                    trackCurrentIndexPosition = (trackCurrentIndexPosition - 1 + ultimateTotalSlidesCount) % ultimateTotalSlidesCount;
-                    renderTestimonialSlidePosition();
-                });
-            }
-
-            // Automated sliding interval loop
-            setInterval(() => {
-                trackCurrentIndexPosition = (trackCurrentIndexPosition + 1) % ultimateTotalSlidesCount;
-                renderTestimonialSlidePosition();
-            }, 8000);
-        }
     </script>
 </body>
 </html>
