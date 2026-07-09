@@ -49,6 +49,7 @@ html
             --primary-glow: rgba(37, 99, 235, 0.15);
             --accent: #059669;
             --accent-glow: rgba(5, 150, 105, 0.15);
+            --whatsapp: #25D366;
             
             --font-sans: 'Plus Jakarta Sans', sans-serif;
             --font-serif: 'Playfair Display', serif;
@@ -127,6 +128,9 @@ html
         .btn-secondary:hover { background: var(--border); transform: translateY(-2px); }
         .btn-accent { background: linear-gradient(135deg, var(--accent), #047857); color: #ffffff; box-shadow: 0 10px 25px -5px rgba(5, 150, 105, 0.4); }
         .btn-accent:hover { transform: translateY(-2px); box-shadow: 0 15px 30px -5px rgba(5, 150, 105, 0.6); }
+        .btn-whatsapp { background: #25D366; color: #ffffff; box-shadow: 0 10px 25px -5px rgba(37, 211, 102, 0.4); }
+        .btn-whatsapp:hover { transform: translateY(-2px); box-shadow: 0 15px 30px -5px rgba(37, 211, 102, 0.6); }
+        .btn-whatsapp svg { margin-right: 10px; }
 
         /* Floating Components */
         .blob { position: absolute; border-radius: 50%; filter: blur(120px); z-index: -1; opacity: 0.15; pointer-events: none; transition: var(--transition); }
@@ -315,8 +319,8 @@ html
         .blog-card h3 { font-size: 1.35rem; margin-bottom: 12px; line-height: 1.3; }
         .blog-card p { color: var(--text-muted); font-size: 0.95rem; line-height: 1.5; }
 
-        /* Contact */
-        .contact-grid { display: grid; grid-template-columns: 0.8fr 1.2fr; gap: 80px; }
+        /* Contact Info - No Form */
+        .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
         .contact-panel-title { font-size: 2.25rem; font-weight: 800; margin-bottom: 24px; }
         .contact-lead-desc { color: var(--text-muted); font-size: 1.1rem; line-height: 1.6; margin-bottom: 40px; }
         .contact-channel-list { list-style: none; display: flex; flex-direction: column; gap: 24px; }
@@ -324,16 +328,14 @@ html
         .channel-icon-circle { width: 52px; height: 52px; border-radius: 50%; background: var(--primary-glow); color: var(--primary); display: flex; align-items: center; justify-content: center; font-size: 1.2rem; }
         .channel-label { font-size: 0.85rem; color: var(--text-muted); text-transform: uppercase; font-weight: 700; letter-spacing: 0.05em; }
         .channel-value { font-size: 1.1rem; font-weight: 600; text-decoration: none; color: var(--text); }
-        
-        .form-box { padding: 56px; border-radius: var(--radius-lg); }
-        .form-row-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; margin-bottom: 24px; }
-        @media(max-width: 576px) { .form-row-grid { grid-template-columns: 1fr; } }
-        .form-element { display: flex; flex-direction: column; gap: 8px; margin-bottom: 24px; }
-        .form-row-grid .form-element { margin-bottom: 0; }
-        .form-element label { font-size: 0.9rem; font-weight: 600; color: var(--text); }
-        .form-control { background: var(--surface-pure); border: 1px solid var(--border); padding: 16px 20px; border-radius: var(--radius-sm); color: var(--text); font-family: var(--font-sans); font-size: 0.95rem; transition: var(--transition); width: 100%; }
-        .form-control:focus { outline: none; border-color: var(--primary); box-shadow: 0 0 0 3px var(--primary-glow); }
-        
+        .contact-cta-box { padding: 56px; border-radius: var(--radius-lg); text-align: center; }
+        .contact-cta-box h3 { font-size: 2rem; margin-bottom: 20px; }
+        .contact-cta-box p { color: var(--text-muted); font-size: 1.05rem; margin-bottom: 32px; line-height: 1.6; }
+        .btn-large { padding: 20px 48px; font-size: 1.1rem; }
+        .btn-whatsapp-large { background: #25D366; color: #fff; padding: 20px 48px; font-size: 1.1rem; border-radius: var(--radius-md); text-decoration: none; display: inline-flex; align-items: center; gap: 12px; transition: var(--transition); box-shadow: 0 10px 25px -5px rgba(37, 211, 102, 0.4); }
+        .btn-whatsapp-large:hover { transform: translateY(-3px); box-shadow: 0 15px 35px -5px rgba(37, 211, 102, 0.6); }
+        .btn-whatsapp-large svg { width: 28px; height: 28px; fill: #fff; }
+
         /* Footer */
         footer { background: var(--surface-pure); border-top: 1px solid var(--border); padding: 100px 0 40px; }
         .footer-grid { display: grid; grid-template-columns: 1.2fr repeat(3, 0.6fr); gap: 60px; margin-bottom: 80px; }
@@ -348,10 +350,11 @@ html
         /* Fixed Actions */
         #fixed-actions-container { position: fixed; bottom: 32px; right: 32px; display: flex; flex-direction: column; gap: 12px; z-index: 1500; }
         .sticky-action-trigger { width: 56px; height: 56px; border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer; text-decoration: none; box-shadow: 0 10px 25px rgba(0,0,0,0.2); transition: var(--transition); font-weight: 600; border: none; }
-        .sticky-btn-audit { background: var(--primary); color: #fff; width: auto; padding: 0 24px; border-radius: 100px; font-size: 0.9rem; }
+        .sticky-btn-whatsapp { background: #25D366; color: #fff; width: auto; padding: 0 24px; border-radius: 100px; font-size: 0.9rem; gap: 8px; }
         .sticky-btn-top { background: var(--surface-pure); border: 1px solid var(--border); color: var(--text); font-size: 1.2rem; opacity: 0; visibility: hidden; }
         .sticky-btn-top.show { opacity: 1; visibility: visible; }
         .sticky-btn-top:hover { transform: translateY(-4px); }
+        .sticky-btn-whatsapp svg { width: 20px; height: 20px; fill: #fff; }
 
         /* Responsive */
         @media(max-width: 1200px) {
@@ -373,6 +376,7 @@ html
             .timeline-step:nth-child(even) .timeline-content, .timeline-step:nth-child(odd) .timeline-content { grid-column: 1; text-align: left; padding-left: 64px; align-items: flex-start; }
             .timeline-content p { max-width: 100%; }
             .footer-grid { grid-template-columns: repeat(2, 1fr); }
+            .contact-grid { grid-template-columns: 1fr; }
         }
         @media(max-width: 768px) {
             .nav-menu { display: none; position: absolute; top: 90px; left: 0; width: 100%; background: var(--surface-pure); border-bottom: 1px solid var(--border); flex-direction: column; padding: 40px; gap: 24px; text-align: center; }
@@ -414,7 +418,10 @@ html
             </ul>
             <div class="nav-actions">
                 <button class="theme-btn" id="theme-toggle" aria-label="Toggle Theme">🌓</button>
-                <a href="#contact" class="btn btn-secondary" style="padding: 10px 20px; font-size: 0.85rem;">Free Audit</a>
+                <a href="https://wa.me/923314349664" target="_blank" class="btn btn-whatsapp" style="padding: 10px 20px; font-size: 0.85rem;">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                    WhatsApp
+                </a>
                 <button class="burger" id="menu-toggle" aria-label="Toggle Menu">
                     <span></span>
                     <span></span>
@@ -432,7 +439,10 @@ html
                 <h1 class="hero-title">Dominate Google Maps. <span class="text-gradient">Explode Your Local Revenue.</span></h1>
                 <p class="hero-desc"><strong>Ranking Matters</strong>, the leading <strong>Local SEO Expert in Lahore</strong>, uses advanced georadial proximity mapping, precision schema architecture, and bulletproof <strong>Google Business Profile optimization</strong> to rank your business where high-intent buyers are looking.</p>
                 <div class="btn-group">
-                    <a href="#contact" class="btn btn-primary">Claim Your Map Spot Now</a>
+                    <a href="https://wa.me/923314349664" target="_blank" class="btn btn-whatsapp">
+                        <svg viewBox="0 0 24 24" width="20" height="20" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                        Chat on WhatsApp
+                    </a>
                     <a href="#services" class="btn btn-secondary">Explore Our Arsenal</a>
                 </div>
                 <div class="hero-metrics">
@@ -468,7 +478,10 @@ html
                 <h2 class="section-title" style="text-align: left; font-size: 2.75rem;">Rankings Are Completely Useless Without Inbound Revenue.</h2>
                 <p><strong>Ranking Matters</strong> is a performance-driven <strong>Local SEO</strong> and digital optimization agency specializing in helping local businesses claim the #1 spot on Google Maps. We focus entirely on hyper-local search engine optimization, reverse-engineering Google's local algorithms using deep georadial mapping and custom JSON-LD semantic architecture.</p>
                 <p>Whether you need complete <strong>Google Business Profile optimization</strong>, systematic citation cleanup, or critical <strong>GMB suspension recovery</strong>, we build data-driven local assets engineered to turn casual online searchers into direct customer phone calls and predictable revenue.</p>
-                <a href="#contact" class="btn btn-accent">Work With Us</a>
+                <a href="https://wa.me/923314349664" target="_blank" class="btn btn-whatsapp">
+                    <svg viewBox="0 0 24 24" width="20" height="20" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                    Chat with Us
+                </a>
             </div>
         </div>
     </section>
@@ -678,7 +691,7 @@ html
                     <div>
                         <div class="plan-name">Local Spark</div>
                         <p class="plan-desc">Perfect for small brick-and-mortar storefronts looking to capture immediate local traffic.</p>
-                        <div class="plan-price">$499<span>/mo</span></div>
+                        <div class="plan-price">₨ 50,000<span>/mo</span></div>
                         <ul class="plan-features">
                             <li>Google Business Profile Setup</li>
                             <li>Targeted Core Citation Building</li>
@@ -686,13 +699,13 @@ html
                             <li>Monthly Core Rank Monitoring</li>
                         </ul>
                     </div>
-                    <a href="#contact" class="btn btn-secondary">Get Started</a>
+                    <a href="https://wa.me/923314349664" target="_blank" class="btn btn-whatsapp">Get Started</a>
                 </div>
                 <div class="card glass pricing-card popular">
                     <div>
                         <div class="plan-name">Map Dominator</div>
                         <p class="plan-desc">Engineered for service area businesses and contractors targeting rapid regional growth.</p>
-                        <div class="plan-price">$899<span>/mo</span></div>
+                        <div class="plan-price">₨ 70,000<span>/mo</span></div>
                         <ul class="plan-features">
                             <li>Advanced Georadial Mapping</li>
                             <li>Tailored Local Schema Deployment</li>
@@ -700,13 +713,13 @@ html
                             <li>Suspension Guard Monitoring</li>
                         </ul>
                     </div>
-                    <a href="#contact" class="btn btn-primary">Dominate Locally</a>
+                    <a href="https://wa.me/923314349664" target="_blank" class="btn btn-primary">Dominate Locally</a>
                 </div>
                 <div class="card glass pricing-card">
                     <div>
                         <div class="plan-name">Enterprise Market Takeover</div>
                         <p class="plan-desc">For multi-location corporate entities wanting complete market takeover across multiple cities.</p>
-                        <div class="plan-price">$1799<span>/mo</span></div>
+                        <div class="plan-price">₨ 90,000<span>/mo</span></div>
                         <ul class="plan-features">
                             <li>Multi-Profile Network Structuring</li>
                             <li>High-Stakes Priority Support Line</li>
@@ -714,7 +727,7 @@ html
                             <li>Premium Dedicated Link Campaign</li>
                         </ul>
                     </div>
-                    <a href="#contact" class="btn btn-secondary">Contact Enterprise</a>
+                    <a href="https://wa.me/923314349664" target="_blank" class="btn btn-secondary">Contact Enterprise</a>
                 </div>
             </div>
         </div>
@@ -943,18 +956,25 @@ html
         </div>
     </section>
 
-    <!-- Contact -->
+    <!-- Contact Section - No Form, WhatsApp Focused -->
     <section id="contact">
         <div class="container contact-grid">
             <div class="contact-panel-info">
                 <h2 class="contact-panel-title">Let's Claim Your <span class="text-gradient">Local Market</span></h2>
-                <p class="contact-lead-desc">Fill out our structural audit intake frame. We'll analyze your local mapping visibility footprint completely free of charge and provide clear scaling routes.</p>
+                <p class="contact-lead-desc">Get in touch with us today. We'll analyze your local mapping visibility footprint completely free of charge and provide clear scaling routes.</p>
                 <ul class="contact-channel-list">
                     <li class="contact-channel-item">
                         <div class="channel-icon-circle">📞</div>
                         <div>
                             <div class="channel-label">Direct Growth Line</div>
                             <a href="tel:+923314349664" class="channel-value">+92 331 4349664</a>
+                        </div>
+                    </li>
+                    <li class="contact-channel-item">
+                        <div class="channel-icon-circle">💬</div>
+                        <div>
+                            <div class="channel-label">WhatsApp</div>
+                            <a href="https://wa.me/923314349664" target="_blank" class="channel-value">+92 331 4349664</a>
                         </div>
                     </li>
                     <li class="contact-channel-item">
@@ -973,32 +993,14 @@ html
                     </li>
                 </ul>
             </div>
-            <div class="card glass form-box">
-                <form id="audit-form" action="#" method="POST">
-                    <div class="form-row-grid">
-                        <div class="form-element">
-                            <label for="client-name">Your Full Name</label>
-                            <input type="text" id="client-name" name="name" class="form-control" placeholder="Your Name" required>
-                        </div>
-                        <div class="form-element">
-                            <label for="client-email">Business Email</label>
-                            <input type="email" id="client-email" name="email" class="form-control" placeholder="name@company.com" required>
-                        </div>
-                    </div>
-                    <div class="form-element">
-                        <label for="business-name">Registered Business Title</label>
-                        <input type="text" id="business-name" name="business_name" class="form-control" placeholder="e.g. Ricky's Heating and Cooling" required>
-                    </div>
-                    <div class="form-element">
-                        <label for="listing-url">Google Maps Share Link (If Suspended, Leave Blank)</label>
-                        <input type="url" id="listing-url" name="maps_url" class="form-control" placeholder="https://maps.google.com/?cid=...">
-                    </div>
-                    <div class="form-element">
-                        <label for="project-notes">Core Ranking Roadblocks or Operational Target Areas</label>
-                        <textarea id="project-notes" name="notes" class="form-control" rows="5" placeholder="Tell us about suspension states, ranking leaks, or multi-location expansion targets..."></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary" style="width: 100%;">Generate My Free Local Mapping Audit Blueprint</button>
-                </form>
+            <div class="card glass contact-cta-box">
+                <span style="font-size: 4rem; display: block; margin-bottom: 20px;">💬</span>
+                <h3>Start Your <span class="text-gradient">Growth Journey</span> Today</h3>
+                <p>Connect with us directly on WhatsApp for a free consultation. Our team of <strong>Local SEO experts</strong> is ready to help you dominate the Google Maps pack and generate high-quality leads.</p>
+                <a href="https://wa.me/923314349664" target="_blank" class="btn-whatsapp-large">
+                    <svg viewBox="0 0 24 24" width="28" height="28"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                    Chat on WhatsApp
+                </a>
             </div>
         </div>
     </section>
@@ -1039,12 +1041,19 @@ html
         </div>
         <div class="container footer-base">
             <div class="footer-copyright">&copy; 2026 <strong>Ranking Matters</strong>. All Rights Reserved.</div>
+            <a href="https://wa.me/923314349664" target="_blank" style="color: var(--text-muted); text-decoration: none; font-size: 0.9rem; display: flex; align-items: center; gap: 8px;">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="#25D366"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                WhatsApp
+            </a>
         </div>
     </footer>
 
     <!-- Fixed Actions -->
     <div id="fixed-actions-container">
-        <a href="#contact" class="sticky-action-trigger sticky-btn-audit">🚀 Request Audit</a>
+        <a href="https://wa.me/923314349664" target="_blank" class="sticky-action-trigger sticky-btn-whatsapp">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            WhatsApp
+        </a>
         <button class="sticky-action-trigger sticky-btn-top" id="back-to-top" aria-label="Scroll to Top">↑</button>
     </div>
 
@@ -1122,17 +1131,17 @@ html
                 });
             });
 
-            // Pricing Toggle
+            // Pricing Toggle - Update PKR prices
             const billingToggle = document.getElementById('billing-toggle');
             const pricingVals = document.querySelectorAll('.plan-price');
-            const standardPrices = [100, 120, 200];
+            const standardPrices = [50000, 70000, 90000];
             billingToggle.addEventListener('change', function() {
                 pricingVals.forEach(function(p, idx) {
                     if (billingToggle.checked) {
                         const discounted = Math.floor(standardPrices[idx] * 0.8);
-                        p.innerHTML = '$' + discounted + '<span>/mo</span>';
+                        p.innerHTML = '₨ ' + discounted.toLocaleString() + '<span>/mo</span>';
                     } else {
-                        p.innerHTML = '$' + standardPrices[idx] + '<span>/mo</span>';
+                        p.innerHTML = '₨ ' + standardPrices[idx].toLocaleString() + '<span>/mo</span>';
                     }
                 });
             });
