@@ -78,6 +78,18 @@
             --nav-bg: rgba(249, 250, 251, 0.75);
         }
 
+        /* Default to dark mode */
+        body {
+            --bg: var(--bg-dark);
+            --surface: var(--surface-dark);
+            --surface-pure: var(--surface-dark-pure);
+            --border: var(--border-dark);
+            --text: var(--text-dark);
+            --text-muted: var(--text-dark-muted);
+            --shadow: 0 20px 40px -15px rgba(0,0,0,0.7);
+            --nav-bg: rgba(7, 7, 10, 0.7);
+        }
+
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: var(--font-sans); background-color: var(--bg); color: var(--text); overflow-x: hidden; transition: background-color 0.4s ease, color 0.4s ease; -webkit-font-smoothing: antialiased; }
         
@@ -1143,8 +1155,12 @@
                 });
             });
 
-            // Theme Toggle
+            // Theme Toggle - Fixed
             const themeToggle = document.getElementById('theme-toggle');
+            // Ensure body has a default class
+            if (!document.body.classList.contains('dark-mode') && !document.body.classList.contains('light-mode')) {
+                document.body.classList.add('dark-mode');
+            }
             themeToggle.addEventListener('click', function() {
                 document.body.classList.toggle('dark-mode');
                 document.body.classList.toggle('light-mode');
