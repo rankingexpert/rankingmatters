@@ -810,6 +810,43 @@
             line-height: 1.6;
         }
 
+        /* Other Services Section */
+        .other-services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            margin-top: 40px;
+        }
+        .other-service-card {
+            padding: 24px;
+            border-radius: var(--radius-md);
+            background: var(--surface);
+            border: 1px solid var(--border);
+            transition: var(--transition);
+            text-decoration: none;
+            color: var(--text);
+            display: block;
+            text-align: center;
+        }
+        .other-service-card:hover {
+            transform: translateY(-4px);
+            border-color: var(--primary);
+        }
+        .other-service-card .os-icon {
+            font-size: 2rem;
+            display: block;
+            margin-bottom: 8px;
+        }
+        .other-service-card h4 {
+            font-size: 1rem;
+            margin-bottom: 4px;
+        }
+        .other-service-card p {
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            margin: 0;
+        }
+
         footer { background: var(--surface-pure); border-top: 1px solid var(--border); padding: 100px 0 40px; }
         .footer-grid { display: grid; grid-template-columns: 1.2fr repeat(3, 0.6fr); gap: 60px; margin-bottom: 80px; }
         .footer-brand p { color: var(--text-muted); font-size: 0.95rem; line-height: 1.6; margin-top: 16px; max-width: 320px; }
@@ -833,11 +870,13 @@
             .service-sidebar { position: static; }
             .benefits-grid { grid-template-columns: repeat(2, 1fr); }
             .faq-grid { grid-template-columns: 1fr; }
+            .other-services-grid { grid-template-columns: repeat(2, 1fr); }
             .footer-grid { grid-template-columns: repeat(2, 1fr); }
             .service-hero .hero-stats { gap: 24px; }
         }
         @media(max-width: 768px) {
             .benefits-grid { grid-template-columns: 1fr; }
+            .other-services-grid { grid-template-columns: 1fr; }
             .footer-grid { grid-template-columns: 1fr; }
             .service-hero .hero-stats .stat .number { font-size: 1.5rem; }
         }
@@ -875,6 +914,7 @@
                         <a href="gmb-recovery.html">GMB Recovery</a>
                         <a href="local-citations.html">Local Citations</a>
                         <a href="google-maps-marketing.html">Google Maps Marketing</a>
+                        <a href="landing-pages.html">Landing Pages</a>
                     </div>
                 </li>
                 <li><a href="blog.html" class="nav-link">Blog</a></li>
@@ -1016,28 +1056,43 @@
     </section>
 
     <!-- ============================================
-    BENEFITS SECTION
+    OTHER SERVICES SECTION
     ============================================ -->
     <section class="glass" style="border-left:none; border-right:none; border-radius:0;">
         <div class="container">
-            <h2 class="section-title">Why Choose <span class="text-gradient">Ranking Matters</span></h2>
-            <p class="section-subtitle">We're the <strong>#1 Local SEO Expert in Lahore</strong> for a reason.</p>
-            <div class="benefits-grid">
-                <div class="card glass benefit-card">
-                    <span class="benefit-icon">🏆</span>
-                    <h4>500+ Businesses Ranked</h4>
-                    <p>We've helped over 500 businesses achieve top rankings on Google Maps and local search.</p>
-                </div>
-                <div class="card glass benefit-card">
-                    <span class="benefit-icon">📊</span>
-                    <h4>Data-Driven Strategy</h4>
-                    <p>Every decision is backed by deep analytics, competitor research, and proven local SEO methodologies.</p>
-                </div>
-                <div class="card glass benefit-card">
-                    <span class="benefit-icon">📈</span>
-                    <h4>Measurable Results</h4>
-                    <p>We provide clear, transparent reports showing exactly what we're doing and the results we're achieving.</p>
-                </div>
+            <h2 class="section-title">Explore Our <span class="text-gradient">Other Services</span></h2>
+            <p class="section-subtitle">Complete local SEO solutions to dominate your market.</p>
+            <div class="other-services-grid">
+                <a href="gbp-optimization.html" class="other-service-card glass">
+                    <span class="os-icon">📍</span>
+                    <h4>GBP Optimization</h4>
+                    <p>Optimize your Google Business Profile</p>
+                </a>
+                <a href="google-maps-ranking.html" class="other-service-card glass">
+                    <span class="os-icon">🗺️</span>
+                    <h4>Google Maps Ranking</h4>
+                    <p>Dominate the Maps pack</p>
+                </a>
+                <a href="gmb-recovery.html" class="other-service-card glass">
+                    <span class="os-icon">🔧</span>
+                    <h4>GMB Recovery</h4>
+                    <p>Fix suspended profiles</p>
+                </a>
+                <a href="local-citations.html" class="other-service-card glass">
+                    <span class="os-icon">🏗️</span>
+                    <h4>Local Citations</h4>
+                    <p>Build your citation foundation</p>
+                </a>
+                <a href="google-maps-marketing.html" class="other-service-card glass">
+                    <span class="os-icon">📱</span>
+                    <h4>Google Maps Marketing</h4>
+                    <p>Drive targeted leads</p>
+                </a>
+                <a href="landing-pages.html" class="other-service-card glass">
+                    <span class="os-icon">🎨</span>
+                    <h4>Landing Page Design</h4>
+                    <p>Convert visitors into leads</p>
+                </a>
             </div>
         </div>
     </section>
@@ -1126,6 +1181,7 @@
                     <li><a href="gmb-recovery.html">GMB Recovery</a></li>
                     <li><a href="local-citations.html">Local Citations</a></li>
                     <li><a href="google-maps-marketing.html">Google Maps Marketing</a></li>
+                    <li><a href="landing-pages.html">Landing Pages</a></li>
                 </ul>
             </div>
             <div class="footer-col">
@@ -1209,9 +1265,25 @@
                 trigger.addEventListener('click', function(e) {
                     if (window.innerWidth <= 992) {
                         e.preventDefault();
-                        this.parentElement.classList.toggle('active');
+                        const parent = this.parentElement;
+                        document.querySelectorAll('.nav-dropdown.active').forEach(function(dropdown) {
+                            if (dropdown !== parent) {
+                                dropdown.classList.remove('active');
+                            }
+                        });
+                        parent.classList.toggle('active');
                     }
                 });
+            });
+
+            document.addEventListener('click', function(e) {
+                if (window.innerWidth <= 992) {
+                    document.querySelectorAll('.nav-dropdown.active').forEach(function(dropdown) {
+                        if (!dropdown.contains(e.target)) {
+                            dropdown.classList.remove('active');
+                        }
+                    });
+                }
             });
 
             document.querySelectorAll('.faq-item').forEach(item => {
