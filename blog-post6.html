@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap" rel="stylesheet">
+
     <style>
         /* --- Complete CSS --- */
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -38,6 +39,7 @@
         @keyframes spin { to { transform: rotate(360deg); } }
         .loader-content { display: flex; align-items: center; }
         h1, h2, h3, h4 { font-weight: 700; letter-spacing: -0.03em; line-height: 1.15; }
+        .section-title { font-size: clamp(2.5rem, 4vw, 3.75rem); font-weight: 800; margin-bottom: 24px; text-align: center; }
         .text-gradient { background: linear-gradient(135deg, #3b82f6 0%, #10b981 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
         .glass { background: var(--surface); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border: 1px solid var(--border); box-shadow: var(--shadow); }
         .card { border-radius: var(--radius-lg); padding: 48px; transition: var(--transition); position: relative; overflow: hidden; }
@@ -60,10 +62,6 @@
         .nav-link::after { content: ''; position: absolute; bottom: -6px; left: 0; width: 0; height: 2px; background: var(--primary); transition: var(--transition); }
         .nav-link.active::after { width: 100%; }
         .nav-actions { display: flex; align-items: center; gap: 20px; }
-        .theme-btn { background: none; border: 1px solid var(--border); width: 44px; height: 44px; border-radius: var(--radius-sm); display: flex; align-items: center; justify-content: center; cursor: pointer; color: var(--text); transition: var(--transition); font-size: 1.2rem; }
-        .theme-btn:hover { background: var(--border); }
-        .burger { display: none; cursor: pointer; background: none; border: none; padding: 8px; flex-direction: column; gap: 5px; }
-        .burger span { display: block; width: 24px; height: 2px; background: var(--text); transition: var(--transition); }
 
         /* Dropdown */
         .nav-dropdown { position: relative; display: inline-block; }
@@ -85,6 +83,11 @@
             .nav-dropdown .dropdown-arrow { display: inline-block; }
             .nav-dropdown.active .dropdown-arrow { transform: rotate(180deg); }
         }
+
+        .theme-btn { background: none; border: 1px solid var(--border); width: 44px; height: 44px; border-radius: var(--radius-sm); display: flex; align-items: center; justify-content: center; cursor: pointer; color: var(--text); transition: var(--transition); font-size: 1.2rem; }
+        .theme-btn:hover { background: var(--border); }
+        .burger { display: none; cursor: pointer; background: none; border: none; padding: 8px; flex-direction: column; gap: 5px; }
+        .burger span { display: block; width: 24px; height: 2px; background: var(--text); transition: var(--transition); }
 
         /* Blog Post Styles */
         .blog-post-hero { padding-top: 160px; padding-bottom: 60px; position: relative; }
@@ -172,6 +175,7 @@
                         <a href="gmb-recovery.html">GMB Recovery</a>
                         <a href="local-citations.html">Local Citations</a>
                         <a href="google-maps-marketing.html">Google Maps Marketing</a>
+                        <a href="landing-pages.html">Landing Pages</a>
                     </div>
                 </li>
                 <li><a href="blog.html" class="nav-link active">Blog</a></li>
@@ -414,6 +418,7 @@
                     <li><a href="gmb-recovery.html">GMB Recovery</a></li>
                     <li><a href="local-citations.html">Local Citations</a></li>
                     <li><a href="google-maps-marketing.html">Google Maps Marketing</a></li>
+                    <li><a href="landing-pages.html">Landing Pages</a></li>
                 </ul>
             </div>
             <div class="footer-col">
