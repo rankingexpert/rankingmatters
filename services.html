@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Services - Ranking Matters | #1 Local SEO Expert in Lahore</title>
-    <meta name="description" content="Explore our expert Local SEO services including Google Business Profile optimization, GMB suspension recovery, local citation engineering, and more.">
+    <meta name="description" content="Explore our expert Local SEO services including Google Business Profile optimization, GMB suspension recovery, local citation engineering, landing page design, and more.">
     <link rel="canonical" href="https://rankingmatters.pk/services.html">
     <meta name="robots" content="index, follow">
     <meta name="theme-color" content="#0a0a12">
@@ -12,7 +12,7 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://rankingmatters.pk/services.html">
     <meta property="og:title" content="Services - Ranking Matters | #1 Local SEO Expert in Lahore">
-    <meta property="og:description" content="Explore our expert Local SEO services including Google Business Profile optimization, GMB suspension recovery, local citation engineering, and more.">
+    <meta property="og:description" content="Explore our expert Local SEO services including Google Business Profile optimization, GMB suspension recovery, local citation engineering, landing page design, and more.">
     <meta property="og:image" content="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=80">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -20,7 +20,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap" rel="stylesheet">
 
     <style>
-        /* --- Complete CSS from index.html --- */
+        /* --- Complete CSS with Stylish Header --- */
         * { margin: 0; padding: 0; box-sizing: border-box; }
         
         :root {
@@ -39,6 +39,8 @@
             --text-light-muted: #4b5563;
 
             --primary: #2563eb;
+            --primary-dark: #1d4ed8;
+            --primary-light: #60a5fa;
             --primary-glow: rgba(37, 99, 235, 0.15);
             --accent: #059669;
             --accent-glow: rgba(5, 150, 105, 0.15);
@@ -83,7 +85,7 @@
         section { padding: 140px 0; position: relative; }
         @media(max-width: 768px) { section { padding: 90px 0; } }
 
-        #scroll-progress { position: fixed; top: 0; left: 0; height: 3px; background: linear-gradient(90deg, var(--primary), var(--accent)); width: 0%; z-index: 2000; transition: width 0.1s ease; }
+        #scroll-progress { position: fixed; top: 0; left: 0; height: 3px; background: linear-gradient(90deg, var(--primary), var(--accent), var(--primary)); width: 0%; z-index: 2000; transition: width 0.1s ease; border-radius: 0 2px 2px 0; }
 
         #loader { 
             position: fixed; inset: 0; background: var(--bg-dark); z-index: 3000; 
@@ -117,42 +119,427 @@
 
         .blob { position: absolute; border-radius: 50%; filter: blur(120px); z-index: -1; opacity: 0.15; pointer-events: none; transition: var(--transition); }
 
-        header { position: fixed; top: 0; left: 0; width: 100%; z-index: 1000; background: var(--nav-bg); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border-bottom: 1px solid var(--border); transition: var(--transition); }
-        .nav-container { display: flex; justify-content: space-between; align-items: center; height: 90px; }
-        .logo { font-size: 1.35rem; font-weight: 800; letter-spacing: -0.04em; text-decoration: none; color: var(--text); display: flex; align-items: center; gap: 8px; }
-        .logo span { color: var(--primary); }
-        .nav-menu { display: flex; align-items: center; gap: 40px; list-style: none; }
-        .nav-link { text-decoration: none; color: var(--text-muted); font-weight: 500; font-size: 0.95rem; transition: var(--transition); position: relative; }
-        .nav-link:hover, .nav-link.active { color: var(--text); }
-        .nav-link::after { content: ''; position: absolute; bottom: -6px; left: 0; width: 0; height: 2px; background: var(--primary); transition: var(--transition); }
-        .nav-link.active::after { width: 100%; }
-        .nav-actions { display: flex; align-items: center; gap: 20px; }
-
-        /* Dropdown */
-        .nav-dropdown { position: relative; display: inline-block; }
-        .nav-dropdown .dropdown-arrow { font-size: 0.6rem; margin-left: 4px; transition: var(--transition); }
-        .nav-dropdown:hover .dropdown-arrow { transform: rotate(180deg); }
-        .nav-dropdown .dropdown-content { display: none; position: absolute; top: 100%; left: 50%; transform: translateX(-50%); min-width: 220px; background: var(--surface-dark); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border-radius: var(--radius-md); padding: 12px 0; box-shadow: var(--shadow); border: 1px solid var(--border); z-index: 1002; animation: dropdownFade 0.3s ease; }
-        @keyframes dropdownFade { from { opacity: 0; transform: translateX(-50%) translateY(-10px); } to { opacity: 1; transform: translateX(-50%) translateY(0); } }
-        .nav-dropdown:hover .dropdown-content { display: block; }
-        .nav-dropdown .dropdown-content a { display: block; padding: 10px 24px; font-size: 0.85rem; font-weight: 500; color: var(--text-muted); transition: var(--transition); white-space: nowrap; letter-spacing: 0.03em; }
-        .nav-dropdown .dropdown-content a:hover { color: var(--primary); background: var(--primary-glow); }
-        .nav-dropdown .dropdown-content a::after { display: none; }
-
-        @media (max-width: 992px) {
-            .nav-dropdown .dropdown-content { display: none; position: static; transform: none; background: transparent !important; backdrop-filter: none !important; box-shadow: none; border: none; padding: 8px 0 8px 20px; animation: none; width: 100%; }
-            .nav-dropdown .dropdown-content a { padding: 8px 16px; font-size: 1rem; color: var(--text-muted) !important; white-space: normal; }
-            .nav-dropdown .dropdown-content a:hover { color: var(--primary) !important; background: transparent !important; }
-            .nav-dropdown:hover .dropdown-content { display: none; }
-            .nav-dropdown.active .dropdown-content { display: block !important; }
-            .nav-dropdown .dropdown-arrow { display: inline-block; }
-            .nav-dropdown.active .dropdown-arrow { transform: rotate(180deg); }
+        /* ============================================
+                   STYLISH HEADER
+                   ============================================ */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background: var(--nav-bg);
+            backdrop-filter: blur(24px) saturate(1.2);
+            -webkit-backdrop-filter: blur(24px) saturate(1.2);
+            border-bottom: 1px solid var(--border);
+            transition: var(--transition);
+        }
+        header.scrolled {
+            background: var(--nav-bg);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            border-bottom-color: rgba(37, 99, 235, 0.15);
+        }
+        header::after {
+            content: '';
+            position: absolute;
+            bottom: -1px;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--primary), var(--accent), var(--primary), transparent);
+            opacity: 0;
+            transition: var(--transition);
+        }
+        header.scrolled::after {
+            opacity: 0.6;
         }
 
-        .theme-btn { background: none; border: 1px solid var(--border); width: 44px; height: 44px; border-radius: var(--radius-sm); display: flex; align-items: center; justify-content: center; cursor: pointer; color: var(--text); transition: var(--transition); font-size: 1.2rem; }
-        .theme-btn:hover { background: var(--border); }
-        .burger { display: none; cursor: pointer; background: none; border: none; padding: 8px; flex-direction: column; gap: 5px; }
-        .burger span { display: block; width: 24px; height: 2px; background: var(--text); transition: var(--transition); }
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 90px;
+            position: relative;
+        }
+        .logo {
+            font-size: 1.45rem;
+            font-weight: 800;
+            letter-spacing: -0.04em;
+            text-decoration: none;
+            color: var(--text);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            position: relative;
+            transition: var(--transition);
+        }
+        .logo:hover {
+            transform: scale(1.02);
+        }
+        .logo span {
+            color: var(--primary);
+            position: relative;
+        }
+        .logo span::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(90deg, var(--primary), var(--accent));
+            border-radius: 2px;
+            opacity: 0;
+            transition: var(--transition);
+        }
+        .logo:hover span::after {
+            opacity: 1;
+        }
+        .logo-glow {
+            position: absolute;
+            width: 80px;
+            height: 80px;
+            background: radial-gradient(circle, rgba(37, 99, 235, 0.08) 0%, transparent 70%);
+            border-radius: 50%;
+            top: 50%;
+            left: -10px;
+            transform: translateY(-50%);
+            pointer-events: none;
+            opacity: 0;
+            transition: var(--transition);
+        }
+        .logo:hover .logo-glow {
+            opacity: 1;
+        }
+
+        .nav-menu {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            list-style: none;
+        }
+        .nav-menu > li {
+            position: relative;
+            padding: 0 4px;
+        }
+        .nav-link {
+            text-decoration: none;
+            color: var(--text-muted);
+            font-weight: 500;
+            font-size: 0.9rem;
+            transition: var(--transition);
+            position: relative;
+            padding: 8px 18px;
+            border-radius: var(--radius-sm);
+            letter-spacing: 0.02em;
+            display: inline-block;
+        }
+        .nav-link::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border-radius: var(--radius-sm);
+            background: var(--primary-glow);
+            opacity: 0;
+            transform: scale(0.8);
+            transition: var(--transition);
+        }
+        .nav-link:hover::before,
+        .nav-link.active::before {
+            opacity: 1;
+            transform: scale(1);
+        }
+        .nav-link:hover,
+        .nav-link.active {
+            color: var(--text);
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 4px;
+            left: 50%;
+            transform: translateX(-50%) scaleX(0);
+            width: 60%;
+            height: 2px;
+            background: linear-gradient(90deg, var(--primary), var(--accent));
+            border-radius: 2px;
+            transition: var(--transition);
+        }
+        .nav-link:hover::after,
+        .nav-link.active::after {
+            transform: translateX(-50%) scaleX(1);
+        }
+
+        .nav-dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        .nav-dropdown .dropdown-arrow {
+            font-size: 0.6rem;
+            margin-left: 4px;
+            transition: var(--transition);
+            display: inline-block;
+        }
+        .nav-dropdown:hover .dropdown-arrow {
+            transform: rotate(180deg);
+        }
+        .nav-dropdown .dropdown-content {
+            display: none;
+            position: absolute;
+            top: calc(100% + 12px);
+            left: 50%;
+            transform: translateX(-50%) translateY(8px);
+            min-width: 240px;
+            background: var(--surface);
+            backdrop-filter: blur(24px) saturate(1.3);
+            -webkit-backdrop-filter: blur(24px) saturate(1.3);
+            border-radius: var(--radius-md);
+            padding: 8px 0;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4), 0 0 0 1px var(--border);
+            border: 1px solid var(--border);
+            z-index: 1002;
+            animation: dropdownFade 0.3s ease;
+            overflow: hidden;
+        }
+        .nav-dropdown .dropdown-content::before {
+            content: '';
+            position: absolute;
+            top: -8px;
+            left: 50%;
+            transform: translateX(-50%) rotate(45deg);
+            width: 16px;
+            height: 16px;
+            background: var(--surface);
+            border-top: 1px solid var(--border);
+            border-left: 1px solid var(--border);
+            border-radius: 3px 0 0 0;
+        }
+        @keyframes dropdownFade {
+            from { opacity: 0; transform: translateX(-50%) translateY(-10px); }
+            to { opacity: 1; transform: translateX(-50%) translateY(0); }
+        }
+        .nav-dropdown:hover .dropdown-content {
+            display: block;
+        }
+        .nav-dropdown .dropdown-content a {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 10px 24px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: var(--text-muted);
+            transition: var(--transition);
+            white-space: nowrap;
+            letter-spacing: 0.02em;
+            text-decoration: none;
+            border-left: 2px solid transparent;
+        }
+        .nav-dropdown .dropdown-content a::before {
+            content: '→';
+            font-size: 0.75rem;
+            opacity: 0;
+            transition: var(--transition);
+            color: var(--primary);
+        }
+        .nav-dropdown .dropdown-content a:hover {
+            color: var(--primary);
+            background: var(--primary-glow);
+            border-left-color: var(--primary);
+            padding-left: 28px;
+        }
+        .nav-dropdown .dropdown-content a:hover::before {
+            opacity: 1;
+            margin-right: 4px;
+        }
+        .nav-dropdown .dropdown-content a::after {
+            display: none;
+        }
+
+        .nav-actions {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .theme-btn {
+            background: none;
+            border: 1px solid var(--border);
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            color: var(--text);
+            transition: var(--transition);
+            font-size: 1.2rem;
+            background: var(--surface);
+            backdrop-filter: blur(8px);
+        }
+        .theme-btn:hover {
+            background: var(--primary-glow);
+            border-color: var(--primary);
+            transform: rotate(15deg) scale(1.05);
+        }
+        .btn-whatsapp-header {
+            background: linear-gradient(135deg, #25D366, #128C7E);
+            color: #fff;
+            padding: 10px 22px;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            text-decoration: none;
+            transition: var(--transition);
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+        }
+        .btn-whatsapp-header:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
+        }
+        .btn-whatsapp-header svg {
+            width: 18px;
+            height: 18px;
+            fill: #fff;
+        }
+
+        .burger {
+            display: none;
+            cursor: pointer;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-sm);
+            padding: 10px;
+            flex-direction: column;
+            gap: 5px;
+            transition: var(--transition);
+        }
+        .burger:hover {
+            border-color: var(--primary);
+        }
+        .burger span {
+            display: block;
+            width: 24px;
+            height: 2px;
+            background: var(--text);
+            transition: var(--transition);
+            border-radius: 2px;
+        }
+        .burger.active span:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 5px);
+        }
+        .burger.active span:nth-child(2) {
+            opacity: 0;
+        }
+        .burger.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(5px, -5px);
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 992px) {
+            .nav-dropdown .dropdown-content {
+                display: none;
+                position: static;
+                transform: none;
+                background: transparent !important;
+                backdrop-filter: none !important;
+                box-shadow: none;
+                border: none;
+                padding: 8px 0 8px 20px;
+                animation: none;
+                width: 100%;
+                border-left: 1px solid var(--border);
+                border-radius: 0;
+            }
+            .nav-dropdown .dropdown-content::before {
+                display: none;
+            }
+            .nav-dropdown .dropdown-content a {
+                padding: 8px 16px;
+                font-size: 1rem;
+                color: var(--text-muted) !important;
+                white-space: normal;
+                border-left: none;
+            }
+            .nav-dropdown .dropdown-content a::before {
+                display: none;
+            }
+            .nav-dropdown .dropdown-content a:hover {
+                color: var(--primary) !important;
+                background: transparent !important;
+                padding-left: 16px;
+            }
+            .nav-dropdown:hover .dropdown-content {
+                display: none;
+            }
+            .nav-dropdown.active .dropdown-content {
+                display: block !important;
+            }
+            .nav-dropdown .dropdown-arrow {
+                display: inline-block;
+            }
+            .nav-dropdown.active .dropdown-arrow {
+                transform: rotate(180deg);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+                position: absolute;
+                top: 90px;
+                left: 0;
+                width: 100%;
+                background: var(--surface);
+                backdrop-filter: blur(24px);
+                -webkit-backdrop-filter: blur(24px);
+                border-bottom: 1px solid var(--border);
+                flex-direction: column;
+                padding: 24px 32px;
+                gap: 8px;
+                text-align: center;
+                animation: mobileMenu 0.3s ease;
+            }
+            @keyframes mobileMenu {
+                from { opacity: 0; transform: translateY(-10px); }
+                to { opacity: 1; transform: translateY(0); }
+            }
+            .nav-menu.active {
+                display: flex;
+            }
+            .nav-menu > li {
+                width: 100%;
+            }
+            .nav-link {
+                display: block;
+                padding: 12px 0;
+                font-size: 1rem;
+            }
+            .nav-link::after {
+                display: none;
+            }
+            .nav-link::before {
+                display: none;
+            }
+            .nav-link:hover {
+                background: var(--primary-glow);
+                border-radius: var(--radius-sm);
+            }
+            .burger {
+                display: flex;
+            }
+            .btn-whatsapp-header span {
+                display: none;
+            }
+            .btn-whatsapp-header {
+                padding: 10px 14px;
+            }
+        }
 
         /* Services Page Specific Styles */
         .services-hero {
@@ -373,7 +760,6 @@
             line-height: 1.6;
         }
 
-        /* Footer */
         footer { background: var(--surface-pure); border-top: 1px solid var(--border); padding: 100px 0 40px; }
         .footer-grid { display: grid; grid-template-columns: 1.2fr repeat(3, 0.6fr); gap: 60px; margin-bottom: 80px; }
         .footer-brand p { color: var(--text-muted); font-size: 0.95rem; line-height: 1.6; margin-top: 16px; max-width: 320px; }
@@ -384,7 +770,6 @@
         .footer-base { display: flex; justify-content: space-between; align-items: center; padding-top: 40px; border-top: 1px solid var(--border); flex-wrap: wrap; gap: 20px; }
         .footer-copyright { font-size: 0.9rem; color: var(--text-muted); }
 
-        /* Fixed Actions */
         #fixed-actions-container { position: fixed; bottom: 32px; right: 32px; display: flex; flex-direction: column; gap: 12px; z-index: 1500; }
         .sticky-action-trigger { width: 56px; height: 56px; border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer; text-decoration: none; box-shadow: 0 10px 25px rgba(0,0,0,0.2); transition: var(--transition); font-weight: 600; border: none; }
         .sticky-btn-whatsapp { background: #25D366; color: #fff; width: auto; padding: 0 24px; border-radius: 100px; font-size: 0.9rem; gap: 8px; }
@@ -393,7 +778,6 @@
         .sticky-btn-top:hover { transform: translateY(-4px); }
         .sticky-btn-whatsapp svg { width: 20px; height: 20px; fill: #fff; }
 
-        /* Responsive */
         @media(max-width: 1200px) {
             .services-grid-full { grid-template-columns: repeat(2, 1fr); }
             .pricing-table-services { grid-template-columns: 1fr; max-width: 550px; margin: 40px auto 0; }
@@ -403,9 +787,6 @@
             .footer-grid { grid-template-columns: repeat(2, 1fr); }
         }
         @media(max-width: 768px) {
-            .nav-menu { display: none; position: absolute; top: 90px; left: 0; width: 100%; background: var(--surface-pure); border-bottom: 1px solid var(--border); flex-direction: column; padding: 40px; gap: 24px; text-align: center; }
-            .nav-menu.active { display: flex; }
-            .burger { display: flex; }
             .services-grid-full { grid-template-columns: 1fr; }
             .process-grid { grid-template-columns: 1fr; }
             .footer-grid { grid-template-columns: 1fr; }
@@ -431,8 +812,11 @@
     <!-- Header -->
     <header>
         <div class="container nav-container">
-            <a href="index.html" class="logo">Ranking<span>Matters</span></a>
-            <ul class="nav-menu">
+            <a href="index.html" class="logo">
+                <span class="logo-glow"></span>
+                Ranking<span>Matters</span>
+            </a>
+            <ul class="nav-menu" id="navMenu">
                 <li><a href="index.html" class="nav-link">Home</a></li>
                 <li><a href="about.html" class="nav-link">About</a></li>
                 <li class="nav-dropdown">
@@ -444,18 +828,19 @@
                         <a href="gmb-recovery.html">GMB Recovery</a>
                         <a href="local-citations.html">Local Citations</a>
                         <a href="google-maps-marketing.html">Google Maps Marketing</a>
+                        <a href="landing-pages.html">Landing Pages</a>
                     </div>
                 </li>
                 <li><a href="blog.html" class="nav-link">Blog</a></li>
                 <li><a href="contact.html" class="nav-link">Contact</a></li>
             </ul>
             <div class="nav-actions">
-                <button class="theme-btn" id="theme-toggle">🌓</button>
-                <a href="https://wa.me/923314349664" target="_blank" class="btn btn-whatsapp" style="padding: 10px 20px; font-size: 0.85rem;">
-                    <svg viewBox="0 0 24 24" width="18" height="18" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-                    WhatsApp
+                <button class="theme-btn" id="theme-toggle" aria-label="Toggle theme">🌓</button>
+                <a href="https://wa.me/923314349664" target="_blank" class="btn-whatsapp-header">
+                    <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                    <span>WhatsApp</span>
                 </a>
-                <button class="burger" id="menu-toggle">
+                <button class="burger" id="menu-toggle" aria-label="Toggle menu">
                     <span></span>
                     <span></span>
                     <span></span>
@@ -552,6 +937,19 @@
                         <li>Review Generation Strategy</li>
                         <li>Photo & Video Optimization</li>
                         <li>Google Posts Management</li>
+                    </ul>
+                    <span class="learn-more">Learn More →</span>
+                </a>
+
+                <!-- Service 7 - NEW -->
+                <a href="landing-pages.html" class="service-card-full glass">
+                    <span class="icon">🎨</span>
+                    <h3>Landing Page Design</h3>
+                    <p>Custom-designed, hyper-local landing pages engineered to rank for specific neighborhoods, zip codes, and service areas. Optimized for maximum conversion.</p>
+                    <ul>
+                        <li>Conversion-Focused Design</li>
+                        <li>Schema Markup Implementation</li>
+                        <li>Mobile-Responsive & Fast</li>
                     </ul>
                     <span class="learn-more">Learn More →</span>
                 </a>
@@ -705,6 +1103,7 @@
                     <li><a href="gmb-recovery.html">GMB Recovery</a></li>
                     <li><a href="local-citations.html">Local Citations</a></li>
                     <li><a href="google-maps-marketing.html">Google Maps Marketing</a></li>
+                    <li><a href="landing-pages.html">Landing Pages</a></li>
                 </ul>
             </div>
             <div class="footer-col">
@@ -749,10 +1148,16 @@
                 document.getElementById('scroll-progress').style.width = scrolled + '%';
                 
                 const btt = document.getElementById('back-to-top');
+                const header = document.querySelector('header');
                 if (window.scrollY > 600) {
                     btt.classList.add('show');
                 } else {
                     btt.classList.remove('show');
+                }
+                if (window.scrollY > 50) {
+                    header.classList.add('scrolled');
+                } else {
+                    header.classList.remove('scrolled');
                 }
             });
 
@@ -761,9 +1166,17 @@
             });
 
             const menuToggle = document.getElementById('menu-toggle');
-            const navMenu = document.querySelector('.nav-menu');
+            const navMenu = document.getElementById('navMenu');
             menuToggle.addEventListener('click', function() {
                 navMenu.classList.toggle('active');
+                menuToggle.classList.toggle('active');
+            });
+
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.addEventListener('click', function() {
+                    navMenu.classList.remove('active');
+                    menuToggle.classList.remove('active');
+                });
             });
 
             const themeToggle = document.getElementById('theme-toggle');
