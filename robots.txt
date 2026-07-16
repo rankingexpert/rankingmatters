@@ -1,0 +1,20 @@
+# Allow all crawlers
+User-agent: *
+Allow: /
+Disallow: /assets/private/
+
+# AI Crawlers Ko Allow Karein
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot  
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+# Sitemap Location
+Sitemap: https://rankingexpert.github.io/rankingmatters/sitemap.xml
