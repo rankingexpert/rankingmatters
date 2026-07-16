@@ -42,7 +42,7 @@
     <!-- ========== SERVICE PAGES ========== -->
     <!-- ========================================== -->
 
-    <!-- 6. LOCAL SEO -->
+    <!-- 5. LOCAL SEO -->
     <url>
         <loc>https://rankingexpert.github.io/rankingmatters/local-seo.html</loc>
         <lastmod>2026-07-16</lastmod>
@@ -50,7 +50,7 @@
         <priority>0.8</priority>
     </url>
 
-    <!-- 7. GBP OPTIMIZATION -->
+    <!-- 6. GBP OPTIMIZATION -->
     <url>
         <loc>https://rankingexpert.github.io/rankingmatters/gbp-optimization.html</loc>
         <lastmod>2026-07-16</lastmod>
@@ -58,7 +58,7 @@
         <priority>0.8</priority>
     </url>
 
-    <!-- 8. GMB RECOVERY -->
+    <!-- 7. GMB RECOVERY -->
     <url>
         <loc>https://rankingexpert.github.io/rankingmatters/gmb-recovery.html</loc>
         <lastmod>2026-07-16</lastmod>
@@ -66,7 +66,7 @@
         <priority>0.8</priority>
     </url>
 
-    <!-- 9. GOOGLE MAPS RANKING -->
+    <!-- 8. GOOGLE MAPS RANKING -->
     <url>
         <loc>https://rankingexpert.github.io/rankingmatters/google-maps-ranking.html</loc>
         <lastmod>2026-07-16</lastmod>
@@ -74,7 +74,7 @@
         <priority>0.8</priority>
     </url>
 
-    <!-- 10. GOOGLE MAPS MARKETING -->
+    <!-- 9. GOOGLE MAPS MARKETING -->
     <url>
         <loc>https://rankingexpert.github.io/rankingmatters/google-maps-marketing.html</loc>
         <lastmod>2026-07-16</lastmod>
@@ -82,7 +82,7 @@
         <priority>0.7</priority>
     </url>
 
-    <!-- 11. LOCAL CITATIONS -->
+    <!-- 10. LOCAL CITATIONS -->
     <url>
         <loc>https://rankingexpert.github.io/rankingmatters/local-citations.html</loc>
         <lastmod>2026-07-16</lastmod>
@@ -90,7 +90,7 @@
         <priority>0.7</priority>
     </url>
 
-    <!-- 12. LANDING PAGES -->
+    <!-- 11. LANDING PAGES -->
     <url>
         <loc>https://rankingexpert.github.io/rankingmatters/landing-pages.html</loc>
         <lastmod>2026-07-16</lastmod>
@@ -102,7 +102,7 @@
     <!-- ========== BLOG PAGES ========== -->
     <!-- ========================================== -->
 
-    <!-- 13. BLOG MAIN -->
+    <!-- 12. BLOG MAIN -->
     <url>
         <loc>https://rankingexpert.github.io/rankingmatters/blog.html</loc>
         <lastmod>2026-07-16</lastmod>
@@ -110,7 +110,7 @@
         <priority>0.7</priority>
     </url>
 
-    <!-- 14. BLOG POST 1 -->
+    <!-- 13. BLOG POST 1 -->
     <url>
         <loc>https://rankingexpert.github.io/rankingmatters/blog-post1.html</loc>
         <lastmod>2026-07-16</lastmod>
@@ -118,7 +118,7 @@
         <priority>0.5</priority>
     </url>
 
-    <!-- 15. BLOG POST 2 -->
+    <!-- 14. BLOG POST 2 -->
     <url>
         <loc>https://rankingexpert.github.io/rankingmatters/blog-post2.html</loc>
         <lastmod>2026-07-16</lastmod>
@@ -126,7 +126,7 @@
         <priority>0.5</priority>
     </url>
 
-    <!-- 16. BLOG POST 3 -->
+    <!-- 15. BLOG POST 3 -->
     <url>
         <loc>https://rankingexpert.github.io/rankingmatters/blog-post3.html</loc>
         <lastmod>2026-07-16</lastmod>
@@ -134,7 +134,7 @@
         <priority>0.5</priority>
     </url>
 
-    <!-- 17. BLOG POST 4 -->
+    <!-- 16. BLOG POST 4 -->
     <url>
         <loc>https://rankingexpert.github.io/rankingmatters/blog-post4.html</loc>
         <lastmod>2026-07-16</lastmod>
@@ -142,7 +142,7 @@
         <priority>0.5</priority>
     </url>
 
-    <!-- 18. BLOG POST 5 -->
+    <!-- 17. BLOG POST 5 -->
     <url>
         <loc>https://rankingexpert.github.io/rankingmatters/blog-post5.html</loc>
         <lastmod>2026-07-16</lastmod>
@@ -150,7 +150,7 @@
         <priority>0.5</priority>
     </url>
 
-    <!-- 19. BLOG POST 6 -->
+    <!-- 18. BLOG POST 6 -->
     <url>
         <loc>https://rankingexpert.github.io/rankingmatters/blog-post6.html</loc>
         <lastmod>2026-07-16</lastmod>
