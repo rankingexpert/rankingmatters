@@ -4,8 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
+    <!-- ====== GOOGLE SEARCH CONSOLE VERIFICATION ====== -->
     <meta name="google-site-verification" content="google03b0f2c466ca5be5" />
     
+    <!-- ====== GOOGLE ANALYTICS (gtag.js) ====== -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z3PRC6PLMM"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -691,7 +693,7 @@
         
         /* Footer */
         footer { background: var(--surface-pure); border-top: 1px solid var(--border); padding: 100px 0 40px; }
-        .footer-grid { display: grid; grid-template-columns: 1.2fr repeat(3, 0.6fr); gap: 60px; margin-bottom: 80px; }
+        .footer-grid { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 60px; margin-bottom: 80px; }
         .footer-brand p { color: var(--text-muted); font-size: 0.95rem; line-height: 1.6; margin-top: 16px; max-width: 320px; }
         .footer-col h4 { font-size: 1rem; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 24px; color: var(--text); }
         .footer-links { list-style: none; display: flex; flex-direction: column; gap: 14px; }
@@ -699,6 +701,58 @@
         .footer-links a:hover { color: var(--primary); padding-left: 4px; }
         .footer-base { display: flex; justify-content: space-between; align-items: center; padding-top: 40px; border-top: 1px solid var(--border); flex-wrap: wrap; gap: 20px; }
         .footer-copyright { font-size: 0.9rem; color: var(--text-muted); }
+
+        /* Footer Map Container */
+        .footer-map-wrapper {
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            background: var(--surface-pure);
+            border: 1px solid var(--border);
+        }
+        .footer-map-wrapper iframe {
+            display: block;
+            width: 100%;
+            height: 280px;
+            border: 0;
+        }
+        .footer-map-label {
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            margin-top: 12px;
+            text-align: center;
+        }
+
+        /* Footer Links Grid */
+        .footer-links-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-top: 30px;
+        }
+        .footer-links-grid h4 {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 16px;
+            color: var(--text);
+        }
+        .footer-links-grid ul {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .footer-links-grid ul a {
+            text-decoration: none;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            transition: var(--transition);
+        }
+        .footer-links-grid ul a:hover {
+            color: var(--primary);
+            padding-left: 4px;
+        }
 
         /* Fixed Actions */
         #fixed-actions-container { position: fixed; bottom: 32px; right: 32px; display: flex; flex-direction: column; gap: 12px; z-index: 1500; }
@@ -709,10 +763,13 @@
         .sticky-btn-top:hover { transform: translateY(-4px); }
         .sticky-btn-whatsapp svg { width: 20px; height: 20px; fill: #fff; }
 
+        /* Responsive */
         @media(max-width: 1200px) {
             .why-grid, .services-grid, .reviews-grid, .blog-grid { grid-template-columns: repeat(2, 1fr); }
             .tools-grid, .cert-grid { grid-template-columns: repeat(3, 1fr); }
             .pricing-grid { grid-template-columns: 1fr; max-width: 550px; margin: 0 auto; }
+            .footer-grid { grid-template-columns: 1fr !important; }
+            .footer-links-grid { grid-template-columns: repeat(3, 1fr); }
         }
         @media(max-width: 992px) {
             .hero-wrapper { grid-template-columns: 1fr; text-align: center; }
@@ -727,15 +784,19 @@
             .timeline-node { left: 24px; transform: translateX(-50%); }
             .timeline-step:nth-child(even) .timeline-content, .timeline-step:nth-child(odd) .timeline-content { grid-column: 1; text-align: left; padding-left: 64px; align-items: flex-start; }
             .timeline-content p { max-width: 100%; }
-            .footer-grid { grid-template-columns: repeat(2, 1fr); }
+            .footer-grid { grid-template-columns: 1fr !important; }
+            .footer-links-grid { grid-template-columns: repeat(2, 1fr); }
+            .footer-map-wrapper iframe { height: 220px; }
         }
         @media(max-width: 768px) {
             .nav-menu { display: none; position: absolute; top: 90px; left: 0; width: 100%; background: var(--surface-pure); border-bottom: 1px solid var(--border); flex-direction: column; padding: 40px; gap: 24px; text-align: center; }
             .nav-menu.active { display: flex; }
             .burger { display: block; }
             .why-grid, .services-grid, .reviews-grid, .blog-grid, .tools-grid, .cert-grid { grid-template-columns: 1fr; }
-            .footer-grid { grid-template-columns: 1fr; }
+            .footer-grid { grid-template-columns: 1fr !important; }
+            .footer-links-grid { grid-template-columns: 1fr; gap: 20px; }
             .portfolio-grid { grid-template-columns: 1fr; }
+            .footer-map-wrapper iframe { height: 180px; }
         }
     </style>
 </head>
@@ -872,7 +933,6 @@
             <h2 class="section-title">Our Tactical <span class="text-gradient">SEO Services</span></h2>
             <p class="section-subtitle">Data-backed scaling strategies deployed precisely to hijack high-intent customer leads from your top local competitors. As a premier <strong>Local SEO expert</strong>, we offer a suite of specialized services.</p>
             <div class="services-grid">
-                <!-- Service 1 -->
                 <div class="card glass service-card">
                     <span class="service-icon">📍</span>
                     <h3>Google Business Profile Optimization</h3>
@@ -883,7 +943,6 @@
                         <li>Continuous Audit Maintenance</li>
                     </ul>
                 </div>
-                <!-- Service 2 -->
                 <div class="card glass service-card">
                     <span class="service-icon">🔧</span>
                     <h3>GMB Suspension & Recovery</h3>
@@ -894,7 +953,6 @@
                         <li>Direct Google Support Pipeline</li>
                     </ul>
                 </div>
-                <!-- Service 3 -->
                 <div class="card glass service-card">
                     <span class="service-icon">🏗️</span>
                     <h3>Local Citation Engineering</h3>
@@ -905,7 +963,6 @@
                         <li>Hyper-Localized Backlink Auditing</li>
                     </ul>
                 </div>
-                <!-- Service 4 - NEW -->
                 <div class="card glass service-card">
                     <span class="service-icon">🗺️</span>
                     <h3>Google Maps Ranking</h3>
@@ -916,7 +973,6 @@
                         <li>Multi-Location Strategy</li>
                     </ul>
                 </div>
-                <!-- Service 5 - NEW -->
                 <div class="card glass service-card">
                     <span class="service-icon">📱</span>
                     <h3>Google Maps Marketing</h3>
@@ -927,7 +983,6 @@
                         <li>Google Posts Management</li>
                     </ul>
                 </div>
-                <!-- Service 6 - NEW -->
                 <div class="card glass service-card">
                     <span class="service-icon">🎨</span>
                     <h3>Landing Page Design</h3>
@@ -1319,7 +1374,6 @@
             <h2 class="section-title">Our Local <span class="text-gradient">SEO Insights</span></h2>
             <p class="section-subtitle">Algorithmic guidelines break downs, optimization deep-dives, and technical tutorials to keep you ahead. Stay informed with the latest from <strong>Ranking Matters</strong>.</p>
             <div class="blog-grid">
-                <!-- Post 1 -->
                 <div class="card glass blog-card">
                     <div class="blog-img-cover">
                         <img src="https://images.unsplash.com/photo-1432821596592-e2c18b78144f?auto=format&fit=crop&w=500&q=80" alt="Local SEO Optimization Blogging Concept">
@@ -1328,7 +1382,6 @@
                     <h3>How to Overcome Proximity Algorithmic Restrictions</h3>
                     <p>Discover the exact steps required to claim maps package positioning outside your immediate physical operational zip code location safely, a tactic often used by <strong>Ranking Matters</strong> for our clients.</p>
                 </div>
-                <!-- Post 2 -->
                 <div class="card glass blog-card">
                     <div class="blog-img-cover">
                         <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=500&q=80" alt="Data Analytics Visualization Matrix">
@@ -1337,7 +1390,6 @@
                     <h3>The Ultimate Playbook for Rapid GMB Reinstatements</h3>
                     <p>A calculated walkthrough mapping out how to prepare clean official documentation to resolve hard Google Business suspensions smoothly, leveraging the expertise of <strong>Ranking Matters</strong>.</p>
                 </div>
-                <!-- Post 3 -->
                 <div class="card glass blog-card">
                     <div class="blog-img-cover">
                         <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=500&q=80" alt="Advanced Coding Metadata Schema Structure">
@@ -1412,48 +1464,71 @@
 
     <!-- Footer -->
     <footer>
-        <div class="container footer-grid">
-            <div class="footer-brand">
-                <a href="#" class="logo">Ranking<span>Matters</span></a>
-                <p>Advanced algorithmic optimization mechanics engineered explicitly to scale inbound customer commercial phone calls and local visibility indicators. Your trusted <strong>Local SEO expert</strong>.</p>
+        <div class="container">
+            <div class="footer-grid">
+                <!-- Left Column -->
+                <div class="footer-brand">
+                    <a href="#" class="logo">Ranking<span>Matters</span></a>
+                    <p>Advanced algorithmic optimization mechanics engineered explicitly to scale inbound customer commercial phone calls and local visibility indicators. Your trusted <strong>Local SEO expert</strong>.</p>
+                    
+                    <div class="footer-links-grid">
+                        <div>
+                            <h4>Quick Links</h4>
+                            <ul>
+                                <li><a href="index.html">Home</a></li>
+                                <li><a href="about.html">About</a></li>
+                                <li><a href="services.html">Services</a></li>
+                                <li><a href="blog.html">Blog</a></li>
+                                <li><a href="contact.html">Contact</a></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4>Our Services</h4>
+                            <ul>
+                                <li><a href="gbp-optimization.html">GBP Optimization</a></li>
+                                <li><a href="local-seo.html">Local SEO</a></li>
+                                <li><a href="google-maps-ranking.html">Maps Ranking</a></li>
+                                <li><a href="gmb-recovery.html">GMB Recovery</a></li>
+                                <li><a href="landing-pages.html">Landing Pages</a></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4>Contact</h4>
+                            <ul>
+                                <li><a href="tel:+923314349664">+92 331 4349664</a></li>
+                                <li><a href="mailto:shanyaqoob730@gmail.com">shanyaqoob730@gmail.com</a></li>
+                                <li><a href="https://wa.me/923314349664" target="_blank">WhatsApp</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column: GMB Map -->
+                <div>
+                    <h4 style="font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 16px; color: var(--text);">Find Us On Google Maps</h4>
+                    <div class="footer-map-wrapper">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3599701.2877120697!2d70.60231495!3d28.227561999999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x84f3df43ef28b013%3A0x722879e737c0b535!2sRanking%20Matters%7C%20Local%20Seo%20Expert%20in%20Lahore!5e0!3m2!1sen!2s!4v1784304112769!5m2!1sen!2s" 
+                            width="100%" 
+                            height="280" 
+                            style="border:0; display: block;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="strict-origin-when-cross-origin">
+                        </iframe>
+                    </div>
+                    <p class="footer-map-label">📍 <strong>Ranking Matters</strong> — Thokar, Lahore, Pakistan</p>
+                </div>
             </div>
-            <div class="footer-col">
-                <h4>Quick Links</h4>
-                <ul class="footer-links">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="blog.html">Blog</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
+
+            <!-- Footer Bottom -->
+            <div class="footer-base">
+                <div class="footer-copyright">&copy; 2026 <strong>Ranking Matters</strong>. All Rights Reserved.</div>
+                <a href="https://wa.me/923314349664" target="_blank" style="color: var(--text-muted); text-decoration: none; display: flex; align-items: center; gap: 8px;">
+                    <svg viewBox="0 0 24 24" width="20" height="20" fill="#25D366"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                    WhatsApp
+                </a>
             </div>
-            <div class="footer-col">
-                <h4>Our Services</h4>
-                <ul class="footer-links">
-                    <li><a href="gbp-optimization.html">GBP Optimization</a></li>
-                    <li><a href="local-seo.html">Local SEO</a></li>
-                    <li><a href="google-maps-ranking.html">Google Maps Ranking</a></li>
-                    <li><a href="gmb-recovery.html">GMB Recovery</a></li>
-                    <li><a href="local-citations.html">Local Citations</a></li>
-                    <li><a href="google-maps-marketing.html">Google Maps Marketing</a></li>
-                    <li><a href="landing-pages.html">Landing Pages</a></li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h4>Contact</h4>
-                <ul class="footer-links">
-                    <li><a href="tel:+923314349664">+92 331 4349664</a></li>
-                    <li><a href="mailto:shanyaqoob730@gmail.com">shanyaqoob730@gmail.com</a></li>
-                    <li><a href="https://wa.me/923314349664" target="_blank">WhatsApp</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="container footer-base">
-            <div class="footer-copyright">&copy; 2026 <strong>Ranking Matters</strong>. All Rights Reserved.</div>
-            <a href="https://wa.me/923314349664" target="_blank" style="color: var(--text-muted); text-decoration: none; display: flex; align-items: center; gap: 8px;">
-                <svg viewBox="0 0 24 24" width="20" height="20" fill="#25D366"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-                WhatsApp
-            </a>
         </div>
     </footer>
 
@@ -1518,9 +1593,8 @@
                 });
             });
 
-            // Theme Toggle - Fixed
+            // Theme Toggle
             const themeToggle = document.getElementById('theme-toggle');
-            // Ensure body has a default class
             if (!document.body.classList.contains('dark-mode') && !document.body.classList.contains('light-mode')) {
                 document.body.classList.add('dark-mode');
             }
@@ -1561,7 +1635,7 @@
             // Pricing Toggle
             const billingToggle = document.getElementById('billing-toggle');
             const pricingVals = document.querySelectorAll('.plan-price');
-            const standardPrices = [499, 899, 1799];
+            const standardPrices = [50000, 70000, 90000];
             billingToggle.addEventListener('change', function() {
                 pricingVals.forEach(function(p, idx) {
                     if (billingToggle.checked) {
