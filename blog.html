@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-      <!-- ====== GOOGLE SEARCH CONSOLE VERIFICATION ====== -->
+    <!-- ====== GOOGLE SEARCH CONSOLE VERIFICATION ====== -->
     <meta name="google-site-verification" content="google03b0f2c466ca5be5" />
     
     <!-- ====== GOOGLE ANALYTICS (gtag.js) ====== -->
@@ -33,7 +33,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap" rel="stylesheet">
 
     <style>
-        /* --- Complete CSS from index.html --- */
+        /* --- Complete CSS --- */
         * { margin: 0; padding: 0; box-sizing: border-box; }
         
         :root {
@@ -141,7 +141,6 @@
         .nav-link.active::after { width: 100%; }
         .nav-actions { display: flex; align-items: center; gap: 20px; }
 
-        /* Dropdown */
         .nav-dropdown { position: relative; display: inline-block; }
         .nav-dropdown .dropdown-arrow { font-size: 0.6rem; margin-left: 4px; transition: var(--transition); }
         .nav-dropdown:hover .dropdown-arrow { transform: rotate(180deg); }
@@ -396,7 +395,6 @@
             line-height: 1.6;
         }
 
-        /* Footer */
         footer { background: var(--surface-pure); border-top: 1px solid var(--border); padding: 100px 0 40px; }
         .footer-grid { display: grid; grid-template-columns: 1.2fr repeat(3, 0.6fr); gap: 60px; margin-bottom: 80px; }
         .footer-brand p { color: var(--text-muted); font-size: 0.95rem; line-height: 1.6; margin-top: 16px; max-width: 320px; }
@@ -407,7 +405,6 @@
         .footer-base { display: flex; justify-content: space-between; align-items: center; padding-top: 40px; border-top: 1px solid var(--border); flex-wrap: wrap; gap: 20px; }
         .footer-copyright { font-size: 0.9rem; color: var(--text-muted); }
 
-        /* Fixed Actions */
         #fixed-actions-container { position: fixed; bottom: 32px; right: 32px; display: flex; flex-direction: column; gap: 12px; z-index: 1500; }
         .sticky-action-trigger { width: 56px; height: 56px; border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer; text-decoration: none; box-shadow: 0 10px 25px rgba(0,0,0,0.2); transition: var(--transition); font-weight: 600; border: none; }
         .sticky-btn-whatsapp { background: #25D366; color: #fff; width: auto; padding: 0 24px; border-radius: 100px; font-size: 0.9rem; gap: 8px; }
@@ -416,7 +413,11 @@
         .sticky-btn-top:hover { transform: translateY(-4px); }
         .sticky-btn-whatsapp svg { width: 20px; height: 20px; fill: #fff; }
 
-        /* Responsive */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
         @media(max-width: 1200px) {
             .blog-grid-full { grid-template-columns: repeat(2, 1fr); }
         }
@@ -457,7 +458,7 @@
                 <li><a href="index.html" class="nav-link">Home</a></li>
                 <li><a href="about.html" class="nav-link">About</a></li>
                 <li class="nav-dropdown">
-                    <a href="services.html" class="nav-link active">Services <span class="dropdown-arrow">▾</span></a>
+                    <a href="services.html" class="nav-link">Services <span class="dropdown-arrow">▾</span></a>
                     <div class="dropdown-content">
                         <a href="gbp-optimization.html">GBP Optimization</a>
                         <a href="local-seo.html">Local SEO</a>
@@ -613,6 +614,40 @@
                         <h3><a href="blog-post6.html">5 Common GMB Suspension Triggers and How to Avoid Them</a></h3>
                         <p>Protect your business listing by understanding the most common reasons for <strong>GMB suspension</strong> and how to prevent them with <strong>Ranking Matters</strong>.</p>
                         <a href="blog-post6.html" class="read-more">Read Full Article →</a>
+                    </div>
+                </div>
+
+                <!-- ====== NEW BLOG POST 7 ====== -->
+                <div class="blog-card-full" data-category="strategy">
+                    <div class="blog-img">
+                        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=600&q=80" alt="Local SEO vs Traditional SEO: What's the Difference?" loading="lazy">
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span class="category">Strategy</span>
+                            <span>July 15, 2026</span>
+                            <span>4 min read</span>
+                        </div>
+                        <h3><a href="blog-post7.html">Local SEO vs Traditional SEO: What's the Difference?</a></h3>
+                        <p>Understanding the key differences between <strong>local SEO</strong> and traditional SEO is crucial for businesses targeting local customers. Learn why <strong>Google Business Profile optimization</strong> matters more than ever.</p>
+                        <a href="blog-post7.html" class="read-more">Read Full Article →</a>
+                    </div>
+                </div>
+
+                <!-- ====== NEW BLOG POST 8 ====== -->
+                <div class="blog-card-full" data-category="gmb">
+                    <div class="blog-img">
+                        <img src="https://images.unsplash.com/photo-1573164713988-8665fc963095?auto=format&fit=crop&w=600&q=80" alt="Google Business Profile Categories: The Ultimate Guide" loading="lazy">
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span class="category">GMB Optimization</span>
+                            <span>July 13, 2026</span>
+                            <span>7 min read</span>
+                        </div>
+                        <h3><a href="blog-post8.html">Google Business Profile Categories: The Ultimate Guide</a></h3>
+                        <p>Choosing the right <strong>GBP categories</strong> is one of the most important decisions for your local search visibility. This guide explains how to select and structure your categories for maximum impact.</p>
+                        <a href="blog-post8.html" class="read-more">Read Full Article →</a>
                     </div>
                 </div>
 
@@ -799,15 +834,18 @@
                 });
             });
 
-            // Add fadeIn animation
-            const style = document.createElement('style');
-            style.textContent = `
-                @keyframes fadeIn {
-                    from { opacity: 0; transform: translateY(20px); }
-                    to { opacity: 1; transform: translateY(0); }
-                }
-            `;
-            document.head.appendChild(style);
+            // Add fadeIn animation if not already present
+            if (!document.querySelector('#fadeInStyle')) {
+                const style = document.createElement('style');
+                style.id = 'fadeInStyle';
+                style.textContent = `
+                    @keyframes fadeIn {
+                        from { opacity: 0; transform: translateY(20px); }
+                        to { opacity: 1; transform: translateY(0); }
+                    }
+                `;
+                document.head.appendChild(style);
+            }
         });
     </script>
 </body>
