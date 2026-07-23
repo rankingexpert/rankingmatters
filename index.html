@@ -21,13 +21,13 @@
     <!-- ====== PRIMARY SEO TAGS ====== -->
     <title>#1 Local SEO Expert in Lahore | Google Maps Ranking & GMB Optimization</title>
     <meta name="description" content="Ranking Matters: Pakistan's top Local SEO expert. Get #1 Google Maps ranking, GMB suspension recovery & lead generation. 85+ verified reviews. Free audit!" />
-    <link rel="canonical" href="https://rankingexpert.github.io/rankingmatters/services.html" />
+    <link rel="canonical" href="https://rankingexpert.github.io/rankingmatters/index.html" />
     <meta name="robots" content="index, follow" />
     <meta name="theme-color" content="#0a0a12" />
 
     <!-- ====== OPEN GRAPH / SOCIAL MEDIA ====== -->
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://rankingexpert.github.io/rankingmatters/services.html" />
+    <meta property="og:url" content="https://rankingexpert.github.io/rankingmatters/index.html" />
     <meta property="og:title" content="#1 Local SEO Expert in Lahore | Google Maps Ranking & GMB Optimization" />
     <meta property="og:description" content="Ranking Matters: Pakistan's top Local SEO expert. Get #1 Google Maps ranking, GMB suspension recovery & lead generation. 85+ verified reviews." />
     <meta property="og:image" content="https://i.ibb.co/N2k6rfHy/Chat-GPT-Image-Jul-14-2026-11-47-57-PM.png" />
@@ -50,7 +50,6 @@
     <!-- ====== SCHEMA MARKUP (JSON-LD) - COMPLETE ====== -->
     <!-- ============================================================ -->
 
-    <!-- ====== ORGANIZATION SCHEMA ====== -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -75,7 +74,6 @@
     }
     </script>
 
-    <!-- ====== LOCAL BUSINESS SCHEMA ====== -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -121,7 +119,6 @@
     }
     </script>
 
-    <!-- ====== WEBSITE SCHEMA ====== -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -145,7 +142,6 @@
     }
     </script>
 
-    <!-- ====== WEBPAGE SCHEMA ====== -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -174,7 +170,6 @@
     }
     </script>
 
-    <!-- ====== BREADCRUMB SCHEMA ====== -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -191,7 +186,6 @@
     }
     </script>
 
-    <!-- ====== SERVICE SCHEMA ====== -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -267,7 +261,6 @@
     }
     </script>
 
-    <!-- ====== FAQ SCHEMA ====== -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -317,38 +310,6 @@
       ]
     }
     </script>
-
-    <!-- ====== ARTICLE SCHEMA ====== -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Article",
-      "@id": "https://rankingexpert.github.io/rankingmatters/#article",
-      "headline": "Real Proven Client Results - Local SEO Case Studies",
-      "description": "Verifiable map pack rank improvements, call acceleration data, and market takeover metrics across our portfolio.",
-      "image": "https://i.ibb.co/N2k6rfHy/Chat-GPT-Image-Jul-14-2026-11-47-57-PM.png",
-      "author": {
-        "@type": "Organization",
-        "name": "Ranking Matters",
-        "@id": "https://rankingexpert.github.io/rankingmatters/#organization"
-      },
-      "publisher": {
-        "@type": "Organization",
-        "name": "Ranking Matters",
-        "@id": "https://rankingexpert.github.io/rankingmatters/#organization"
-      },
-      "datePublished": "2026-07-16",
-      "dateModified": "2026-07-16",
-      "mainEntityOfPage": {
-        "@type": "WebPage",
-        "@id": "https://rankingexpert.github.io/rankingmatters/index.html#webpage"
-      }
-    }
-    </script>
-
-    <!-- ============================================================ -->
-    <!-- ====== END SCHEMA MARKUP ====== -->
-    <!-- ============================================================ -->
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -407,7 +368,6 @@
             --nav-bg: rgba(249, 250, 251, 0.75);
         }
 
-        /* Default to dark mode */
         body {
             --bg: var(--bg-dark);
             --surface: var(--surface-dark);
@@ -422,36 +382,30 @@
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: var(--font-sans); background-color: var(--bg); color: var(--text); overflow-x: hidden; transition: background-color 0.4s ease, color 0.4s ease; -webkit-font-smoothing: antialiased; }
         
-        /* Layout */
         .container { width: 100%; max-width: 1400px; margin: 0 auto; padding: 0 40px; }
         @media(max-width: 768px) { .container { padding: 0 24px; } }
         
         section { padding: 140px 0; position: relative; }
         @media(max-width: 768px) { section { padding: 90px 0; } }
 
-        /* Scroll Progress Bar */
         #scroll-progress { position: fixed; top: 0; left: 0; height: 3px; background: linear-gradient(90deg, var(--primary), var(--accent)); width: 0%; z-index: 2000; transition: width 0.1s ease; }
 
-        /* Loader Animation */
         #loader { position: fixed; inset: 0; background: var(--bg-dark); z-index: 3000; display: flex; justify-content: center; align-items: center; transition: opacity 0.6s ease, visibility 0.6s ease; }
         #loader.hidden { opacity: 0; visibility: hidden; pointer-events: none; }
         .loader-logo { font-size: 2rem; font-weight: 800; letter-spacing: -1px; color: #fff; position: relative; animation: pulse 1.5s infinite; }
         .loader-logo span { color: var(--primary); }
         @keyframes pulse { 0%, 100% { opacity: 0.6; transform: scale(0.98); } 50% { opacity: 1; transform: scale(1); } }
 
-        /* Typography & Utilities */
         h1, h2, h3, h4 { font-weight: 700; letter-spacing: -0.03em; line-height: 1.15; }
         .section-title { font-size: clamp(2.5rem, 4vw, 3.75rem); font-weight: 800; margin-bottom: 24px; text-align: center; }
         .section-subtitle { font-size: clamp(1.1rem, 1.5vw, 1.35rem); color: var(--text-muted); text-align: center; max-width: 700px; margin: 0 auto 80px; font-weight: 400; line-height: 1.5; }
         .text-gradient { background: linear-gradient(135deg, #3b82f6 0%, #10b981 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
         .serif { font-family: var(--font-serif); font-style: italic; font-weight: 400; }
         
-        /* Glassmorphism Elements */
         .glass { background: var(--surface); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border: 1px solid var(--border); box-shadow: var(--shadow); }
         .card { border-radius: var(--radius-lg); padding: 48px; transition: var(--transition); position: relative; overflow: hidden; }
         .card:hover { transform: translateY(-8px); border-color: rgba(37, 99, 235, 0.3); }
 
-        /* Buttons & Interactive Elements */
         .btn-group { display: flex; gap: 16px; align-items: center; flex-wrap: wrap; }
         .btn { display: inline-flex; align-items: center; justify-content: center; padding: 18px 36px; font-weight: 600; font-size: 0.95rem; border-radius: var(--radius-md); transition: var(--transition); text-decoration: none; position: relative; overflow: hidden; cursor: pointer; border: none; }
         .btn-primary { background: linear-gradient(135deg, var(--primary), #1d4ed8); color: #ffffff; box-shadow: 0 10px 25px -5px rgba(37, 99, 235, 0.4); }
@@ -464,10 +418,8 @@
         .btn-whatsapp:hover { transform: translateY(-2px); box-shadow: 0 15px 30px -5px rgba(37, 211, 102, 0.6); }
         .btn-whatsapp svg { margin-right: 10px; }
 
-        /* Floating Components */
         .blob { position: absolute; border-radius: 50%; filter: blur(120px); z-index: -1; opacity: 0.15; pointer-events: none; transition: var(--transition); }
         
-        /* Sticky Navigation */
         header { position: fixed; top: 0; left: 0; width: 100%; z-index: 1000; background: var(--nav-bg); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border-bottom: 1px solid var(--border); transition: var(--transition); }
         .nav-container { display: flex; justify-content: space-between; align-items: center; height: 90px; }
         .logo { font-size: 1.35rem; font-weight: 800; letter-spacing: -0.04em; text-decoration: none; color: var(--text); display: flex; align-items: center; gap: 8px; }
@@ -479,7 +431,6 @@
         .nav-link.active::after { width: 100%; }
         .nav-actions { display: flex; align-items: center; gap: 20px; }
 
-        /* DROPDOWN */
         .nav-dropdown { position: relative; display: inline-block; }
         .nav-dropdown .dropdown-arrow { font-size: 0.6rem; margin-left: 4px; transition: var(--transition); }
         .nav-dropdown:hover .dropdown-arrow { transform: rotate(180deg); }
@@ -489,9 +440,6 @@
         .nav-dropdown .dropdown-content a { display: block; padding: 10px 24px; font-size: 0.85rem; font-weight: 500; color: var(--text-muted); transition: var(--transition); white-space: nowrap; letter-spacing: 0.03em; }
         .nav-dropdown .dropdown-content a:hover { color: var(--primary); background: var(--primary-glow); }
         .nav-dropdown .dropdown-content a::after { display: none; }
-        .header.scrolled .nav-dropdown .dropdown-content { background: var(--surface-light); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border: 1px solid var(--border-light); }
-        .header.scrolled .nav-dropdown .dropdown-content a { color: var(--text-muted); }
-        .header.scrolled .nav-dropdown .dropdown-content a:hover { color: var(--primary); background: var(--primary-glow); }
 
         @media (max-width: 992px) {
             .nav-dropdown .dropdown-content { display: none; position: static; transform: none; background: transparent !important; backdrop-filter: none !important; box-shadow: none; border: none; padding: 8px 0 8px 20px; animation: none; width: 100%; }
@@ -508,7 +456,6 @@
         .burger { display: none; cursor: pointer; background: none; border: none; padding: 8px; flex-direction: column; gap: 5px; }
         .burger span { display: block; width: 24px; height: 2px; background: var(--text); transition: var(--transition); }
 
-        /* Hero Section */
         .hero-wrapper { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 60px; align-items: center; min-height: calc(100vh - 90px); padding-top: 40px; }
         .hero-title { font-size: clamp(3rem, 5.5vw, 5rem); font-weight: 800; letter-spacing: -0.04em; margin-bottom: 32px; line-height: 1.05; }
         .hero-desc { font-size: clamp(1.15rem, 1.8vw, 1.4rem); color: var(--text-muted); margin-bottom: 48px; max-width: 620px; font-weight: 400; line-height: 1.5; }
@@ -520,33 +467,30 @@
         .hero-badge { position: absolute; top: 32px; right: 32px; padding: 12px 24px; border-radius: 100px; font-weight: 700; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.05em; display: flex; align-items: center; gap: 8px; z-index: 10; background: rgba(0,0,0,0.6); color: #fff; backdrop-filter: blur(8px); }
         .badge-dot { width: 8px; height: 8px; background: #10b981; border-radius: 50%; box-shadow: 0 0 12px #10b981; }
 
-        /* Mouse Glow */
         #mouse-glow { position: fixed; width: 400px; height: 400px; background: radial-gradient(circle, rgba(37, 99, 235, 0.08) 0%, transparent 70%); pointer-events: none; z-index: 1; transform: translate(-50%, -50%); transition: opacity 0.3s ease; opacity: 0; }
 
-        /* About Section */
         .about-grid { display: grid; grid-template-columns: 0.9fr 1.1fr; gap: 80px; align-items: center; }
         .about-visual { position: relative; border-radius: var(--radius-lg); overflow: hidden; height: 600px; box-shadow: var(--shadow); background: var(--surface-pure); }
         .about-image { width: 100%; height: 100%; object-fit: cover; }
         .about-tag { font-weight: 700; color: var(--primary); text-transform: uppercase; letter-spacing: 0.1em; font-size: 0.9rem; margin-bottom: 16px; display: block; }
         .about-text p { font-size: 1.15rem; color: var(--text-muted); margin-bottom: 32px; line-height: 1.6; }
 
-        /* Why Choose Me */
         .why-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; }
         .why-card .icon-box { width: 64px; height: 64px; border-radius: var(--radius-md); background: var(--primary-glow); display: flex; align-items: center; justify-content: center; margin-bottom: 32px; color: var(--primary); font-size: 1.5rem; font-weight: bold; }
         .why-card h3 { font-size: 1.5rem; margin-bottom: 16px; }
         .why-card p { color: var(--text-muted); line-height: 1.5; }
 
-        /* Services Grid */
         .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; }
-        .service-card { display: flex; flex-direction: column; height: 100%; }
-        .service-icon { font-size: 2.25rem; margin-bottom: 24px; display: block; }
+        .service-card { display: flex; flex-direction: column; height: 100%; text-decoration: none; color: var(--text); }
+        .service-card .icon { font-size: 2.25rem; margin-bottom: 24px; display: block; }
         .service-card h3 { font-size: 1.35rem; margin-bottom: 16px; font-weight: 700; }
         .service-card p { color: var(--text-muted); font-size: 0.95rem; line-height: 1.6; margin-bottom: 24px; flex-grow: 1; }
         .service-features { list-style: none; border-top: 1px solid var(--border); padding-top: 20px; display: flex; flex-direction: column; gap: 10px; }
         .service-features li { font-size: 0.85rem; color: var(--text); display: flex; align-items: center; gap: 8px; }
         .service-features li::before { content: '→'; color: var(--accent); font-weight: bold; }
+        .service-card .learn-more { display: inline-block; margin-top: 16px; color: var(--primary); font-weight: 600; transition: var(--transition); }
+        .service-card:hover .learn-more { color: var(--accent); padding-left: 4px; }
 
-        /* Process Timeline */
         .timeline-container { position: relative; max-width: 1000px; margin: 0 auto; }
         .timeline-container::before { content: ''; position: absolute; left: 50%; top: 0; width: 2px; height: 100%; background: var(--border); transform: translateX(-50%); }
         .timeline-step { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; margin-bottom: 100px; position: relative; }
@@ -559,12 +503,10 @@
         .timeline-content h3 { font-size: 1.5rem; margin-bottom: 16px; }
         .timeline-content p { color: var(--text-muted); font-size: 0.95rem; line-height: 1.6; max-width: 400px; }
 
-        /* Target Industries */
         .industries-container { display: flex; flex-wrap: wrap; gap: 16px; justify-content: center; max-width: 1100px; margin: 0 auto; }
         .industry-pill { padding: 16px 32px; border-radius: 100px; font-weight: 600; font-size: 1rem; transition: var(--transition); cursor: default; border: 1px solid var(--border); }
         .industry-pill:hover { background: var(--primary); color: #fff; border-color: var(--primary); transform: scale(1.05); }
 
-        /* Portfolio */
         .portfolio-filter { display: flex; justify-content: center; gap: 12px; margin-bottom: 48px; flex-wrap: wrap; }
         .filter-btn { padding: 12px 24px; border-radius: 100px; background: transparent; border: 1px solid var(--border); color: var(--text-muted); font-weight: 600; font-size: 0.9rem; transition: var(--transition); cursor: pointer; }
         .filter-btn.active, .filter-btn:hover { background: var(--primary); color: #fff; border-color: var(--primary); }
@@ -579,7 +521,6 @@
         .portfolio-client { font-size: 0.85rem; font-weight: 700; color: var(--primary); text-transform: uppercase; letter-spacing: 0.05em; }
         .portfolio-growth { padding: 6px 14px; background: var(--accent-glow); color: var(--accent); border-radius: 100px; font-weight: 700; font-size: 0.85rem; }
 
-        /* Case Studies */
         .case-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 40px; }
         .case-card h3 { font-size: 1.75rem; margin: 24px 0 16px; }
         .case-card p { color: var(--text-muted); line-height: 1.6; margin-bottom: 32px; }
@@ -587,7 +528,6 @@
         .case-stat-val { font-size: 2rem; font-weight: 800; color: var(--accent); }
         .case-stat-lbl { font-size: 0.8rem; color: var(--text-muted); text-transform: uppercase; font-weight: 600; margin-top: 4px; }
 
-        /* Pricing */
         .pricing-toggle { display: flex; align-items: center; justify-content: center; gap: 16px; margin-bottom: 56px; }
         .pricing-toggle span { font-weight: 600; font-size: 1rem; }
         .switch { position: relative; display: inline-block; width: 64px; height: 36px; }
@@ -608,7 +548,6 @@
         .plan-features li { display: flex; align-items: center; gap: 12px; font-size: 0.95rem; }
         .plan-features li::before { content: '✓'; color: var(--accent); font-weight: 900; }
 
-        /* Testimonials */
         .testimonial-outer { max-width: 900px; margin: 0 auto; position: relative; }
         .testimonial-wrapper { overflow: hidden; width: 100%; }
         .testimonial-track { display: flex; transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1); width: 100%; }
@@ -622,7 +561,6 @@
         .slider-btn { width: 52px; height: 52px; border-radius: 50%; background: var(--surface-pure); border: 1px solid var(--border); color: var(--text); display: flex; align-items: center; justify-content: center; cursor: pointer; transition: var(--transition); font-size: 1.2rem; }
         .slider-btn:hover { background: var(--primary); color: #fff; border-color: var(--primary); }
 
-        /* Reviews */
         .reviews-summary { display: flex; align-items: center; justify-content: center; gap: 40px; margin-bottom: 56px; border-bottom: 1px solid var(--border); padding-bottom: 40px; flex-wrap: wrap; }
         .rating-huge { font-size: 4rem; font-weight: 800; color: var(--text); line-height: 1; }
         .rating-stars { color: #f59e0b; font-size: 1.5rem; margin-bottom: 4px; }
@@ -635,26 +573,22 @@
         .reviewer-meta { font-size: 0.8rem; color: var(--text-muted); }
         .review-text { font-size: 0.9rem; color: var(--text-muted); line-height: 1.6; }
 
-        /* Skills */
         .skills-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 40px; }
         .skill-item h4 { font-size: 1.1rem; margin-bottom: 12px; display: flex; justify-content: space-between; }
         .skill-bar-bg { height: 6px; background: var(--border); border-radius: 10px; overflow: hidden; }
         .skill-bar-fill { height: 100%; background: linear-gradient(90deg, var(--primary), var(--accent)); width: 0%; transition: width 2s cubic-bezier(0.16, 1, 0.3, 1); border-radius: 10px; }
 
-        /* Certifications */
         .cert-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; text-align: center; }
         .cert-card { padding: 32px; border-radius: var(--radius-md); display: flex; flex-direction: column; align-items: center; justify-content: center; }
         .cert-icon { font-size: 2.5rem; color: var(--primary); margin-bottom: 16px; }
         .cert-card h4 { font-size: 1.1rem; font-weight: 700; margin-bottom: 4px; }
         .cert-card p { font-size: 0.85rem; color: var(--text-muted); }
 
-        /* Tools */
         .tools-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
         .tool-card { display: flex; align-items: center; gap: 20px; padding: 24px; border-radius: var(--radius-md); }
         .tool-avatar-box { width: 48px; height: 48px; border-radius: var(--radius-sm); background: var(--surface-pure); border: 1px solid var(--border); display: flex; align-items: center; justify-content: center; font-weight: 800; color: var(--primary); font-size: 1.25rem; }
         .tool-card h4 { font-size: 1.1rem; font-weight: 600; }
 
-        /* FAQ */
         .faq-max { max-width: 850px; margin: 0 auto; display: flex; flex-direction: column; gap: 16px; }
         .faq-item { border-radius: var(--radius-md); overflow: hidden; border: 1px solid var(--border); transition: var(--transition); }
         .faq-trigger { width: 100%; padding: 28px 32px; background: var(--surface-pure); border: none; text-align: left; color: var(--text); font-size: 1.2rem; font-weight: 700; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 24px; }
@@ -664,7 +598,6 @@
         .faq-item.open { border-color: var(--primary); }
         .faq-item.open .faq-icon-state { transform: rotate(45deg); color: var(--primary); }
 
-        /* Blog */
         .blog-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; }
         .blog-card { overflow: hidden; }
         .blog-img-cover { height: 240px; overflow: hidden; border-radius: var(--radius-md); margin-bottom: 24px; background: var(--surface-pure); }
@@ -674,7 +607,6 @@
         .blog-card h3 { font-size: 1.35rem; margin-bottom: 12px; line-height: 1.3; }
         .blog-card p { color: var(--text-muted); font-size: 0.95rem; line-height: 1.5; }
 
-        /* Contact */
         .contact-grid { display: grid; grid-template-columns: 0.8fr 1.2fr; gap: 80px; }
         .contact-panel-title { font-size: 2.25rem; font-weight: 800; margin-bottom: 24px; }
         .contact-lead-desc { color: var(--text-muted); font-size: 1.1rem; line-height: 1.6; margin-bottom: 40px; }
@@ -693,7 +625,6 @@
         .form-control { background: var(--surface-pure); border: 1px solid var(--border); padding: 16px 20px; border-radius: var(--radius-sm); color: var(--text); font-family: var(--font-sans); font-size: 0.95rem; transition: var(--transition); width: 100%; }
         .form-control:focus { outline: none; border-color: var(--primary); box-shadow: 0 0 0 3px var(--primary-glow); }
         
-        /* Footer */
         footer { background: var(--surface-pure); border-top: 1px solid var(--border); padding: 100px 0 40px; }
         .footer-grid { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 60px; margin-bottom: 80px; }
         .footer-brand p { color: var(--text-muted); font-size: 0.95rem; line-height: 1.6; margin-top: 16px; max-width: 320px; }
@@ -704,7 +635,6 @@
         .footer-base { display: flex; justify-content: space-between; align-items: center; padding-top: 40px; border-top: 1px solid var(--border); flex-wrap: wrap; gap: 20px; }
         .footer-copyright { font-size: 0.9rem; color: var(--text-muted); }
 
-        /* Footer Map Container */
         .footer-map-wrapper {
             border-radius: var(--radius-md);
             overflow: hidden;
@@ -725,7 +655,6 @@
             text-align: center;
         }
 
-        /* Footer Links Grid */
         .footer-links-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -756,7 +685,6 @@
             padding-left: 4px;
         }
 
-        /* Fixed Actions */
         #fixed-actions-container { position: fixed; bottom: 32px; right: 32px; display: flex; flex-direction: column; gap: 12px; z-index: 1500; }
         .sticky-action-trigger { width: 56px; height: 56px; border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer; text-decoration: none; box-shadow: 0 10px 25px rgba(0,0,0,0.2); transition: var(--transition); font-weight: 600; border: none; }
         .sticky-btn-whatsapp { background: #25D366; color: #fff; width: auto; padding: 0 24px; border-radius: 100px; font-size: 0.9rem; gap: 8px; }
@@ -765,7 +693,6 @@
         .sticky-btn-top:hover { transform: translateY(-4px); }
         .sticky-btn-whatsapp svg { width: 20px; height: 20px; fill: #fff; }
 
-        /* Responsive */
         @media(max-width: 1200px) {
             .why-grid, .services-grid, .reviews-grid, .blog-grid { grid-template-columns: repeat(2, 1fr); }
             .tools-grid, .cert-grid { grid-template-columns: repeat(3, 1fr); }
@@ -818,7 +745,7 @@
     <!-- Header -->
     <header>
         <div class="container nav-container">
-            <a href="#" class="logo">Ranking<span>Matters</span></a>
+            <a href="index.html" class="logo">Ranking<span>Matters</span></a>
             <ul class="nav-menu">
                 <li><a href="index.html" class="nav-link active">Home</a></li>
                 <li><a href="about.html" class="nav-link">About</a></li>
@@ -935,8 +862,9 @@
             <h2 class="section-title">Our Tactical <span class="text-gradient">SEO Services</span></h2>
             <p class="section-subtitle">Data-backed scaling strategies deployed precisely to hijack high-intent customer leads from your top local competitors. As a premier <strong>Local SEO expert</strong>, we offer a suite of specialized services.</p>
             <div class="services-grid">
-                <div class="card glass service-card">
-                    <span class="service-icon">📍</span>
+                <!-- GBP Optimization -->
+                <a href="gbp-optimization.html" class="card glass service-card">
+                    <span class="icon">📍</span>
                     <h3>Google Business Profile Optimization</h3>
                     <p>Complete structural builds and monthly optimization mechanics designed to securely place your profile into the coveted Google 3-Pack. Our <strong>Google Business Profile optimization</strong> service ensures your listing is fully optimized for local searches.</p>
                     <ul class="service-features">
@@ -944,9 +872,12 @@
                         <li>Geo-Targeted Asset Stacking</li>
                         <li>Continuous Audit Maintenance</li>
                     </ul>
-                </div>
-                <div class="card glass service-card">
-                    <span class="service-icon">🔧</span>
+                    <span class="learn-more">Learn More →</span>
+                </a>
+
+                <!-- GMB Recovery -->
+                <a href="gmb-recovery.html" class="card glass service-card">
+                    <span class="icon">🔧</span>
                     <h3>GMB Suspension & Recovery</h3>
                     <p>Emergency restoration services for suspended accounts. We diagnose guidelines violations, rewrite business representations, and file rapid appeals. Trust <strong>Ranking Matters</strong> for reliable <strong>GMB suspension recovery</strong>.</p>
                     <ul class="service-features">
@@ -954,9 +885,12 @@
                         <li>Address & Document Auditing</li>
                         <li>Direct Google Support Pipeline</li>
                     </ul>
-                </div>
-                <div class="card glass service-card">
-                    <span class="service-icon">🏗️</span>
+                    <span class="learn-more">Learn More →</span>
+                </a>
+
+                <!-- Local Citations -->
+                <a href="local-citations.html" class="card glass service-card">
+                    <span class="icon">🏗️</span>
                     <h3>Local Citation Engineering</h3>
                     <p>Building flawless tier-1 business citations and structural directories while aggressively fixing historical name, address, and phone variations. This foundational <strong>local SEO</strong> work is critical for ranking success.</p>
                     <ul class="service-features">
@@ -964,9 +898,12 @@
                         <li>Premium Local Network Placement</li>
                         <li>Hyper-Localized Backlink Auditing</li>
                     </ul>
-                </div>
-                <div class="card glass service-card">
-                    <span class="service-icon">🗺️</span>
+                    <span class="learn-more">Learn More →</span>
+                </a>
+
+                <!-- Google Maps Ranking -->
+                <a href="google-maps-ranking.html" class="card glass service-card">
+                    <span class="icon">🗺️</span>
                     <h3>Google Maps Ranking</h3>
                     <p>Advanced georadial mapping and proximity optimization to secure top positions in the Google Maps pack across multiple service areas. Expand your reach and dominate local search.</p>
                     <ul class="service-features">
@@ -974,9 +911,12 @@
                         <li>Proximity Optimization</li>
                         <li>Multi-Location Strategy</li>
                     </ul>
-                </div>
-                <div class="card glass service-card">
-                    <span class="service-icon">📱</span>
+                    <span class="learn-more">Learn More →</span>
+                </a>
+
+                <!-- Google Maps Marketing -->
+                <a href="google-maps-marketing.html" class="card glass service-card">
+                    <span class="icon">📱</span>
                     <h3>Google Maps Marketing</h3>
                     <p>Strategic Google Maps marketing to drive targeted traffic, generate leads, and build a strong local presence through your Google Business Profile. Maximize your visibility and attract high-intent customers.</p>
                     <ul class="service-features">
@@ -984,9 +924,12 @@
                         <li>Photo & Video Optimization</li>
                         <li>Google Posts Management</li>
                     </ul>
-                </div>
-                <div class="card glass service-card">
-                    <span class="service-icon">🎨</span>
+                    <span class="learn-more">Learn More →</span>
+                </a>
+
+                <!-- Landing Page Design -->
+                <a href="landing-pages.html" class="card glass service-card">
+                    <span class="icon">🎨</span>
                     <h3>Landing Page Design</h3>
                     <p>Custom-designed, hyper-local landing pages engineered to rank for specific neighborhoods, zip codes, and service areas. Each page is optimized for maximum conversion and local SEO performance.</p>
                     <ul class="service-features">
@@ -994,7 +937,15 @@
                         <li>Schema Markup Implementation</li>
                         <li>Mobile-Responsive & Fast</li>
                     </ul>
-                </div>
+                    <span class="learn-more">Learn More →</span>
+                </a>
+            </div>
+
+            <!-- ====== VIEW ALL SERVICES BUTTON ====== -->
+            <div style="text-align: center; margin-top: 60px;">
+                <a href="services.html" class="btn btn-primary" style="padding: 18px 48px; font-size: 1.05rem;">
+                    View All Services →
+                </a>
             </div>
         </div>
     </section>
@@ -1468,9 +1419,8 @@
     <footer>
         <div class="container">
             <div class="footer-grid">
-                <!-- Left Column -->
                 <div class="footer-brand">
-                    <a href="#" class="logo">Ranking<span>Matters</span></a>
+                    <a href="index.html" class="logo">Ranking<span>Matters</span></a>
                     <p>Advanced algorithmic optimization mechanics engineered explicitly to scale inbound customer commercial phone calls and local visibility indicators. Your trusted <strong>Local SEO expert</strong>.</p>
                     
                     <div class="footer-links-grid">
@@ -1491,6 +1441,8 @@
                                 <li><a href="local-seo.html">Local SEO</a></li>
                                 <li><a href="google-maps-ranking.html">Maps Ranking</a></li>
                                 <li><a href="gmb-recovery.html">GMB Recovery</a></li>
+                                <li><a href="local-citations.html">Local Citations</a></li>
+                                <li><a href="google-maps-marketing.html">Maps Marketing</a></li>
                                 <li><a href="landing-pages.html">Landing Pages</a></li>
                             </ul>
                         </div>
@@ -1505,7 +1457,6 @@
                     </div>
                 </div>
 
-                <!-- Right Column: GMB Map -->
                 <div>
                     <h4 style="font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 16px; color: var(--text);">Find Us On Google Maps</h4>
                     <div class="footer-map-wrapper">
@@ -1523,7 +1474,6 @@
                 </div>
             </div>
 
-            <!-- Footer Bottom -->
             <div class="footer-base">
                 <div class="footer-copyright">&copy; 2026 <strong>Ranking Matters</strong>. All Rights Reserved.</div>
                 <a href="https://wa.me/923314349664" target="_blank" style="color: var(--text-muted); text-decoration: none; display: flex; align-items: center; gap: 8px;">
@@ -1543,11 +1493,8 @@
         <button class="sticky-action-trigger sticky-btn-top" id="back-to-top">↑</button>
     </div>
 
-    <!-- JavaScript -->
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            
-            // Loader
             const loader = document.getElementById('loader');
             window.addEventListener('load', function() {
                 setTimeout(function() {
@@ -1557,7 +1504,6 @@
                 }, 400);
             });
 
-            // Scroll Progress
             window.addEventListener('scroll', function() {
                 const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
                 const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
@@ -1572,19 +1518,16 @@
                 }
             });
 
-            // Back to Top
             document.getElementById('back-to-top').addEventListener('click', function() {
                 window.scrollTo({ top: 0, behavior: 'smooth' });
             });
 
-            // Mobile Menu
             const menuToggle = document.getElementById('menu-toggle');
             const navMenu = document.querySelector('.nav-menu');
             menuToggle.addEventListener('click', function() {
                 navMenu.classList.toggle('active');
             });
 
-            // Mobile Dropdown
             const dropdownTriggers = document.querySelectorAll('.nav-dropdown > a');
             dropdownTriggers.forEach(function(trigger) {
                 trigger.addEventListener('click', function(e) {
@@ -1595,7 +1538,6 @@
                 });
             });
 
-            // Theme Toggle
             const themeToggle = document.getElementById('theme-toggle');
             if (!document.body.classList.contains('dark-mode') && !document.body.classList.contains('light-mode')) {
                 document.body.classList.add('dark-mode');
@@ -1605,7 +1547,6 @@
                 document.body.classList.toggle('light-mode');
             });
 
-            // Mouse Glow
             const glow = document.getElementById('mouse-glow');
             document.addEventListener('mousemove', function(e) {
                 glow.style.opacity = '1';
@@ -1616,7 +1557,6 @@
                 glow.style.opacity = '0';
             });
 
-            // Portfolio Filter
             const filterBtns = document.querySelectorAll('.filter-btn');
             const portfolioCards = document.querySelectorAll('.portfolio-card');
             filterBtns.forEach(function(btn) {
@@ -1634,7 +1574,6 @@
                 });
             });
 
-            // Pricing Toggle
             const billingToggle = document.getElementById('billing-toggle');
             const pricingVals = document.querySelectorAll('.plan-price');
             const standardPrices = [50000, 70000, 90000];
@@ -1649,7 +1588,6 @@
                 });
             });
 
-            // FAQ
             const faqTriggers = document.querySelectorAll('.faq-trigger');
             faqTriggers.forEach(function(t) {
                 t.addEventListener('click', function() {
@@ -1667,7 +1605,6 @@
                 });
             });
 
-            // Testimonial Slider
             const track = document.getElementById('testimonial-track');
             const slides = document.querySelectorAll('.testimonial-slide');
             let currIdx = 0;
@@ -1680,7 +1617,6 @@
                 track.style.transform = 'translateX(-' + (currIdx * 100) + '%)';
             });
 
-            // Counters
             const counters = document.querySelectorAll('.counter');
             const countObs = new IntersectionObserver(function(entries) {
                 entries.forEach(function(entry) {
@@ -1704,7 +1640,6 @@
             }, { threshold: 0.5 });
             counters.forEach(function(c) { countObs.observe(c); });
 
-            // Skill Bars
             function triggerSkillAnimations() {
                 const fillBars = document.querySelectorAll('.skill-bar-fill');
                 const skillObs = new IntersectionObserver(function(entries) {
