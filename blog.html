@@ -418,12 +418,39 @@
             to { opacity: 1; transform: translateY(0); }
         }
 
+        /* ====== FEATURED POST STYLING ====== */
+        .featured-post {
+            border: 2px solid var(--primary);
+            background: var(--surface);
+            position: relative;
+            overflow: hidden;
+        }
+        .featured-post::before {
+            content: '⭐ Featured';
+            position: absolute;
+            top: 16px;
+            right: 16px;
+            background: var(--primary);
+            color: #fff;
+            padding: 6px 16px;
+            border-radius: 100px;
+            font-size: 0.7rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            z-index: 5;
+        }
+        .featured-post .blog-img {
+            height: 300px;
+        }
+
         @media(max-width: 1200px) {
             .blog-grid-full { grid-template-columns: repeat(2, 1fr); }
         }
         @media(max-width: 992px) {
             .footer-grid { grid-template-columns: repeat(2, 1fr); }
             .blog-sidebar { grid-template-columns: 1fr; }
+            .featured-post .blog-img { height: 240px; }
         }
         @media(max-width: 768px) {
             .nav-menu { display: none; position: absolute; top: 90px; left: 0; width: 100%; background: var(--surface-pure); border-bottom: 1px solid var(--border); flex-direction: column; padding: 40px; gap: 24px; text-align: center; }
@@ -431,6 +458,8 @@
             .burger { display: flex; }
             .blog-grid-full { grid-template-columns: 1fr; }
             .footer-grid { grid-template-columns: 1fr; }
+            .featured-post .blog-img { height: 200px; }
+            .featured-post::before { font-size: 0.6rem; padding: 4px 12px; }
         }
     </style>
 </head>
@@ -506,6 +535,7 @@
                 <button class="blog-filter-btn" data-filter="gmb">GMB Optimization</button>
                 <button class="blog-filter-btn" data-filter="suspension">Suspension Recovery</button>
                 <button class="blog-filter-btn" data-filter="strategy">Strategy</button>
+                <button class="blog-filter-btn" data-filter="featured">⭐ Featured</button>
             </div>
         </div>
     </section>
@@ -514,6 +544,23 @@
     <section style="padding-top: 0;">
         <div class="container">
             <div class="blog-grid-full">
+
+                <!-- ====== FEATURED POST: BLOG POST 9 ====== -->
+                <div class="blog-card-full featured-post" data-category="featured">
+                    <div class="blog-img">
+                        <img src="https://i.ibb.co/3mkSDcTd/Local-SEO-Guide-2026-Complete-Blog-Post-Collection.png" alt="Local SEO Guide 2026 - Complete Blog Post Collection" loading="lazy">
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span class="category">⭐ Featured</span>
+                            <span>July 22, 2026</span>
+                            <span>12 min read</span>
+                        </div>
+                        <h3><a href="blog-post9.html">📚 Local SEO Guide 2026: Complete Blog Post Collection</a></h3>
+                        <p>Your complete guide to Local SEO. All <strong>8 blog posts</strong> in one place covering <strong>Google Business Profile optimization</strong>, <strong>GMB suspension recovery</strong>, <strong>Google Maps ranking</strong>, and more from <strong>Ranking Matters</strong>.</p>
+                        <a href="blog-post9.html" class="read-more">Read Full Article →</a>
+                    </div>
+                </div>
 
                 <!-- Blog Post 1 -->
                 <div class="blog-card-full" data-category="local-seo">
@@ -617,7 +664,7 @@
                     </div>
                 </div>
 
-                <!-- ====== NEW BLOG POST 7 ====== -->
+                <!-- Blog Post 7 -->
                 <div class="blog-card-full" data-category="strategy">
                     <div class="blog-img">
                         <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=600&q=80" alt="Local SEO vs Traditional SEO: What's the Difference?" loading="lazy">
@@ -634,7 +681,7 @@
                     </div>
                 </div>
 
-                <!-- ====== NEW BLOG POST 8 ====== -->
+                <!-- Blog Post 8 -->
                 <div class="blog-card-full" data-category="gmb">
                     <div class="blog-img">
                         <img src="https://images.unsplash.com/photo-1573164713988-8665fc963095?auto=format&fit=crop&w=600&q=80" alt="Google Business Profile Categories: The Ultimate Guide" loading="lazy">
@@ -662,11 +709,12 @@
                 <div class="sidebar-card glass">
                     <h4>📚 Popular Categories</h4>
                     <ul>
+                        <li><a href="blog.html?category=featured"><span class="arrow">⭐</span> Featured (1)</a></li>
                         <li><a href="blog.html?category=local-seo"><span class="arrow">→</span> Local SEO (12)</a></li>
                         <li><a href="blog.html?category=gmb"><span class="arrow">→</span> GMB Optimization (8)</a></li>
                         <li><a href="blog.html?category=suspension"><span class="arrow">→</span> Suspension Recovery (6)</a></li>
                         <li><a href="blog.html?category=strategy"><span class="arrow">→</span> Strategy (10)</a></li>
-                        <li><a href="blog.html"><span class="arrow">→</span> All Posts (36)</a></li>
+                        <li><a href="blog.html"><span class="arrow">→</span> All Posts (37)</a></li>
                     </ul>
                 </div>
                 <div class="sidebar-card glass">
@@ -680,6 +728,7 @@
                         <a href="blog.html?tag=strategy">#Strategy</a>
                         <a href="blog.html?tag=ranking">#Ranking</a>
                         <a href="blog.html?tag=leads">#Leads</a>
+                        <a href="blog.html?tag=complete-guide">#CompleteGuide</a>
                     </div>
                 </div>
             </div>
