@@ -1,117 +1,195 @@
-# RANKING MATTERS - LOCAL SEO AGENCY
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xmlns:news="http://www.google.com/schemas/sitemap-news/0.9"
+        xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0"
+        xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
 
-## SUMMARY
-Ranking Matters is a performance-driven Local SEO and digital optimization agency specializing in helping local businesses claim the #1 spot on Google Maps. We transform Google Business Profiles into high-converting lead generation machines.
+    <!-- ============================================================ -->
+    <!-- SITEMAP - RANKING MATTERS                                     -->
+    <!-- Website: https://rankingexpert.github.io/rankingmatters/    -->
+    <!-- Generated: July 22, 2026                                     -->
+    <!-- Total URLs: 16                                               -->
+    <!-- ============================================================ -->
 
-## CORE SERVICES
+    <!-- ============================================================ -->
+    <!-- MAIN PAGES                                                  -->
+    <!-- ============================================================ -->
 
-### Google Business Profile Optimization
-Complete structural builds and monthly optimization mechanics designed to securely place your profile into the coveted Google 3-Pack.
-- Keyword Category Structuring
-- Geo-Targeted Asset Stacking
-- Continuous Audit Maintenance
+    <!-- Homepage -->
+    <url>
+        <loc>https://rankingexpert.github.io/rankingmatters/index.html</loc>
+        <lastmod>2026-07-22</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>1.0</priority>
+    </url>
 
-### GMB Suspension & Recovery
-Emergency restoration services for suspended Google Business Profile accounts.
-- Contamination Data Cleanup
-- Address & Document Auditing
-- Direct Google Support Pipeline
-- 72-hour reinstatement guarantee
+    <!-- About Page -->
+    <url>
+        <loc>https://rankingexpert.github.io/rankingmatters/about.html</loc>
+        <lastmod>2026-07-22</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
 
-### Local Citation Engineering
-Building tier-1 business citations while fixing historical NAP (Name, Address, Phone) variations.
-- Aggressive Inconsistent NAP Cleanup
-- Premium Local Network Placement
-- Hyper-Localized Backlink Auditing
+    <!-- Services Main Page -->
+    <url>
+        <loc>https://rankingexpert.github.io/rankingmatters/services.html</loc>
+        <lastmod>2026-07-22</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
 
-### Google Maps Ranking
-Advanced georadial mapping and proximity optimization for top Google Maps positions.
-- Georadial Mapping
-- Proximity Optimization
-- Multi-Location Strategy
+    <!-- Blog Main Page -->
+    <url>
+        <loc>https://rankingexpert.github.io/rankingmatters/blog.html</loc>
+        <lastmod>2026-07-22</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
 
-### Google Maps Marketing
-Strategic Google Maps marketing to drive targeted traffic and generate leads.
-- Review Generation Strategy
-- Photo & Video Optimization
-- Google Posts Management
+    <!-- Contact Page -->
+    <url>
+        <loc>https://rankingexpert.github.io/rankingmatters/contact.html</loc>
+        <lastmod>2026-07-22</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
 
-### Landing Page Design
-Custom-designed hyper-local landing pages optimized for conversion.
-- Conversion-Focused Design
-- Schema Markup Implementation
-- Mobile-Responsive & Fast
+    <!-- ============================================================ -->
+    <!-- SERVICES PAGES (SUB-SERVICES)                               -->
+    <!-- ============================================================ -->
 
-## PRIMARY INDUSTRIES
-- HVAC & Mechanical
-- Emergency Plumbing
-- Home Contracting & Roofing
-- Premium Bridal Studios
-- Commercial Janitorial Services
-- Real Estate Brokerages
+    <!-- GBP Optimization -->
+    <url>
+        <loc>https://rankingexpert.github.io/rankingmatters/gbp-optimization.html</loc>
+        <lastmod>2026-07-22</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
 
-## PRICING STRUCTURE
+    <!-- Local SEO -->
+    <url>
+        <loc>https://rankingexpert.github.io/rankingmatters/local-seo.html</loc>
+        <lastmod>2026-07-22</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
 
-### Local Spark - ₨ 50,000/mo
-- Google Business Profile Setup
-- Targeted Core Citation Building
-- Standard Geo-Tag Asset Postings
-- Monthly Core Rank Monitoring
+    <!-- Google Maps Ranking -->
+    <url>
+        <loc>https://rankingexpert.github.io/rankingmatters/google-maps-ranking.html</loc>
+        <lastmod>2026-07-22</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.85</priority>
+    </url>
 
-### Map Dominator - ₨ 70,000/mo
-- Advanced Georadial Mapping
-- Tailored Local Schema Deployment
-- Deep Tier-1 Citation Cleanup
-- Suspension Guard Monitoring
+    <!-- GMB Recovery -->
+    <url>
+        <loc>https://rankingexpert.github.io/rankingmatters/gmb-recovery.html</loc>
+        <lastmod>2026-07-22</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.85</priority>
+    </url>
 
-### Enterprise Market Takeover - ₨ 90,000/mo
-- Multi-Profile Network Structuring
-- High-Stakes Priority Support Line
-- Custom Organic Landing Pages
-- Premium Dedicated Link Campaign
+    <!-- Local Citations -->
+    <url>
+        <loc>https://rankingexpert.github.io/rankingmatters/local-citations.html</loc>
+        <lastmod>2026-07-22</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
 
-## TECHNICAL EXPERTISE
-- GMB Troubleshooting & Verification: 98%
-- Georadial Proximity Optimization: 95%
-- Local JSON-LD Semantic Web: 92%
-- Directory Data Remediation: 96%
+    <!-- Google Maps Marketing -->
+    <url>
+        <loc>https://rankingexpert.github.io/rankingmatters/google-maps-marketing.html</loc>
+        <lastmod>2026-07-22</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
 
-## TOOLS WE DEPLOY
-- Ahrefs Pro
-- Semrush Matrix
-- Screaming Frog
-- BrightLocal
+    <!-- Landing Pages -->
+    <url>
+        <loc>https://rankingexpert.github.io/rankingmatters/landing-pages.html</loc>
+        <lastmod>2026-07-22</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
 
-## KEY CONTACT INFORMATION
-- Phone: +92 331 4349664
-- Email: shanyaqoob730@gmail.com
-- Location: Thokar, Lahore, Pakistan
-- Website: https://rankingexpert.github.io/rankingmatters/
+    <!-- ============================================================ -->
+    <!-- BLOG POSTS                                                   -->
+    <!-- ============================================================ -->
 
-## FREQUENTLY ASKED QUESTIONS
+    <!-- Blog Post 1 -->
+    <url>
+        <loc>https://rankingexpert.github.io/rankingmatters/blog-post1.html</loc>
+        <lastmod>2026-07-10</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.65</priority>
+    </url>
 
-Q: What causes GMB suspensions?
-A: Aggressive name changes (keyword stuffing), address changes to unverified locations, data mismatch across directories, or system sweeps targeting specific local service categories.
+    <!-- Blog Post 2 -->
+    <url>
+        <loc>https://rankingexpert.github.io/rankingmatters/blog-post2.html</loc>
+        <lastmod>2026-07-08</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.65</priority>
+    </url>
 
-Q: How do you improve Google Maps ranking?
-A: By building geo-contextual relevance through structured backend coordinates, locally optimized landing page networks, nested schema configurations, and hyper-targeted contextual link profiles.
+    <!-- Blog Post 3 -->
+    <url>
+        <loc>https://rankingexpert.github.io/rankingmatters/blog-post3.html</loc>
+        <lastmod>2026-07-05</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.65</priority>
+    </url>
 
-Q: Do you require long-term contracts?
-A: No, all campaigns run on flexible month-to-month commitments based on transparent performance and verifiable ROI.
+    <!-- Blog Post 4 -->
+    <url>
+        <loc>https://rankingexpert.github.io/rankingmatters/blog-post4.html</loc>
+        <lastmod>2026-07-03</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.65</priority>
+    </url>
 
-Q: How long does GMB suspension recovery take?
-A: Our specialists can typically get your profile reinstated within 72 hours.
+    <!-- Blog Post 5 -->
+    <url>
+        <loc>https://rankingexpert.github.io/rankingmatters/blog-post5.html</loc>
+        <lastmod>2026-06-28</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.65</priority>
+    </url>
 
-## VERSION
-- Last Updated: 2026-07-16
-- Format Version: 1.0
+    <!-- Blog Post 6 -->
+    <url>
+        <loc>https://rankingexpert.github.io/rankingmatters/blog-post6.html</loc>
+        <lastmod>2026-06-25</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.65</priority>
+    </url>
 
-## PRICING
-- Local Spark: ₨ 50,000/mo
-- Map Dominator: ₨ 70,000/mo
-- Enterprise: ₨ 90,000/mo
+    <!-- Blog Post 7 -->
+    <url>
+        <loc>https://rankingexpert.github.io/rankingmatters/blog-post7.html</loc>
+        <lastmod>2026-07-15</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.65</priority>
+    </url>
 
-## CONTACT
-- Phone: +92 331 4349664
-- Email: shanyaqoob730@gmail.com
-- Location: Thokar, Lahore, Pakistan
+    <!-- Blog Post 8 -->
+    <url>
+        <loc>https://rankingexpert.github.io/rankingmatters/blog-post8.html</loc>
+        <lastmod>2026-07-13</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.65</priority>
+    </url>
+
+    <!-- Blog Post 9 (NEW) -->
+    <url>
+        <loc>https://rankingexpert.github.io/rankingmatters/blog-post9.html</loc>
+        <lastmod>2026-07-22</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.85</priority>
+    </url>
+
+</urlset>
