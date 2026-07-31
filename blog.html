@@ -1,9 +1,12 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <title>Google Business Profile Suspended? Step-by-Step Recovery Guide | Ranking Matters</title>
+    <meta name="description" content="Is your Google Business Profile suspended? Learn the difference between soft & hard suspension, common triggers, and a complete step-by-step recovery process to get reinstated fast.">
+    <link rel="canonical" href="https://rankingexpert.github.io/rankingmatters/blog/gbp-suspension-recovery-guide.html">
+    
     <!-- ====== GOOGLE SEARCH CONSOLE VERIFICATION ====== -->
     <meta name="google-site-verification" content="google03b0f2c466ca5be5" />
     
@@ -16,26 +19,28 @@
         gtag('config', 'G-Z3PRC6PLMM');
     </script>
     
-    <title>Blog - Ranking Matters | #1 Local SEO Expert in Lahore</title>
-    <meta name="description" content="Read the latest insights, tips, and strategies from Ranking Matters. Stay ahead with expert local SEO advice, GMB optimization guides, and more.">
-    <link rel="canonical" href="https://rankingexpert.github.io/rankingmatters/blog.html">
-    <meta name="robots" content="index, follow">
-    <meta name="theme-color" content="#0a0a12">
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#0a0a12" />
 
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://rankingexpert.github.io/rankingmatters/blog.html">
-    <meta property="og:title" content="Blog - Ranking Matters | #1 Local SEO Expert in Lahore">
-    <meta property="og:description" content="Read the latest insights, tips, and strategies from Ranking Matters. Stay ahead with expert local SEO advice.">
-    <meta property="og:image" content="https://images.unsplash.com/photo-1432821596592-e2c18b78144f?auto=format&fit=crop&w=1200&q=80">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://rankingexpert.github.io/rankingmatters/blog/gbp-suspension-recovery-guide.html" />
+    <meta property="og:title" content="Google Business Profile Suspended? Step-by-Step Recovery Guide" />
+    <meta property="og:description" content="Is your Google Business Profile suspended? Learn the difference between soft & hard suspension, common triggers, and a complete step-by-step recovery process to get reinstated fast." />
+    <meta property="og:image" content="https://i.ibb.co/SX8wRbWw/Google-Business-Profile-Suspended-Here-s-How-to-Recover-It-Step-by-Step-2026-Guide.png" />
+    <meta property="og:site_name" content="Ranking Matters" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://rankingexpert.github.io/rankingmatters/blog/gbp-suspension-recovery-guide.html" />
+    <meta name="twitter:title" content="Google Business Profile Suspended? Step-by-Step Recovery Guide" />
+    <meta name="twitter:description" content="Is your Google Business Profile suspended? Learn the difference between soft & hard suspension, common triggers, and a complete step-by-step recovery process to get reinstated fast." />
+    <meta name="twitter:image" content="https://i.ibb.co/SX8wRbWw/Google-Business-Profile-Suspended-Here-s-How-to-Recover-It-Step-by-Step-2026-Guide.png" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap" rel="stylesheet">
 
     <style>
-        /* --- Complete CSS --- */
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        
+        /* --- Ranking Matters CSS Architecture --- */
         :root {
             --bg-dark: #07070a;
             --surface-dark: rgba(18, 18, 26, 0.7);
@@ -87,59 +92,55 @@
             --nav-bg: rgba(249, 250, 251, 0.75);
         }
 
-        html { scroll-behavior: smooth; }
+        body {
+            --bg: var(--bg-dark);
+            --surface: var(--surface-dark);
+            --surface-pure: var(--surface-dark-pure);
+            --border: var(--border-dark);
+            --text: var(--text-dark);
+            --text-muted: var(--text-dark-muted);
+            --shadow: 0 20px 40px -15px rgba(0,0,0,0.7);
+            --nav-bg: rgba(7, 7, 10, 0.7);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: var(--font-sans); background-color: var(--bg); color: var(--text); overflow-x: hidden; transition: background-color 0.4s ease, color 0.4s ease; -webkit-font-smoothing: antialiased; }
         
         .container { width: 100%; max-width: 1400px; margin: 0 auto; padding: 0 40px; }
         @media(max-width: 768px) { .container { padding: 0 24px; } }
-        
-        section { padding: 140px 0; position: relative; }
-        @media(max-width: 768px) { section { padding: 90px 0; } }
 
         #scroll-progress { position: fixed; top: 0; left: 0; height: 3px; background: linear-gradient(90deg, var(--primary), var(--accent)); width: 0%; z-index: 2000; transition: width 0.1s ease; }
 
-        #loader { 
-            position: fixed; inset: 0; background: var(--bg-dark); z-index: 3000; 
-            display: flex; justify-content: center; align-items: center; 
-            transition: opacity 0.8s ease, visibility 0.8s ease; 
-        }
+        #loader { position: fixed; inset: 0; background: var(--bg-dark); z-index: 3000; display: flex; justify-content: center; align-items: center; transition: opacity 0.6s ease, visibility 0.6s ease; }
         #loader.hidden { opacity: 0; visibility: hidden; pointer-events: none; }
-        .loader-logo { font-size: 2rem; font-weight: 800; letter-spacing: -1px; color: #fff; }
+        .loader-logo { font-size: 2rem; font-weight: 800; letter-spacing: -1px; color: #fff; position: relative; animation: pulse 1.5s infinite; }
         .loader-logo span { color: var(--primary); }
-        .loader-spinner { width: 48px; height: 48px; border: 4px solid rgba(255,255,255,0.1); border-top-color: var(--primary); border-radius: 50%; animation: spin 1s linear infinite; margin-right: 20px; }
-        @keyframes spin { to { transform: rotate(360deg); } }
-        .loader-content { display: flex; align-items: center; }
+        @keyframes pulse { 0%, 100% { opacity: 0.6; transform: scale(0.98); } 50% { opacity: 1; transform: scale(1); } }
 
         h1, h2, h3, h4 { font-weight: 700; letter-spacing: -0.03em; line-height: 1.15; }
-        .section-title { font-size: clamp(2.5rem, 4vw, 3.75rem); font-weight: 800; margin-bottom: 24px; text-align: center; }
-        .section-subtitle { font-size: clamp(1.1rem, 1.5vw, 1.35rem); color: var(--text-muted); text-align: center; max-width: 700px; margin: 0 auto 80px; font-weight: 400; line-height: 1.5; }
         .text-gradient { background: linear-gradient(135deg, #3b82f6 0%, #10b981 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-
+        
         .glass { background: var(--surface); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border: 1px solid var(--border); box-shadow: var(--shadow); }
         .card { border-radius: var(--radius-lg); padding: 48px; transition: var(--transition); position: relative; overflow: hidden; }
-        .card:hover { transform: translateY(-8px); border-color: rgba(37, 99, 235, 0.3); }
 
         .btn { display: inline-flex; align-items: center; justify-content: center; padding: 18px 36px; font-weight: 600; font-size: 0.95rem; border-radius: var(--radius-md); transition: var(--transition); text-decoration: none; position: relative; overflow: hidden; cursor: pointer; border: none; }
         .btn-primary { background: linear-gradient(135deg, var(--primary), #1d4ed8); color: #ffffff; box-shadow: 0 10px 25px -5px rgba(37, 99, 235, 0.4); }
         .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 15px 30px -5px rgba(37, 99, 235, 0.6); }
-        .btn-secondary { background: transparent; color: var(--text); border: 1px solid var(--border); }
-        .btn-secondary:hover { background: var(--border); transform: translateY(-2px); }
         .btn-whatsapp { background: #25D366; color: #ffffff; box-shadow: 0 10px 25px -5px rgba(37, 211, 102, 0.4); }
         .btn-whatsapp:hover { transform: translateY(-2px); box-shadow: 0 15px 30px -5px rgba(37, 211, 102, 0.6); }
         .btn-whatsapp svg { margin-right: 10px; }
 
-        .blob { position: absolute; border-radius: 50%; filter: blur(120px); z-index: -1; opacity: 0.15; pointer-events: none; transition: var(--transition); }
-
         header { position: fixed; top: 0; left: 0; width: 100%; z-index: 1000; background: var(--nav-bg); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border-bottom: 1px solid var(--border); transition: var(--transition); }
-        .nav-container { display: flex; justify-content: space-between; align-items: center; height: 90px; }
+        .nav-container { display: flex; justify-content: space-between; align-items: center; height: 80px; }
         .logo { font-size: 1.35rem; font-weight: 800; letter-spacing: -0.04em; text-decoration: none; color: var(--text); display: flex; align-items: center; gap: 8px; }
         .logo span { color: var(--primary); }
         .nav-menu { display: flex; align-items: center; gap: 40px; list-style: none; }
-        .nav-link { text-decoration: none; color: var(--text-muted); font-weight: 500; font-size: 0.95rem; transition: var(--transition); position: relative; }
+        .nav-link { text-decoration: none; color: var(--text-muted); font-weight: 500; font-size: 0.95rem; transition: var(--transition); position: relative; padding: 4px 0; }
         .nav-link:hover, .nav-link.active { color: var(--text); }
-        .nav-link::after { content: ''; position: absolute; bottom: -6px; left: 0; width: 0; height: 2px; background: var(--primary); transition: var(--transition); }
+        .nav-link::after { content: ''; position: absolute; bottom: -2px; left: 0; width: 0; height: 2px; background: var(--primary); transition: var(--transition); border-radius: 2px; }
         .nav-link.active::after { width: 100%; }
-        .nav-actions { display: flex; align-items: center; gap: 20px; }
+        .nav-link:hover::after { width: 100%; }
+        .nav-actions { display: flex; align-items: center; gap: 16px; }
 
         .nav-dropdown { position: relative; display: inline-block; }
         .nav-dropdown .dropdown-arrow { font-size: 0.6rem; margin-left: 4px; transition: var(--transition); }
@@ -149,7 +150,6 @@
         .nav-dropdown:hover .dropdown-content { display: block; }
         .nav-dropdown .dropdown-content a { display: block; padding: 10px 24px; font-size: 0.85rem; font-weight: 500; color: var(--text-muted); transition: var(--transition); white-space: nowrap; letter-spacing: 0.03em; }
         .nav-dropdown .dropdown-content a:hover { color: var(--primary); background: var(--primary-glow); }
-        .nav-dropdown .dropdown-content a::after { display: none; }
 
         @media (max-width: 992px) {
             .nav-dropdown .dropdown-content { display: none; position: static; transform: none; background: transparent !important; backdrop-filter: none !important; box-shadow: none; border: none; padding: 8px 0 8px 20px; animation: none; width: 100%; }
@@ -164,350 +164,121 @@
         .theme-btn { background: none; border: 1px solid var(--border); width: 44px; height: 44px; border-radius: var(--radius-sm); display: flex; align-items: center; justify-content: center; cursor: pointer; color: var(--text); transition: var(--transition); font-size: 1.2rem; }
         .theme-btn:hover { background: var(--border); }
         .burger { display: none; cursor: pointer; background: none; border: none; padding: 8px; flex-direction: column; gap: 5px; }
-        .burger span { display: block; width: 24px; height: 2px; background: var(--text); transition: var(--transition); }
+        .burger span { display: block; width: 24px; height: 2px; background: var(--text); transition: var(--transition); border-radius: 2px; }
 
-        /* Blog Page Specific Styles */
-        .blog-hero {
-            padding-top: 160px;
-            padding-bottom: 80px;
-            text-align: center;
-            position: relative;
-        }
-        .blog-hero h1 {
-            font-size: clamp(3rem, 5vw, 4.5rem);
-            font-weight: 800;
-            margin-bottom: 24px;
-            line-height: 1.05;
-        }
-        .blog-hero p {
-            font-size: clamp(1.1rem, 1.8vw, 1.3rem);
-            color: var(--text-muted);
-            max-width: 750px;
-            margin: 0 auto;
-            line-height: 1.6;
-        }
-        .blog-hero .blob-blog {
-            position: absolute;
-            width: 400px;
-            height: 400px;
-            background: var(--primary);
-            border-radius: 50%;
-            filter: blur(140px);
-            opacity: 0.1;
-            top: -20%;
-            right: -10%;
-            z-index: -1;
-        }
-        .blog-hero .blob-blog-2 {
-            position: absolute;
-            width: 300px;
-            height: 300px;
-            background: var(--accent);
-            border-radius: 50%;
-            filter: blur(120px);
-            opacity: 0.08;
-            bottom: -10%;
-            left: -5%;
-            z-index: -1;
+        /* Blog Post Styles */
+        .blog-post-wrapper { max-width: 850px; margin: 120px auto 60px; padding: 0 20px; }
+        .blog-post-wrapper h1 { font-size: clamp(2.2rem, 4vw, 3.2rem); font-weight: 800; margin-bottom: 16px; color: var(--text); }
+        .blog-post-wrapper .post-meta { color: var(--text-muted); font-size: 0.95rem; margin-bottom: 32px; border-bottom: 1px solid var(--border); padding-bottom: 24px; }
+        .blog-post-wrapper .post-meta span { margin-right: 20px; }
+        .blog-post-wrapper .featured-image-wrapper { margin-bottom: 40px; }
+        .blog-post-wrapper .featured-image { width: 100%; border-radius: var(--radius-lg); border: 1px solid var(--border); display: block; }
+        .blog-post-wrapper .image-caption { font-size: 0.9rem; color: var(--text-muted); text-align: center; margin-top: 12px; font-style: italic; }
+        .blog-post-wrapper h2 { font-size: clamp(1.6rem, 2.5vw, 2.2rem); font-weight: 700; margin-top: 48px; margin-bottom: 16px; color: var(--text); }
+        .blog-post-wrapper h3 { font-size: clamp(1.2rem, 1.8vw, 1.5rem); font-weight: 600; margin-top: 32px; margin-bottom: 12px; color: var(--text); }
+        .blog-post-wrapper p { font-size: 1.1rem; line-height: 1.7; color: var(--text-muted); margin-bottom: 20px; }
+        .blog-post-wrapper ul, .blog-post-wrapper ol { margin-bottom: 20px; padding-left: 24px; color: var(--text-muted); }
+        .blog-post-wrapper ul li, .blog-post-wrapper ol li { font-size: 1.05rem; line-height: 1.7; margin-bottom: 8px; }
+        .blog-post-wrapper table { width: 100%; border-collapse: collapse; margin: 32px 0; background: var(--surface-pure); border-radius: var(--radius-md); overflow: hidden; }
+        .blog-post-wrapper table th { background: var(--primary); color: #fff; padding: 14px 20px; text-align: left; font-weight: 600; }
+        .blog-post-wrapper table td { padding: 14px 20px; border-bottom: 1px solid var(--border); color: var(--text-muted); }
+        .blog-post-wrapper table tr:last-child td { border-bottom: none; }
+        .blog-post-wrapper .faq-item { border-bottom: 1px solid var(--border); padding: 20px 0; }
+        .blog-post-wrapper .faq-item:last-child { border-bottom: none; }
+        .blog-post-wrapper .faq-item h3 { margin-top: 0; font-size: 1.15rem; color: var(--text); }
+        .blog-post-wrapper .faq-item p { margin-bottom: 0; }
+        .blog-post-wrapper .cta-box { background: var(--surface); border: 1px solid var(--primary); border-radius: var(--radius-lg); padding: 40px 48px; text-align: center; margin: 48px 0; }
+        .blog-post-wrapper .cta-box h3 { margin-top: 0; font-size: 1.6rem; color: var(--text); }
+        .blog-post-wrapper .cta-box p { margin-bottom: 24px; }
+        .blog-post-wrapper .cta-box .btn-group { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+        .blog-post-wrapper strong { color: var(--text); }
+        .blog-post-wrapper a { color: var(--primary); text-decoration: none; transition: var(--transition); }
+        .blog-post-wrapper a:hover { color: var(--accent); text-decoration: underline; }
+        .blog-post-wrapper .back-to-blog { display: inline-flex; align-items: center; gap: 8px; color: var(--text-muted); text-decoration: none; font-weight: 500; margin-bottom: 32px; transition: var(--transition); }
+        .blog-post-wrapper .back-to-blog:hover { color: var(--text); text-decoration: none; }
+
+        @media(max-width: 768px) {
+            .blog-post-wrapper { margin-top: 100px; padding: 0 16px; }
+            .blog-post-wrapper .cta-box { padding: 28px 20px; }
+            .blog-post-wrapper table { font-size: 0.9rem; }
+            .blog-post-wrapper table th, .blog-post-wrapper table td { padding: 10px 14px; }
         }
 
-        .blog-filter {
-            display: flex;
-            justify-content: center;
-            gap: 12px;
-            margin-bottom: 48px;
-            flex-wrap: wrap;
-        }
-        .blog-filter-btn {
-            padding: 12px 28px;
-            border-radius: 100px;
-            background: transparent;
-            border: 1px solid var(--border);
-            color: var(--text-muted);
-            font-weight: 600;
-            font-size: 0.9rem;
-            transition: var(--transition);
-            cursor: pointer;
-        }
-        .blog-filter-btn.active, .blog-filter-btn:hover {
-            background: var(--primary);
-            color: #fff;
-            border-color: var(--primary);
-        }
-
-        .blog-grid-full {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 32px;
-        }
-        .blog-card-full {
-            overflow: hidden;
-            border-radius: var(--radius-lg);
-            background: var(--surface);
-            border: 1px solid var(--border);
-            transition: var(--transition);
-        }
-        .blog-card-full:hover {
-            transform: translateY(-8px);
-            border-color: var(--primary);
-            box-shadow: 0 20px 40px -15px rgba(37, 99, 235, 0.15);
-        }
-        .blog-card-full .blog-img {
-            height: 260px;
-            overflow: hidden;
-            background: var(--surface-pure);
-        }
-        .blog-card-full .blog-img img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: var(--transition);
-        }
-        .blog-card-full:hover .blog-img img {
-            transform: scale(1.05);
-        }
-        .blog-card-full .blog-content {
-            padding: 32px;
-        }
-        .blog-card-full .blog-meta {
-            display: flex;
-            align-items: center;
-            gap: 16px;
-            margin-bottom: 12px;
-            font-size: 0.8rem;
-            color: var(--text-muted);
-        }
-        .blog-card-full .blog-meta .category {
-            color: var(--primary);
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-        }
-        .blog-card-full h3 {
-            font-size: 1.35rem;
-            margin-bottom: 12px;
-            line-height: 1.3;
-        }
-        .blog-card-full h3 a {
-            color: var(--text);
-            text-decoration: none;
-            transition: var(--transition);
-        }
-        .blog-card-full h3 a:hover {
-            color: var(--primary);
-        }
-        .blog-card-full p {
-            color: var(--text-muted);
-            font-size: 0.95rem;
-            line-height: 1.6;
-            margin-bottom: 20px;
-        }
-        .blog-card-full .read-more {
-            color: var(--primary);
-            font-weight: 600;
-            text-decoration: none;
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            transition: var(--transition);
-        }
-        .blog-card-full .read-more:hover {
-            gap: 12px;
-            color: var(--accent);
-        }
-
-        .blog-sidebar {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 32px;
-            margin-top: 60px;
-        }
-        .blog-sidebar .sidebar-card {
-            padding: 32px;
-            border-radius: var(--radius-lg);
-            background: var(--surface);
-            border: 1px solid var(--border);
-        }
-        .blog-sidebar .sidebar-card h4 {
-            font-size: 1.2rem;
-            margin-bottom: 16px;
-        }
-        .blog-sidebar .sidebar-card ul {
-            list-style: none;
-        }
-        .blog-sidebar .sidebar-card ul li {
-            padding: 10px 0;
-            border-bottom: 1px solid var(--border);
-        }
-        .blog-sidebar .sidebar-card ul li:last-child {
-            border-bottom: none;
-        }
-        .blog-sidebar .sidebar-card ul li a {
-            color: var(--text-muted);
-            text-decoration: none;
-            transition: var(--transition);
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-        .blog-sidebar .sidebar-card ul li a:hover {
-            color: var(--primary);
-            padding-left: 4px;
-        }
-        .blog-sidebar .sidebar-card ul li a .arrow {
-            color: var(--primary);
-        }
-        .blog-sidebar .sidebar-card .tag-cloud {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-        }
-        .blog-sidebar .sidebar-card .tag-cloud a {
-            padding: 6px 16px;
-            border-radius: 100px;
-            background: var(--surface-pure);
-            border: 1px solid var(--border);
-            color: var(--text-muted);
-            text-decoration: none;
-            font-size: 0.85rem;
-            transition: var(--transition);
-        }
-        .blog-sidebar .sidebar-card .tag-cloud a:hover {
-            background: var(--primary);
-            color: #fff;
-            border-color: var(--primary);
-        }
-
-        .cta-section-blog {
-            text-align: center;
-            padding: 80px 40px;
-            border-radius: var(--radius-lg);
-        }
-        .cta-section-blog h2 {
-            font-size: clamp(2rem, 3vw, 2.8rem);
-            margin-bottom: 20px;
-        }
-        .cta-section-blog p {
-            color: var(--text-muted);
-            font-size: 1.1rem;
-            max-width: 600px;
-            margin: 0 auto 32px;
-            line-height: 1.6;
-        }
-
-        footer { background: var(--surface-pure); border-top: 1px solid var(--border); padding: 100px 0 40px; }
-        .footer-grid { display: grid; grid-template-columns: 1.2fr repeat(3, 0.6fr); gap: 60px; margin-bottom: 80px; }
+        footer { background: var(--surface-pure); border-top: 1px solid var(--border); padding: 80px 0 40px; margin-top: 60px; }
+        .footer-grid { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 60px; margin-bottom: 60px; }
         .footer-brand p { color: var(--text-muted); font-size: 0.95rem; line-height: 1.6; margin-top: 16px; max-width: 320px; }
-        .footer-col h4 { font-size: 1rem; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 24px; color: var(--text); }
-        .footer-links { list-style: none; display: flex; flex-direction: column; gap: 14px; }
-        .footer-links a { text-decoration: none; color: var(--text-muted); font-size: 0.95rem; transition: var(--transition); }
-        .footer-links a:hover { color: var(--primary); padding-left: 4px; }
+        .footer-links-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; margin-top: 30px; }
+        .footer-links-grid h4 { font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 16px; color: var(--text); }
+        .footer-links-grid ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+        .footer-links-grid ul a { text-decoration: none; color: var(--text-muted); font-size: 0.9rem; transition: var(--transition); }
+        .footer-links-grid ul a:hover { color: var(--primary); padding-left: 4px; }
         .footer-base { display: flex; justify-content: space-between; align-items: center; padding-top: 40px; border-top: 1px solid var(--border); flex-wrap: wrap; gap: 20px; }
         .footer-copyright { font-size: 0.9rem; color: var(--text-muted); }
+        .footer-socials { display: flex; gap: 16px; }
+        .footer-socials a { color: var(--text-muted); transition: var(--transition); font-size: 1.2rem; text-decoration: none; width: 40px; height: 40px; border-radius: 50%; border: 1px solid var(--border); display: flex; align-items: center; justify-content: center; }
+        .footer-socials a:hover { color: var(--primary); border-color: var(--primary); background: var(--primary-glow); }
+        .footer-legal { display: flex; gap: 24px; flex-wrap: wrap; }
+        .footer-legal a { color: var(--text-muted); text-decoration: none; font-size: 0.85rem; transition: var(--transition); }
+        .footer-legal a:hover { color: var(--primary); }
+        .footer-map-wrapper { border-radius: var(--radius-md); overflow: hidden; box-shadow: var(--shadow); background: var(--surface-pure); border: 1px solid var(--border); }
+        .footer-map-wrapper iframe { display: block; width: 100%; height: 280px; border: 0; }
+        .footer-map-label { color: var(--text-muted); font-size: 0.85rem; margin-top: 12px; text-align: center; }
+        @media(max-width: 992px) { .footer-grid { grid-template-columns: 1fr !important; } .footer-links-grid { grid-template-columns: repeat(2, 1fr); } }
+        @media(max-width: 768px) { .footer-links-grid { grid-template-columns: 1fr; } .footer-map-wrapper iframe { height: 180px; } }
 
         #fixed-actions-container { position: fixed; bottom: 32px; right: 32px; display: flex; flex-direction: column; gap: 12px; z-index: 1500; }
         .sticky-action-trigger { width: 56px; height: 56px; border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer; text-decoration: none; box-shadow: 0 10px 25px rgba(0,0,0,0.2); transition: var(--transition); font-weight: 600; border: none; }
         .sticky-btn-whatsapp { background: #25D366; color: #fff; width: auto; padding: 0 24px; border-radius: 100px; font-size: 0.9rem; gap: 8px; }
+        .sticky-btn-whatsapp:hover { transform: scale(1.05); }
         .sticky-btn-top { background: var(--surface-pure); border: 1px solid var(--border); color: var(--text); font-size: 1.2rem; opacity: 0; visibility: hidden; }
         .sticky-btn-top.show { opacity: 1; visibility: visible; }
-        .sticky-btn-top:hover { transform: translateY(-4px); }
+        .sticky-btn-top:hover { transform: translateY(-4px); background: var(--primary); color: #fff; border-color: var(--primary); }
         .sticky-btn-whatsapp svg { width: 20px; height: 20px; fill: #fff; }
-
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        /* ====== FEATURED POST STYLING ====== */
-        .featured-post {
-            border: 2px solid var(--primary);
-            background: var(--surface);
-            position: relative;
-            overflow: hidden;
-        }
-        .featured-post::before {
-            content: '⭐ Featured';
-            position: absolute;
-            top: 16px;
-            right: 16px;
-            background: var(--primary);
-            color: #fff;
-            padding: 6px 16px;
-            border-radius: 100px;
-            font-size: 0.7rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-            z-index: 5;
-        }
-        .featured-post .blog-img {
-            height: 300px;
-        }
-
-        @media(max-width: 1200px) {
-            .blog-grid-full { grid-template-columns: repeat(2, 1fr); }
-        }
-        @media(max-width: 992px) {
-            .footer-grid { grid-template-columns: repeat(2, 1fr); }
-            .blog-sidebar { grid-template-columns: 1fr; }
-            .featured-post .blog-img { height: 240px; }
-        }
-        @media(max-width: 768px) {
-            .nav-menu { display: none; position: absolute; top: 90px; left: 0; width: 100%; background: var(--surface-pure); border-bottom: 1px solid var(--border); flex-direction: column; padding: 40px; gap: 24px; text-align: center; }
-            .nav-menu.active { display: flex; }
-            .burger { display: flex; }
-            .blog-grid-full { grid-template-columns: 1fr; }
-            .footer-grid { grid-template-columns: 1fr; }
-            .featured-post .blog-img { height: 200px; }
-            .featured-post::before { font-size: 0.6rem; padding: 4px 12px; }
-        }
+        .sticky-cta-audit { position: fixed; bottom: 32px; left: 32px; z-index: 1500; }
+        .sticky-cta-audit a { display: flex; align-items: center; gap: 10px; padding: 16px 28px; border-radius: 100px; background: var(--primary); color: #fff; text-decoration: none; font-weight: 600; font-size: 0.95rem; box-shadow: 0 10px 25px rgba(37, 99, 235, 0.4); transition: var(--transition); }
+        .sticky-cta-audit a:hover { transform: translateY(-4px); box-shadow: 0 15px 30px rgba(37, 99, 235, 0.6); }
+        @media(max-width: 768px) { .sticky-cta-audit { display: none; } }
     </style>
 </head>
-<body class="dark-mode">
+<body>
 
     <!-- Scroll Progress -->
     <div id="scroll-progress"></div>
 
     <!-- Loader -->
     <div id="loader">
-        <div class="loader-content">
-            <div class="loader-spinner"></div>
-            <div class="loader-logo">Ranking<span>Matters</span></div>
-        </div>
+        <div class="loader-logo">Ranking<span>Matters</span></div>
     </div>
 
-    <!-- Mouse Glow System -->
-    <div id="mouse-glow"></div>
-
     <!-- Header -->
-    <header>
+    <header role="banner">
         <div class="container nav-container">
-            <a href="index.html" class="logo">Ranking<span>Matters</span></a>
-            <ul class="nav-menu">
-                <li><a href="index.html" class="nav-link">Home</a></li>
-                <li><a href="about.html" class="nav-link">About</a></li>
+            <a href="/index.html" class="logo" aria-label="Ranking Matters Home">Ranking<span>Matters</span></a>
+            <ul class="nav-menu" role="navigation" aria-label="Main Navigation">
+                <li><a href="/index.html" class="nav-link">Home</a></li>
+                <li><a href="/about.html" class="nav-link">About</a></li>
                 <li class="nav-dropdown">
-                    <a href="services.html" class="nav-link">Services <span class="dropdown-arrow">▾</span></a>
-                    <div class="dropdown-content">
-                        <a href="gbp-optimization.html">GBP Optimization</a>
-                        <a href="local-seo.html">Local SEO</a>
-                        <a href="google-maps-ranking.html">Google Maps Ranking</a>
-                        <a href="gmb-recovery.html">GMB Recovery</a>
-                        <a href="local-citations.html">Local Citations</a>
-                        <a href="google-maps-marketing.html">Google Maps Marketing</a>
-                        <a href="landing-pages.html">Landing Pages</a>
+                    <a href="/services.html" class="nav-link" aria-haspopup="true">Services <span class="dropdown-arrow" aria-hidden="true">▾</span></a>
+                    <div class="dropdown-content" role="menu">
+                        <a href="/gbp-optimization.html" role="menuitem">GBP Optimization</a>
+                        <a href="/local-seo.html" role="menuitem">Local SEO</a>
+                        <a href="/google-maps-ranking.html" role="menuitem">Google Maps Ranking</a>
+                        <a href="/gmb-recovery.html" role="menuitem">GMB Recovery</a>
+                        <a href="/local-citations.html" role="menuitem">Local Citations</a>
+                        <a href="/google-maps-marketing.html" role="menuitem">Google Maps Marketing</a>
+                        <a href="/landing-pages.html" role="menuitem">Landing Pages</a>
                     </div>
                 </li>
-                <li><a href="blog.html" class="nav-link active">Blog</a></li>
-                <li><a href="contact.html" class="nav-link">Contact</a></li>
+                <li><a href="/blog.html" class="nav-link active">Blog</a></li>
+                <li><a href="/contact.html" class="nav-link">Contact</a></li>
             </ul>
             <div class="nav-actions">
-                <button class="theme-btn" id="theme-toggle">🌓</button>
-                <a href="https://wa.me/923314349664" target="_blank" class="btn btn-whatsapp" style="padding: 10px 20px; font-size: 0.85rem;">
-                    <svg viewBox="0 0 24 24" width="18" height="18" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                <button class="theme-btn" id="theme-toggle" aria-label="Toggle dark/light mode">🌓</button>
+                <a href="https://wa.me/923314349664" target="_blank" class="btn btn-whatsapp" style="padding: 10px 20px; font-size: 0.85rem;" aria-label="Contact us on WhatsApp">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="white" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
                     WhatsApp
                 </a>
-                <button class="burger" id="menu-toggle">
+                <button class="burger" id="menu-toggle" aria-label="Toggle navigation menu">
                     <span></span>
                     <span></span>
                     <span></span>
@@ -516,301 +287,301 @@
         </div>
     </header>
 
-    <!-- Blog Hero -->
-    <section class="blog-hero">
-        <div class="blob-blog"></div>
-        <div class="blob-blog-2"></div>
-        <div class="container">
-            <h1>Our <span class="text-gradient">SEO Insights</span></h1>
-            <p>Stay ahead of the competition with expert <strong>local SEO</strong> tips, <strong>Google Business Profile optimization</strong> guides, and actionable strategies from the team at <strong>Ranking Matters</strong>.</p>
+    <!-- Blog Post Content -->
+    <div class="blog-post-wrapper">
+        <a href="/blog.html" class="back-to-blog">← Back to Blog</a>
+        
+        <h1>Google Business Profile Suspended? Here's How to Recover It Step by Step (2026 Guide)</h1>
+        
+        <div class="post-meta">
+            <span>📅 August 1, 2026</span>
+            <span>⏱ 10 min read</span>
+            <span>🏷️ <a href="/blog.html?category=suspension" style="color: var(--primary); text-decoration: none;">Suspension Recovery</a></span>
         </div>
-    </section>
 
-    <!-- Blog Filter -->
-    <section style="padding-top: 0; padding-bottom: 40px;">
-        <div class="container">
-            <div class="blog-filter">
-                <button class="blog-filter-btn active" data-filter="all">All Posts</button>
-                <button class="blog-filter-btn" data-filter="local-seo">Local SEO</button>
-                <button class="blog-filter-btn" data-filter="gmb">GMB Optimization</button>
-                <button class="blog-filter-btn" data-filter="suspension">Suspension Recovery</button>
-                <button class="blog-filter-btn" data-filter="strategy">Strategy</button>
-                <button class="blog-filter-btn" data-filter="featured">⭐ Featured</button>
-            </div>
+        <!-- Featured Image -->
+        <div class="featured-image-wrapper">
+            <img src="https://i.ibb.co/SX8wRbWw/Google-Business-Profile-Suspended-Here-s-How-to-Recover-It-Step-by-Step-2026-Guide.png" 
+                 alt="Google Business Profile Suspended? Here's How to Recover It Step by Step (2026 Guide) - Featured Image" 
+                 class="featured-image">
+            <p class="image-caption">Google Business Profile Suspension Recovery Guide 2026 — Step-by-step process to get your GBP reinstated</p>
         </div>
-    </section>
 
-    <!-- Blog Grid -->
-    <section style="padding-top: 0;">
-        <div class="container">
-            <div class="blog-grid-full">
+        <p>One morning, you wake up, check your phone, and notice something feels off. Your calls are down. Your website traffic has flatlined. You head to Google, search for your business, and… it's gone. Vanished from the map pack. Your <strong>Google Business Profile has been suspended</strong>.</p>
 
-                <!-- ====== FEATURED POST: BLOG POST 9 (New GBP Suspension Guide) ====== -->
-                <div class="blog-card-full featured-post" data-category="featured suspension">
-                    <div class="blog-img">
-                        <img src="https://i.ibb.co/SX8wRbWw/Google-Business-Profile-Suspended-Here-s-How-to-Recover-It-Step-by-Step-2026-Guide.png" alt="Google Business Profile Suspended? Here's How to Recover It Step by Step (2026 Guide)" loading="lazy">
-                    </div>
-                    <div class="blog-content">
-                        <div class="blog-meta">
-                            <span class="category">⭐ Featured • Suspension Recovery</span>
-                            <span>August 1, 2026</span>
-                            <span>10 min read</span>
-                        </div>
-                        <h3><a href="blog/gbp-suspension-recovery-guide.html">Google Business Profile Suspended? Here's How to Recover It Step by Step (2026 Guide)</a></h3>
-                        <p>Is your <strong>Google Business Profile suspended</strong>? Learn the difference between soft & hard suspension, common triggers, and a complete step-by-step recovery process to get reinstated fast. Includes expert tips, documentation checklist, and appeal strategies from <strong>Ranking Matters</strong>.</p>
-                        <a href="blog/gbp-suspension-recovery-guide.html" class="read-more">Read Full Article →</a>
-                    </div>
-                </div>
+        <p>I can't tell you how many business owners I've spoken to who have felt that same sinking feeling. It's a moment of pure panic because, for many local businesses, their GBP isn't just a listing – it's their digital storefront and a primary lead generation engine.</p>
 
-                <!-- ====== FEATURED POST: BLOG POST 9 (Collection) ====== -->
-                <div class="blog-card-full featured-post" data-category="featured local-seo">
-                    <div class="blog-img">
-                        <img src="https://i.ibb.co/3mkSDcTd/Local-SEO-Guide-2026-Complete-Blog-Post-Collection.png" alt="Local SEO Guide 2026 - Complete Blog Post Collection" loading="lazy">
-                    </div>
-                    <div class="blog-content">
-                        <div class="blog-meta">
-                            <span class="category">⭐ Featured • Local SEO</span>
-                            <span>July 22, 2026</span>
-                            <span>12 min read</span>
-                        </div>
-                        <h3><a href="blog-post9.html">📚 Local SEO Guide 2026: Complete Blog Post Collection</a></h3>
-                        <p>Your complete guide to Local SEO. All <strong>8 blog posts</strong> in one place covering <strong>Google Business Profile optimization</strong>, <strong>GMB suspension recovery</strong>, <strong>Google Maps ranking</strong>, and more from <strong>Ranking Matters</strong>.</p>
-                        <a href="blog-post9.html" class="read-more">Read Full Article →</a>
-                    </div>
-                </div>
+        <p>Here's the good news: a suspension, whether a soft suspension or a hard suspension, is not the end of the road. The vast majority of suspended Google Business Profiles can be <strong>successfully recovered</strong>.</p>
 
-                <!-- Blog Post 1 -->
-                <div class="blog-card-full" data-category="local-seo">
-                    <div class="blog-img">
-                        <img src="https://images.unsplash.com/photo-1432821596592-e2c18b78144f?auto=format&fit=crop&w=600&q=80" alt="How to Overcome Proximity Algorithmic Restrictions" loading="lazy">
-                    </div>
-                    <div class="blog-content">
-                        <div class="blog-meta">
-                            <span class="category">Local SEO</span>
-                            <span>July 10, 2026</span>
-                            <span>5 min read</span>
-                        </div>
-                        <h3><a href="blog-post1.html">How to Overcome Proximity Algorithmic Restrictions</a></h3>
-                        <p>Discover the exact steps required to claim maps package positioning outside your immediate physical operational zip code location safely. A must-read for <strong>local SEO experts</strong>.</p>
-                        <a href="blog-post1.html" class="read-more">Read Full Article →</a>
-                    </div>
-                </div>
+        <p>In this guide, I'm sharing everything I know as a Local SEO Consultant about how to <strong>recover your suspended Google Business Profile</strong>. We'll walk through why Google suspends profiles, the difference between a soft and hard suspension, and a step-by-step plan for a successful <strong>Google Business Profile reinstatement</strong>.</p>
 
-                <!-- Blog Post 2 -->
-                <div class="blog-card-full" data-category="suspension">
-                    <div class="blog-img">
-                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=600&q=80" alt="The Ultimate Playbook for Rapid GMB Reinstatements" loading="lazy">
-                    </div>
-                    <div class="blog-content">
-                        <div class="blog-meta">
-                            <span class="category">Suspension Recovery</span>
-                            <span>July 8, 2026</span>
-                            <span>7 min read</span>
-                        </div>
-                        <h3><a href="blog-post2.html">The Ultimate Playbook for Rapid GMB Reinstatements</a></h3>
-                        <p>A calculated walkthrough mapping out how to prepare clean official documentation to resolve hard <strong>Google Business Profile</strong> suspensions smoothly.</p>
-                        <a href="blog-post2.html" class="read-more">Read Full Article →</a>
-                    </div>
-                </div>
+        <p>If you're dealing with a Google Business Profile suspension right now, take a deep breath. Let's fix this.</p>
 
-                <!-- Blog Post 3 -->
-                <div class="blog-card-full" data-category="strategy">
-                    <div class="blog-img">
-                        <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=600&q=80" alt="Mastering JSON-LD Setup for Local Business Growth" loading="lazy">
-                    </div>
-                    <div class="blog-content">
-                        <div class="blog-meta">
-                            <span class="category">Strategy</span>
-                            <span>July 5, 2026</span>
-                            <span>6 min read</span>
-                        </div>
-                        <h3><a href="blog-post3.html">Mastering JSON-LD Setup for Local Business Growth</a></h3>
-                        <p>Learn how to precisely embed coordinate points and semantic relationship links into website codebases to speed up page crawl tracking.</p>
-                        <a href="blog-post3.html" class="read-more">Read Full Article →</a>
-                    </div>
-                </div>
+        <h2>What Does It Mean When Your Google Business Profile Is Suspended?</h2>
 
-                <!-- Blog Post 4 -->
-                <div class="blog-card-full" data-category="gmb">
-                    <div class="blog-img">
-                        <img src="https://i.ibb.co/sp0NkBN1/Chat-GPT-Image-Jul-15-2026-08-51-15-PM.png" alt="Google Business Profile Optimization Checklist 2026" loading="lazy">
-                    </div>
-                    <div class="blog-content">
-                        <div class="blog-meta">
-                            <span class="category">GMB Optimization</span>
-                            <span>July 3, 2026</span>
-                            <span>8 min read</span>
-                        </div>
-                        <h3><a href="blog-post4.html">Google Business Profile Optimization Checklist 2026</a></h3>
-                        <p>A complete checklist for optimizing your <strong>Google Business Profile</strong> to rank higher in local search results and attract more customers.</p>
-                        <a href="blog-post4.html" class="read-more">Read Full Article →</a>
-                    </div>
-                </div>
+        <p>First, it's crucial to understand what we're dealing with. A <strong>Google Business Profile suspension</strong> means Google has determined your profile violated their <a href="https://support.google.com/business/answer/3038177" target="_blank" rel="noopener">guidelines</a>. As a result, they've restricted or completely removed your listing from Google Search and Maps.</p>
 
-                <!-- Blog Post 5 -->
-                <div class="blog-card-full" data-category="local-seo">
-                    <div class="blog-img">
-                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=600&q=80" alt="Georadial Mapping: The Future of Local SEO" loading="lazy">
-                    </div>
-                    <div class="blog-content">
-                        <div class="blog-meta">
-                            <span class="category">Local SEO</span>
-                            <span>June 28, 2026</span>
-                            <span>5 min read</span>
-                        </div>
-                        <h3><a href="blog-post5.html">Georadial Mapping: The Future of Local SEO</a></h3>
-                        <p>Learn how advanced <strong>georadial mapping</strong> techniques can expand your service area and help you reach customers beyond your immediate location.</p>
-                        <a href="blog-post5.html" class="read-more">Read Full Article →</a>
-                    </div>
-                </div>
+        <p>Google's primary goal is to connect users with trustworthy, accurate information. Their automated systems are designed to sniff out and penalize spammy behavior, inconsistent information, or anything that seems "off". Often, their system flags a profile and suspends it first, only to investigate the legitimacy later.</p>
 
-                <!-- Blog Post 6 -->
-                <div class="blog-card-full" data-category="suspension">
-                    <div class="blog-img">
-                        <img src="https://i.ibb.co/MkR80mYR/Gemini-Generated-Image-eppwm6eppwm6eppw.png" alt="5 Common GMB Suspension Triggers and How to Avoid Them" loading="lazy">
-                    </div>
-                    <div class="blog-content">
-                        <div class="blog-meta">
-                            <span class="category">Suspension Recovery</span>
-                            <span>June 25, 2026</span>
-                            <span>6 min read</span>
-                        </div>
-                        <h3><a href="blog-post6.html">5 Common GMB Suspension Triggers and How to Avoid Them</a></h3>
-                        <p>Protect your business listing by understanding the most common reasons for <strong>GMB suspension</strong> and how to prevent them with <strong>Ranking Matters</strong>.</p>
-                        <a href="blog-post6.html" class="read-more">Read Full Article →</a>
-                    </div>
-                </div>
+        <p>But not all suspensions are created equal. Understanding the type of suspension you're facing is the first step toward recovery.</p>
 
-                <!-- Blog Post 7 -->
-                <div class="blog-card-full" data-category="strategy">
-                    <div class="blog-img">
-                        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=600&q=80" alt="Local SEO vs Traditional SEO: What's the Difference?" loading="lazy">
-                    </div>
-                    <div class="blog-content">
-                        <div class="blog-meta">
-                            <span class="category">Strategy</span>
-                            <span>July 15, 2026</span>
-                            <span>4 min read</span>
-                        </div>
-                        <h3><a href="blog-post7.html">Local SEO vs Traditional SEO: What's the Difference?</a></h3>
-                        <p>Understanding the key differences between <strong>local SEO</strong> and traditional SEO is crucial for businesses targeting local customers. Learn why <strong>Google Business Profile optimization</strong> matters more than ever.</p>
-                        <a href="blog-post7.html" class="read-more">Read Full Article →</a>
-                    </div>
-                </div>
+        <h3>Soft Suspension vs. Hard Suspension</h3>
 
-                <!-- Blog Post 8 -->
-                <div class="blog-card-full" data-category="gmb">
-                    <div class="blog-img">
-                        <img src="https://images.unsplash.com/photo-1573164713988-8665fc963095?auto=format&fit=crop&w=600&q=80" alt="Google Business Profile Categories: The Ultimate Guide" loading="lazy">
-                    </div>
-                    <div class="blog-content">
-                        <div class="blog-meta">
-                            <span class="category">GMB Optimization</span>
-                            <span>July 13, 2026</span>
-                            <span>7 min read</span>
-                        </div>
-                        <h3><a href="blog-post8.html">Google Business Profile Categories: The Ultimate Guide</a></h3>
-                        <p>Choosing the right <strong>GBP categories</strong> is one of the most important decisions for your local search visibility. This guide explains how to select and structure your categories for maximum impact.</p>
-                        <a href="blog-post8.html" class="read-more">Read Full Article →</a>
-                    </div>
-                </div>
+        <p>Google uses two main levels of enforcement: soft and hard. Knowing which one you're dealing with helps determine the urgency and the potential damage.</p>
 
-            </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Feature</th>
+                    <th>Soft Suspension</th>
+                    <th>Hard Suspension</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Public Visibility</strong></td>
+                    <td>Your profile remains visible on Google Maps.</td>
+                    <td>Your profile is completely removed from Search and Maps.</td>
+                </tr>
+                <tr>
+                    <td><strong>Owner Access</strong></td>
+                    <td>You lose management access; you can't edit the profile or respond to reviews.</td>
+                    <td>You also lose management access. The profile is effectively dead to the public.</td>
+                </tr>
+                <tr>
+                    <td><strong>Common Causes</strong></td>
+                    <td>Minor violations, ownership conflicts, verification inconsistencies, or suspicious account activity.</td>
+                    <td>Major violations like keyword stuffing, fake addresses, duplicate listings, or repeated severe policy violations.</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <p>Knowing which one you have is critical. A soft suspension is like a warning shot. It's frustrating, but you can still be found by customers while you work on the fix. A hard suspension is catastrophic for visibility and requires an immediate, careful response.</p>
+
+        <h2>Common Reasons Your Google Business Profile Was Suspended</h2>
+
+        <p>Google usually doesn't tell you exactly why you were suspended. They might mention a "violation of guidelines," but it's often vague and unhelpful. This detective work is where many business owners stumble. They start making wild guesses and submitting appeals without actually fixing the core problem.</p>
+
+        <p>Here are the most common triggers for a <strong>GBP suspension</strong>, based on hundreds of cases I've seen:</p>
+
+        <h3>1. Keyword Stuffing in Your Business Name</h3>
+        <p>This is the absolute #1 cause of suspensions. If your business is "ABC Dental," your business name should be "ABC Dental." It should <strong>not</strong> be "ABC Dental Best Cosmetic Dentist London Emergency Implants." Google views this as an attempt to game the system, and your profile will be flagged.</p>
+
+        <h3>2. Address Issues (Virtual Offices & Hidden Addresses)</h3>
+        <p>Google is cracking down hard on addresses. If you're a <strong>Service Area Business</strong> (SAB) that serves customers at their location (e.g., a plumber or mobile hairdresser), you must <strong>hide your address</strong> and define service areas. Leaving your home address visible can trigger a hard suspension. Using a PO Box, virtual office, or mail-forwarding address is also a surefire way to get suspended.</p>
+
+        <h3>3. Duplicate Listings</h3>
+        <p>Having more than one Google Business Profile for the exact same business location creates trust conflicts in Google's system. This often happens by accident during ownership transfers or after a rebrand, but it's a clear violation. Google may suspend one or all of the associated listings.</p>
+
+        <h3>4. Suspicious Profile Activity & Rapid Edits</h3>
+        <p>Think of your GBP as a profile that should evolve slowly. Making a large number of edits in a short period, especially to major fields like your business name, address, phone number (NAP), and primary category, can look like spam to Google's algorithm and trigger an immediate suspension.</p>
+
+        <h3>5. Verification & Inconsistency Problems</h3>
+        <p>Google cross-checks your listing against other sources. If the information on your Google Business Profile doesn't match your website, business registration, or citations on other directories, your profile will be flagged as untrustworthy. Consistency is key.</p>
+
+        <h2>Step-by-Step: How to Recover Your Suspended Google Business Profile</h2>
+
+        <p>Now that you know what we're up against, let's get to the practical part. This is the exact process I use and recommend for a successful <strong>Google Business Profile reinstatement</strong>.</p>
+
+        <h3>Step 1: Confirm Your Suspension</h3>
+        <p>Before panicking, make absolutely sure your profile is suspended. Sometimes it's a verification issue or a simple glitch. Here's how to check:</p>
+        <ul>
+            <li><strong>Check your dashboard:</strong> Log in to your GBP account. You'll see a notification or a "Suspended" status indicator if you're suspended.</li>
+            <li><strong>Search for your business:</strong> Search for your business by exact name on Google Maps. If it's gone, it's likely a hard suspension. If it's there but you can't access it, it's likely a soft suspension.</li>
+            <li><strong>Check your email:</strong> Google may have sent you an automated email regarding a policy violation.</li>
+        </ul>
+
+        <h3>Step 2: Identify the Violation (The Detective Work)</h3>
+        <p>This is the most critical step. You cannot successfully appeal a suspension without first identifying and fixing the root cause. This process is called an "Integrity Audit."</p>
+        <ul>
+            <li><strong>Review Google's Guidelines</strong>: Sit down and carefully read the <a href="https://support.google.com/business/answer/3038177" target="_blank" rel="noopener">Google Business Profile guidelines</a>. Don't skim. Read every section to understand what is and isn't allowed.</li>
+            <li><strong>Audit Your Profile</strong>: Compare every piece of information on your GBP to your official documents, website, and real-world signage.</li>
+            <li><strong>Check NAP consistency</strong>: Ensure your Name, Address, and Phone number on your GBP match your website, business license, and utility bills perfectly. Any deviation is a red flag.</li>
+            <li><strong>Review your business name</strong>: Is it your legal name? Is it "keyword-stuffed"? If so, this is likely your problem.</li>
+            <li><strong>Check your address</strong>: Does it belong in a storefront category or a service-area category? Is it a real, physical address or a virtual office?</li>
+            <li><strong>Use the Appeal Tool for clues</strong>: In many cases, you can use the Google Business Profile Appeal Tool to get a general reason for the suspension.</li>
+        </ul>
+        <p>You must be honest with yourself during this audit. You're looking for the problem, not trying to justify why your profile is perfect.</p>
+
+        <h3>Step 3: Fix the Violation Before You Appeal</h3>
+        <p>Here's the golden rule of GBP reinstatement: <strong>Do not appeal until you have fixed the issue</strong>. Submitting an appeal while your profile still violates guidelines is a waste of time and can use up your one appeal opportunity.</p>
+        <p>Once you identify the problem, take steps to correct it. If your business name has extra keywords, get it changed to your legal name. If you're a service-area business, hide your address and set up your service zones. If you have duplicate listings, find them and request their removal through Google Maps.</p>
+        <p><strong>Important Note:</strong> If your profile is in a suspended state, you may not be able to make edits directly. In this case, you'll need to clearly state the corrective actions you have taken (or will take) in your appeal and documentation.</p>
+
+        <h3>Step 4: Gather Your Documentation</h3>
+        <p>To prove your legitimacy to Google, you'll need to gather supporting evidence. This is critical for getting your <strong>Google Business Profile reinstatement</strong> approved. Prepare the following:</p>
+        <ul>
+            <li><strong>Business License or Registration</strong>: An official government-issued document that shows your business is legitimate.</li>
+            <li><strong>Utility Bill</strong>: A recent utility bill (electricity, water, internet, phone) with the business name and address that matches your GBP.</li>
+            <li><strong>Tax Certificate</strong>: If you have one, this is another powerful piece of evidence.</li>
+            <li><strong>Lease Agreement</strong>: A copy of your commercial lease can help prove your physical presence.</li>
+            <li><strong>Photos of Signage</strong>: A clear photo of your permanent, exterior business signage. This is a must.</li>
+            <li><strong>Video Walkthrough</strong>: A short video walkthrough showing the interior of your business can be incredibly persuasive.</li>
+        </ul>
+        <p><strong>Pro Tip:</strong> Google only gives you 60 minutes to upload files once you start the appeal process. Prepare your documents, compress them into a single ZIP file, and have them ready to go.</p>
+
+        <h3>Step 5: Submit the Reinstatement Request</h3>
+        <p>Now you're ready to submit your appeal. Here's the process:</p>
+        <ol>
+            <li><strong>Use the Official Form</strong>: Go to the <a href="https://support.google.com/business/workflow/13569690" target="_blank" rel="noopener">Google Business Profile reinstatement form</a>.</li>
+            <li><strong>Be Thorough and Concise</strong>: Fill out every field completely. In your explanation, clearly state that you have audited your profile, identified the potential violation, and taken steps to correct it.</li>
+            <li><strong>Upload Your Evidence</strong>: Attach your prepared documents. This is non-negotiable. A well-documented appeal is far more likely to be approved.</li>
+            <li><strong>Wait</strong>: After submitting, do not submit another request. It won't speed things up; it will only reset your position in the queue.</li>
+        </ol>
+        <p>Reinstatement usually takes 3 to 7 business days, though high-volume periods can see wait times of several weeks.</p>
+
+        <h3>Step 6: What to Do if Your Appeal Is Denied</h3>
+        <p>If your appeal is denied, don't give up. You have options:</p>
+        <ul>
+            <li><strong>Request an Additional Review</strong>: You may be able to submit a <a href="https://support.google.com/business/contact/local_appeals?hl=en" target="_blank" rel="noopener">request for an additional review</a>. This is often your "last chance" appeal, so you need to be as meticulous as possible.</li>
+            <li><strong>Visit the Community Forum</strong>: Post in the <a href="https://support.google.com/business/community" target="_blank" rel="noopener">Google Business Profile Community forum</a>. Google Product Experts like Sherry Bonelli and Vinay Toshniwal are known to help business owners navigate appeals.</li>
+        </ul>
+
+        <h2>Common Mistakes to Avoid</h2>
+        <p>I've seen businesses delay their recovery for months by making these simple mistakes. Avoid them at all costs.</p>
+        <ul>
+            <li><strong>Creating a new GBP</strong>: If your profile is suspended, do not create a new one. This is against Google's guidelines and will get suspended immediately.</li>
+            <li><strong>Submitting multiple appeals</strong>: Sending in ticket after ticket makes you look impatient and unprofessional. It also slows down your case.</li>
+            <li><strong>Changing your profile while an appeal is pending</strong>: This can reset the review process and make you look like you're still trying to game the system.</li>
+        </ul>
+
+        <h2>Protecting Your GBP from Future Suspensions</h2>
+        <p>Once you get reinstated, you want to make sure it doesn't happen again. Here's how to "suspension-proof" your profile:</p>
+        <ul>
+            <li><strong>Never keyword-stuff</strong>: Use your legal business name and nothing else. Your business name should be your business name.</li>
+            <li><strong>Use a real physical address</strong>: Or, if you're a SAB, hide your address and define your service areas correctly.</li>
+            <li><strong>Make changes slowly</strong>: Avoid making rapid, multiple changes to key fields like NAP, categories, and business hours.</li>
+            <li><strong>Keep NAP consistent</strong>: Ensure the information on your GBP matches your website and all other directories.</li>
+            <li><strong>Audit your profile regularly</strong>: Set a reminder to do a quick "health check" of your profile each month.</li>
+        </ul>
+
+        <h2>FAQ: Your Google Business Profile Suspension Questions, Answered</h2>
+
+        <div class="faq-item">
+            <h3>How long does GBP reinstatement take?</h3>
+            <p>Typically, 3-7 business days, but it can take up to a few weeks depending on the complexity of the case and Google's current workload.</p>
         </div>
-    </section>
-
-    <!-- Sidebar / Newsletter Section -->
-    <section class="glass" style="border-left:none; border-right:none; border-radius:0;">
-        <div class="container">
-            <div class="blog-sidebar">
-                <div class="sidebar-card glass">
-                    <h4>📚 Popular Categories</h4>
-                    <ul>
-                        <li><a href="blog.html?category=featured"><span class="arrow">⭐</span> Featured (2)</a></li>
-                        <li><a href="blog.html?category=local-seo"><span class="arrow">→</span> Local SEO (12)</a></li>
-                        <li><a href="blog.html?category=gmb"><span class="arrow">→</span> GMB Optimization (8)</a></li>
-                        <li><a href="blog.html?category=suspension"><span class="arrow">→</span> Suspension Recovery (7)</a></li>
-                        <li><a href="blog.html?category=strategy"><span class="arrow">→</span> Strategy (10)</a></li>
-                        <li><a href="blog.html"><span class="arrow">→</span> All Posts (38)</a></li>
-                    </ul>
-                </div>
-                <div class="sidebar-card glass">
-                    <h4>🏷️ Popular Tags</h4>
-                    <div class="tag-cloud">
-                        <a href="blog.html?tag=local-seo">#LocalSEO</a>
-                        <a href="blog.html?tag=gmb">#GMB</a>
-                        <a href="blog.html?tag=suspension">#Suspension</a>
-                        <a href="blog.html?tag=google-maps">#GoogleMaps</a>
-                        <a href="blog.html?tag=optimization">#Optimization</a>
-                        <a href="blog.html?tag=strategy">#Strategy</a>
-                        <a href="blog.html?tag=ranking">#Ranking</a>
-                        <a href="blog.html?tag=leads">#Leads</a>
-                        <a href="blog.html?tag=recovery">#Recovery</a>
-                        <a href="blog.html?tag=complete-guide">#CompleteGuide</a>
-                    </div>
-                </div>
-            </div>
+        <div class="faq-item">
+            <h3>Will I lose my reviews if my profile is suspended?</h3>
+            <p>No. Your reviews are safely stored and will reappear once your profile is reinstated.</p>
         </div>
-    </section>
+        <div class="faq-item">
+            <h3>Can a competitor cause my profile to be suspended?</h3>
+            <p>Competitors can report your profile, but this alone won't cause a suspension. Google will only take action if your profile is found to violate their guidelines.</p>
+        </div>
+        <div class="faq-item">
+            <h3>What should I do if I haven't received a response to my appeal?</h3>
+            <p>Do not submit a new appeal. If it's been longer than the estimated time, you can consider posting in the Google Business Profile Community forum for advice from a product expert.</p>
+        </div>
+        <div class="faq-item">
+            <h3>Can I use a virtual office address for my GBP?</h3>
+            <p>No. Using a virtual office, PO Box, or rented mailbox is one of the most common reasons for hard suspensions.</p>
+        </div>
+        <div class="faq-item">
+            <h3>What's the difference between a soft and hard suspension?</h3>
+            <p>A soft suspension means your profile is still visible but you can't manage it. A hard suspension means your profile is completely removed from Google Search and Maps.</p>
+        </div>
+        <div class="faq-item">
+            <h3>Is it possible to recover a Google Business Profile after a hard suspension?</h3>
+            <p>Yes, it is absolutely possible. It requires a thorough audit, fixing the violation, and submitting a well-documented appeal. The process is more rigorous but often successful.</p>
+        </div>
+        <div class="faq-item">
+            <h3>Should I hire a professional for GBP suspension recovery?</h3>
+            <p>While you can do it yourself, many business owners find the process stressful and time-consuming. A professional with experience in the appeal process can significantly increase your chances of success.</p>
+        </div>
 
-    <!-- CTA Section -->
-    <section>
-        <div class="container">
-            <div class="card glass cta-section-blog">
-                <h2>Want to <span class="text-gradient">Dominate</span> the Google Maps Pack?</h2>
-                <p>Partner with <strong>Ranking Matters</strong> — the <strong>#1 Local SEO Expert in Lahore</strong> — and watch your business grow with our proven <strong>local SEO</strong> strategies.</p>
-                <a href="https://wa.me/923314349664" target="_blank" class="btn btn-whatsapp" style="padding: 18px 44px; font-size: 1.05rem;">
-                    <svg viewBox="0 0 24 24" width="22" height="22" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        <div class="cta-box">
+            <h3>Need Expert Help? We Can Get Your Profile Reinstated</h3>
+            <p>Dealing with a <strong>Google Business Profile suspension</strong> is a high-stakes, stressful process. If you've tried the steps above and are still stuck, or if you simply don't have the time to manage the appeal process yourself, we're here to help.</p>
+            <p>At <strong>Ranking Matters</strong>, we've successfully recovered hundreds of suspended Google Business Profiles. We'll conduct a deep dive into your profile, identify the root cause of the suspension, and build a comprehensive, evidence-backed appeal to maximize your chances of success.</p>
+            <p>Don't let a suspension cost you your business's visibility.</p>
+            <div class="btn-group">
+                <a href="/contact.html" class="btn btn-primary">Book a Free Audit</a>
+                <a href="https://wa.me/923314349664" target="_blank" class="btn btn-whatsapp">
+                    <svg viewBox="0 0 24 24" width="20" height="20" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
                     Chat on WhatsApp
                 </a>
             </div>
         </div>
-    </section>
+    </div>
 
     <!-- Footer -->
     <footer>
-        <div class="container footer-grid">
-            <div class="footer-brand">
-                <a href="index.html" class="logo">Ranking<span>Matters</span></a>
-                <p>Advanced algorithmic optimization mechanics engineered explicitly to scale inbound customer commercial phone calls and local visibility indicators. Your trusted <strong>Local SEO expert</strong>.</p>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="/index.html" class="logo">Ranking<span>Matters</span></a>
+                    <p>Advanced algorithmic optimization mechanics engineered explicitly to scale inbound customer commercial phone calls and local visibility indicators. Your trusted <strong>Local SEO expert</strong>.</p>
+                    
+                    <div class="footer-links-grid">
+                        <div>
+                            <h4>Quick Links</h4>
+                            <ul>
+                                <li><a href="/index.html">Home</a></li>
+                                <li><a href="/about.html">About</a></li>
+                                <li><a href="/services.html">Services</a></li>
+                                <li><a href="/blog.html">Blog</a></li>
+                                <li><a href="/contact.html">Contact</a></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4>Our Services</h4>
+                            <ul>
+                                <li><a href="/gbp-optimization.html">GBP Optimization</a></li>
+                                <li><a href="/local-seo.html">Local SEO</a></li>
+                                <li><a href="/google-maps-ranking.html">Maps Ranking</a></li>
+                                <li><a href="/gmb-recovery.html">GMB Recovery</a></li>
+                                <li><a href="/local-citations.html">Local Citations</a></li>
+                                <li><a href="/google-maps-marketing.html">Maps Marketing</a></li>
+                                <li><a href="/landing-pages.html">Landing Pages</a></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4>Contact</h4>
+                            <ul>
+                                <li><a href="tel:+923314349664">+92 331 4349664</a></li>
+                                <li><a href="mailto:shanyaqoob730@gmail.com">shanyaqoob730@gmail.com</a></li>
+                                <li><a href="https://wa.me/923314349664" target="_blank">WhatsApp</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 style="font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 16px; color: var(--text);">Find Us On Google Maps</h4>
+                    <div class="footer-map-wrapper">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3599701.2877120697!2d70.60231495!3d28.227561999999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x84f3df43ef28b013%3A0x722879e737c0b535!2sRanking%20Matters%7C%20Local%20Seo%20Expert%20in%20Lahore!5e0!3m2!1sen!2s!4v1784304112769!5m2!1sen!2s" 
+                            width="100%" 
+                            height="280" 
+                            style="border:0; display: block;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="strict-origin-when-cross-origin">
+                        </iframe>
+                    </div>
+                    <p class="footer-map-label">📍 <strong>Ranking Matters</strong> — Thokar, Lahore, Pakistan</p>
+                </div>
             </div>
-            <div class="footer-col">
-                <h4>Quick Links</h4>
-                <ul class="footer-links">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="blog.html">Blog</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
+
+            <div class="footer-base">
+                <div class="footer-copyright">&copy; 2026 <strong>Ranking Matters</strong>. All Rights Reserved.</div>
+                <div class="footer-legal">
+                    <a href="/privacy-policy.html">Privacy Policy</a>
+                    <a href="/terms.html">Terms of Service</a>
+                    <a href="/sitemap.html">Sitemap</a>
+                </div>
+                <div class="footer-socials">
+                    <a href="#" aria-label="Facebook">fb</a>
+                    <a href="#" aria-label="LinkedIn">in</a>
+                    <a href="#" aria-label="Instagram">ig</a>
+                    <a href="#" aria-label="Twitter">tw</a>
+                </div>
+                <a href="https://wa.me/923314349664" target="_blank" style="color: var(--text-muted); text-decoration: none; display: flex; align-items: center; gap: 8px;">
+                    <svg viewBox="0 0 24 24" width="20" height="20" fill="#25D366"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                    WhatsApp
+                </a>
             </div>
-            <div class="footer-col">
-                <h4>Our Services</h4>
-                <ul class="footer-links">
-                    <li><a href="gbp-optimization.html">GBP Optimization</a></li>
-                    <li><a href="local-seo.html">Local SEO</a></li>
-                    <li><a href="google-maps-ranking.html">Google Maps Ranking</a></li>
-                    <li><a href="gmb-recovery.html">GMB Recovery</a></li>
-                    <li><a href="local-citations.html">Local Citations</a></li>
-                    <li><a href="google-maps-marketing.html">Google Maps Marketing</a></li>
-                    <li><a href="landing-pages.html">Landing Pages</a></li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h4>Contact</h4>
-                <ul class="footer-links">
-                    <li><a href="tel:+923314349664">+92 331 4349664</a></li>
-                    <li><a href="mailto:shanyaqoob730@gmail.com">shanyaqoob730@gmail.com</a></li>
-                    <li><a href="https://wa.me/923314349664" target="_blank">WhatsApp</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="container footer-base">
-            <div class="footer-copyright">&copy; 2026 <strong>Ranking Matters</strong>. All Rights Reserved.</div>
-            <a href="https://wa.me/923314349664" target="_blank" style="color: var(--text-muted); text-decoration: none; display: flex; align-items: center; gap: 8px;">
-                <svg viewBox="0 0 24 24" width="20" height="20" fill="#25D366"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-                WhatsApp
-            </a>
         </div>
     </footer>
 
@@ -823,14 +594,22 @@
         <button class="sticky-action-trigger sticky-btn-top" id="back-to-top">↑</button>
     </div>
 
-    <!-- JavaScript -->
+    <div class="sticky-cta-audit">
+        <a href="/contact.html">📊 Book Free Audit</a>
+    </div>
+
     <script>
         document.addEventListener('DOMContentLoaded', function() {
+            // Loader
             const loader = document.getElementById('loader');
-            setTimeout(function() {
-                loader.classList.add('hidden');
-            }, 800);
+            window.addEventListener('load', function() {
+                setTimeout(function() {
+                    loader.style.opacity = '0';
+                    loader.style.visibility = 'hidden';
+                }, 400);
+            });
 
+            // Scroll Progress
             window.addEventListener('scroll', function() {
                 const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
                 const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
@@ -849,49 +628,14 @@
                 window.scrollTo({ top: 0, behavior: 'smooth' });
             });
 
+            // Mobile Menu Toggle
             const menuToggle = document.getElementById('menu-toggle');
             const navMenu = document.querySelector('.nav-menu');
             menuToggle.addEventListener('click', function() {
                 navMenu.classList.toggle('active');
             });
 
-            const themeToggle = document.getElementById('theme-toggle');
-            themeToggle.addEventListener('click', function() {
-                document.body.classList.toggle('dark-mode');
-                document.body.classList.toggle('light-mode');
-            });
-
-            const glow = document.getElementById('mouse-glow');
-            document.addEventListener('mousemove', function(e) {
-                glow.style.opacity = '1';
-                glow.style.left = e.clientX + 'px';
-                glow.style.top = e.clientY + 'px';
-            });
-            document.addEventListener('mouseleave', function() {
-                glow.style.opacity = '0';
-            });
-
-            // Blog Filter
-            const filterBtns = document.querySelectorAll('.blog-filter-btn');
-            const blogCards = document.querySelectorAll('.blog-card-full');
-            filterBtns.forEach(function(btn) {
-                btn.addEventListener('click', function() {
-                    filterBtns.forEach(function(b) { b.classList.remove('active'); });
-                    btn.classList.add('active');
-                    const target = btn.getAttribute('data-filter');
-                    blogCards.forEach(function(card) {
-                        const categories = card.getAttribute('data-category').split(' ');
-                        if (target === 'all' || categories.includes(target)) {
-                            card.style.display = 'block';
-                            card.style.animation = 'fadeIn 0.6s forwards';
-                        } else {
-                            card.style.display = 'none';
-                        }
-                    });
-                });
-            });
-
-            // Mobile Dropdown
+            // Dropdown for Mobile
             const dropdownTriggers = document.querySelectorAll('.nav-dropdown > a');
             dropdownTriggers.forEach(function(trigger) {
                 trigger.addEventListener('click', function(e) {
@@ -902,19 +646,17 @@
                 });
             });
 
-            // Add fadeIn animation if not already present
-            if (!document.querySelector('#fadeInStyle')) {
-                const style = document.createElement('style');
-                style.id = 'fadeInStyle';
-                style.textContent = `
-                    @keyframes fadeIn {
-                        from { opacity: 0; transform: translateY(20px); }
-                        to { opacity: 1; transform: translateY(0); }
-                    }
-                `;
-                document.head.appendChild(style);
+            // Theme Toggle
+            const themeToggle = document.getElementById('theme-toggle');
+            if (!document.body.classList.contains('dark-mode') && !document.body.classList.contains('light-mode')) {
+                document.body.classList.add('dark-mode');
             }
+            themeToggle.addEventListener('click', function() {
+                document.body.classList.toggle('dark-mode');
+                document.body.classList.toggle('light-mode');
+            });
         });
     </script>
+
 </body>
 </html>
