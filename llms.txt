@@ -1,6 +1,6 @@
 # RANKING MATTERS - LLMS.TXT
 # Website: https://rankingexpert.github.io/rankingmatters/
-# Last Updated: July 22, 2026
+# Last Updated: August 1, 2026
 # Purpose: AI models ko website ka complete overview dene ke liye
 
 ---
@@ -153,12 +153,19 @@ Ranking Matters is a performance-driven Local SEO and digital optimization agenc
 # 7. BLOG POSTS (Complete Collection)
 # ============================================================
 
-## Featured Post
-**Title:** Local SEO Guide 2026: Complete Blog Post Collection
+## Featured Posts
+
+### 1. Google Business Profile Suspended? Here's How to Recover It Step by Step (2026 Guide)
+**URL:** https://rankingexpert.github.io/rankingmatters/blog/gbp-suspension-recovery-guide.html
+**Category:** ⭐ Featured • Suspension Recovery
+**Date:** August 1, 2026
+**Summary:** Complete step-by-step guide to recover a suspended Google Business Profile. Covers soft vs hard suspension, common triggers, documentation checklist, and appeal strategies.
+
+### 2. Local SEO Guide 2026: Complete Blog Post Collection
 **URL:** https://rankingexpert.github.io/rankingmatters/blog-post9.html
-**Description:** Your complete guide to Local SEO. All 8 blog posts in one place covering Google Business Profile optimization, GMB suspension recovery, Google Maps ranking, and more.
-**Category:** ⭐ Featured
+**Category:** ⭐ Featured • Local SEO
 **Date:** July 22, 2026
+**Summary:** Your complete guide to Local SEO. All 8 blog posts in one place covering Google Business Profile optimization, GMB suspension recovery, Google Maps ranking, and more.
 
 ## All Blog Posts
 
@@ -208,7 +215,7 @@ Ranking Matters is a performance-driven Local SEO and digital optimization agenc
 **URL:** https://rankingexpert.github.io/rankingmatters/blog-post8.html
 **Category:** GMB Optimization
 **Date:** July 13, 2026
-**Summary:** Choosing the right GBP categories is one of the most important decisions for your local search visibility.
+**Summary:** Choosing the right GBP categories is one of the most important decisions for your local search visibility. Learn how to select and structure your categories for maximum impact.
 
 ---
 
@@ -227,6 +234,9 @@ A: No, all campaigns run on flexible month-to-month commitments based on transpa
 
 **Q: How long does GMB suspension recovery take?**
 A: Our specialists can typically get your profile reinstated within 72 hours.
+
+**Q: What are GBP categories and why are they important?**
+A: GBP categories are labels that describe your business and services. They help Google understand your business so it can show your profile to relevant searchers. Choosing the right categories directly impacts your local search rankings.
 
 ---
 
@@ -272,6 +282,7 @@ A: Our specialists can typically get your profile reinstated within 72 hours.
 - https://rankingexpert.github.io/rankingmatters/blog-post7.html
 - https://rankingexpert.github.io/rankingmatters/blog-post8.html
 - https://rankingexpert.github.io/rankingmatters/blog-post9.html
+- https://rankingexpert.github.io/rankingmatters/blog/gbp-suspension-recovery-guide.html
 
 ---
 
