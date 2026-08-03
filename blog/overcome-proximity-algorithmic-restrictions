@@ -17,8 +17,8 @@
     </script>
     
     <title>How to Overcome Proximity Algorithmic Restrictions? | Ranking Matters</title>
-    <meta name="description" content="Learn how to overcome proximity algorithmic restrictions? and claim maps package positioning outside your physical location. Expert local SEO tips from Ranking Matters.">
-    <link rel="canonical" href="https://rankingexpert.github.io/rankingmatters/blog-post1.html">
+    <meta name="description" content="Learn how to overcome proximity algorithmic restrictions and claim Google Maps pack positioning outside your physical location. Expert local SEO tips from Ranking Matters.">
+    <link rel="canonical" href="https://rankingexpert.github.io/rankingmatters/blog/overcome-proximity-algorithmic-restrictions.html">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap" rel="stylesheet">
@@ -176,24 +176,24 @@
     <!-- ====== HEADER WITH CORRECT NAVIGATION ====== -->
     <header>
         <div class="container nav-container">
-            <a href="index.html" class="logo">Ranking<span>Matters</span></a>
+            <a href="/rankingmatters/index.html" class="logo">Ranking<span>Matters</span></a>
             <ul class="nav-menu">
-                <li><a href="index.html" class="nav-link">Home</a></li>
-                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="/rankingmatters/index.html" class="nav-link">Home</a></li>
+                <li><a href="/rankingmatters/about.html" class="nav-link">About</a></li>
                 <li class="nav-dropdown">
-                    <a href="services.html" class="nav-link">Services <span class="dropdown-arrow">▾</span></a>
+                    <a href="/rankingmatters/services.html" class="nav-link">Services <span class="dropdown-arrow">▾</span></a>
                     <div class="dropdown-content">
-                        <a href="gbp-optimization.html">GBP Optimization</a>
-                        <a href="local-seo.html">Local SEO</a>
-                        <a href="google-maps-ranking.html">Google Maps Ranking</a>
-                        <a href="gmb-recovery.html">GMB Recovery</a>
-                        <a href="local-citations.html">Local Citations</a>
-                        <a href="google-maps-marketing.html">Google Maps Marketing</a>
-                        <a href="landing-pages.html">Landing Pages</a>
+                        <a href="/rankingmatters/gbp-optimization.html">GBP Optimization</a>
+                        <a href="/rankingmatters/local-seo.html">Local SEO</a>
+                        <a href="/rankingmatters/google-maps-ranking.html">Google Maps Ranking</a>
+                        <a href="/rankingmatters/gmb-recovery.html">GMB Recovery</a>
+                        <a href="/rankingmatters/local-citations.html">Local Citations</a>
+                        <a href="/rankingmatters/google-maps-marketing.html">Google Maps Marketing</a>
+                        <a href="/rankingmatters/landing-pages.html">Landing Pages</a>
                     </div>
                 </li>
-                <li><a href="blog.html" class="nav-link active">Blog</a></li>
-                <li><a href="contact.html" class="nav-link">Contact</a></li>
+                <li><a href="/rankingmatters/blog.html" class="nav-link active">Blog</a></li>
+                <li><a href="/rankingmatters/contact.html" class="nav-link">Contact</a></li>
             </ul>
             <div class="nav-actions">
                 <button class="theme-btn" id="theme-toggle">🌓</button>
@@ -218,9 +218,9 @@
             <div class="blog-post-content">
                 <div class="meta">
                     <span>📅 July 10, 2026</span>
-                    <span>🏷️ <a href="blog.html?category=local-seo" style="color:var(--primary); text-decoration:none;">Local SEO</a></span>
+                    <span>🏷️ <a href="/rankingmatters/blog.html?category=local-seo" style="color:var(--primary); text-decoration:none;">Local SEO</a></span>
                     <span>⏱️ 5 min read</span>
-                    <span>👤 By <a href="about.html" style="color:var(--primary); text-decoration:none;">Arslan Yaqoob</a></span>
+                    <span>👤 By <a href="/rankingmatters/about.html" style="color:var(--primary); text-decoration:none;">Arslan Yaqoob</a></span>
                 </div>
                 <h1>How to Overcome <span class="text-gradient">Proximity Algorithmic Restrictions</span></h1>
                 <div class="featured-image">
@@ -252,7 +252,7 @@
                     "Within just 60 days of implementing georadial mapping, our clients consistently see a 40-60% increase in leads from outside their immediate zip code."
                 </blockquote>
 
-                <p>To learn more about our <a href="services.html" style="color:var(--primary); text-decoration:none; font-weight:600;">local SEO services</a>, visit our services page.</p>
+                <p>To learn more about our <a href="/rankingmatters/services.html" style="color:var(--primary); text-decoration:none; font-weight:600;">local SEO services</a>, visit our services page.</p>
 
                 <h2>Strategy 2: Service Area Optimization</h2>
                 <p>When you set up your <strong>Google Business Profile</strong>, you can define your service area. Many businesses make the mistake of setting this too narrowly. We recommend:</p>
@@ -278,27 +278,27 @@
                     <li>Including neighborhood names in your content naturally</li>
                 </ul>
 
-                <p>Check out our <a href="blog.html" style="color:var(--primary); text-decoration:none; font-weight:600;">blog</a> for more content strategy tips and local SEO insights.</p>
+                <p>Check out our <a href="/rankingmatters/blog.html" style="color:var(--primary); text-decoration:none; font-weight:600;">blog</a> for more content strategy tips and local SEO insights.</p>
 
                 <h2>Why This Works</h2>
                 <p>These strategies work because they signal to Google that you're relevant to searchers in multiple locations. By combining <strong>georadial mapping</strong>, service area optimization, and local content, you can <strong>dominate the Google Maps pack</strong> across a wider region.</p>
 
                 <div class="highlight-box" style="border-color: #dc2626;">
                     <h4 style="color: #dc2626;">⚠️ Warning</h4>
-                    <p>A <strong>GMB suspension</strong> can happen if you violate Google's guidelines. If you're facing a suspension, our <a href="services.html" style="color:var(--primary); text-decoration:none; font-weight:600;">GMB suspension recovery</a> services can help you get reinstated quickly.</p>
+                    <p>A <strong>GMB suspension</strong> can happen if you violate Google's guidelines. If you're facing a suspension, our <a href="/rankingmatters/services.html" style="color:var(--primary); text-decoration:none; font-weight:600;">GMB suspension recovery</a> services can help you get reinstated quickly.</p>
                 </div>
 
                 <h2>Get Expert Help</h2>
                 <p>At <strong>Ranking Matters</strong>, we're experts in <strong>local SEO</strong> and <strong>Google Maps optimization</strong>. Our team has helped hundreds of businesses expand their reach and generate more leads. Ready to overcome proximity restrictions?</p>
 
-                <p><a href="contact.html" style="color:var(--primary); text-decoration:none; font-weight:600;">Contact us</a> today for a free consultation and let's start dominating your local market.</p>
+                <p><a href="/rankingmatters/contact.html" style="color:var(--primary); text-decoration:none; font-weight:600;">Contact us</a> today for a free consultation and let's start dominating your local market.</p>
 
                 <div class="author-box glass">
                     <div class="avatar">AY</div>
                     <div class="author-info">
                         <h4>Arslan Yaqoob</h4>
                         <p>Founder & Lead SEO Strategist at <strong>Ranking Matters</strong>. With over 8 years of experience in <strong>local SEO</strong>, Arslan specializes in <strong>Google Business Profile optimization</strong> and <strong>GMB suspension recovery</strong>.</p>
-                        <p style="margin-top:8px;"><a href="about.html" style="color:var(--primary); text-decoration:none;">Learn more about Arslan Yaqoob →</a></p>
+                        <p style="margin-top:8px;"><a href="/rankingmatters/about.html" style="color:var(--primary); text-decoration:none;">Learn more about Arslan Yaqoob →</a></p>
                     </div>
                 </div>
 
@@ -312,27 +312,27 @@
                 </div>
 
                 <div class="blog-navigation">
-                    <a href="blog.html">← Back to Blog</a>
-                    <a href="blog-post2.html">Next: GMB Reinstatement Guide →</a>
+                    <a href="/rankingmatters/blog.html">← Back to Blog</a>
+                    <a href="/rankingmatters/blog/rapid-gmb-reinstatements.html">Next: GMB Reinstatement Guide →</a>
                 </div>
 
                 <div style="margin-top: 48px;">
                     <h3 style="margin-bottom: 24px;">📖 Related Articles</h3>
                     <div class="related-posts">
                         <div class="related-card glass">
-                            <h4><a href="blog-post2.html">The Ultimate Playbook for Rapid GMB Reinstatements</a></h4>
+                            <h4><a href="/rankingmatters/blog/rapid-gmb-reinstatements.html">The Ultimate Playbook for Rapid GMB Reinstatements</a></h4>
                             <p>Learn how to quickly resolve GMB suspensions</p>
-                            <a href="blog-post2.html" class="read-link">Read Article →</a>
+                            <a href="/rankingmatters/blog/rapid-gmb-reinstatements.html" class="read-link">Read Article →</a>
                         </div>
                         <div class="related-card glass">
-                            <h4><a href="blog-post3.html">Mastering JSON-LD Setup for Local Business Growth</a></h4>
+                            <h4><a href="/rankingmatters/blog/mastering-json-ld-setup.html">Mastering JSON-LD Setup for Local Business Growth</a></h4>
                             <p>Technical SEO for better local rankings</p>
-                            <a href="blog-post3.html" class="read-link">Read Article →</a>
+                            <a href="/rankingmatters/blog/mastering-json-ld-setup.html" class="read-link">Read Article →</a>
                         </div>
                         <div class="related-card glass">
-                            <h4><a href="blog-post4.html">Google Business Profile Optimization Checklist 2026</a></h4>
+                            <h4><a href="/rankingmatters/blog/gbp-optimization-checklist-2026.html">Google Business Profile Optimization Checklist 2026</a></h4>
                             <p>Complete GBP optimization guide</p>
-                            <a href="blog-post4.html" class="read-link">Read Article →</a>
+                            <a href="/rankingmatters/blog/gbp-optimization-checklist-2026.html" class="read-link">Read Article →</a>
                         </div>
                     </div>
                 </div>
@@ -345,29 +345,29 @@
     <footer>
         <div class="container footer-grid">
             <div class="footer-brand">
-                <a href="index.html" class="logo">Ranking<span>Matters</span></a>
+                <a href="/rankingmatters/index.html" class="logo">Ranking<span>Matters</span></a>
                 <p>Advanced algorithmic optimization mechanics engineered explicitly to scale inbound customer commercial phone calls and local visibility indicators. Your trusted <strong>Local SEO expert</strong>.</p>
             </div>
             <div class="footer-col">
                 <h4>Quick Links</h4>
                 <ul class="footer-links">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="blog.html">Blog</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="/rankingmatters/index.html">Home</a></li>
+                    <li><a href="/rankingmatters/about.html">About</a></li>
+                    <li><a href="/rankingmatters/services.html">Services</a></li>
+                    <li><a href="/rankingmatters/blog.html">Blog</a></li>
+                    <li><a href="/rankingmatters/contact.html">Contact</a></li>
                 </ul>
             </div>
             <div class="footer-col">
                 <h4>Our Services</h4>
                 <ul class="footer-links">
-                    <li><a href="gbp-optimization.html">GBP Optimization</a></li>
-                    <li><a href="local-seo.html">Local SEO</a></li>
-                    <li><a href="google-maps-ranking.html">Google Maps Ranking</a></li>
-                    <li><a href="gmb-recovery.html">GMB Recovery</a></li>
-                    <li><a href="local-citations.html">Local Citations</a></li>
-                    <li><a href="google-maps-marketing.html">Google Maps Marketing</a></li>
-                    <li><a href="landing-pages.html">Landing Pages</a></li>
+                    <li><a href="/rankingmatters/gbp-optimization.html">GBP Optimization</a></li>
+                    <li><a href="/rankingmatters/local-seo.html">Local SEO</a></li>
+                    <li><a href="/rankingmatters/google-maps-ranking.html">Google Maps Ranking</a></li>
+                    <li><a href="/rankingmatters/gmb-recovery.html">GMB Recovery</a></li>
+                    <li><a href="/rankingmatters/local-citations.html">Local Citations</a></li>
+                    <li><a href="/rankingmatters/google-maps-marketing.html">Google Maps Marketing</a></li>
+                    <li><a href="/rankingmatters/landing-pages.html">Landing Pages</a></li>
                 </ul>
             </div>
             <div class="footer-col">
