@@ -354,15 +354,25 @@
         }
 
         /* Footer */
-        footer { background: var(--surface-pure); border-top: 1px solid var(--border); padding: 100px 0 40px; }
-        .footer-grid { display: grid; grid-template-columns: 1.2fr repeat(3, 0.6fr); gap: 60px; margin-bottom: 80px; }
+        footer { background: var(--surface-pure); border-top: 1px solid var(--border); padding: 80px 0 40px; }
+        .footer-grid { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 60px; margin-bottom: 60px; }
         .footer-brand p { color: var(--text-muted); font-size: 0.95rem; line-height: 1.6; margin-top: 16px; max-width: 320px; }
-        .footer-col h4 { font-size: 1rem; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 24px; color: var(--text); }
-        .footer-links { list-style: none; display: flex; flex-direction: column; gap: 14px; }
-        .footer-links a { text-decoration: none; color: var(--text-muted); font-size: 0.95rem; transition: var(--transition); }
-        .footer-links a:hover { color: var(--primary); padding-left: 4px; }
+        .footer-links-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; margin-top: 30px; }
+        .footer-links-grid h4 { font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 16px; color: var(--text); }
+        .footer-links-grid ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+        .footer-links-grid ul a { text-decoration: none; color: var(--text-muted); font-size: 0.9rem; transition: var(--transition); }
+        .footer-links-grid ul a:hover { color: var(--primary); padding-left: 4px; }
         .footer-base { display: flex; justify-content: space-between; align-items: center; padding-top: 40px; border-top: 1px solid var(--border); flex-wrap: wrap; gap: 20px; }
         .footer-copyright { font-size: 0.9rem; color: var(--text-muted); }
+        .footer-socials { display: flex; gap: 16px; }
+        .footer-socials a { color: var(--text-muted); transition: var(--transition); font-size: 1.2rem; text-decoration: none; width: 40px; height: 40px; border-radius: 50%; border: 1px solid var(--border); display: flex; align-items: center; justify-content: center; }
+        .footer-socials a:hover { color: var(--primary); border-color: var(--primary); background: var(--primary-glow); }
+        .footer-legal { display: flex; gap: 24px; flex-wrap: wrap; }
+        .footer-legal a { color: var(--text-muted); text-decoration: none; font-size: 0.85rem; transition: var(--transition); }
+        .footer-legal a:hover { color: var(--primary); }
+        .footer-map-wrapper { border-radius: var(--radius-md); overflow: hidden; box-shadow: var(--shadow); background: var(--surface-pure); border: 1px solid var(--border); }
+        .footer-map-wrapper iframe { display: block; width: 100%; height: 280px; border: 0; }
+        .footer-map-label { color: var(--text-muted); font-size: 0.85rem; margin-top: 12px; text-align: center; }
 
         /* Fixed Actions */
         #fixed-actions-container { position: fixed; bottom: 32px; right: 32px; display: flex; flex-direction: column; gap: 12px; z-index: 1500; }
@@ -382,7 +392,9 @@
         @media(max-width: 992px) {
             .about-story-grid { grid-template-columns: 1fr; gap: 48px; }
             .about-story-image { height: 350px; }
-            .footer-grid { grid-template-columns: repeat(2, 1fr); }
+            .footer-grid { grid-template-columns: 1fr !important; }
+            .footer-links-grid { grid-template-columns: repeat(2, 1fr); }
+            .footer-map-wrapper iframe { height: 220px; }
         }
         @media(max-width: 768px) {
             .nav-menu { display: none; position: absolute; top: 90px; left: 0; width: 100%; background: var(--surface-pure); border-bottom: 1px solid var(--border); flex-direction: column; padding: 40px; gap: 24px; text-align: center; }
@@ -391,7 +403,9 @@
             .about-mission-grid { grid-template-columns: 1fr; }
             .team-grid { grid-template-columns: 1fr; }
             .stats-grid-about { grid-template-columns: 1fr 1fr; }
-            .footer-grid { grid-template-columns: 1fr; }
+            .footer-grid { grid-template-columns: 1fr !important; }
+            .footer-links-grid { grid-template-columns: 1fr; gap: 20px; }
+            .footer-map-wrapper iframe { height: 180px; }
         }
     </style>
 </head>
@@ -414,24 +428,24 @@
     <!-- Header -->
     <header>
         <div class="container nav-container">
-            <a href="index.html" class="logo">Ranking<span>Matters</span></a>
+            <a href="/rankingmatters/index.html" class="logo">Ranking<span>Matters</span></a>
             <ul class="nav-menu">
-                <li><a href="index.html" class="nav-link">Home</a></li>
-                <li><a href="about.html" class="nav-link active">About</a></li>
+                <li><a href="/rankingmatters/index.html" class="nav-link">Home</a></li>
+                <li><a href="/rankingmatters/about.html" class="nav-link active">About</a></li>
                 <li class="nav-dropdown">
-                    <a href="services.html" class="nav-link">Services <span class="dropdown-arrow">▾</span></a>
+                    <a href="/rankingmatters/services.html" class="nav-link">Services <span class="dropdown-arrow">▾</span></a>
                     <div class="dropdown-content">
-                        <a href="gbp-optimization.html">GBP Optimization</a>
-                        <a href="local-seo.html">Local SEO</a>
-                        <a href="google-maps-ranking.html">Google Maps Ranking</a>
-                        <a href="gmb-recovery.html">GMB Recovery</a>
-                        <a href="local-citations.html">Local Citations</a>
-                        <a href="google-maps-marketing.html">Google Maps Marketing</a>
-                        <a href="landing-pages.html">Landing Pages</a>
+                        <a href="/rankingmatters/gbp-optimization.html">GBP Optimization</a>
+                        <a href="/rankingmatters/local-seo.html">Local SEO</a>
+                        <a href="/rankingmatters/google-maps-ranking.html">Google Maps Ranking</a>
+                        <a href="/rankingmatters/gmb-recovery.html">GMB Recovery</a>
+                        <a href="/rankingmatters/local-citations.html">Local Citations</a>
+                        <a href="/rankingmatters/google-maps-marketing.html">Google Maps Marketing</a>
+                        <a href="/rankingmatters/landing-pages.html">Landing Pages</a>
                     </div>
                 </li>
-                <li><a href="blog.html" class="nav-link">Blog</a></li>
-                <li><a href="contact.html" class="nav-link">Contact</a></li>
+                <li><a href="/rankingmatters/blog.html" class="nav-link">Blog</a></li>
+                <li><a href="/rankingmatters/contact.html" class="nav-link">Contact</a></li>
             </ul>
             <div class="nav-actions">
                 <button class="theme-btn" id="theme-toggle">🌓</button>
@@ -454,7 +468,7 @@
         <div class="blob-about-2"></div>
         <div class="container">
             <h1>About <span class="text-gradient">Ranking Matters</span></h1>
-            <p>We are a performance-driven <strong>Local SEO</strong> and digital optimization agency specializing in helping local businesses claim the #1 spot on Google Maps. Our data-driven approach transforms <strong>Google Business Profiles</strong> into high-converting lead generation machines.</p>
+            <p>We are a performance-driven <strong>Local SEO</strong> and digital optimization agency specializing in helping local businesses claim the #1 spot on Google Maps. Our data-driven approach transforms <a href="/rankingmatters/gbp-optimization.html" style="color: var(--primary); text-decoration: none; font-weight: 500;">Google Business Profiles</a> into high-converting lead generation machines.</p>
         </div>
     </section>
 
@@ -462,7 +476,7 @@
     <section class="glass" style="border-left:none; border-right:none; border-radius:0;">
         <div class="container">
             <h2 class="section-title">Our <span class="text-gradient">Mission & Values</span></h2>
-            <p class="section-subtitle">We believe in transparency, data-driven decisions, and delivering real business growth through strategic local SEO.</p>
+            <p class="section-subtitle">We believe in transparency, data-driven decisions, and delivering real business growth through strategic <a href="/rankingmatters/local-seo.html" style="color: var(--primary); text-decoration: none; font-weight: 500;">local SEO</a>.</p>
             <div class="about-mission-grid">
                 <div class="card glass mission-card">
                     <div class="icon-box">🎯</div>
@@ -492,9 +506,9 @@
             <div class="about-story-content">
                 <span class="tag">Our Story</span>
                 <h2>The Journey Behind <span class="text-gradient">Ranking Matters</span></h2>
-                <p><strong>Ranking Matters</strong> was founded with a simple mission: to help local businesses in Lahore and across Pakistan dominate the <strong>Google Maps pack</strong> and generate high-quality leads. We saw too many businesses struggling with invisible listings, <strong>GMB suspensions</strong>, and outdated SEO tactics.</p>
+                <p><strong>Ranking Matters</strong> was founded with a simple mission: to help local businesses in Lahore and across Pakistan dominate the <a href="/rankingmatters/google-maps-ranking.html" style="color: var(--primary); text-decoration: none; font-weight: 500;">Google Maps pack</a> and generate high-quality leads. We saw too many businesses struggling with invisible listings, <a href="/rankingmatters/gmb-recovery.html" style="color: var(--primary); text-decoration: none; font-weight: 500;">GMB suspensions</a>, and outdated SEO tactics.</p>
                 <p>Today, <strong>Ranking Matters</strong> is recognized as the <strong>#1 Local SEO Expert in Lahore</strong>. We've helped hundreds of businesses across diverse industries — from HVAC contractors to bridal studios — achieve top rankings on Google Maps and explode their local revenue.</p>
-                <p>Our team of <strong>local SEO experts</strong> uses cutting-edge techniques like <strong>georadial mapping</strong>, <strong>JSON-LD schema architecture</strong>, <strong>Google Business Profile optimization</strong>, and <strong>high-converting landing page design</strong> to deliver results that matter.</p>
+                <p>Our team of <strong>local SEO experts</strong> uses cutting-edge techniques like <a href="/rankingmatters/google-maps-ranking.html" style="color: var(--primary); text-decoration: none; font-weight: 500;">georadial mapping</a>, <a href="/rankingmatters/blog/mastering-json-ld-setup.html" style="color: var(--primary); text-decoration: none; font-weight: 500;">JSON-LD schema architecture</a>, <a href="/rankingmatters/gbp-optimization.html" style="color: var(--primary); text-decoration: none; font-weight: 500;">Google Business Profile optimization</a>, and <a href="/rankingmatters/landing-pages.html" style="color: var(--primary); text-decoration: none; font-weight: 500;">high-converting landing page design</a> to deliver results that matter.</p>
                 <a href="https://wa.me/923314349664" target="_blank" class="btn btn-whatsapp">
                     <svg viewBox="0 0 24 24" width="20" height="20" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
                     Chat with Our Team
@@ -511,7 +525,7 @@
             <div class="stats-grid-about">
                 <div class="stat-item">
                     <h4>150+</h4>
-                    <p>GMB Suspensions Fixed</p>
+                    <p><a href="/rankingmatters/gmb-recovery.html" style="color: var(--text); text-decoration: none;">GMB Suspensions Fixed</a></p>
                 </div>
                 <div class="stat-item">
                     <h4>87%</h4>
@@ -539,19 +553,19 @@
                     <div class="avatar">AY</div>
                     <h3>Arslan Yaqoob</h3>
                     <div class="role">Founder & Lead SEO Strategist</div>
-                    <p>With over 8 years of experience in <strong>local SEO</strong>, Arslan specializes in <strong>Google Business Profile optimization</strong> and <strong>GMB suspension recovery</strong>.</p>
+                    <p>With over 8 years of experience in <a href="/rankingmatters/local-seo.html" style="color: var(--primary); text-decoration: none; font-weight: 500;">local SEO</a>, Arslan specializes in <a href="/rankingmatters/gbp-optimization.html" style="color: var(--primary); text-decoration: none; font-weight: 500;">Google Business Profile optimization</a> and <a href="/rankingmatters/gmb-recovery.html" style="color: var(--primary); text-decoration: none; font-weight: 500;">GMB suspension recovery</a>.</p>
                 </div>
                 <div class="card glass team-card">
                     <div class="avatar">BA</div>
                     <h3>Bilal Azeem</h3>
                     <div class="role">Senior Local SEO Specialist</div>
-                    <p>Bilal is an expert in <strong>georadial mapping</strong> and <strong>local citation engineering</strong>, helping businesses expand their reach across multiple zip codes.</p>
+                    <p>Bilal is an expert in <a href="/rankingmatters/google-maps-ranking.html" style="color: var(--primary); text-decoration: none; font-weight: 500;">georadial mapping</a> and <a href="/rankingmatters/local-citations.html" style="color: var(--primary); text-decoration: none; font-weight: 500;">local citation engineering</a>, helping businesses expand their reach across multiple zip codes.</p>
                 </div>
                 <div class="card glass team-card">
                     <div class="avatar">MF</div>
                     <h3>Muhammad Faizan</h3>
                     <div class="role">Technical SEO & Schema Expert</div>
-                    <p>Faizan specializes in <strong>JSON-LD schema architecture</strong>, <strong>landing page design</strong>, and advanced technical SEO, ensuring your website communicates perfectly with Google's algorithms.</p>
+                    <p>Faizan specializes in <a href="/rankingmatters/blog/mastering-json-ld-setup.html" style="color: var(--primary); text-decoration: none; font-weight: 500;">JSON-LD schema architecture</a>, <a href="/rankingmatters/landing-pages.html" style="color: var(--primary); text-decoration: none; font-weight: 500;">landing page design</a>, and advanced technical SEO, ensuring your website communicates perfectly with Google's algorithms.</p>
                 </div>
             </div>
         </div>
@@ -566,7 +580,7 @@
                 <div class="card glass mission-card">
                     <div class="icon-box">🏆</div>
                     <h3>Proven Track Record</h3>
-                    <p>We've helped hundreds of businesses achieve #1 rankings on Google Maps. Our case studies speak for themselves.</p>
+                    <p>We've helped hundreds of businesses achieve #1 rankings on <a href="/rankingmatters/google-maps-ranking.html" style="color: var(--primary); text-decoration: none; font-weight: 500;">Google Maps</a>. Our <a href="/rankingmatters/blog.html" style="color: var(--primary); text-decoration: none; font-weight: 500;">case studies</a> speak for themselves.</p>
                 </div>
                 <div class="card glass mission-card">
                     <div class="icon-box">🔬</div>
@@ -598,48 +612,82 @@
 
     <!-- Footer -->
     <footer>
-        <div class="container footer-grid">
-            <div class="footer-brand">
-                <a href="index.html" class="logo">Ranking<span>Matters</span></a>
-                <p>Advanced algorithmic optimization mechanics engineered explicitly to scale inbound customer commercial phone calls and local visibility indicators. Your trusted <strong>Local SEO expert</strong>.</p>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="/rankingmatters/index.html" class="logo">Ranking<span>Matters</span></a>
+                    <p>Advanced algorithmic optimization mechanics engineered explicitly to scale inbound customer commercial phone calls and local visibility indicators. Your trusted <strong>Local SEO expert</strong>.</p>
+                    
+                    <div class="footer-links-grid">
+                        <div>
+                            <h4>Quick Links</h4>
+                            <ul>
+                                <li><a href="/rankingmatters/index.html">Home</a></li>
+                                <li><a href="/rankingmatters/about.html">About</a></li>
+                                <li><a href="/rankingmatters/services.html">Services</a></li>
+                                <li><a href="/rankingmatters/blog.html">Blog</a></li>
+                                <li><a href="/rankingmatters/contact.html">Contact</a></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4>Our Services</h4>
+                            <ul>
+                                <li><a href="/rankingmatters/gbp-optimization.html">GBP Optimization</a></li>
+                                <li><a href="/rankingmatters/local-seo.html">Local SEO</a></li>
+                                <li><a href="/rankingmatters/google-maps-ranking.html">Maps Ranking</a></li>
+                                <li><a href="/rankingmatters/gmb-recovery.html">GMB Recovery</a></li>
+                                <li><a href="/rankingmatters/local-citations.html">Local Citations</a></li>
+                                <li><a href="/rankingmatters/google-maps-marketing.html">Maps Marketing</a></li>
+                                <li><a href="/rankingmatters/landing-pages.html">Landing Pages</a></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4>Contact</h4>
+                            <ul>
+                                <li><a href="tel:+923314349664">+92 331 4349664</a></li>
+                                <li><a href="mailto:shanyaqoob730@gmail.com">shanyaqoob730@gmail.com</a></li>
+                                <li><a href="https://wa.me/923314349664" target="_blank">WhatsApp</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ====== GMB EMBED ====== -->
+                <div>
+                    <h4 style="font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 16px; color: var(--text);">Find Us On Google Maps</h4>
+                    <div class="footer-map-wrapper">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3599701.2877120697!2d70.60231495!3d28.227561999999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x84f3df43ef28b013%3A0x722879e737c0b535!2sRanking%20Matters%7C%20Local%20Seo%20Expert%20in%20Lahore!5e0!3m2!1sen!2s!4v1784304112769!5m2!1sen!2s" 
+                            width="100%" 
+                            height="280" 
+                            style="border:0; display: block;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="strict-origin-when-cross-origin">
+                        </iframe>
+                    </div>
+                    <p class="footer-map-label">📍 <strong>Ranking Matters</strong> — Thokar, Lahore, Pakistan</p>
+                </div>
             </div>
-            <div class="footer-col">
-                <h4>Quick Links</h4>
-                <ul class="footer-links">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="blog.html">Blog</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
+
+            <div class="footer-base">
+                <div class="footer-copyright">&copy; 2026 <strong>Ranking Matters</strong>. All Rights Reserved.</div>
+                <div class="footer-legal">
+                    <a href="/rankingmatters/privacy-policy.html">Privacy Policy</a>
+                    <a href="/rankingmatters/terms.html">Terms of Service</a>
+                    <a href="/rankingmatters/sitemap.html">Sitemap</a>
+                </div>
+                <div class="footer-socials">
+                    <a href="#" aria-label="Facebook">fb</a>
+                    <a href="#" aria-label="LinkedIn">in</a>
+                    <a href="#" aria-label="Instagram">ig</a>
+                    <a href="#" aria-label="Twitter">tw</a>
+                </div>
+                <a href="https://wa.me/923314349664" target="_blank" style="color: var(--text-muted); text-decoration: none; display: flex; align-items: center; gap: 8px;">
+                    <svg viewBox="0 0 24 24" width="20" height="20" fill="#25D366"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                    WhatsApp
+                </a>
             </div>
-            <div class="footer-col">
-                <h4>Our Services</h4>
-                <ul class="footer-links">
-                    <li><a href="gbp-optimization.html">GBP Optimization</a></li>
-                    <li><a href="local-seo.html">Local SEO</a></li>
-                    <li><a href="google-maps-ranking.html">Google Maps Ranking</a></li>
-                    <li><a href="gmb-recovery.html">GMB Recovery</a></li>
-                    <li><a href="local-citations.html">Local Citations</a></li>
-                    <li><a href="google-maps-marketing.html">Google Maps Marketing</a></li>
-                    <li><a href="landing-pages.html">Landing Pages</a></li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h4>Contact</h4>
-                <ul class="footer-links">
-                    <li><a href="tel:+923314349664">+92 331 4349664</a></li>
-                    <li><a href="mailto:shanyaqoob730@gmail.com">shanyaqoob730@gmail.com</a></li>
-                    <li><a href="https://wa.me/923314349664" target="_blank">WhatsApp</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="container footer-base">
-            <div class="footer-copyright">&copy; 2026 <strong>Ranking Matters</strong>. All Rights Reserved.</div>
-            <a href="https://wa.me/923314349664" target="_blank" style="color: var(--text-muted); text-decoration: none; display: flex; align-items: center; gap: 8px;">
-                <svg viewBox="0 0 24 24" width="20" height="20" fill="#25D366"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-                WhatsApp
-            </a>
         </div>
     </footer>
 
