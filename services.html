@@ -17,14 +17,8 @@
     </script>
 
     <!-- ====== IMPORTANT INDEXING FIXES ====== -->
-    <!-- 1. CANONICAL URL (FIXED) -->
     <link rel="canonical" href="https://rankingexpert.github.io/rankingmatters/services.html" />
-    
-    <!-- 2. ALTERNATE LANGUAGE VERSIONS -->
     <link rel="alternate" hreflang="en" href="https://rankingexpert.github.io/rankingmatters/services.html" />
-    
-    <!-- 3. PREV/NEXT FOR PAGINATION (if applicable) -->
-    <!-- 4. NO INDEX BLOCKED (REMOVED ANY NOINDEX TAGS) -->
     
     <title>Local SEO Services - Ranking Matters | #1 Expert in Lahore</title>
     <meta name="description" content="Ranking Matters offers expert Local SEO services in Lahore: Google Business Profile optimization, GMB suspension recovery, citation building, and landing page design. Get #1 rankings today!" />
@@ -32,12 +26,12 @@
     <meta name="googlebot" content="index, follow" />
     <meta name="theme-color" content="#0a0a12" />
 
-    <!-- ====== OPEN GRAPH (FIXED) ====== -->
+    <!-- ====== OPEN GRAPH ====== -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://rankingexpert.github.io/rankingmatters/services.html" />
     <meta property="og:title" content="Local SEO Services - Ranking Matters | #1 Expert in Lahore" />
     <meta property="og:description" content="Explore our expert Local SEO services including Google Business Profile optimization, GMB suspension recovery, local citation engineering, and more. Get #1 rankings!" />
-    <meta property="og:image" content="https://rankingexpert.github.io/rankingmatters/images/og-services.jpg" />
+    <meta property="og:image" content="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=80" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta property="og:site_name" content="Ranking Matters" />
@@ -47,9 +41,9 @@
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Local SEO Services - Ranking Matters" />
     <meta name="twitter:description" content="Expert Local SEO services in Lahore: GBP optimization, GMB recovery, citations, and more." />
-    <meta name="twitter:image" content="https://rankingexpert.github.io/rankingmatters/images/og-services.jpg" />
+    <meta name="twitter:image" content="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=80" />
 
-    <!-- ====== SCHEMA MARKUP (CRITICAL FOR INDEXING) ====== -->
+    <!-- ====== SCHEMA MARKUP ====== -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -97,7 +91,6 @@
     }
     </script>
 
-    <!-- Service-specific Schema -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -157,7 +150,6 @@
     }
     </script>
 
-    <!-- Organization Schema -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -185,14 +177,12 @@
     }
     </script>
 
-    <!-- ====== FONTS ====== -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
 
-    <!-- ====== CSS ====== -->
     <style>
-        /* [CSS CODE - SAME AS BEFORE WITH FIXES] */
+        /* --- Complete CSS --- */
         * { margin: 0; padding: 0; box-sizing: border-box; }
         
         :root {
@@ -252,7 +242,7 @@
         section { padding: 140px 0; position: relative; }
         @media(max-width: 768px) { section { padding: 90px 0; } }
 
-        #scroll-progress { position: fixed; top: 0; left: 0; height: 3px; background: linear-gradient(90deg, var(--primary), var(--accent), var(--primary)); width: 0%; z-index: 2000; transition: width 0.1s ease; border-radius: 0 2px 2px 0; }
+        #scroll-progress { position: fixed; top: 0; left: 0; height: 3px; background: linear-gradient(90deg, var(--primary), var(--accent)); width: 0%; z-index: 2000; transition: width 0.1s ease; }
 
         #loader { position: fixed; inset: 0; background: var(--bg-dark); z-index: 3000; display: flex; justify-content: center; align-items: center; transition: opacity 0.8s ease, visibility 0.8s ease; }
         #loader.hidden { opacity: 0; visibility: hidden; pointer-events: none; }
@@ -282,7 +272,6 @@
 
         .blob { position: absolute; border-radius: 50%; filter: blur(120px); z-index: -1; opacity: 0.15; pointer-events: none; transition: var(--transition); }
 
-        /* HEADER - Same as before */
         header { position: fixed; top: 0; left: 0; width: 100%; z-index: 1000; background: var(--nav-bg); backdrop-filter: blur(24px) saturate(1.2); -webkit-backdrop-filter: blur(24px) saturate(1.2); border-bottom: 1px solid var(--border); transition: var(--transition); }
         header.scrolled { background: var(--nav-bg); box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3); border-bottom-color: rgba(37, 99, 235, 0.15); }
         header::after { content: ''; position: absolute; bottom: -1px; left: 0; width: 100%; height: 1px; background: linear-gradient(90deg, transparent, var(--primary), var(--accent), var(--primary), transparent); opacity: 0; transition: var(--transition); }
@@ -375,6 +364,12 @@
         .service-card-full .learn-more { display: inline-block; margin-top: 16px; color: var(--primary); font-weight: 600; text-decoration: none; transition: var(--transition); }
         .service-card-full .learn-more:hover { color: var(--accent); padding-left: 4px; }
 
+        .breadcrumb { padding: 20px 0 10px 0; font-size: 0.85rem; color: var(--text-muted); display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+        .breadcrumb a { color: var(--primary); text-decoration: none; transition: var(--transition); }
+        .breadcrumb a:hover { color: var(--accent); }
+        .breadcrumb .separator { color: var(--text-muted); opacity: 0.5; }
+        .breadcrumb .current { color: var(--text); font-weight: 500; }
+
         .pricing-table-services { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; margin-top: 40px; }
         .pricing-card-service { text-align: center; padding: 48px 32px; }
         .pricing-card-service .price { font-size: 3rem; font-weight: 800; color: var(--primary); margin: 16px 0; }
@@ -413,33 +408,6 @@
         .sticky-btn-top:hover { transform: translateY(-4px); }
         .sticky-btn-whatsapp svg { width: 20px; height: 20px; fill: #fff; }
 
-        /* ====== BREADCRUMB NAVIGATION (NEW) ====== */
-        .breadcrumb {
-            padding: 20px 0 10px 0;
-            font-size: 0.85rem;
-            color: var(--text-muted);
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            flex-wrap: wrap;
-        }
-        .breadcrumb a {
-            color: var(--primary);
-            text-decoration: none;
-            transition: var(--transition);
-        }
-        .breadcrumb a:hover {
-            color: var(--accent);
-        }
-        .breadcrumb .separator {
-            color: var(--text-muted);
-            opacity: 0.5;
-        }
-        .breadcrumb .current {
-            color: var(--text);
-            font-weight: 500;
-        }
-
         @media(max-width: 1200px) {
             .services-grid-full { grid-template-columns: repeat(2, 1fr); }
             .pricing-table-services { grid-template-columns: 1fr; max-width: 550px; margin: 40px auto 0; }
@@ -471,26 +439,26 @@
     <!-- Header -->
     <header>
         <div class="container nav-container">
-            <a href="index.html" class="logo">
+            <a href="/rankingmatters/index.html" class="logo">
                 Ranking<span>Matters</span>
             </a>
             <ul class="nav-menu" id="navMenu">
-                <li><a href="index.html" class="nav-link">Home</a></li>
-                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="/rankingmatters/index.html" class="nav-link">Home</a></li>
+                <li><a href="/rankingmatters/about.html" class="nav-link">About</a></li>
                 <li class="nav-dropdown">
-                    <a href="services.html" class="nav-link active">Services <span class="dropdown-arrow">▾</span></a>
+                    <a href="/rankingmatters/services.html" class="nav-link active">Services <span class="dropdown-arrow">▾</span></a>
                     <div class="dropdown-content">
-                        <a href="gbp-optimization.html">GBP Optimization</a>
-                        <a href="local-seo.html">Local SEO</a>
-                        <a href="google-maps-ranking.html">Google Maps Ranking</a>
-                        <a href="gmb-recovery.html">GMB Recovery</a>
-                        <a href="local-citations.html">Local Citations</a>
-                        <a href="google-maps-marketing.html">Google Maps Marketing</a>
-                        <a href="landing-pages.html">Landing Pages</a>
+                        <a href="/rankingmatters/gbp-optimization.html">GBP Optimization</a>
+                        <a href="/rankingmatters/local-seo.html">Local SEO</a>
+                        <a href="/rankingmatters/google-maps-ranking.html">Google Maps Ranking</a>
+                        <a href="/rankingmatters/gmb-recovery.html">GMB Recovery</a>
+                        <a href="/rankingmatters/local-citations.html">Local Citations</a>
+                        <a href="/rankingmatters/google-maps-marketing.html">Google Maps Marketing</a>
+                        <a href="/rankingmatters/landing-pages.html">Landing Pages</a>
                     </div>
                 </li>
-                <li><a href="blog.html" class="nav-link">Blog</a></li>
-                <li><a href="contact.html" class="nav-link">Contact</a></li>
+                <li><a href="/rankingmatters/blog.html" class="nav-link">Blog</a></li>
+                <li><a href="/rankingmatters/contact.html" class="nav-link">Contact</a></li>
             </ul>
             <div class="nav-actions">
                 <button class="theme-btn" id="theme-toggle" aria-label="Toggle theme">🌓</button>
@@ -507,10 +475,10 @@
         </div>
     </header>
 
-    <!-- ====== BREADCRUMB NAVIGATION (NEW - IMPROVES INDEXING) ====== -->
+    <!-- ====== BREADCRUMB NAVIGATION ====== -->
     <div class="container" style="padding-top: 120px;">
         <nav class="breadcrumb" aria-label="Breadcrumb">
-            <a href="index.html">Home</a>
+            <a href="/rankingmatters/index.html">Home</a>
             <span class="separator">›</span>
             <span class="current">Services</span>
         </nav>
@@ -522,7 +490,7 @@
         <div class="blob-service-2"></div>
         <div class="container">
             <h1>Our <span class="text-gradient">SEO Services</span></h1>
-            <p>Data-backed scaling strategies deployed precisely to hijack high-intent customer leads from your top local competitors. As a premier <strong>Local SEO expert</strong>, <strong>Ranking Matters</strong> offers a comprehensive suite of specialized services designed to dominate the <strong>Google Maps pack</strong>.</p>
+            <p>Data-backed scaling strategies deployed precisely to hijack high-intent customer leads from your top local competitors. As a premier <strong>Local SEO expert</strong>, <strong>Ranking Matters</strong> offers a comprehensive suite of specialized services designed to dominate the <strong>Google Maps pack</strong>. <a href="/rankingmatters/about.html" style="color: var(--primary); text-decoration: none; font-weight: 500;">Learn more about our approach →</a></p>
         </div>
     </section>
 
@@ -531,7 +499,7 @@
         <div class="container">
             <div class="services-grid-full">
                 <!-- Service 1 -->
-                <a href="gbp-optimization.html" class="service-card-full glass">
+                <a href="/rankingmatters/gbp-optimization.html" class="service-card-full glass">
                     <span class="icon">📍</span>
                     <h3>Google Business Profile Optimization</h3>
                     <p>Complete structural builds and monthly optimization mechanics designed to securely place your profile into the coveted Google 3-Pack.</p>
@@ -544,7 +512,7 @@
                 </a>
 
                 <!-- Service 2 -->
-                <a href="local-seo.html" class="service-card-full glass">
+                <a href="/rankingmatters/local-seo.html" class="service-card-full glass">
                     <span class="icon">🔍</span>
                     <h3>Local SEO</h3>
                     <p>Comprehensive local search engine optimization strategies to help your business rank higher in local search results and attract more customers.</p>
@@ -557,7 +525,7 @@
                 </a>
 
                 <!-- Service 3 -->
-                <a href="google-maps-ranking.html" class="service-card-full glass">
+                <a href="/rankingmatters/google-maps-ranking.html" class="service-card-full glass">
                     <span class="icon">🗺️</span>
                     <h3>Google Maps Ranking</h3>
                     <p>Advanced georadial mapping and proximity optimization to secure top positions in the Google Maps pack across multiple service areas.</p>
@@ -570,7 +538,7 @@
                 </a>
 
                 <!-- Service 4 -->
-                <a href="gmb-recovery.html" class="service-card-full glass">
+                <a href="/rankingmatters/gmb-recovery.html" class="service-card-full glass">
                     <span class="icon">🔧</span>
                     <h3>GMB Suspension & Recovery</h3>
                     <p>Emergency restoration services for suspended accounts. We diagnose violations, rewrite business representations, and file rapid appeals.</p>
@@ -583,7 +551,7 @@
                 </a>
 
                 <!-- Service 5 -->
-                <a href="local-citations.html" class="service-card-full glass">
+                <a href="/rankingmatters/local-citations.html" class="service-card-full glass">
                     <span class="icon">🏗️</span>
                     <h3>Local Citations</h3>
                     <p>Building flawless tier-1 business citations and structural directories while aggressively fixing historical NAP variations.</p>
@@ -596,7 +564,7 @@
                 </a>
 
                 <!-- Service 6 -->
-                <a href="google-maps-marketing.html" class="service-card-full glass">
+                <a href="/rankingmatters/google-maps-marketing.html" class="service-card-full glass">
                     <span class="icon">📱</span>
                     <h3>Google Maps Marketing</h3>
                     <p>Strategic Google Maps marketing to drive targeted traffic, generate leads, and build a strong local presence through your Google Business Profile.</p>
@@ -609,7 +577,7 @@
                 </a>
 
                 <!-- Service 7 -->
-                <a href="landing-pages.html" class="service-card-full glass">
+                <a href="/rankingmatters/landing-pages.html" class="service-card-full glass">
                     <span class="icon">🎨</span>
                     <h3>Landing Page Design</h3>
                     <p>Custom-designed, hyper-local landing pages engineered to rank for specific neighborhoods, zip codes, and service areas. Optimized for maximum conversion.</p>
@@ -628,7 +596,7 @@
     <section class="glass" style="border-left:none; border-right:none; border-radius:0;">
         <div class="container">
             <h2 class="section-title">Service <span class="text-gradient">Packages</span></h2>
-            <p class="section-subtitle">Choose the package that fits your business needs. All plans include our signature <strong>local SEO</strong> expertise.</p>
+            <p class="section-subtitle">Choose the package that fits your business needs. All plans include our signature <strong>local SEO</strong> expertise. <a href="/rankingmatters/contact.html" style="color: var(--primary); text-decoration: none; font-weight: 500;">Contact us for custom pricing →</a></p>
             <div class="pricing-table-services">
                 <div class="card glass pricing-card-service">
                     <h3>Local Spark</h3>
@@ -641,7 +609,7 @@
                         <li>Monthly Core Rank Monitoring</li>
                         <li>Basic Review Management</li>
                     </ul>
-                    <a href="https://wa.me/923314349664" target="_blank" class="btn btn-secondary">Get Started</a>
+                    <a href="/rankingmatters/contact.html" class="btn btn-secondary">Get Started</a>
                 </div>
                 <div class="card glass pricing-card-service popular">
                     <h3>Map Dominator</h3>
@@ -655,7 +623,7 @@
                         <li>Advanced Review Management</li>
                         <li>Monthly Strategy Calls</li>
                     </ul>
-                    <a href="https://wa.me/923314349664" target="_blank" class="btn btn-primary">Dominate Locally</a>
+                    <a href="/rankingmatters/contact.html" class="btn btn-primary">Dominate Locally</a>
                 </div>
                 <div class="card glass pricing-card-service">
                     <h3>Enterprise Takeover</h3>
@@ -669,7 +637,7 @@
                         <li>Full-Service Review Management</li>
                         <li>Dedicated Account Manager</li>
                     </ul>
-                    <a href="https://wa.me/923314349664" target="_blank" class="btn btn-secondary">Contact Enterprise</a>
+                    <a href="/rankingmatters/contact.html" class="btn btn-secondary">Contact Enterprise</a>
                 </div>
             </div>
         </div>
@@ -679,27 +647,27 @@
     <section>
         <div class="container">
             <h2 class="section-title">Our <span class="text-gradient">Process</span></h2>
-            <p class="section-subtitle">A proven, step-by-step approach to deliver measurable results for your business.</p>
+            <p class="section-subtitle">A proven, step-by-step approach to deliver measurable results for your business. <a href="/rankingmatters/about.html" style="color: var(--primary); text-decoration: none; font-weight: 500;">Meet our expert team →</a></p>
             <div class="process-grid">
                 <div class="card glass process-step">
                     <div class="step-number">1</div>
                     <h4>Discovery & Audit</h4>
-                    <p>We analyze your current local presence, identify gaps, and develop a customized strategy for your business.</p>
+                    <p>We analyze your current local presence, identify gaps, and develop a customized strategy for your business. <a href="/rankingmatters/gbp-optimization.html" style="color: var(--primary); text-decoration: none; font-weight: 500;">Start with GBP Audit</a></p>
                 </div>
                 <div class="card glass process-step">
                     <div class="step-number">2</div>
                     <h4>Strategy Development</h4>
-                    <p>We create a data-driven <strong>local SEO</strong> strategy tailored to your specific industry and target locations.</p>
+                    <p>We create a data-driven <strong>local SEO</strong> strategy tailored to your specific industry and target locations. <a href="/rankingmatters/local-seo.html" style="color: var(--primary); text-decoration: none; font-weight: 500;">Explore Local SEO</a></p>
                 </div>
                 <div class="card glass process-step">
                     <div class="step-number">3</div>
                     <h4>Implementation</h4>
-                    <p>Our team executes the strategy with precision, optimizing your <strong>Google Business Profile</strong> and citations.</p>
+                    <p>Our team executes the strategy with precision, optimizing your <strong>Google Business Profile</strong> and citations. <a href="/rankingmatters/local-citations.html" style="color: var(--primary); text-decoration: none; font-weight: 500;">Citation Building</a></p>
                 </div>
                 <div class="card glass process-step">
                     <div class="step-number">4</div>
                     <h4>Monitoring & Optimization</h4>
-                    <p>We continuously track performance, make data-driven adjustments, and keep you informed with transparent reports.</p>
+                    <p>We continuously track performance, make data-driven adjustments, and keep you informed with transparent reports. <a href="/rankingmatters/google-maps-ranking.html" style="color: var(--primary); text-decoration: none; font-weight: 500;">Track Your Rankings</a></p>
                 </div>
             </div>
         </div>
@@ -709,23 +677,51 @@
     <section class="glass" style="border-left:none; border-right:none; border-radius:0;">
         <div class="container">
             <h2 class="section-title">Why <span class="text-gradient">Ranking Matters</span></h2>
-            <p class="section-subtitle">Here's why businesses trust us as their <strong>Local SEO expert</strong> in Lahore.</p>
+            <p class="section-subtitle">Here's why businesses trust us as their <strong>Local SEO expert</strong> in Lahore. <a href="/rankingmatters/blog.html" style="color: var(--primary); text-decoration: none; font-weight: 500;">Read our success stories →</a></p>
             <div class="services-grid-full" style="grid-template-columns: repeat(3, 1fr);">
                 <div class="service-card-full glass">
                     <span class="icon">🏆</span>
                     <h3>Proven Track Record</h3>
-                    <p>We've helped 500+ businesses achieve #1 rankings on Google Maps. Our case studies and client testimonials speak for themselves.</p>
+                    <p>We've helped 500+ businesses achieve #1 rankings on Google Maps. Our <a href="/rankingmatters/blog.html" style="color: var(--primary); text-decoration: none; font-weight: 500;">case studies</a> and client testimonials speak for themselves.</p>
                 </div>
                 <div class="service-card-full glass">
                     <span class="icon">🔬</span>
                     <h3>Data-Driven Approach</h3>
-                    <p>Every decision we make is backed by data and analytics. We don't rely on guesswork — we rely on results.</p>
+                    <p>Every decision we make is backed by data and analytics. We don't rely on guesswork — we rely on results. <a href="/rankingmatters/about.html" style="color: var(--primary); text-decoration: none; font-weight: 500;">Our methodology →</a></p>
                 </div>
                 <div class="service-card-full glass">
                     <span class="icon">💎</span>
                     <h3>Transparent Reporting</h3>
-                    <p>We provide clear, transparent reports showing exactly what we're doing and the results we're achieving for your business.</p>
+                    <p>We provide clear, transparent reports showing exactly what we're doing and the results we're achieving for your business. <a href="/rankingmatters/contact.html" style="color: var(--primary); text-decoration: none; font-weight: 500;">Get a free consultation →</a></p>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Latest Blog Section (Internal Linking) -->
+    <section>
+        <div class="container">
+            <h2 class="section-title">Latest <span class="text-gradient">SEO Insights</span></h2>
+            <p class="section-subtitle">Stay ahead with our expert <strong>local SEO</strong> guides and tutorials. <a href="/rankingmatters/blog.html" style="color: var(--primary); text-decoration: none; font-weight: 500;">View all blog posts →</a></p>
+            <div class="services-grid-full" style="grid-template-columns: repeat(3, 1fr);">
+                <a href="/rankingmatters/blog/overcome-proximity-algorithmic-restrictions.html" class="service-card-full glass" style="text-align: left;">
+                    <span class="icon">📘</span>
+                    <h4 style="font-size: 1.2rem;">Overcome Proximity Algorithmic Restrictions</h4>
+                    <p>Learn how to expand your Google Maps reach beyond your physical location.</p>
+                    <span class="learn-more">Read Article →</span>
+                </a>
+                <a href="/rankingmatters/blog/rapid-gmb-reinstatements.html" class="service-card-full glass" style="text-align: left;">
+                    <span class="icon">📗</span>
+                    <h4 style="font-size: 1.2rem;">Rapid GMB Reinstatements</h4>
+                    <p>Step-by-step guide to quickly recover from a GMB suspension.</p>
+                    <span class="learn-more">Read Article →</span>
+                </a>
+                <a href="/rankingmatters/blog/how-to-get-more-google-reviews-organically.html" class="service-card-full glass" style="text-align: left;">
+                    <span class="icon">📙</span>
+                    <h4 style="font-size: 1.2rem;">Get More Google Reviews Organically</h4>
+                    <p>Proven strategies to boost your Google reviews without breaking the rules.</p>
+                    <span class="learn-more">Read Article →</span>
+                </a>
             </div>
         </div>
     </section>
@@ -736,6 +732,7 @@
             <div class="card glass cta-section-services">
                 <h2>Ready to <span class="text-gradient">Dominate</span> Your Local Market?</h2>
                 <p>Partner with <strong>Ranking Matters</strong> — the <strong>#1 Local SEO Expert in Lahore</strong> — and watch your business grow with our proven <strong>local SEO</strong> strategies.</p>
+                <a href="/rankingmatters/contact.html" class="btn btn-primary" style="padding: 18px 44px; font-size: 1.05rem; margin-right: 16px;">Get a Free Audit</a>
                 <a href="https://wa.me/923314349664" target="_blank" class="btn btn-whatsapp" style="padding: 18px 44px; font-size: 1.05rem;">
                     <svg viewBox="0 0 24 24" width="22" height="22" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
                     Chat on WhatsApp
@@ -748,29 +745,29 @@
     <footer>
         <div class="container footer-grid">
             <div class="footer-brand">
-                <a href="index.html" class="logo">Ranking<span>Matters</span></a>
+                <a href="/rankingmatters/index.html" class="logo">Ranking<span>Matters</span></a>
                 <p>Advanced algorithmic optimization mechanics engineered explicitly to scale inbound customer commercial phone calls and local visibility indicators. Your trusted <strong>Local SEO expert</strong>.</p>
             </div>
             <div class="footer-col">
                 <h4>Quick Links</h4>
                 <ul class="footer-links">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="blog.html">Blog</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="/rankingmatters/index.html">Home</a></li>
+                    <li><a href="/rankingmatters/about.html">About</a></li>
+                    <li><a href="/rankingmatters/services.html">Services</a></li>
+                    <li><a href="/rankingmatters/blog.html">Blog</a></li>
+                    <li><a href="/rankingmatters/contact.html">Contact</a></li>
                 </ul>
             </div>
             <div class="footer-col">
                 <h4>Our Services</h4>
                 <ul class="footer-links">
-                    <li><a href="gbp-optimization.html">GBP Optimization</a></li>
-                    <li><a href="local-seo.html">Local SEO</a></li>
-                    <li><a href="google-maps-ranking.html">Google Maps Ranking</a></li>
-                    <li><a href="gmb-recovery.html">GMB Recovery</a></li>
-                    <li><a href="local-citations.html">Local Citations</a></li>
-                    <li><a href="google-maps-marketing.html">Google Maps Marketing</a></li>
-                    <li><a href="landing-pages.html">Landing Pages</a></li>
+                    <li><a href="/rankingmatters/gbp-optimization.html">GBP Optimization</a></li>
+                    <li><a href="/rankingmatters/local-seo.html">Local SEO</a></li>
+                    <li><a href="/rankingmatters/google-maps-ranking.html">Google Maps Ranking</a></li>
+                    <li><a href="/rankingmatters/gmb-recovery.html">GMB Recovery</a></li>
+                    <li><a href="/rankingmatters/local-citations.html">Local Citations</a></li>
+                    <li><a href="/rankingmatters/google-maps-marketing.html">Google Maps Marketing</a></li>
+                    <li><a href="/rankingmatters/landing-pages.html">Landing Pages</a></li>
                 </ul>
             </div>
             <div class="footer-col">
