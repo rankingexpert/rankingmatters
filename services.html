@@ -31,7 +31,7 @@
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://rankingexpert.github.io/rankingmatters/services.html" />
     <meta property="og:title" content="Local SEO &amp; Google Maps Services – Ranking Matters" />
-    <meta property="og:description" content="Expert Local SEO, GBP optimization, GMB recovery, citations, Maps ranking, and landing pages. Dominate Google Maps with Ranking Matters." />
+    <meta property="og:description" content="Expert Local SEO, GBP optimization, GMB recovery, citations, Maps ranking, and landing pages." />
     <meta property="og:image" content="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=80" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
@@ -363,7 +363,7 @@
         .breadcrumb .separator { color: var(--text-muted); opacity: 0.5; }
         .breadcrumb .current { color: var(--text); font-weight: 500; }
 
-        /* ----- PRICING (keep as is) ----- */
+        /* ----- PRICING ----- */
         .pricing-table-services { display: grid; grid-template-columns: repeat(3,1fr); gap: 32px; margin-top: 40px; }
         .pricing-card-service { text-align: center; padding: 48px 32px; }
         .pricing-card-service .price { font-size: 3rem; font-weight: 800; color: var(--primary); margin: 16px 0; }
@@ -386,14 +386,48 @@
         .cta-section-services h2 { font-size: clamp(2rem,3vw,2.8rem); margin-bottom: 20px; }
         .cta-section-services p { color: var(--text-muted); font-size: 1.1rem; max-width: 600px; margin: 0 auto 32px; line-height: 1.6; }
 
-        /* ----- FOOTER ----- */
+        /* ----- FOOTER (UPDATED WITH MAP) ----- */
         footer { background: var(--surface-pure); border-top: 1px solid var(--border); padding: 100px 0 40px; }
-        .footer-grid { display: grid; grid-template-columns: 1.2fr repeat(3,0.6fr); gap: 60px; margin-bottom: 80px; }
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.2fr 0.6fr 0.6fr 1.6fr;
+            gap: 60px;
+            margin-bottom: 80px;
+        }
         .footer-brand p { color: var(--text-muted); font-size: 0.95rem; line-height: 1.6; margin-top: 16px; max-width: 320px; }
         .footer-col h4 { font-size: 1rem; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 24px; color: var(--text); }
         .footer-links { list-style: none; display: flex; flex-direction: column; gap: 14px; }
         .footer-links a { text-decoration: none; color: var(--text-muted); font-size: 0.95rem; transition: var(--transition); }
         .footer-links a:hover { color: var(--primary); padding-left: 4px; }
+
+        /* Map column styles */
+        .footer-map iframe {
+            width: 100%;
+            height: 210px;
+            border-radius: var(--radius-sm);
+            border: 0;
+            margin-top: 4px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        .footer-map .contact-mini {
+            margin-top: 12px;
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+        .footer-map .contact-mini a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .footer-map .contact-mini a:hover {
+            color: var(--primary);
+        }
+
         .footer-base { display: flex; justify-content: space-between; align-items: center; padding-top: 40px; border-top: 1px solid var(--border); flex-wrap: wrap; gap: 20px; }
         .footer-copyright { font-size: 0.9rem; color: var(--text-muted); }
 
@@ -406,16 +440,24 @@
         .sticky-btn-top:hover { transform: translateY(-4px); }
         .sticky-btn-whatsapp svg { width: 20px; height: 20px; fill: #fff; }
 
+        /* ----- RESPONSIVE (updated for map) ----- */
         @media(max-width:1200px) {
             .services-grid-full { grid-template-columns: repeat(2,1fr); }
             .pricing-table-services { grid-template-columns: 1fr; max-width: 550px; margin: 40px auto 0; }
             .process-grid { grid-template-columns: repeat(2,1fr); }
         }
-        @media(max-width:992px) { .footer-grid { grid-template-columns: repeat(2,1fr); } }
+        @media(max-width:992px) {
+            .footer-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 40px;
+            }
+            .footer-map iframe { height: 180px; }
+        }
         @media(max-width:768px) {
             .services-grid-full { grid-template-columns: 1fr; }
             .process-grid { grid-template-columns: 1fr; }
-            .footer-grid { grid-template-columns: 1fr; }
+            .footer-grid { grid-template-columns: 1fr; gap: 30px; }
+            .footer-map iframe { height: 200px; }
             .detailed-services .service-block { padding: 28px 20px; }
             .faq-item { padding: 20px; }
         }
@@ -771,7 +813,7 @@
         </div>
     </section>
 
-    <!-- ====== PRICING SECTION (existing, unchanged) ====== -->
+    <!-- ====== PRICING SECTION (existing) ====== -->
     <section class="glass" style="border-left:none; border-right:none; border-radius:0;">
         <div class="container">
             <h2 class="section-title">Service <span class="text-gradient">Packages</span></h2>
@@ -875,13 +917,16 @@
         </div>
     </section>
 
-    <!-- ====== FOOTER ====== -->
+    <!-- ====== FOOTER (UPDATED WITH GMB MAP) ====== -->
     <footer>
         <div class="container footer-grid">
+            <!-- Column 1: Brand -->
             <div class="footer-brand">
                 <a href="/rankingmatters/index.html" class="logo">Ranking<span>Matters</span></a>
                 <p>Advanced algorithmic optimization mechanics engineered specifically to scale local visibility and customer calls. Your trusted <strong>Local SEO expert</strong> in Lahore.</p>
             </div>
+
+            <!-- Column 2: Quick Links -->
             <div class="footer-col">
                 <h4>Quick Links</h4>
                 <ul class="footer-links">
@@ -892,6 +937,8 @@
                     <li><a href="/rankingmatters/contact.html">Contact</a></li>
                 </ul>
             </div>
+
+            <!-- Column 3: Our Services -->
             <div class="footer-col">
                 <h4>Our Services</h4>
                 <ul class="footer-links">
@@ -904,15 +951,22 @@
                     <li><a href="/rankingmatters/landing-pages.html">Landing Pages</a></li>
                 </ul>
             </div>
-            <div class="footer-col">
-                <h4>Contact</h4>
-                <ul class="footer-links">
-                    <li><a href="tel:+923314349664">+92 331 4349664</a></li>
-                    <li><a href="mailto:shanyaqoob730@gmail.com">shanyaqoob730@gmail.com</a></li>
-                    <li><a href="https://wa.me/923314349664" target="_blank">WhatsApp</a></li>
-                </ul>
+
+            <!-- Column 4: GMB MAP + Contact (Right Side) -->
+            <div class="footer-col footer-map">
+                <h4>Find Us on Google Maps</h4>
+                <!-- Your GMB Embed Code (responsive) -->
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d158535.06683510746!2d74.2292243!3d31.462108949999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x84f3df43ef28b013%3A0x722879e737c0b535!2sRanking%20Matters%7C%20Local%20Seo%20Expert%20in%20Lahore!5e1!3m2!1sen!2s!4v1785884365369!5m2!1sen!2s" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+                
+                <div class="contact-mini">
+                    <a href="tel:+923314349664">📞 +92 331 4349664</a>
+                    <a href="mailto:shanyaqoob730@gmail.com">✉️ shanyaqoob730@gmail.com</a>
+                    <a href="https://wa.me/923314349664" target="_blank" style="color: #25D366;">💬 WhatsApp</a>
+                </div>
             </div>
         </div>
+
+        <!-- Footer Base -->
         <div class="container footer-base">
             <div class="footer-copyright">&copy; 2026 <strong>Ranking Matters</strong>. All Rights Reserved.</div>
             <a href="https://wa.me/923314349664" target="_blank" style="color:var(--text-muted); text-decoration:none; display:flex; align-items:center; gap:8px;">
