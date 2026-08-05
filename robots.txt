@@ -1,5 +1,5 @@
 # ============================================================
-# ROBOTS.TXT – Ranking Matters
+# ROBOTS.TXT - Ranking Matters
 # Website: https://rankingexpert.github.io/rankingmatters/
 # Last Updated: August 6, 2026
 # ============================================================
@@ -39,20 +39,34 @@ Allow: /
 
 User-agent: Googlebot
 Allow: /
+Crawl-delay: 1
+
+User-agent: Googlebot-Image
+Allow: /
+
+User-agent: Googlebot-News
+Allow: /
 
 User-agent: Bingbot
 Allow: /
+Crawl-delay: 1
 
 User-agent: DuckDuckBot
 Allow: /
+Crawl-delay: 1
 
 User-agent: Baiduspider
 Allow: /
+Crawl-delay: 2
 
 User-agent: YandexBot
 Allow: /
+Crawl-delay: 1
 
 User-agent: Sogou
+Allow: /
+
+User-agent: Exabot
 Allow: /
 
 # ============================================================
@@ -75,6 +89,24 @@ User-agent: WhatsApp
 Allow: /
 
 # ============================================================
+# ALLOW SEO TOOLS (Ahrefs, Semrush etc.)
+# ============================================================
+# Note: Inhe allow kiya gaya hai taake aap apni SEO performance
+# track kar sakein. Agar aap yeh tools use nahi karte toh block kar sakte hain.
+
+User-agent: AhrefsBot
+Allow: /
+
+User-agent: SemrushBot
+Allow: /
+
+User-agent: DataForSeoBot
+Allow: /
+
+User-agent: SEOPressBot
+Allow: /
+
+# ============================================================
 # BLOCK SPAM BOTS (Only bad actors)
 # ============================================================
 
@@ -87,8 +119,31 @@ Disallow: /
 User-agent: BLEXBot
 Disallow: /
 
+User-agent: MauiBot
+Disallow: /
+
+User-agent: rogerbot
+Disallow: /
+
+User-agent: ltx71
+Disallow: /
+
+User-agent: aspseek
+Disallow: /
+
+User-agent: ia_archiver
+Disallow: /
+
 # ============================================================
-# SITEMAP
+# SITEMAP LOCATION
 # ============================================================
 
 Sitemap: https://rankingexpert.github.io/rankingmatters/sitemap.xml
+
+# ============================================================
+# NOTES:
+# - services.html ab sitemap mein shamil hai ✅
+# - Ahrefs aur Semrush allow kar diye gaye hain (SEO tracking ke liye)
+# - Sitemap URL sahi set kiya gaya hai
+# - Saare important search engines allow hain
+# ============================================================
