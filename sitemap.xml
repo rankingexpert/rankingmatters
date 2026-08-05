@@ -1,128 +1,115 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:xhtml="http://www.w3.org/1999/xhtml"
-        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
-        xmlns:news="http://www.google.com/schemas/sitemap-news/0.9"
-        xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0"
-        xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
 
-    <!-- ============================================================ -->
-    <!-- SITEMAP - RANKING MATTERS                                     -->
-    <!-- Website: https://rankingexpert.github.io/rankingmatters/     -->
-    <!-- Generated: August 4, 2026                                    -->
-    <!-- Total URLs: 30                                               -->
-    <!-- ============================================================ -->
+    <!-- ============================================================
+         MAIN PAGES
+         ============================================================ -->
 
-    <!-- ============================================================ -->
-    <!-- ===================== MAIN PAGES ============================ -->
-    <!-- ============================================================ -->
-
-    <!-- 1. HOMEPAGE - Highest Priority -->
     <url>
         <loc>https://rankingexpert.github.io/rankingmatters/index.html</loc>
-        <lastmod>2026-08-04</lastmod>
+        <lastmod>2026-08-06</lastmod>
         <changefreq>daily</changefreq>
         <priority>1.0</priority>
-        <xhtml:link rel="alternate" hreflang="en" href="https://rankingexpert.github.io/rankingmatters/index.html"/>
     </url>
 
-    <!-- 2. ABOUT US -->
     <url>
         <loc>https://rankingexpert.github.io/rankingmatters/about.html</loc>
-        <lastmod>2026-08-04</lastmod>
+        <lastmod>2026-08-06</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
 
-    <!-- 3. SERVICES MAIN PAGE -->
     <url>
         <loc>https://rankingexpert.github.io/rankingmatters/services.html</loc>
-        <lastmod>2026-08-04</lastmod>
+        <lastmod>2026-08-06</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
     </url>
 
-    <!-- 4. BLOG MAIN PAGE -->
     <url>
         <loc>https://rankingexpert.github.io/rankingmatters/blog.html</loc>
-        <lastmod>2026-08-04</lastmod>
+        <lastmod>2026-08-06</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
     </url>
 
-    <!-- 5. CONTACT PAGE -->
     <url>
         <loc>https://rankingexpert.github.io/rankingmatters/contact.html</loc>
-        <lastmod>2026-08-04</lastmod>
+        <lastmod>2026-08-06</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
 
-    <!-- ============================================================ -->
-    <!-- ===================== SERVICE PAGES ========================= -->
-    <!-- ============================================================ -->
+    <!-- ============================================================
+         SERVICES PAGES (CORRECTED URLS)
+         ============================================================ -->
 
-    <!-- 6. GBP OPTIMIZATION -->
     <url>
         <loc>https://rankingexpert.github.io/rankingmatters/gbp-optimization.html</loc>
-        <lastmod>2026-08-04</lastmod>
+        <lastmod>2026-08-06</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.85</priority>
     </url>
 
-    <!-- 7. LOCAL SEO -->
     <url>
         <loc>https://rankingexpert.github.io/rankingmatters/local-seo.html</loc>
-        <lastmod>2026-08-04</lastmod>
+        <lastmod>2026-08-06</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.85</priority>
     </url>
 
-    <!-- 8. GOOGLE MAPS RANKING -->
     <url>
         <loc>https://rankingexpert.github.io/rankingmatters/google-maps-ranking.html</loc>
-        <lastmod>2026-08-04</lastmod>
+        <lastmod>2026-08-06</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.85</priority>
     </url>
 
-    <!-- 9. GMB RECOVERY -->
     <url>
         <loc>https://rankingexpert.github.io/rankingmatters/gmb-recovery.html</loc>
-        <lastmod>2026-08-04</lastmod>
+        <lastmod>2026-08-06</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.85</priority>
     </url>
 
-    <!-- 10. LOCAL CITATIONS -->
     <url>
         <loc>https://rankingexpert.github.io/rankingmatters/local-citations.html</loc>
-        <lastmod>2026-08-04</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
+        <lastmod>2026-08-06</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.85</priority>
     </url>
 
-    <!-- 11. GOOGLE MAPS MARKETING -->
     <url>
         <loc>https://rankingexpert.github.io/rankingmatters/google-maps-marketing.html</loc>
-        <lastmod>2026-08-04</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
+        <lastmod>2026-08-06</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.85</priority>
     </url>
 
-    <!-- 12. LANDING PAGES -->
     <url>
         <loc>https://rankingexpert.github.io/rankingmatters/landing-pages.html</loc>
-        <lastmod>2026-08-04</lastmod>
+        <lastmod>2026-08-06</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
 
-    <!-- ============================================================ -->
-    <!-- ===================== BLOG POSTS (SEO Friendly URLs) ======== -->
-    <!-- ============================================================ -->
+    <!-- ============================================================
+         BLOG POSTS (INCLUDING NEW ONE)
+         ============================================================ -->
 
-    <!-- 13. How to Get More Google Reviews Organically (2026 Guide) - NEW -->
+    <!-- NEW: GMB Instant Verification 2026 -->
+    <url>
+        <loc>https://rankingexpert.github.io/rankingmatters/blog/gmb-instant-verification-2026.html</loc>
+        <lastmod>2026-08-06</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.85</priority>
+        <image:image>
+            <image:loc>https://images.unsplash.com/photo-1560472354-b33ff0c44a43</image:loc>
+            <image:title>GMB Instant Verification Method in 2026 - Fastest Way to Verify Your Google Business Profile</image:title>
+        </image:image>
+    </url>
+
     <url>
         <loc>https://rankingexpert.github.io/rankingmatters/blog/how-to-get-more-google-reviews-organically.html</loc>
         <lastmod>2026-08-03</lastmod>
@@ -130,11 +117,10 @@
         <priority>0.85</priority>
         <image:image>
             <image:loc>https://images.unsplash.com/photo-1556742049-0cfed4f6a45d</image:loc>
-            <image:caption>How to Get More Google Reviews Organically</image:caption>
+            <image:title>How to Get More Google Reviews Organically - Proven Strategies</image:title>
         </image:image>
     </url>
 
-    <!-- 14. Google Business Profile Suspension Recovery Guide -->
     <url>
         <loc>https://rankingexpert.github.io/rankingmatters/blog/gbp-suspension-recovery-guide.html</loc>
         <lastmod>2026-08-01</lastmod>
@@ -142,11 +128,10 @@
         <priority>0.85</priority>
         <image:image>
             <image:loc>https://i.ibb.co/SX8wRbWw/Google-Business-Profile-Suspended-Here-s-How-to-Recover-It-Step-by-Step-2026-Guide.png</image:loc>
-            <image:caption>Google Business Profile Suspension Recovery Guide</image:caption>
+            <image:title>Google Business Profile Suspension Recovery Guide 2026</image:title>
         </image:image>
     </url>
 
-    <!-- 15. Local SEO Guide 2026: Complete Blog Post Collection -->
     <url>
         <loc>https://rankingexpert.github.io/rankingmatters/blog/local-seo-guide-2026.html</loc>
         <lastmod>2026-07-22</lastmod>
@@ -154,11 +139,10 @@
         <priority>0.85</priority>
         <image:image>
             <image:loc>https://i.ibb.co/3mkSDcTd/Local-SEO-Guide-2026-Complete-Blog-Post-Collection.png</image:loc>
-            <image:caption>Local SEO Guide 2026 - Complete Blog Post Collection</image:caption>
+            <image:title>Local SEO Guide 2026 - Complete Blog Post Collection</image:title>
         </image:image>
     </url>
 
-    <!-- 16. How to Overcome Proximity Algorithmic Restrictions -->
     <url>
         <loc>https://rankingexpert.github.io/rankingmatters/blog/overcome-proximity-algorithmic-restrictions.html</loc>
         <lastmod>2026-07-10</lastmod>
@@ -166,11 +150,10 @@
         <priority>0.65</priority>
         <image:image>
             <image:loc>https://images.unsplash.com/photo-1432821596592-e2c18b78144f</image:loc>
-            <image:caption>How to Overcome Proximity Algorithmic Restrictions</image:caption>
+            <image:title>How to Overcome Proximity Algorithmic Restrictions</image:title>
         </image:image>
     </url>
 
-    <!-- 17. The Ultimate Playbook for Rapid GMB Reinstatements -->
     <url>
         <loc>https://rankingexpert.github.io/rankingmatters/blog/rapid-gmb-reinstatements.html</loc>
         <lastmod>2026-07-08</lastmod>
@@ -178,11 +161,10 @@
         <priority>0.65</priority>
         <image:image>
             <image:loc>https://images.unsplash.com/photo-1551288049-bebda4e38f71</image:loc>
-            <image:caption>The Ultimate Playbook for Rapid GMB Reinstatements</image:caption>
+            <image:title>The Ultimate Playbook for Rapid GMB Reinstatements</image:title>
         </image:image>
     </url>
 
-    <!-- 18. Mastering JSON-LD Setup for Local Business Growth -->
     <url>
         <loc>https://rankingexpert.github.io/rankingmatters/blog/mastering-json-ld-setup.html</loc>
         <lastmod>2026-07-05</lastmod>
@@ -190,11 +172,10 @@
         <priority>0.65</priority>
         <image:image>
             <image:loc>https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5</image:loc>
-            <image:caption>Mastering JSON-LD Setup for Local Business Growth</image:caption>
+            <image:title>Mastering JSON-LD Setup for Local Business Growth</image:title>
         </image:image>
     </url>
 
-    <!-- 19. Google Business Profile Optimization Checklist 2026 -->
     <url>
         <loc>https://rankingexpert.github.io/rankingmatters/blog/gbp-optimization-checklist-2026.html</loc>
         <lastmod>2026-07-03</lastmod>
@@ -202,11 +183,10 @@
         <priority>0.65</priority>
         <image:image>
             <image:loc>https://i.ibb.co/sp0NkBN1/Chat-GPT-Image-Jul-15-2026-08-51-15-PM.png</image:loc>
-            <image:caption>Google Business Profile Optimization Checklist 2026</image:caption>
+            <image:title>Google Business Profile Optimization Checklist 2026</image:title>
         </image:image>
     </url>
 
-    <!-- 20. Georadial Mapping: The Future of Local SEO -->
     <url>
         <loc>https://rankingexpert.github.io/rankingmatters/blog/georadial-mapping-future-local-seo.html</loc>
         <lastmod>2026-06-28</lastmod>
@@ -214,11 +194,10 @@
         <priority>0.65</priority>
         <image:image>
             <image:loc>https://images.unsplash.com/photo-1460925895917-afdab827c52f</image:loc>
-            <image:caption>Georadial Mapping: The Future of Local SEO</image:caption>
+            <image:title>Georadial Mapping: The Future of Local SEO</image:title>
         </image:image>
     </url>
 
-    <!-- 21. 5 Common GMB Suspension Triggers and How to Avoid Them -->
     <url>
         <loc>https://rankingexpert.github.io/rankingmatters/blog/5-common-gmb-suspension-triggers.html</loc>
         <lastmod>2026-06-25</lastmod>
@@ -226,11 +205,10 @@
         <priority>0.65</priority>
         <image:image>
             <image:loc>https://i.ibb.co/MkR80mYR/Gemini-Generated-Image-eppwm6eppwm6eppw.png</image:loc>
-            <image:caption>5 Common GMB Suspension Triggers and How to Avoid Them</image:caption>
+            <image:title>5 Common GMB Suspension Triggers and How to Avoid Them</image:title>
         </image:image>
     </url>
 
-    <!-- 22. Local SEO vs Traditional SEO: What's the Difference? -->
     <url>
         <loc>https://rankingexpert.github.io/rankingmatters/blog/local-seo-vs-traditional-seo.html</loc>
         <lastmod>2026-07-15</lastmod>
@@ -238,11 +216,10 @@
         <priority>0.65</priority>
         <image:image>
             <image:loc>https://images.unsplash.com/photo-1552664730-d307ca884978</image:loc>
-            <image:caption>Local SEO vs Traditional SEO: What's the Difference?</image:caption>
+            <image:title>Local SEO vs Traditional SEO: What's the Difference?</image:title>
         </image:image>
     </url>
 
-    <!-- 23. Google Business Profile Categories: The Ultimate Guide -->
     <url>
         <loc>https://rankingexpert.github.io/rankingmatters/blog/gbp-categories-ultimate-guide.html</loc>
         <lastmod>2026-07-13</lastmod>
@@ -250,95 +227,8 @@
         <priority>0.65</priority>
         <image:image>
             <image:loc>https://images.unsplash.com/photo-1573164713988-8665fc963095</image:loc>
-            <image:caption>Google Business Profile Categories: The Ultimate Guide</image:caption>
+            <image:title>Google Business Profile Categories: The Ultimate Guide</image:title>
         </image:image>
-    </url>
-
-    <!-- ============================================================ -->
-    <!-- ===================== OLD BLOG POSTS (Root) ================= -->
-    <!-- ============================================================ -->
-    <!-- These are kept for backward compatibility and redirects       -->
-    <!-- to maintain existing backlinks and SEO value                 -->
-
-    <!-- 24. Redirect: How to Overcome Proximity Algorithmic Restrictions -->
-    <url>
-        <loc>https://rankingexpert.github.io/rankingmatters/blog-post1.html</loc>
-        <lastmod>2026-08-04</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.3</priority>
-        <xhtml:link rel="canonical" href="https://rankingexpert.github.io/rankingmatters/blog/overcome-proximity-algorithmic-restrictions.html"/>
-    </url>
-
-    <!-- 25. Redirect: The Ultimate Playbook for Rapid GMB Reinstatements -->
-    <url>
-        <loc>https://rankingexpert.github.io/rankingmatters/blog-post2.html</loc>
-        <lastmod>2026-08-04</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.3</priority>
-        <xhtml:link rel="canonical" href="https://rankingexpert.github.io/rankingmatters/blog/rapid-gmb-reinstatements.html"/>
-    </url>
-
-    <!-- 26. Redirect: Mastering JSON-LD Setup -->
-    <url>
-        <loc>https://rankingexpert.github.io/rankingmatters/blog-post3.html</loc>
-        <lastmod>2026-08-04</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.3</priority>
-        <xhtml:link rel="canonical" href="https://rankingexpert.github.io/rankingmatters/blog/mastering-json-ld-setup.html"/>
-    </url>
-
-    <!-- 27. Redirect: GBP Optimization Checklist -->
-    <url>
-        <loc>https://rankingexpert.github.io/rankingmatters/blog-post4.html</loc>
-        <lastmod>2026-08-04</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.3</priority>
-        <xhtml:link rel="canonical" href="https://rankingexpert.github.io/rankingmatters/blog/gbp-optimization-checklist-2026.html"/>
-    </url>
-
-    <!-- 28. Redirect: Georadial Mapping -->
-    <url>
-        <loc>https://rankingexpert.github.io/rankingmatters/blog-post5.html</loc>
-        <lastmod>2026-08-04</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.3</priority>
-        <xhtml:link rel="canonical" href="https://rankingexpert.github.io/rankingmatters/blog/georadial-mapping-future-local-seo.html"/>
-    </url>
-
-    <!-- 29. Redirect: 5 Common GMB Suspension Triggers -->
-    <url>
-        <loc>https://rankingexpert.github.io/rankingmatters/blog-post6.html</loc>
-        <lastmod>2026-08-04</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.3</priority>
-        <xhtml:link rel="canonical" href="https://rankingexpert.github.io/rankingmatters/blog/5-common-gmb-suspension-triggers.html"/>
-    </url>
-
-    <!-- 30. Redirect: Local SEO vs Traditional SEO -->
-    <url>
-        <loc>https://rankingexpert.github.io/rankingmatters/blog-post7.html</loc>
-        <lastmod>2026-08-04</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.3</priority>
-        <xhtml:link rel="canonical" href="https://rankingexpert.github.io/rankingmatters/blog/local-seo-vs-traditional-seo.html"/>
-    </url>
-
-    <!-- 31. Redirect: GBP Categories Ultimate Guide -->
-    <url>
-        <loc>https://rankingexpert.github.io/rankingmatters/blog-post8.html</loc>
-        <lastmod>2026-08-04</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.3</priority>
-        <xhtml:link rel="canonical" href="https://rankingexpert.github.io/rankingmatters/blog/gbp-categories-ultimate-guide.html"/>
-    </url>
-
-    <!-- 32. Redirect: Local SEO Guide Collection -->
-    <url>
-        <loc>https://rankingexpert.github.io/rankingmatters/blog-post9.html</loc>
-        <lastmod>2026-08-04</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.3</priority>
-        <xhtml:link rel="canonical" href="https://rankingexpert.github.io/rankingmatters/blog/local-seo-guide-2026.html"/>
     </url>
 
 </urlset>
