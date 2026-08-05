@@ -12,7 +12,7 @@ User-agent: *
 Allow: /
 
 # ============================================================
-# ALLOW AI CRAWLERS (For better visibility)
+# ALLOW AI CRAWLERS
 # ============================================================
 
 User-agent: GPTBot
@@ -89,10 +89,8 @@ User-agent: WhatsApp
 Allow: /
 
 # ============================================================
-# ALLOW SEO TOOLS (Ahrefs, Semrush etc.)
+# ALLOW SEO TOOLS
 # ============================================================
-# Note: Inhe allow kiya gaya hai taake aap apni SEO performance
-# track kar sakein. Agar aap yeh tools use nahi karte toh block kar sakte hain.
 
 User-agent: AhrefsBot
 Allow: /
@@ -106,8 +104,24 @@ Allow: /
 User-agent: SEOPressBot
 Allow: /
 
+User-agent: Moz
+Allow: /
+
+User-agent: SEOkicks
+Allow: /
+
 # ============================================================
-# BLOCK SPAM BOTS (Only bad actors)
+# ALLOW SITE AUDIT TOOLS
+# ============================================================
+
+User-agent: Sitebulb
+Allow: /
+
+User-agent: ScreamingFrog
+Allow: /
+
+# ============================================================
+# BLOCK SPAM BOTS
 # ============================================================
 
 User-agent: MJ12bot
@@ -134,6 +148,25 @@ Disallow: /
 User-agent: ia_archiver
 Disallow: /
 
+User-agent: Baidu
+Disallow: /
+
+User-agent: Yandex
+Disallow: /
+
+# ============================================================
+# BLOCK EMAIL HARVESTERS
+# ============================================================
+
+User-agent: EmailCollector
+Disallow: /
+
+User-agent: EmailSiphon
+Disallow: /
+
+User-agent: Extractor
+Disallow: /
+
 # ============================================================
 # SITEMAP LOCATION
 # ============================================================
@@ -142,8 +175,10 @@ Sitemap: https://rankingexpert.github.io/rankingmatters/sitemap.xml
 
 # ============================================================
 # NOTES:
-# - services.html ab sitemap mein shamil hai ✅
-# - Ahrefs aur Semrush allow kar diye gaye hain (SEO tracking ke liye)
-# - Sitemap URL sahi set kiya gaya hai
-# - Saare important search engines allow hain
+# - services.html is now included in sitemap
+# - Ahrefs and Semrush are allowed for SEO tracking
+# - Sitemap URL is correctly set
+# - All major search engines are allowed
+# - Spam bots are blocked
+# - Crawl-delay is set for respectful crawling
 # ============================================================
