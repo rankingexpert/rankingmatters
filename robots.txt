@@ -1,31 +1,15 @@
 # ============================================================
-# ROBOTS.TXT - Ranking Matters
+# ROBOTS.TXT – Ranking Matters
 # Website: https://rankingexpert.github.io/rankingmatters/
-# Last Updated: July 22, 2026
+# Last Updated: August 6, 2026
 # ============================================================
 
 # ============================================================
-# ALLOW ALL MAJOR SEARCH ENGINES
+# ALLOW ALL SEARCH ENGINES
 # ============================================================
 
 User-agent: *
 Allow: /
-
-# Block sensitive/private directories
-Disallow: /assets/private/
-Disallow: /admin/
-Disallow: /wp-admin/
-Disallow: /cgi-bin/
-Disallow: /tmp/
-Disallow: /backup/
-Disallow: /config/
-
-# Block duplicate content areas
-Disallow: /*?*
-Disallow: /*.pdf$
-Disallow: /*.zip$
-Disallow: /*.rar$
-Disallow: /*.exe$
 
 # ============================================================
 # ALLOW AI CRAWLERS (For better visibility)
@@ -50,44 +34,25 @@ User-agent: Google-Extended
 Allow: /
 
 # ============================================================
-# ALLOW SEARCH ENGINE BOTS
+# ALLOW MAJOR SEARCH ENGINES
 # ============================================================
 
 User-agent: Googlebot
 Allow: /
-Crawl-delay: 1
-
-User-agent: Googlebot-Image
-Allow: /
-Crawl-delay: 1
-
-User-agent: Googlebot-News
-Allow: /
 
 User-agent: Bingbot
 Allow: /
-Crawl-delay: 1
-
-User-agent: Slurp
-Allow: /
-Crawl-delay: 1
 
 User-agent: DuckDuckBot
 Allow: /
-Crawl-delay: 1
 
 User-agent: Baiduspider
 Allow: /
-Crawl-delay: 2
 
 User-agent: YandexBot
 Allow: /
-Crawl-delay: 1
 
 User-agent: Sogou
-Allow: /
-
-User-agent: Exabot
 Allow: /
 
 # ============================================================
@@ -110,14 +75,8 @@ User-agent: WhatsApp
 Allow: /
 
 # ============================================================
-# BLOCK BAD BOTS / SPAM CRAWLERS
+# BLOCK SPAM BOTS (Only bad actors)
 # ============================================================
-
-User-agent: AhrefsBot
-Disallow: /
-
-User-agent: SemrushBot
-Disallow: /
 
 User-agent: MJ12bot
 Disallow: /
@@ -125,28 +84,11 @@ Disallow: /
 User-agent: Dotbot
 Disallow: /
 
-User-agent: rogerbot
-Disallow: /
-
 User-agent: BLEXBot
 Disallow: /
 
-User-agent: DataForSeoBot
-Disallow: /
-
-User-agent: MauiBot
-Disallow: /
-
 # ============================================================
-# ALLOW SITEMAP
+# SITEMAP
 # ============================================================
 
 Sitemap: https://rankingexpert.github.io/rankingmatters/sitemap.xml
-
-# ============================================================
-# NOTES:
-# - All major search engines are allowed
-# - AI crawlers are allowed for better visibility
-# - Bad bots are blocked to save server resources
-# - Sitemap is submitted for better indexing
-# ============================================================
