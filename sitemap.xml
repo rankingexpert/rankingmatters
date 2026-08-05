@@ -20,12 +20,20 @@
         <priority>0.8</priority>
     </url>
 
+    <!-- ============================================================
+         ⭐ SERVICES PAGE (ADDED - YAHAN PEHLE NAHI THA)
+         ============================================================ -->
+
     <url>
         <loc>https://rankingexpert.github.io/rankingmatters/services.html</loc>
         <lastmod>2026-08-06</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
     </url>
+
+    <!-- ============================================================
+         OTHER MAIN PAGES
+         ============================================================ -->
 
     <url>
         <loc>https://rankingexpert.github.io/rankingmatters/blog.html</loc>
@@ -42,7 +50,7 @@
     </url>
 
     <!-- ============================================================
-         SERVICES PAGES (CORRECTED URLS)
+         SERVICES SUB-PAGES
          ============================================================ -->
 
     <url>
@@ -95,10 +103,9 @@
     </url>
 
     <!-- ============================================================
-         BLOG POSTS (INCLUDING NEW ONE)
+         BLOG POSTS
          ============================================================ -->
 
-    <!-- NEW: GMB Instant Verification 2026 -->
     <url>
         <loc>https://rankingexpert.github.io/rankingmatters/blog/gmb-instant-verification-2026.html</loc>
         <lastmod>2026-08-06</lastmod>
