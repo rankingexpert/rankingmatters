@@ -1,0 +1,921 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to Use Google NLP API for Local SEO Entities (2026 Guide) | Ranking Matters</title>
+    <meta name="description" content="Learn how to use the Google Cloud Natural Language API to extract entities, analyze competitors, and find semantic gaps in your local SEO strategy. Step-by-step tutorial with code examples.">
+    <link rel="canonical" href="https://rankingexpert.github.io/rankingmatters/blog/how-to-use-google-nlp-api-local-seo.html">
+    
+    <!-- ====== GOOGLE SEARCH CONSOLE VERIFICATION ====== -->
+    <meta name="google-site-verification" content="google03b0f2c466ca5be5" />
+    
+    <!-- ====== GOOGLE ANALYTICS (gtag.js) ====== -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z3PRC6PLMM"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){ dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-Z3PRC6PLMM');
+    </script>
+    
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#0a0a12" />
+
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://rankingexpert.github.io/rankingmatters/blog/how-to-use-google-nlp-api-local-seo.html" />
+    <meta property="og:title" content="How to Use Google NLP API to Extract Local SEO Entities (Step-by-Step Tutorial)" />
+    <meta property="og:description" content="Learn how to use the Google Cloud Natural Language API to extract entities, analyze competitors, and find semantic gaps in your local SEO strategy. Step-by-step guide with code examples." />
+    <meta property="og:image" content="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80" />
+    <meta property="og:site_name" content="Ranking Matters" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://rankingexpert.github.io/rankingmatters/blog/how-to-use-google-nlp-api-local-seo.html" />
+    <meta name="twitter:title" content="How to Use Google NLP API for Local SEO Entities (2026 Guide)" />
+    <meta name="twitter:description" content="Learn how to use the Google Cloud Natural Language API to extract entities, analyze competitors, and find semantic gaps in your local SEO strategy." />
+    <meta name="twitter:image" content="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+    <style>
+        /* --- Ranking Matters CSS Architecture --- */
+        :root {
+            --bg-dark: #07070a;
+            --surface-dark: rgba(18, 18, 26, 0.7);
+            --surface-dark-pure: #0d0d14;
+            --border-dark: rgba(255, 255, 255, 0.06);
+            --text-dark: #f3f4f6;
+            --text-dark-muted: #9ca3af;
+            
+            --bg-light: #f9fafb;
+            --surface-light: rgba(255, 255, 255, 0.75);
+            --surface-light-pure: #ffffff;
+            --border-light: rgba(0, 0, 0, 0.06);
+            --text-light: #111827;
+            --text-light-muted: #4b5563;
+
+            --primary: #2563eb;
+            --primary-glow: rgba(37, 99, 235, 0.15);
+            --accent: #059669;
+            --accent-glow: rgba(5, 150, 105, 0.15);
+            --whatsapp: #25D366;
+            
+            --font-sans: 'Plus Jakarta Sans', sans-serif;
+            --font-serif: 'Playfair Display', serif;
+            --radius-lg: 24px;
+            --radius-md: 14px;
+            --radius-sm: 8px;
+            --transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        body.dark-mode {
+            --bg: var(--bg-dark);
+            --surface: var(--surface-dark);
+            --surface-pure: var(--surface-dark-pure);
+            --border: var(--border-dark);
+            --text: var(--text-dark);
+            --text-muted: var(--text-dark-muted);
+            --shadow: 0 20px 40px -15px rgba(0,0,0,0.7);
+            --nav-bg: rgba(7, 7, 10, 0.7);
+        }
+
+        body.light-mode {
+            --bg: var(--bg-light);
+            --surface: var(--surface-light);
+            --surface-pure: var(--surface-light-pure);
+            --border: var(--border-light);
+            --text: var(--text-light);
+            --text-muted: var(--text-light-muted);
+            --shadow: 0 20px 40px -15px rgba(0,0,0,0.05);
+            --nav-bg: rgba(249, 250, 251, 0.75);
+        }
+
+        body {
+            --bg: var(--bg-dark);
+            --surface: var(--surface-dark);
+            --surface-pure: var(--surface-dark-pure);
+            --border: var(--border-dark);
+            --text: var(--text-dark);
+            --text-muted: var(--text-dark-muted);
+            --shadow: 0 20px 40px -15px rgba(0,0,0,0.7);
+            --nav-bg: rgba(7, 7, 10, 0.7);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: var(--font-sans); background-color: var(--bg); color: var(--text); overflow-x: hidden; transition: background-color 0.4s ease, color 0.4s ease; -webkit-font-smoothing: antialiased; }
+        
+        .container { width: 100%; max-width: 1400px; margin: 0 auto; padding: 0 40px; }
+        @media(max-width: 768px) { .container { padding: 0 24px; } }
+
+        #scroll-progress { position: fixed; top: 0; left: 0; height: 3px; background: linear-gradient(90deg, var(--primary), var(--accent)); width: 0%; z-index: 2000; transition: width 0.1s ease; }
+
+        #loader { position: fixed; inset: 0; background: var(--bg-dark); z-index: 3000; display: flex; justify-content: center; align-items: center; transition: opacity 0.6s ease, visibility 0.6s ease; }
+        #loader.hidden { opacity: 0; visibility: hidden; pointer-events: none; }
+        .loader-logo { font-size: 2rem; font-weight: 800; letter-spacing: -1px; color: #fff; position: relative; animation: pulse 1.5s infinite; }
+        .loader-logo span { color: var(--primary); }
+        @keyframes pulse { 0%, 100% { opacity: 0.6; transform: scale(0.98); } 50% { opacity: 1; transform: scale(1); } }
+
+        h1, h2, h3, h4 { font-weight: 700; letter-spacing: -0.03em; line-height: 1.15; }
+        .text-gradient { background: linear-gradient(135deg, #3b82f6 0%, #10b981 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        
+        .glass { background: var(--surface); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border: 1px solid var(--border); box-shadow: var(--shadow); }
+        .card { border-radius: var(--radius-lg); padding: 48px; transition: var(--transition); position: relative; overflow: hidden; }
+
+        .btn { display: inline-flex; align-items: center; justify-content: center; padding: 18px 36px; font-weight: 600; font-size: 0.95rem; border-radius: var(--radius-md); transition: var(--transition); text-decoration: none; position: relative; overflow: hidden; cursor: pointer; border: none; }
+        .btn-primary { background: linear-gradient(135deg, var(--primary), #1d4ed8); color: #ffffff; box-shadow: 0 10px 25px -5px rgba(37, 99, 235, 0.4); }
+        .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 15px 30px -5px rgba(37, 99, 235, 0.6); }
+        .btn-whatsapp { background: #25D366; color: #ffffff; box-shadow: 0 10px 25px -5px rgba(37, 211, 102, 0.4); }
+        .btn-whatsapp:hover { transform: translateY(-2px); box-shadow: 0 15px 30px -5px rgba(37, 211, 102, 0.6); }
+        .btn-whatsapp svg { margin-right: 10px; }
+
+        /* ====== HEADER ====== */
+        header { position: fixed; top: 0; left: 0; width: 100%; z-index: 1000; background: var(--nav-bg); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border-bottom: 1px solid var(--border); transition: var(--transition); }
+        .nav-container { display: flex; justify-content: space-between; align-items: center; height: 80px; }
+        .logo { font-size: 1.35rem; font-weight: 800; letter-spacing: -0.04em; text-decoration: none; color: var(--text); display: flex; align-items: center; gap: 8px; }
+        .logo span { color: var(--primary); }
+        .nav-menu { display: flex; align-items: center; gap: 40px; list-style: none; }
+        .nav-link { text-decoration: none; color: var(--text-muted); font-weight: 500; font-size: 0.95rem; transition: var(--transition); position: relative; padding: 4px 0; }
+        .nav-link:hover, .nav-link.active { color: var(--text); }
+        .nav-link::after { content: ''; position: absolute; bottom: -2px; left: 0; width: 0; height: 2px; background: var(--primary); transition: var(--transition); border-radius: 2px; }
+        .nav-link.active::after { width: 100%; }
+        .nav-link:hover::after { width: 100%; }
+        .nav-actions { display: flex; align-items: center; gap: 16px; }
+
+        .nav-dropdown { position: relative; display: inline-block; }
+        .nav-dropdown .dropdown-arrow { font-size: 0.6rem; margin-left: 4px; transition: var(--transition); }
+        .nav-dropdown:hover .dropdown-arrow { transform: rotate(180deg); }
+        .nav-dropdown .dropdown-content { display: none; position: absolute; top: 100%; left: 50%; transform: translateX(-50%); min-width: 220px; background: var(--surface-dark); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border-radius: var(--radius-md); padding: 12px 0; box-shadow: var(--shadow); border: 1px solid var(--border); z-index: 1002; animation: dropdownFade 0.3s ease; }
+        @keyframes dropdownFade { from { opacity: 0; transform: translateX(-50%) translateY(-10px); } to { opacity: 1; transform: translateX(-50%) translateY(0); } }
+        .nav-dropdown:hover .dropdown-content { display: block; }
+        .nav-dropdown .dropdown-content a { display: block; padding: 10px 24px; font-size: 0.85rem; font-weight: 500; color: var(--text-muted); transition: var(--transition); white-space: nowrap; letter-spacing: 0.03em; }
+        .nav-dropdown .dropdown-content a:hover { color: var(--primary); background: var(--primary-glow); }
+
+        @media (max-width: 992px) {
+            .nav-dropdown .dropdown-content { display: none; position: static; transform: none; background: transparent !important; backdrop-filter: none !important; box-shadow: none; border: none; padding: 8px 0 8px 20px; animation: none; width: 100%; }
+            .nav-dropdown .dropdown-content a { padding: 8px 16px; font-size: 1rem; color: var(--text-muted) !important; white-space: normal; }
+            .nav-dropdown .dropdown-content a:hover { color: var(--primary) !important; background: transparent !important; }
+            .nav-dropdown:hover .dropdown-content { display: none; }
+            .nav-dropdown.active .dropdown-content { display: block !important; }
+            .nav-dropdown .dropdown-arrow { display: inline-block; }
+            .nav-dropdown.active .dropdown-arrow { transform: rotate(180deg); }
+        }
+
+        .theme-btn { background: none; border: 1px solid var(--border); width: 44px; height: 44px; border-radius: var(--radius-sm); display: flex; align-items: center; justify-content: center; cursor: pointer; color: var(--text); transition: var(--transition); font-size: 1.2rem; }
+        .theme-btn:hover { background: var(--border); }
+        .burger { display: none; cursor: pointer; background: none; border: none; padding: 8px; flex-direction: column; gap: 5px; }
+        .burger span { display: block; width: 24px; height: 2px; background: var(--text); transition: var(--transition); border-radius: 2px; }
+
+        /* Blog Post Styles */
+        .blog-post-wrapper { max-width: 850px; margin: 120px auto 60px; padding: 0 20px; }
+        .blog-post-wrapper h1 { font-size: clamp(2.2rem, 4vw, 3.2rem); font-weight: 800; margin-bottom: 16px; color: var(--text); }
+        .blog-post-wrapper .post-meta { color: var(--text-muted); font-size: 0.95rem; margin-bottom: 32px; border-bottom: 1px solid var(--border); padding-bottom: 24px; }
+        .blog-post-wrapper .post-meta span { margin-right: 20px; }
+        .blog-post-wrapper .featured-image-wrapper { margin-bottom: 40px; }
+        .blog-post-wrapper .featured-image { width: 100%; border-radius: var(--radius-lg); border: 1px solid var(--border); display: block; }
+        .blog-post-wrapper .image-caption { font-size: 0.9rem; color: var(--text-muted); text-align: center; margin-top: 12px; font-style: italic; }
+        .blog-post-wrapper .in-content-image-wrapper { margin: 32px 0; }
+        .blog-post-wrapper .in-content-image { width: 100%; border-radius: var(--radius-md); border: 1px solid var(--border); display: block; }
+        .blog-post-wrapper h2 { font-size: clamp(1.6rem, 2.5vw, 2.2rem); font-weight: 700; margin-top: 48px; margin-bottom: 16px; color: var(--text); }
+        .blog-post-wrapper h3 { font-size: clamp(1.2rem, 1.8vw, 1.5rem); font-weight: 600; margin-top: 32px; margin-bottom: 12px; color: var(--text); }
+        .blog-post-wrapper p { font-size: 1.1rem; line-height: 1.7; color: var(--text-muted); margin-bottom: 20px; }
+        .blog-post-wrapper ul, .blog-post-wrapper ol { margin-bottom: 20px; padding-left: 24px; color: var(--text-muted); }
+        .blog-post-wrapper ul li, .blog-post-wrapper ol li { font-size: 1.05rem; line-height: 1.7; margin-bottom: 8px; }
+        .blog-post-wrapper table { width: 100%; border-collapse: collapse; margin: 32px 0; background: var(--surface-pure); border-radius: var(--radius-md); overflow: hidden; }
+        .blog-post-wrapper table th { background: var(--primary); color: #fff; padding: 14px 20px; text-align: left; font-weight: 600; }
+        .blog-post-wrapper table td { padding: 14px 20px; border-bottom: 1px solid var(--border); color: var(--text-muted); }
+        .blog-post-wrapper table tr:last-child td { border-bottom: none; }
+        .blog-post-wrapper .faq-item { border-bottom: 1px solid var(--border); padding: 20px 0; }
+        .blog-post-wrapper .faq-item:last-child { border-bottom: none; }
+        .blog-post-wrapper .faq-item h3 { margin-top: 0; font-size: 1.15rem; color: var(--text); }
+        .blog-post-wrapper .faq-item p { margin-bottom: 0; }
+        .blog-post-wrapper .cta-box { background: var(--surface); border: 1px solid var(--primary); border-radius: var(--radius-lg); padding: 40px 48px; text-align: center; margin: 48px 0; }
+        .blog-post-wrapper .cta-box h3 { margin-top: 0; font-size: 1.6rem; color: var(--text); }
+        .blog-post-wrapper .cta-box p { margin-bottom: 24px; }
+        .blog-post-wrapper .cta-box .btn-group { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+        .blog-post-wrapper strong { color: var(--text); }
+        .blog-post-wrapper a { color: var(--primary); text-decoration: none; transition: var(--transition); }
+        .blog-post-wrapper a:hover { color: var(--accent); text-decoration: underline; }
+        .blog-post-wrapper .back-to-blog { display: inline-flex; align-items: center; gap: 8px; color: var(--text-muted); text-decoration: none; font-weight: 500; margin-bottom: 32px; transition: var(--transition); }
+        .blog-post-wrapper .back-to-blog:hover { color: var(--text); text-decoration: none; }
+        .blog-post-wrapper .highlight-box { background: var(--primary-glow); border-left: 4px solid var(--primary); padding: 20px 28px; border-radius: var(--radius-sm); margin: 28px 0; }
+        .blog-post-wrapper .highlight-box strong { color: var(--primary); }
+        .blog-post-wrapper .toc-box { background: var(--surface); border: 1px solid var(--border); padding: 28px 32px; border-radius: var(--radius-md); margin: 32px 0; }
+        .blog-post-wrapper .toc-box h3 { margin-top: 0; font-size: 1.2rem; }
+        .blog-post-wrapper .toc-box ul { margin-bottom: 0; padding-left: 20px; }
+        .blog-post-wrapper .toc-box ul li { font-size: 0.95rem; margin-bottom: 6px; }
+        .blog-post-wrapper .toc-box ul li a { color: var(--text-muted); text-decoration: none; transition: var(--transition); }
+        .blog-post-wrapper .toc-box ul li a:hover { color: var(--primary); text-decoration: underline; }
+        .blog-post-wrapper pre { background: var(--surface-pure); padding: 20px 24px; border-radius: var(--radius-md); overflow-x: auto; border: 1px solid var(--border); font-family: 'Courier New', monospace; font-size: 0.85rem; line-height: 1.6; color: var(--text); margin: 24px 0; white-space: pre-wrap; word-break: break-word; }
+        .blog-post-wrapper pre code { font-family: inherit; }
+
+        @media(max-width: 768px) {
+            .blog-post-wrapper { margin-top: 100px; padding: 0 16px; }
+            .blog-post-wrapper .cta-box { padding: 28px 20px; }
+            .blog-post-wrapper table { font-size: 0.9rem; }
+            .blog-post-wrapper table th, .blog-post-wrapper table td { padding: 10px 14px; }
+            .blog-post-wrapper .toc-box { padding: 20px 16px; }
+        }
+
+        /* ====== FOOTER ====== */
+        footer { background: var(--surface-pure); border-top: 1px solid var(--border); padding: 80px 0 40px; margin-top: 60px; }
+        .footer-grid { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 60px; margin-bottom: 60px; }
+        .footer-brand p { color: var(--text-muted); font-size: 0.95rem; line-height: 1.6; margin-top: 16px; max-width: 320px; }
+        .footer-links-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; margin-top: 30px; }
+        .footer-links-grid h4 { font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 16px; color: var(--text); }
+        .footer-links-grid ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+        .footer-links-grid ul a { text-decoration: none; color: var(--text-muted); font-size: 0.9rem; transition: var(--transition); }
+        .footer-links-grid ul a:hover { color: var(--primary); padding-left: 4px; }
+        .footer-base { display: flex; justify-content: space-between; align-items: center; padding-top: 40px; border-top: 1px solid var(--border); flex-wrap: wrap; gap: 20px; }
+        .footer-copyright { font-size: 0.9rem; color: var(--text-muted); }
+        .footer-socials { display: flex; gap: 16px; }
+        .footer-socials a { color: var(--text-muted); transition: var(--transition); font-size: 1.2rem; text-decoration: none; width: 40px; height: 40px; border-radius: 50%; border: 1px solid var(--border); display: flex; align-items: center; justify-content: center; }
+        .footer-socials a:hover { color: var(--primary); border-color: var(--primary); background: var(--primary-glow); }
+        .footer-legal { display: flex; gap: 24px; flex-wrap: wrap; }
+        .footer-legal a { color: var(--text-muted); text-decoration: none; font-size: 0.85rem; transition: var(--transition); }
+        .footer-legal a:hover { color: var(--primary); }
+        .footer-map-wrapper { border-radius: var(--radius-md); overflow: hidden; box-shadow: var(--shadow); background: var(--surface-pure); border: 1px solid var(--border); }
+        .footer-map-wrapper iframe { display: block; width: 100%; height: 280px; border: 0; }
+        .footer-map-label { color: var(--text-muted); font-size: 0.85rem; margin-top: 12px; text-align: center; }
+        @media(max-width: 992px) { .footer-grid { grid-template-columns: 1fr !important; } .footer-links-grid { grid-template-columns: repeat(2, 1fr); } }
+        @media(max-width: 768px) { .footer-links-grid { grid-template-columns: 1fr; } .footer-map-wrapper iframe { height: 180px; } }
+
+        #fixed-actions-container { position: fixed; bottom: 32px; right: 32px; display: flex; flex-direction: column; gap: 12px; z-index: 1500; }
+        .sticky-action-trigger { width: 56px; height: 56px; border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer; text-decoration: none; box-shadow: 0 10px 25px rgba(0,0,0,0.2); transition: var(--transition); font-weight: 600; border: none; }
+        .sticky-btn-whatsapp { background: #25D366; color: #fff; width: auto; padding: 0 24px; border-radius: 100px; font-size: 0.9rem; gap: 8px; }
+        .sticky-btn-whatsapp:hover { transform: scale(1.05); }
+        .sticky-btn-top { background: var(--surface-pure); border: 1px solid var(--border); color: var(--text); font-size: 1.2rem; opacity: 0; visibility: hidden; }
+        .sticky-btn-top.show { opacity: 1; visibility: visible; }
+        .sticky-btn-top:hover { transform: translateY(-4px); background: var(--primary); color: #fff; border-color: var(--primary); }
+        .sticky-btn-whatsapp svg { width: 20px; height: 20px; fill: #fff; }
+        .sticky-cta-audit { position: fixed; bottom: 32px; left: 32px; z-index: 1500; }
+        .sticky-cta-audit a { display: flex; align-items: center; gap: 10px; padding: 16px 28px; border-radius: 100px; background: var(--primary); color: #fff; text-decoration: none; font-weight: 600; font-size: 0.95rem; box-shadow: 0 10px 25px rgba(37, 99, 235, 0.4); transition: var(--transition); }
+        .sticky-cta-audit a:hover { transform: translateY(-4px); box-shadow: 0 15px 30px rgba(37, 99, 235, 0.6); }
+        @media(max-width: 768px) { .sticky-cta-audit { display: none; } }
+    </style>
+</head>
+<body>
+
+    <!-- Scroll Progress -->
+    <div id="scroll-progress"></div>
+
+    <!-- Loader -->
+    <div id="loader">
+        <div class="loader-logo">Ranking<span>Matters</span></div>
+    </div>
+
+    <!-- ====== HEADER ====== -->
+    <header role="banner">
+        <div class="container nav-container">
+            <a href="/rankingmatters/index.html" class="logo" aria-label="Ranking Matters Home">Ranking<span>Matters</span></a>
+            <ul class="nav-menu" role="navigation" aria-label="Main Navigation">
+                <li><a href="/rankingmatters/index.html" class="nav-link">Home</a></li>
+                <li><a href="/rankingmatters/about.html" class="nav-link">About</a></li>
+                <li class="nav-dropdown">
+                    <a href="/rankingmatters/services.html" class="nav-link" aria-haspopup="true">Services <span class="dropdown-arrow" aria-hidden="true">▾</span></a>
+                    <div class="dropdown-content" role="menu">
+                        <a href="/rankingmatters/gbp-optimization.html" role="menuitem">GBP Optimization</a>
+                        <a href="/rankingmatters/local-seo.html" role="menuitem">Local SEO</a>
+                        <a href="/rankingmatters/google-maps-ranking.html" role="menuitem">Google Maps Ranking</a>
+                        <a href="/rankingmatters/gmb-recovery.html" role="menuitem">GMB Recovery</a>
+                        <a href="/rankingmatters/local-citations.html" role="menuitem">Local Citations</a>
+                        <a href="/rankingmatters/google-maps-marketing.html" role="menuitem">Google Maps Marketing</a>
+                        <a href="/rankingmatters/landing-pages.html" role="menuitem">Landing Pages</a>
+                    </div>
+                </li>
+                <li><a href="/rankingmatters/blog.html" class="nav-link active">Blog</a></li>
+                <li><a href="/rankingmatters/contact.html" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button class="theme-btn" id="theme-toggle" aria-label="Toggle dark/light mode">🌓</button>
+                <a href="https://wa.me/923314349664" target="_blank" class="btn btn-whatsapp" style="padding: 10px 20px; font-size: 0.85rem;" aria-label="Contact us on WhatsApp">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="white" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                    WhatsApp
+                </a>
+                <button class="burger" id="menu-toggle" aria-label="Toggle navigation menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- ====== BLOG POST CONTENT ====== -->
+    <div class="blog-post-wrapper">
+        <a href="/rankingmatters/blog.html" class="back-to-blog">← Back to Blog</a>
+        
+        <h1>How to Use the Google NLP API to Extract Local SEO Entities (Step-by-Step Tutorial)</h1>
+        
+        <div class="post-meta">
+            <span>📅 August 12, 2026</span>
+            <span>⏱ 10 min read</span>
+            <span>🏷️ <a href="/rankingmatters/blog.html?category=technical-seo" style="color: var(--primary); text-decoration: none;">Technical SEO</a></span>
+        </div>
+
+        <!-- Featured Image -->
+        <div class="featured-image-wrapper">
+            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80" 
+                 alt="Google NLP API for Local SEO Entities - Step-by-Step Guide" 
+                 class="featured-image">
+            <p class="image-caption">Figure 1: Using Google's Natural Language API to extract local SEO entities and analyze competitor content</p>
+        </div>
+
+        <p>Stop guessing what Google thinks your page is about. The <strong>Google Cloud Natural Language API</strong> reveals exactly which entities—people, places, brands, concepts—Google's AI detects in your content, and how important they are.</p>
+
+        <p>In this step-by-step tutorial, you'll learn how to:</p>
+        <ul>
+            <li>Set up the Google NLP API for free (with $300 in credits)</li>
+            <li>Extract high-salience entities from your content</li>
+            <li>Analyze your competitors' pages to find entity gaps</li>
+            <li>Use entity data to rewrite your content and schema for better rankings</li>
+        </ul>
+
+        <p>Whether you're a local business owner, an SEO agency, or a freelancer, this guide will give you a <strong>practical, repeatable workflow</strong> to build semantic authority in 2026.</p>
+
+        <!-- ====== TABLE OF CONTENTS ====== -->
+        <div class="toc-box">
+            <h3>📑 Table of Contents</h3>
+            <ul>
+                <li><a href="#what-is-nlp-api">What is the Google NLP API?</a></li>
+                <li><a href="#why-entities-matter">Why Entities Matter More Than Keywords in 2026</a></li>
+                <li><a href="#step-1">Step 1: Set Up Your Google Cloud Account</a></li>
+                <li><a href="#step-2">Step 2: Enable the Natural Language API</a></li>
+                <li><a href="#step-3">Step 3: Create Your API Key</a></li>
+                <li><a href="#step-4">Step 4: Run Your First Entity Analysis</a></li>
+                <li><a href="#step-5">Step 5: Analyze Your Competitors' Content</a></li>
+                <li><a href="#step-6">Step 6: Identify Your Entity Gaps</a></li>
+                <li><a href="#step-7">Step 7: Implement Your Findings</a></li>
+                <li><a href="#case-study">Local SEO Case Study: Before and After</a></li>
+                <li><a href="#common-mistakes">Common Mistakes to Avoid</a></li>
+                <li><a href="#faq">FAQ</a></li>
+            </ul>
+        </div>
+
+        <h2 id="what-is-nlp-api">What is the Google NLP API?</h2>
+
+        <p>The <strong>Google Cloud Natural Language API</strong> is a machine learning tool that reveals the structure and meaning of text. It extracts <strong>entities</strong> (proper nouns like people, places, organizations, and concepts) from any text you feed it, along with their <strong>salience</strong> (importance) scores.</p>
+
+        <p>Think of it as putting on <strong>Google's glasses</strong>. When you run your content—or your competitor's content—through this API, you see exactly what Google "sees" when it reads your page. You stop guessing and start knowing.</p>
+
+        <h2 id="why-entities-matter">Why Entities Matter More Than Keywords in 2026</h2>
+
+        <p>In traditional SEO, the fundamental unit was a <strong>keyword</strong>. In AI search (Google Gemini, ChatGPT, Perplexity), the fundamental unit is an <strong>entity</strong>—a unique, identifiable thing: a brand, a person, a concept, a place.</p>
+
+        <p><strong>Key shift:</strong> LLMs don't count keyword frequency—they build knowledge graphs about your brand, asking: <em>what is this thing? What category does it belong to? What relationships connect it to other entities?</em></p>
+
+        <p>For local SEO, this means:</p>
+        <ul>
+            <li>If your content mentions <em>"plumber in Manchester"</em> but the API doesn't detect <strong>"Manchester"</strong> as a location entity, Google's AI may not connect your business to that city.</li>
+            <li>If your competitors mention <strong>"Salford Quays," "Trafford Centre,"</strong> and <strong>"MediaCityUK"</strong> as entities and you don't, you're missing the semantic connections that build topical authority.</li>
+        </ul>
+
+        <div class="highlight-box">
+            <strong>🔥 Pro Tip:</strong> The API offers <strong>5,000 free units per month</strong>. For most local SEO audits (analyzing 10-20 competitor pages), this is more than enough to get started without spending a dime.
+        </div>
+
+        <h2 id="step-1">Step 1: Set Up Your Google Cloud Account</h2>
+
+        <p>Before you can use the API, you need a Google Cloud Platform (GCP) account.</p>
+        <ol>
+            <li>Go to <a href="https://cloud.google.com" target="_blank" rel="noopener">cloud.google.com</a> and sign in with your Google account.</li>
+            <li>Create a new project (or select an existing one).</li>
+            <li><strong>New customers get $300 in free credits</strong> to test and deploy workloads, including AI APIs.</li>
+        </ol>
+
+        <h2 id="step-2">Step 2: Enable the Natural Language API</h2>
+
+        <ol>
+            <li>In the Google Cloud Console, navigate to <strong>APIs & Services → Library</strong>.</li>
+            <li>Search for <strong>"Cloud Natural Language API"</strong> and select it.</li>
+            <li>Click <strong>Enable</strong>.</li>
+        </ol>
+
+        <h2 id="step-3">Step 3: Create Your API Key</h2>
+
+        <ol>
+            <li>Go to <strong>APIs & Services → Credentials</strong>.</li>
+            <li>Click <strong>Create Credentials → API Key</strong>.</li>
+            <li>Copy your new API key and store it securely.</li>
+            <li>(Optional) Restrict the key to only the Natural Language API for security.</li>
+        </ol>
+
+        <h2 id="step-4">Step 4: Run Your First Entity Analysis</h2>
+
+        <h3>Method A: Using cURL (No Coding Required)</h3>
+
+        <p>The simplest way to test the API is with a cURL command. Open your terminal and run:</p>
+
+        <pre><code>curl -X POST \
+  -H "Authorization: Bearer $(gcloud auth application-default print-access-token)" \
+  -H "Content-Type: application/json; charset=utf-8" \
+  --data '{
+    "encodingType": "UTF8",
+    "document": {
+      "type": "PLAIN_TEXT",
+      "content": "ABC Plumbing provides emergency boiler repair and 24/7 pipe installation services across Manchester, Salford, and Trafford. We are Gas Safe registered and available 365 days a year."
+    }
+  }' \
+  "https://language.googleapis.com/v2/documents:analyzeEntities"</code></pre>
+
+        <h3>Method B: Using Python (For Regular Use)</h3>
+
+        <p>If you plan to analyze multiple pages regularly, Python is more efficient:</p>
+
+        <pre><code># Import the Google Cloud client library
+from google.cloud import language_v1
+
+# Initialize the client
+client = language_v1.LanguageServiceClient()
+
+# Your text content (copy a competitor's page content here)
+text = """ABC Plumbing provides emergency boiler repair and 24/7 pipe 
+          installation services across Manchester, Salford, and Trafford. 
+          We are Gas Safe registered and available 365 days a year."""
+
+# Create a document object
+document = language_v1.Document(
+    content=text,
+    type_=language_v1.Document.Type.PLAIN_TEXT
+)
+
+# Call the API to analyze entities
+response = client.analyze_entities(document=document)
+
+# Print results
+for entity in response.entities:
+    print(f"Entity: {entity.name}")
+    print(f"Type: {entity.type_.name}")
+    print(f"Salience: {entity.salience:.4f}")
+    print(f"Mentions: {len(entity.mentions)}")
+    print("-" * 40)
+
+# Filter for high-salience entities only (above 0.15 threshold)
+high_salience = [e for e in response.entities if e.salience > 0.15]
+print(f"\nHigh-salience entities found: {len(high_salience)}")</code></pre>
+
+        <h3>Understanding the Response</h3>
+
+        <p>The API returns a JSON response with the following key fields:</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Field</th>
+                    <th>What It Means</th>
+                    <th>Why It Matters for Local SEO</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong><code>name</code></strong></td>
+                    <td>The entity text (e.g., "Manchester")</td>
+                    <td>This is what Google recognizes as a distinct entity</td>
+                </tr>
+                <tr>
+                    <td><strong><code>type</code></strong></td>
+                    <td>Entity category: <code>PERSON</code>, <code>LOCATION</code>, <code>ORGANIZATION</code>, etc.</td>
+                    <td>Tells you if Google sees your location, brand, or service as distinct entities</td>
+                </tr>
+                <tr>
+                    <td><strong><code>salience</code></strong></td>
+                    <td>Importance score from 0.0 to 1.0</td>
+                    <td>Higher salience = Google thinks this entity is central to your content</td>
+                </tr>
+                <tr>
+                    <td><strong><code>mentions</code></strong></td>
+                    <td>How many times the entity appears</td>
+                    <td>Confirms entity frequency and context</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <p><strong>Example Response for the plumbing text above:</strong></p>
+
+        <pre><code>{
+  "entities": [
+    {
+      "name": "ABC Plumbing",
+      "type": "ORGANIZATION",
+      "salience": 0.4231,
+      "mentions": [{"text": {"content": "ABC Plumbing"}}]
+    },
+    {
+      "name": "Manchester",
+      "type": "LOCATION",
+      "salience": 0.3124,
+      "mentions": [{"text": {"content": "Manchester"}}]
+    },
+    {
+      "name": "Salford",
+      "type": "LOCATION",
+      "salience": 0.1876,
+      "mentions": [{"text": {"content": "Salford"}}]
+    },
+    {
+      "name": "Trafford",
+      "type": "LOCATION",
+      "salience": 0.1542,
+      "mentions": [{"text": {"content": "Trafford"}}]
+    }
+  ]
+}</code></pre>
+
+        <h2 id="step-5">Step 5: Analyze Your Competitors' Content</h2>
+
+        <p>This is where the real power of the NLP API reveals itself.</p>
+
+        <h3>The Competitor Audit Process:</h3>
+
+        <ol>
+            <li><strong>Identify your top 5 local competitors</strong> (the ones ranking above you in the Local Pack).</li>
+            <li><strong>Extract their content</strong>:
+                <ul>
+                    <li>Copy their <strong>homepage</strong> text</li>
+                    <li>Copy their <strong>main service page</strong> text</li>
+                    <li>Copy their <strong>"About Us"</strong> page text</li>
+                </ul>
+            </li>
+            <li><strong>Run each through the NLP API</strong> using the Python script above.</li>
+            <li><strong>Create a comparison table</strong>:</li>
+        </ol>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Entity</th>
+                    <th>Your Content (Salience)</th>
+                    <th>Competitor A (Salience)</th>
+                    <th>Competitor B (Salience)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Manchester</td>
+                    <td>0.31</td>
+                    <td>0.52</td>
+                    <td>0.48</td>
+                </tr>
+                <tr>
+                    <td>Salford</td>
+                    <td>0.19</td>
+                    <td>0.08</td>
+                    <td>0.35</td>
+                </tr>
+                <tr>
+                    <td>Trafford</td>
+                    <td>0.15</td>
+                    <td>0.42</td>
+                    <td>0.12</td>
+                </tr>
+                <tr>
+                    <td>Gas Safe</td>
+                    <td>0.09</td>
+                    <td>0.28</td>
+                    <td>0.31</td>
+                </tr>
+                <tr>
+                    <td>Emergency</td>
+                    <td>0.22</td>
+                    <td>0.41</td>
+                    <td>0.38</td>
+                </tr>
+                <tr>
+                    <td>24/7</td>
+                    <td>0.18</td>
+                    <td>0.33</td>
+                    <td>0.29</td>
+                </tr>
+                <tr>
+                    <td>Boiler Repair</td>
+                    <td>0.27</td>
+                    <td>0.19</td>
+                    <td>0.44</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <p>5. <strong>Spot the gaps</strong>: Where are your competitors scoring higher salience on critical entities?</p>
+
+        <h2 id="step-6">Step 6: Identify Your Entity Gaps</h2>
+
+        <p>Based on the comparison above, you can identify three types of gaps:</p>
+
+        <h3>Gap Type 1: Dominance Gap (Low Salience on Target Entities)</h3>
+        <p><strong>Problem:</strong> Your core entity (e.g., "Emergency Plumbing") has low salience compared to competitors.</p>
+        <p><strong>Fix:</strong> Rewrite your introduction to establish dominance. Move your primary entity closer to the beginning of your content.</p>
+        <p><strong>Example:</strong> Instead of starting with <em>"We are a plumbing company,"</em> start with <em>"Emergency plumbing services in Manchester—available 24/7, 365 days a year."</em></p>
+
+        <h3>Gap Type 2: Missing Entity Gap (Entities You Don't Mention at All)</h3>
+        <p><strong>Problem:</strong> Competitors mention entities like <em>"Trafford Centre"</em> or <em>"MediaCityUK"</em> that you've completely ignored.</p>
+        <p><strong>Fix:</strong> Organically add these missing entities to your content. Create dedicated paragraphs or service pages for these micro-locations.</p>
+        <p><strong>Example:</strong> Add a section: <em>"We serve businesses around the Trafford Centre and MediaCityUK with rapid response plumbing services."</em></p>
+
+        <h3>Gap Type 3: Context Gap (Weak Entity Relationships)</h3>
+        <p><strong>Problem:</strong> You mention entities, but the API doesn't connect them strongly.</p>
+        <p><strong>Fix:</strong> Use <strong>semantic triplets</strong> (Subject → Predicate → Object) to strengthen relationships.</p>
+        <p><strong>Example:</strong> Instead of <em>"We serve Manchester,"</em> write <em>"[ABC Plumbing] → [provides] → [emergency services] to [Manchester] and [Salford] residents."</em></p>
+
+        <h2 id="step-7">Step 7: Implement Your Findings</h2>
+
+        <h3>7.1 Update Your Website Content</h3>
+        <p>Based on your entity gap analysis, rewrite your:</p>
+        <ul>
+            <li><strong>Homepage</strong> (ensure your primary location and service entities appear early with high salience)</li>
+            <li><strong>Service pages</strong> (add missing micro-location entities)</li>
+            <li><strong>About Us page</strong> (strengthen organization and person entities)</li>
+            <li><strong>GBP description</strong> (align with your highest-salience entities)</li>
+        </ul>
+
+        <h3>7.2 Update Your Schema Markup</h3>
+        <p>Ensure your JSON-LD schema includes all the entities the API detects:</p>
+
+        <pre><code>{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "ABC Plumbing",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Manchester",
+    "addressRegion": "Greater Manchester"
+  },
+  "areaServed": ["Manchester", "Salford", "Trafford"],
+  "openingHours": "Mo-Su 00:00-23:59",
+  "memberOf": {
+    "@type": "Organization",
+    "name": "Gas Safe Register"
+  }
+}</code></pre>
+
+        <h3>7.3 Create New Content Targeting Missing Entities</h3>
+        <p>If you discovered missing location entities, create:</p>
+        <ul>
+            <li><strong>Dedicated service area pages</strong> for each neighborhood or zip code</li>
+            <li><strong>Blog posts</strong> covering local events or community topics in those areas</li>
+            <li><strong>GBP posts</strong> (Google Posts) mentioning these specific locations</li>
+        </ul>
+
+        <h2 id="case-study">Local SEO Case Study: Before and After</h2>
+
+        <h3>Before (Entity-Weak Content)</h3>
+        <p><em>"We are a plumbing company based in the Greater Manchester area. We offer boiler repair, pipe installation, and emergency callouts. Our team is experienced and reliable."</em></p>
+
+        <p><strong>NLP API Results:</strong></p>
+        <ul>
+            <li><code>plumbing</code> (salience: 0.08)</li>
+            <li><code>Greater Manchester</code> (salience: 0.06)</li>
+            <li>No specific neighborhoods detected</li>
+            <li>Low overall entity density</li>
+        </ul>
+
+        <h3>After (Entity-Clear Content)</h3>
+        <p><em>"ABC Plumbing provides <strong>emergency boiler repair</strong> and <strong>24/7 pipe installation</strong> services across <strong>Manchester city centre</strong>, <strong>Salford Quays</strong>, and the <strong>Trafford Park</strong> area. We are <strong>Gas Safe registered</strong> and have served over 500 local businesses since 2015. Available 365 days a year—including weekends and bank holidays."</em></p>
+
+        <p><strong>NLP API Results:</strong></p>
+        <ul>
+            <li><code>ABC Plumbing</code> (salience: 0.45) — Organization entity</li>
+            <li><code>Manchester city centre</code> (salience: 0.32) — Location entity</li>
+            <li><code>Salford Quays</code> (salience: 0.21) — Location entity</li>
+            <li><code>Trafford Park</code> (salience: 0.18) — Location entity</li>
+            <li><code>Gas Safe registered</code> (salience: 0.15) — Organization entity</li>
+            <li><code>emergency boiler repair</code> (salience: 0.28) — Concept entity</li>
+            <li><code>24/7 pipe installation</code> (salience: 0.24) — Concept entity</li>
+        </ul>
+
+        <p><strong>Result:</strong> Google's AI now clearly understands:</p>
+        <ul>
+            <li>Who you are (ABC Plumbing)</li>
+            <li>What you do (emergency boiler repair, pipe installation)</li>
+            <li>Where you serve (Manchester, Salford, Trafford)</li>
+            <li>Your credentials (Gas Safe registered)</li>
+            <li>Your availability (24/7, 365 days)</li>
+        </ul>
+
+        <h2 id="common-mistakes">Common Mistakes to Avoid</h2>
+
+        <ul>
+            <li><strong>❌ Mistake 1: Only Analyzing Your Own Content</strong> — You need to analyze <strong>competitors</strong> to find gaps. The API is most powerful when used comparatively.</li>
+            <li><strong>❌ Mistake 2: Ignoring Low-Salience Entities</strong> — Entities with salience below 0.10 aren't "useless"—they're opportunities. If competitors have high salience on an entity you barely mention, that's a gap to fill.</li>
+            <li><strong>❌ Mistake 3: Keyword Stuffing Entities</strong> — Don't just repeat "Manchester" 50 times. The API detects natural language patterns. Write for humans, optimize for entities.</li>
+            <li><strong>❌ Mistake 4: Forgetting About Entity Types</strong> — A <code>LOCATION</code> entity (Manchester) is different from an <code>ORGANIZATION</code> entity (Gas Safe). Make sure you're covering all relevant entity types.</li>
+            <li><strong>❌ Mistake 5: Not Updating Your Schema</strong> — Entity analysis should inform your structured data. If the API detects "Salford Quays" as a key location, add it to your <code>areaServed</code> in JSON-LD.</li>
+        </ul>
+
+        <h2 id="faq">FAQ</h2>
+
+        <div class="faq-item">
+            <h3>What is the Google NLP API?</h3>
+            <p>The Google Cloud Natural Language API is a machine learning tool that extracts entities (people, places, organizations, concepts) from text, along with their importance scores (salience). It reveals how Google's AI "reads" your content.</p>
+        </div>
+        <div class="faq-item">
+            <h3>Is the Google NLP API free?</h3>
+            <p>New Google Cloud customers receive $300 in free credits. Additionally, the Natural Language API offers <strong>5,000 free units per month</strong>—enough to analyze 10-20 competitor pages for free.</p>
+        </div>
+        <div class="faq-item">
+            <h3>What is salience in the NLP API?</h3>
+            <p>Salience is a score from 0.0 to 1.0 that indicates how important an entity is to the overall text. Higher salience = Google's AI thinks this entity is central to understanding your content.</p>
+        </div>
+        <div class="faq-item">
+            <h3>How do I analyze a competitor's page with the NLP API?</h3>
+            <p>Copy the text from their homepage, service pages, and About Us page. Paste it into the Python script or cURL command. Run the analysis and compare the entities and salience scores against your own content.</p>
+        </div>
+        <div class="faq-item">
+            <h3>What entity types does the API detect?</h3>
+            <p>The API detects multiple entity types including: <code>PERSON</code>, <code>LOCATION</code>, <code>ORGANIZATION</code>, <code>DATE</code>, <code>NUMBER</code>, <code>ADDRESS</code>, <code>EVENT</code>, <code>WORK_OF_ART</code>, <code>CONSUMER_GOOD</code>, and more.</p>
+        </div>
+        <div class="faq-item">
+            <h3>How often should I run entity analysis?</h3>
+            <p>Run a full entity audit quarterly, or whenever you: create new service pages, enter a new geographic market, notice a competitor overtaking you in the Local Pack, or update your website content significantly.</p>
+        </div>
+        <div class="faq-item">
+            <h3>Can I use the NLP API for voice search optimization?</h3>
+            <p>Yes! Voice searches are more conversational and entity-focused (e.g., "Where is the closest open vet?"). Use the API to identify the entities in your voice search target queries and optimize your content accordingly.</p>
+        </div>
+        <div class="faq-item">
+            <h3>How does entity analysis help with Google Business Profile optimization?</h3>
+            <p>Run your GBP description through the API. If key location entities (your city, neighborhoods, landmarks) have low salience, rewrite your description to strengthen those entities. Also ensure your GBP categories align with your highest-salience service entities.</p>
+        </div>
+
+        <div class="cta-box">
+            <h3>Ready to Take Your Local SEO to the Next Level?</h3>
+            <p>At <strong>Ranking Matters</strong>, we use advanced entity analysis, NLP API auditing, and AI-powered content strategies to help local businesses dominate their market.</p>
+            <p>Let us build a custom entity map that drives real calls and foot traffic.</p>
+            <div class="btn-group">
+                <a href="/rankingmatters/contact.html" class="btn btn-primary">Book a Free Strategy Session</a>
+                <a href="https://wa.me/923314349664" target="_blank" class="btn btn-whatsapp">
+                    <svg viewBox="0 0 24 24" width="20" height="20" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                    Chat on WhatsApp
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- ====== FOOTER ====== -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="/rankingmatters/index.html" class="logo">Ranking<span>Matters</span></a>
+                    <p>Advanced algorithmic optimization mechanics engineered explicitly to scale inbound customer commercial phone calls and local visibility indicators. Your trusted <strong>Local SEO expert</strong>.</p>
+                    
+                    <div class="footer-links-grid">
+                        <div>
+                            <h4>Quick Links</h4>
+                            <ul>
+                                <li><a href="/rankingmatters/index.html">Home</a></li>
+                                <li><a href="/rankingmatters/about.html">About</a></li>
+                                <li><a href="/rankingmatters/services.html">Services</a></li>
+                                <li><a href="/rankingmatters/blog.html">Blog</a></li>
+                                <li><a href="/rankingmatters/contact.html">Contact</a></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4>Our Services</h4>
+                            <ul>
+                                <li><a href="/rankingmatters/gbp-optimization.html">GBP Optimization</a></li>
+                                <li><a href="/rankingmatters/local-seo.html">Local SEO</a></li>
+                                <li><a href="/rankingmatters/google-maps-ranking.html">Maps Ranking</a></li>
+                                <li><a href="/rankingmatters/gmb-recovery.html">GMB Recovery</a></li>
+                                <li><a href="/rankingmatters/local-citations.html">Local Citations</a></li>
+                                <li><a href="/rankingmatters/google-maps-marketing.html">Maps Marketing</a></li>
+                                <li><a href="/rankingmatters/landing-pages.html">Landing Pages</a></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4>Contact</h4>
+                            <ul>
+                                <li><a href="tel:+923314349664">+92 331 4349664</a></li>
+                                <li><a href="mailto:shanyaqoob730@gmail.com">shanyaqoob730@gmail.com</a></li>
+                                <li><a href="https://wa.me/923314349664" target="_blank">WhatsApp</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 style="font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 16px; color: var(--text);">Find Us On Google Maps</h4>
+                    <div class="footer-map-wrapper">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3599701.2877120697!2d70.60231495!3d28.227561999999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x84f3df43ef28b013%3A0x722879e737c0b535!2sRanking%20Matters%7C%20Local%20Seo%20Expert%20in%20Lahore!5e0!3m2!1sen!2s!4v1784304112769!5m2!1sen!2s" 
+                            width="100%" 
+                            height="280" 
+                            style="border:0; display: block;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="strict-origin-when-cross-origin">
+                        </iframe>
+                    </div>
+                    <p class="footer-map-label">📍 <strong>Ranking Matters</strong> — Thokar, Lahore, Pakistan</p>
+                </div>
+            </div>
+
+            <div class="footer-base">
+                <div class="footer-copyright">&copy; 2026 <strong>Ranking Matters</strong>. All Rights Reserved.</div>
+                <div class="footer-legal">
+                    <a href="/rankingmatters/privacy-policy.html">Privacy Policy</a>
+                    <a href="/rankingmatters/terms.html">Terms of Service</a>
+                    <a href="/rankingmatters/sitemap.html">Sitemap</a>
+                </div>
+                <div class="footer-socials">
+                    <a href="#" aria-label="Facebook">fb</a>
+                    <a href="#" aria-label="LinkedIn">in</a>
+                    <a href="#" aria-label="Instagram">ig</a>
+                    <a href="#" aria-label="Twitter">tw</a>
+                </div>
+                <a href="https://wa.me/923314349664" target="_blank" style="color: var(--text-muted); text-decoration: none; display: flex; align-items: center; gap: 8px;">
+                    <svg viewBox="0 0 24 24" width="20" height="20" fill="#25D366"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                    WhatsApp
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ====== FIXED ACTIONS ====== -->
+    <div id="fixed-actions-container">
+        <a href="https://wa.me/923314349664" target="_blank" class="sticky-action-trigger sticky-btn-whatsapp">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            WhatsApp
+        </a>
+        <button class="sticky-action-trigger sticky-btn-top" id="back-to-top">↑</button>
+    </div>
+
+    <div class="sticky-cta-audit">
+        <a href="/rankingmatters/contact.html">📊 Book Free Audit</a>
+    </div>
+
+    <!-- ====== JAVASCRIPT ====== -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Loader
+            const loader = document.getElementById('loader');
+            window.addEventListener('load', function() {
+                setTimeout(function() {
+                    loader.style.opacity = '0';
+                    loader.style.visibility = 'hidden';
+                }, 400);
+            });
+
+            // Scroll Progress
+            window.addEventListener('scroll', function() {
+                const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+                const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+                const scrolled = (winScroll / height) * 100;
+                document.getElementById('scroll-progress').style.width = scrolled + '%';
+                
+                const btt = document.getElementById('back-to-top');
+                if (window.scrollY > 600) {
+                    btt.classList.add('show');
+                } else {
+                    btt.classList.remove('show');
+                }
+            });
+
+            document.getElementById('back-to-top').addEventListener('click', function() {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+
+            // Mobile Menu Toggle
+            const menuToggle = document.getElementById('menu-toggle');
+            const navMenu = document.querySelector('.nav-menu');
+            menuToggle.addEventListener('click', function() {
+                navMenu.classList.toggle('active');
+            });
+
+            // Dropdown for Mobile
+            const dropdownTriggers = document.querySelectorAll('.nav-dropdown > a');
+            dropdownTriggers.forEach(function(trigger) {
+                trigger.addEventListener('click', function(e) {
+                    if (window.innerWidth <= 992) {
+                        e.preventDefault();
+                        this.parentElement.classList.toggle('active');
+                    }
+                });
+            });
+
+            // Theme Toggle
+            const themeToggle = document.getElementById('theme-toggle');
+            if (!document.body.classList.contains('dark-mode') && !document.body.classList.contains('light-mode')) {
+                document.body.classList.add('dark-mode');
+            }
+            themeToggle.addEventListener('click', function() {
+                document.body.classList.toggle('dark-mode');
+                document.body.classList.toggle('light-mode');
+            });
+
+            // Smooth scroll for TOC links
+            document.querySelectorAll('.toc-box a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    const target = document.querySelector(targetId);
+                    if (target) {
+                        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    }
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>
