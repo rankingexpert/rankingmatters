@@ -1407,31 +1407,50 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 </ul>
             </div>
             <div class="card glass form-box">
-                <form id="audit-form" action="#" method="POST">
+                <!-- ====== UPDATED FORM WITH FORMSPREE AJAX ====== -->
+                <form id="audit-form" action="https://formspree.io/f/xqpzvpvd" method="POST">
+                    <!-- Success & Error Messages -->
+                    <div data-fs-success style="display:none; background: #10b981; color: #fff; padding: 16px; border-radius: 8px; margin-bottom: 20px;">
+                        ✅ Thanks! We’ll be in touch shortly.
+                    </div>
+                    <div data-fs-error style="display:none; background: #ef4444; color: #fff; padding: 16px; border-radius: 8px; margin-bottom: 20px;">
+                        ❌ Something went wrong. Please try again.
+                    </div>
+
                     <div class="form-row-grid">
                         <div class="form-element">
                             <label for="client-name">Your Full Name</label>
-                            <input type="text" id="client-name" name="name" class="form-control" placeholder="Your Name" required>
+                            <input type="text" id="client-name" name="name" class="form-control" placeholder="Your Name" required data-fs-field>
+                            <span data-fs-error="name" style="color: #ef4444; font-size: 0.85rem;"></span>
                         </div>
                         <div class="form-element">
                             <label for="client-email">Business Email</label>
-                            <input type="email" id="client-email" name="email" class="form-control" placeholder="name@company.com" required>
+                            <input type="email" id="client-email" name="email" class="form-control" placeholder="name@company.com" required data-fs-field>
+                            <span data-fs-error="email" style="color: #ef4444; font-size: 0.85rem;"></span>
                         </div>
                     </div>
+
                     <div class="form-element">
                         <label for="business-name">Registered Business Title</label>
-                        <input type="text" id="business-name" name="business_name" class="form-control" placeholder="e.g. Ricky's Heating and Cooling" required>
+                        <input type="text" id="business-name" name="business_name" class="form-control" placeholder="e.g. Ricky's Heating and Cooling" required data-fs-field>
+                        <span data-fs-error="business_name" style="color: #ef4444; font-size: 0.85rem;"></span>
                     </div>
+
                     <div class="form-element">
                         <label for="listing-url">Google Maps Share Link (If Suspended, Leave Blank)</label>
-                        <input type="url" id="listing-url" name="maps_url" class="form-control" placeholder="https://maps.google.com/?cid=...">
+                        <input type="url" id="listing-url" name="maps_url" class="form-control" placeholder="https://maps.google.com/?cid=..." data-fs-field>
+                        <span data-fs-error="maps_url" style="color: #ef4444; font-size: 0.85rem;"></span>
                     </div>
+
                     <div class="form-element">
                         <label for="project-notes">Core Ranking Roadblocks or Operational Target Areas</label>
-                        <textarea id="project-notes" name="notes" class="form-control" rows="5" placeholder="Tell us about suspension states, ranking leaks, or multi-location expansion targets..."></textarea>
+                        <textarea id="project-notes" name="notes" class="form-control" rows="5" placeholder="Tell us about suspension states, ranking leaks, or multi-location expansion targets..." data-fs-field></textarea>
+                        <span data-fs-error="notes" style="color: #ef4444; font-size: 0.85rem;"></span>
                     </div>
-                    <button type="submit" class="btn btn-primary" style="width: 100%;">Get Free Local SEO Audit</button>
+
+                    <button type="submit" class="btn btn-primary" style="width: 100%;" data-fs-submit-btn>Get Free Local SEO Audit</button>
                 </form>
+                <!-- ====== END UPDATED FORM ====== -->
             </div>
         </div>
     </section>
@@ -1522,7 +1541,19 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <button class="sticky-action-trigger sticky-btn-top" id="back-to-top">↑</button>
     </div>
 
-    <!-- ====== JAVASCRIPT (Deferred) ====== -->
+    <!-- ====== FORMPREE AJAX ====== -->
+    <script src="https://unpkg.com/@formspree/ajax@1" defer></script>
+    <script>
+        window.formspree = window.formspree || function () {
+            (formspree.q = formspree.q || []).push(arguments);
+        };
+        formspree('initForm', {
+            formElement: '#audit-form',
+            formId: 'xqpzvpvd'
+        });
+    </script>
+
+    <!-- ====== EXISTING JAVASCRIPT ====== -->
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             // Loader
