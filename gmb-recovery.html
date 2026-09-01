@@ -634,130 +634,267 @@
             font-weight: 500;
         }
 
-        .service-content-grid {
+        /* ===== CONTACT GRID (Copied from Contact Page) ===== */
+        .contact-grid-main {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 60px;
             align-items: start;
         }
-        .service-content-main p {
-            color: var(--text-muted);
-            font-size: 1.1rem;
-            line-height: 1.8;
-            margin-bottom: 24px;
+        .contact-info-side {
+            display: flex;
+            flex-direction: column;
+            gap: 32px;
         }
-        .service-content-main h2 {
-            font-size: 1.8rem;
-            margin: 40px 0 16px;
-        }
-        .service-content-main h3 {
-            font-size: 1.3rem;
-            margin: 32px 0 12px;
-        }
-        .service-content-main ul {
-            color: var(--text-muted);
-            font-size: 1.05rem;
-            line-height: 1.8;
-            padding-left: 24px;
-            margin-bottom: 24px;
-        }
-        .service-content-main ul li {
-            margin-bottom: 8px;
-        }
-        .service-content-main .highlight-box {
-            padding: 24px 32px;
-            border-radius: var(--radius-md);
-            background: var(--primary-glow);
-            border: 1px solid var(--primary);
-            margin: 24px 0;
-        }
-        .service-content-main .highlight-box h4 {
-            color: var(--primary);
-            margin-bottom: 8px;
-        }
-        .service-content-main .highlight-box p {
-            margin-bottom: 0;
-        }
-        .service-content-main .highlight-box.warning {
-            border-color: #dc2626;
-            background: rgba(220, 38, 38, 0.08);
-        }
-        .service-content-main .highlight-box.warning h4 {
-            color: #dc2626;
-        }
-
-        .service-sidebar {
-            position: sticky;
-            top: 120px;
-        }
-        .service-sidebar .sidebar-card {
+        .contact-info-side .info-card {
             padding: 32px;
             border-radius: var(--radius-lg);
             background: var(--surface);
             border: 1px solid var(--border);
-            margin-bottom: 24px;
             transition: var(--transition);
         }
-        .service-sidebar .sidebar-card:hover {
+        .contact-info-side .info-card:hover {
             border-color: var(--primary);
+            transform: translateY(-4px);
         }
-        .service-sidebar .sidebar-card h4 {
-            font-size: 1.2rem;
-            margin-bottom: 16px;
-        }
-        .service-sidebar .sidebar-card ul {
-            list-style: none;
-        }
-        .service-sidebar .sidebar-card ul li {
-            padding: 10px 0;
-            border-bottom: 1px solid var(--border);
-            color: var(--text-muted);
+        .contact-info-side .info-card .icon-circle {
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            background: var(--primary-glow);
+            color: var(--primary);
             display: flex;
             align-items: center;
-            gap: 10px;
+            justify-content: center;
+            font-size: 1.5rem;
+            margin-bottom: 16px;
         }
-        .service-sidebar .sidebar-card ul li:last-child {
-            border-bottom: none;
+        .contact-info-side .info-card h4 {
+            font-size: 1.2rem;
+            margin-bottom: 8px;
         }
-        .service-sidebar .sidebar-card ul li::before {
-            content: '✓';
-            color: var(--accent);
-            font-weight: 700;
-        }
-        .service-sidebar .sidebar-card .price-tag {
-            font-size: 2.5rem;
-            font-weight: 800;
-            color: var(--primary);
-            margin: 16px 0;
-        }
-        .service-sidebar .sidebar-card .price-tag span {
-            font-size: 1rem;
+        .contact-info-side .info-card p {
             color: var(--text-muted);
-            font-weight: 400;
+            line-height: 1.6;
+        }
+        .contact-info-side .info-card a {
+            color: var(--text);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        .contact-info-side .info-card a:hover {
+            color: var(--primary);
+        }
+        .contact-form-side {
+            padding: 48px;
+            border-radius: var(--radius-lg);
+            background: var(--surface);
+            border: 1px solid var(--border);
+        }
+        .contact-form-side h2 {
+            font-size: 1.8rem;
+            margin-bottom: 8px;
+        }
+        .contact-form-side .form-desc {
+            color: var(--text-muted);
+            margin-bottom: 32px;
+            line-height: 1.6;
+        }
+        .form-row-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+            margin-bottom: 24px;
+        }
+        @media(max-width: 576px) {
+            .form-row-grid { grid-template-columns: 1fr; }
+        }
+        .form-element {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            margin-bottom: 24px;
+        }
+        .form-row-grid .form-element { margin-bottom: 0; }
+        .form-element label {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--text);
+        }
+        .form-control {
+            background: var(--surface-pure);
+            border: 1px solid var(--border);
+            padding: 16px 20px;
+            border-radius: var(--radius-sm);
+            color: var(--text);
+            font-family: var(--font-sans);
+            font-size: 0.95rem;
+            transition: var(--transition);
+            width: 100%;
+        }
+        .form-control:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px var(--primary-glow);
         }
 
-        .benefits-grid {
+        .map-section {
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            height: 400px;
+            border: 1px solid var(--border);
+        }
+        .map-section iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        .why-contact-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 32px;
         }
-        .benefit-card {
+        .why-contact-card {
             text-align: center;
-            padding: 32px 24px;
+            padding: 40px 32px;
         }
-        .benefit-card .benefit-icon {
-            font-size: 2.5rem;
-            margin-bottom: 16px;
-            display: block;
+        .why-contact-card .icon-box {
+            width: 64px;
+            height: 64px;
+            border-radius: 50%;
+            background: var(--primary-glow);
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            margin: 0 auto 20px;
         }
-        .benefit-card h4 {
+        .why-contact-card h4 {
             font-size: 1.2rem;
-            margin-bottom: 8px;
+            margin-bottom: 12px;
         }
-        .benefit-card p {
+        .why-contact-card p {
             color: var(--text-muted);
             font-size: 0.95rem;
+            line-height: 1.6;
+        }
+        .why-contact-card a {
+            display: inline-block;
+            margin-top: 12px;
+            color: var(--primary);
+            font-weight: 600;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        .why-contact-card a:hover {
+            color: var(--accent);
+            padding-left: 4px;
+        }
+
+        .contact-blog-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            margin-top: 32px;
+        }
+        .contact-blog-card {
+            padding: 24px;
+            border-radius: var(--radius-md);
+            background: var(--surface);
+            border: 1px solid var(--border);
+            transition: var(--transition);
+            text-decoration: none;
+            color: var(--text);
+        }
+        .contact-blog-card:hover {
+            border-color: var(--primary);
+            transform: translateY(-4px);
+        }
+        .contact-blog-card .blog-tag {
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            color: var(--primary);
+            font-weight: 700;
+            letter-spacing: 0.05em;
+        }
+        .contact-blog-card h4 {
+            font-size: 1rem;
+            margin: 8px 0;
+        }
+        .contact-blog-card p {
+            color: var(--text-muted);
+            font-size: 0.85rem;
             line-height: 1.5;
+        }
+        .contact-blog-card .read-link {
+            color: var(--primary);
+            font-weight: 600;
+            font-size: 0.85rem;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            margin-top: 12px;
+            transition: var(--transition);
+        }
+        .contact-blog-card .read-link:hover {
+            gap: 8px;
+            color: var(--accent);
+        }
+
+        .cta-section-service {
+            text-align: center;
+            padding: 80px 40px;
+            border-radius: var(--radius-lg);
+        }
+        .cta-section-service h2 {
+            font-size: clamp(2rem, 3vw, 2.8rem);
+            margin-bottom: 20px;
+        }
+        .cta-section-service p {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto 32px;
+            line-height: 1.6;
+        }
+
+        .other-services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            margin-top: 40px;
+        }
+        .other-service-card {
+            padding: 24px;
+            border-radius: var(--radius-md);
+            background: var(--surface);
+            border: 1px solid var(--border);
+            transition: var(--transition);
+            text-decoration: none;
+            color: var(--text);
+            display: block;
+            text-align: center;
+        }
+        .other-service-card:hover {
+            transform: translateY(-4px);
+            border-color: var(--primary);
+        }
+        .other-service-card .os-icon {
+            font-size: 2rem;
+            display: block;
+            margin-bottom: 8px;
+        }
+        .other-service-card h4 {
+            font-size: 1rem;
+            margin-bottom: 4px;
+        }
+        .other-service-card p {
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            margin: 0;
         }
 
         .faq-grid {
@@ -806,60 +943,6 @@
             transform: rotate(45deg);
         }
 
-        .cta-section-service {
-            text-align: center;
-            padding: 80px 40px;
-            border-radius: var(--radius-lg);
-        }
-        .cta-section-service h2 {
-            font-size: clamp(2rem, 3vw, 2.8rem);
-            margin-bottom: 20px;
-        }
-        .cta-section-service p {
-            color: var(--text-muted);
-            font-size: 1.1rem;
-            max-width: 600px;
-            margin: 0 auto 32px;
-            line-height: 1.6;
-        }
-
-        /* Other Services Section */
-        .other-services-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 24px;
-            margin-top: 40px;
-        }
-        .other-service-card {
-            padding: 24px;
-            border-radius: var(--radius-md);
-            background: var(--surface);
-            border: 1px solid var(--border);
-            transition: var(--transition);
-            text-decoration: none;
-            color: var(--text);
-            display: block;
-            text-align: center;
-        }
-        .other-service-card:hover {
-            transform: translateY(-4px);
-            border-color: var(--primary);
-        }
-        .other-service-card .os-icon {
-            font-size: 2rem;
-            display: block;
-            margin-bottom: 8px;
-        }
-        .other-service-card h4 {
-            font-size: 1rem;
-            margin-bottom: 4px;
-        }
-        .other-service-card p {
-            color: var(--text-muted);
-            font-size: 0.85rem;
-            margin: 0;
-        }
-
         footer { background: var(--surface-pure); border-top: 1px solid var(--border); padding: 100px 0 40px; }
         .footer-grid { display: grid; grid-template-columns: 1.2fr repeat(3, 0.6fr); gap: 60px; margin-bottom: 80px; }
         .footer-brand p { color: var(--text-muted); font-size: 0.95rem; line-height: 1.6; margin-top: 16px; max-width: 320px; }
@@ -879,19 +962,20 @@
         .sticky-btn-whatsapp svg { width: 20px; height: 20px; fill: #fff; }
 
         @media(max-width: 992px) {
-            .service-content-grid { grid-template-columns: 1fr; }
-            .service-sidebar { position: static; }
-            .benefits-grid { grid-template-columns: repeat(2, 1fr); }
-            .faq-grid { grid-template-columns: 1fr; }
+            .contact-grid-main { grid-template-columns: 1fr; }
+            .why-contact-grid { grid-template-columns: repeat(2, 1fr); }
+            .contact-blog-grid { grid-template-columns: repeat(2, 1fr); }
             .other-services-grid { grid-template-columns: repeat(2, 1fr); }
             .footer-grid { grid-template-columns: repeat(2, 1fr); }
             .service-hero .hero-stats { gap: 24px; }
         }
         @media(max-width: 768px) {
-            .benefits-grid { grid-template-columns: 1fr; }
+            .why-contact-grid { grid-template-columns: 1fr; }
             .other-services-grid { grid-template-columns: 1fr; }
             .footer-grid { grid-template-columns: 1fr; }
             .service-hero .hero-stats .stat .number { font-size: 1.5rem; }
+            .contact-form-side { padding: 24px; }
+            .map-section { height: 250px; }
         }
     </style>
 </head>
@@ -949,7 +1033,7 @@
     </header>
 
     <!-- ============================================
-    SERVICE HERO
+    SERVICE HERO (Recovery Specific)
     ============================================ -->
     <section class="service-hero">
         <div class="blob-service-detail"></div>
@@ -979,98 +1063,225 @@
     </section>
 
     <!-- ============================================
-    SERVICE CONTENT
+    CONTACT GRID (Copied from Contact Page & Modified for Recovery)
     ============================================ -->
     <section style="padding-top: 0;">
-        <div class="container service-content-grid">
-            <div class="service-content-main">
-                <h2>Why <span class="text-gradient">GMB Suspension Recovery</span> Matters</h2>
-                <p>A <strong>GMB suspension</strong> can be devastating for your business. Your visibility disappears, your phone stops ringing, and your revenue takes a sudden hit. At <strong>Ranking Matters</strong>, we've successfully recovered <strong>150+ GMB suspensions</strong> for businesses across diverse industries.</p>
-                <p>As the <strong>#1 Local SEO Expert in Lahore</strong>, we've developed a systematic approach that consistently delivers results. Our <strong>GMB suspension recovery</strong> process has helped businesses regain their visibility within 48-72 hours.</p>
+        <div class="container contact-grid-main">
 
-                <div class="highlight-box">
-                    <h4>💡 Key Insight</h4>
-                    <p>At <strong>Ranking Matters</strong>, we've successfully recovered <strong>150+ GMB suspensions</strong> with a 98% success rate. Our <strong>GMB suspension recovery</strong> process has helped businesses regain their visibility within 48-72 hours.</p>
+            <!-- Left Side - Contact Info (Modified for Recovery) -->
+            <div class="contact-info-side">
+
+                <div class="info-card glass">
+                    <div class="icon-circle">📞</div>
+                    <h4>Call Us (24/7 Recovery Support)</h4>
+                    <p><a href="tel:+923314349664">+92 331 4349664</a></p>
+                    <p style="font-size: 0.9rem; margin-top: 4px; color: var(--text-muted);">
+                        Available 24/7 for GMB Suspension Emergencies
+                    </p>
+                    <p style="font-size: 0.85rem; margin-top: 8px;">
+                        <a href="#faq" style="color: var(--primary); text-decoration: none; font-weight: 500;">
+                            View Recovery Process →
+                        </a>
+                    </p>
                 </div>
 
-                <h2>Types of <span class="text-gradient">GMB Suspensions</span></h2>
-
-                <h3>1. Hard Suspension</h3>
-                <p>Your entire listing is removed and you cannot access it. This is the most severe type and requires a formal appeal process.</p>
-
-                <h3>2. Soft Suspension</h3>
-                <p>Your listing is still visible but you cannot make edits. You can usually resolve this by verifying your information.</p>
-
-                <h3>3. Algorithmic Suspension</h3>
-                <p>Triggered by automated systems when suspicious activity is detected.</p>
-
-                <h3>4. Manual Suspension</h3>
-                <p>Issued by a Google employee after a review of your listing.</p>
-
-                <h2>Common Causes of <span class="text-gradient">GMB Suspensions</span></h2>
-                <ul>
-                    <li><strong>Keyword Stuffing:</strong> Adding excessive keywords to your business name</li>
-                    <li><strong>Inconsistent NAP:</strong> Mismatched Name, Address, or Phone numbers</li>
-                    <li><strong>Virtual Offices:</strong> Using PO boxes or virtual addresses</li>
-                    <li><strong>Duplicate Listings:</strong> Having multiple listings for the same business</li>
-                    <li><strong>Prohibited Content:</strong> Violating Google's policies</li>
-                    <li><strong>Review Manipulation:</strong> Fake reviews or incentivized ratings</li>
-                    <li><strong>Address Changes:</strong> Frequent changes to your business address</li>
-                </ul>
-
-                <h2>Our <span class="text-gradient">Recovery Process</span></h2>
-
-                <h3>Step 1: Identify the Type of Suspension</h3>
-                <p>We analyze your account to determine if it's a hard or soft suspension and the specific triggers that caused it.</p>
-
-                <h3>Step 2: Gather Documentation</h3>
-                <p>We help you prepare all necessary documents including business license, utility bills, insurance certificates, and official business correspondence.</p>
-
-                <h3>Step 3: Clean Your Listing</h3>
-                <p>We remove any policy violations from your listing including excessive keywords, inconsistent information, and prohibited content.</p>
-
-                <h3>Step 4: File the Appeal</h3>
-                <p>We craft a detailed appeal letter addressing every potential concern and submit it through the proper Google support channels.</p>
-
-                <h3>Step 5: Follow Up Professionally</h3>
-                <p>We follow up with Google support through their official channels until your listing is reinstated.</p>
-
-                <div class="highlight-box warning">
-                    <h4>⚠️ Important</h4>
-                    <p>A <strong>GMB suspension</strong> can have devastating effects on your business. If you're facing a suspension, don't panic. Contact <strong>Ranking Matters</strong> for professional <strong>GMB suspension recovery</strong> services.</p>
+                <div class="info-card glass">
+                    <div class="icon-circle">💬</div>
+                    <h4>WhatsApp (Fastest Response)</h4>
+                    <p><a href="https://wa.me/923314349664" target="_blank">+92 331 4349664</a></p>
+                    <p style="font-size: 0.9rem; margin-top: 4px; color: var(--text-muted);">Share your suspension details instantly</p>
+                    <p style="font-size: 0.85rem; margin-top: 8px;"><a href="https://wa.me/923314349664" target="_blank" style="color: var(--primary); text-decoration: none; font-weight: 500;">Chat with our Expert →</a></p>
                 </div>
+
+                <div class="info-card glass">
+                    <div class="icon-circle">✉️</div>
+                    <h4>Email Us</h4>
+                    <p><a href="mailto:shanyaqoob730@gmail.com">shanyaqoob730@gmail.com</a></p>
+                    <p style="font-size: 0.9rem; margin-top: 4px; color: var(--text-muted);">Send your suspension documents here</p>
+                    <p style="font-size: 0.85rem; margin-top: 8px;"><a href="#faq" style="color: var(--primary); text-decoration: none; font-weight: 500;">FAQ about Suspensions →</a></p>
+                </div>
+
+                <div class="info-card glass">
+                    <div class="icon-circle">📍</div>
+                    <h4>Visit Us</h4>
+                    <p>Thokar, Lahore, Pakistan</p>
+                    <p style="font-size: 0.9rem; margin-top: 4px; color: var(--text-muted);">By appointment for recovery cases</p>
+                    <p style="font-size: 0.85rem; margin-top: 8px;"><a href="about.html" style="color: var(--primary); text-decoration: none; font-weight: 500;">About Ranking Matters →</a></p>
+                </div>
+
             </div>
 
-            <!-- Sidebar -->
-            <div class="service-sidebar">
-                <div class="sidebar-card glass">
-                    <h4>What's Included</h4>
-                    <ul>
-                        <li>Comprehensive Listing Audit</li>
-                        <li>Documentation Preparation</li>
-                        <li>Appeal Letter Writing</li>
-                        <li>Direct Google Support Communication</li>
-                        <li>Post-Recovery Monitoring</li>
-                        <li>Preventive Strategy Setup</li>
-                    </ul>
-                    <div class="price-tag">₨ 50,000 <span>/mo</span></div>
-                    <a href="https://wa.me/923314349664" target="_blank" class="btn btn-primary" style="width: 100%; text-align: center; justify-content: center;">Recover Now</a>
-                </div>
+            <!-- Right Side - Contact Form (Modified for Recovery) -->
+            <div class="contact-form-side glass">
+                <h2>Get Your <span class="text-gradient">GMB Profile</span> Back</h2>
+                <p class="form-desc">Fill out the form below to get a <strong>free forensic audit</strong> of your suspended profile. Our experts will analyze your case and provide a clear recovery roadmap. Trust <strong>Ranking Matters</strong>, the leading <strong>Local SEO expert</strong> in Lahore.</p>
 
-                <div class="sidebar-card glass">
-                    <h4>💬 Need Help?</h4>
-                    <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6;">Chat with our <strong>GMB recovery experts</strong> and get a free consultation for your suspended profile.</p>
-                    <a href="https://wa.me/923314349664" target="_blank" class="btn btn-whatsapp" style="width: 100%; text-align: center; justify-content: center; margin-top: 12px;">
-                        <svg viewBox="0 0 24 24" width="18" height="18" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-                        Chat on WhatsApp
-                    </a>
+                <!-- ====== FORM (SAME AS CONTACT PAGE) ====== -->
+                <form id="audit-form" action="https://formspree.io/f/xqpzvpvd" method="POST">
+                    <!-- Success & Error Messages -->
+                    <div data-fs-success style="display:none; background: #10b981; color: #fff; padding: 16px; border-radius: 8px; margin-bottom: 20px;">
+                        ✅ Thanks! We’ll be in touch shortly.
+                    </div>
+                    <div data-fs-error style="display:none; background: #ef4444; color: #fff; padding: 16px; border-radius: 8px; margin-bottom: 20px;">
+                        ❌ Something went wrong. Please try again.
+                    </div>
+
+                    <div class="form-row-grid">
+                        <div class="form-element">
+                            <label for="client-name">Your Full Name</label>
+                            <input type="text" id="client-name" name="name" class="form-control" placeholder="Your Name" required data-fs-field>
+                            <span data-fs-error="name" style="color: #ef4444; font-size: 0.85rem;"></span>
+                        </div>
+                        <div class="form-element">
+                            <label for="client-email">Business Email</label>
+                            <input type="email" id="client-email" name="email" class="form-control" placeholder="name@company.com" required data-fs-field>
+                            <span data-fs-error="email" style="color: #ef4444; font-size: 0.85rem;"></span>
+                        </div>
+                    </div>
+
+                    <div class="form-element">
+                        <label for="business-name">Registered Business Title</label>
+                        <input type="text" id="business-name" name="business_name" class="form-control" placeholder="e.g. Ricky's Heating and Cooling" required data-fs-field>
+                        <span data-fs-error="business_name" style="color: #ef4444; font-size: 0.85rem;"></span>
+                    </div>
+
+                    <div class="form-element">
+                        <label for="listing-url">Google Maps Share Link (Suspended Profile URL)</label>
+                        <input type="url" id="listing-url" name="maps_url" class="form-control" placeholder="https://maps.google.com/?cid=..." data-fs-field>
+                        <span data-fs-error="maps_url" style="color: #ef4444; font-size: 0.85rem;"></span>
+                    </div>
+
+                    <div class="form-element">
+                        <label for="project-notes">Suspension Details & Core Issues</label>
+                        <textarea id="project-notes" name="notes" class="form-control" rows="5" placeholder="Tell us about the suspension date, any warnings you received, and previous appeal attempts..." data-fs-field></textarea>
+                        <span data-fs-error="notes" style="color: #ef4444; font-size: 0.85rem;"></span>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary" style="width: 100%;" data-fs-submit-btn>Get Free Recovery Audit</button>
+                </form>
+                <!-- ====== END FORM ====== -->
+
+                <p style="color: var(--text-muted); font-size: 0.85rem; margin-top: 16px; text-align: center;">We respect your privacy. Your information will never be shared. <a href="privacy-policy.html" style="color: var(--primary); text-decoration: none;">Privacy Policy</a></p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ============================================
+    WHY CHOOSE US (Recovery Focused)
+    ============================================ -->
+    <section class="glass" style="border-left:none; border-right:none; border-radius:0;">
+        <div class="container">
+            <h2 class="section-title">Why Trust <span class="text-gradient">Ranking Matters</span> For Recovery?</h2>
+            <p class="section-subtitle">Here's why businesses trust us as their <strong>GMB Recovery expert</strong> in Lahore.</p>
+            <div class="why-contact-grid">
+                <div class="card glass why-contact-card">
+                    <div class="icon-box">🏆</div>
+                    <h4>Proven Recovery Results</h4>
+                    <p>We've successfully recovered <strong>150+ GMB suspensions</strong> with a 98% success rate, handling even the toughest hard suspensions.</p>
+                    <a href="blog/gbp-suspension-recovery-guide.html">Read case studies →</a>
+                </div>
+                <div class="card glass why-contact-card">
+                    <div class="icon-box">🔍</div>
+                    <h4>Forensic Audit Approach</h4>
+                    <p>We don't guess. We perform a deep forensic analysis to find the exact violation and build an appeal that Google's team can't refuse.</p>
+                    <a href="local-seo.html">Learn our method →</a>
+                </div>
+                <div class="card glass why-contact-card">
+                    <div class="icon-box">💎</div>
+                    <h4>Direct Google Communication</h4>
+                    <p>We handle all back-and-forth with Google support, so you don't have to stress. We follow up relentlessly until you're reinstated.</p>
+                    <a href="google-maps-ranking.html">Track your recovery →</a>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- ============================================
-    OTHER SERVICES SECTION
+    LATEST INSIGHTS (Recovery & Local SEO Blog)
+    ============================================ -->
+    <section>
+        <div class="container">
+            <h2 class="section-title">Latest <span class="text-gradient">SEO Insights</span></h2>
+            <p class="section-subtitle">Stay ahead with expert <strong>local SEO</strong> and <strong>GMB recovery</strong> tips. <a href="blog.html" style="color: var(--primary); text-decoration: none; font-weight: 500;">View all posts →</a></p>
+            <div class="contact-blog-grid">
+                <a href="blog/gbp-suspension-recovery-guide.html" class="contact-blog-card glass">
+                    <span class="blog-tag">🔥 Recovery Guide</span>
+                    <h4>GBP Suspension Recovery Guide 2026</h4>
+                    <p>Complete step-by-step guide to recover a suspended Google Business Profile.</p>
+                    <span class="read-link">Read Article →</span>
+                </a>
+                <a href="blog/how-to-get-more-google-reviews-organically.html" class="contact-blog-card glass">
+                    <span class="blog-tag">⭐ Reviews</span>
+                    <h4>How to Get More Google Reviews Organically</h4>
+                    <p>Proven strategies to boost your Google reviews without breaking the rules.</p>
+                    <span class="read-link">Read Article →</span>
+                </a>
+                <a href="blog/overcome-proximity-algorithmic-restrictions.html" class="contact-blog-card glass">
+                    <span class="blog-tag">Local Strategy</span>
+                    <h4>Overcome Proximity Algorithmic Restrictions</h4>
+                    <p>Expand your Google Maps reach beyond your physical location.</p>
+                    <span class="read-link">Read Article →</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+    MAP SECTION
+    ============================================ -->
+    <section class="glass" style="border-left:none; border-right:none; border-radius:0; padding: 60px 0;">
+        <div class="container">
+            <h2 class="section-title">Find Us <span class="text-gradient">On The Map</span></h2>
+            <p class="section-subtitle">Visit our operational hub in Lahore. We're just a message away! <a href="about.html" style="color: var(--primary); text-decoration: none; font-weight: 500;">Learn more about us →</a></p>
+            <div class="map-section">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d27194.224026496536!2d74.28350675!3d31.4547891!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391901d4c0fa7c39%3A0xb2440d51d4df645!2sThokar%20Niaz%20Baig%2C%20Lahore%2C%20Punjab%2C%20Pakistan!5e0!3m2!1sen!2s!4v1700000000000" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+    FAQ SECTION (Recovery Specific - Kept Original)
+    ============================================ -->
+    <section id="faq">
+        <div class="container">
+            <h2 class="section-title">Frequently Asked <span class="text-gradient">Questions</span></h2>
+            <p class="section-subtitle">Clear, straightforward answers about our <strong>GMB Suspension Recovery</strong> service.</p>
+            <div class="faq-grid">
+                <div class="faq-item glass">
+                    <div class="faq-question">
+                        <span>What causes a GMB suspension?</span>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">Suspensions are usually triggered by keyword stuffing, inconsistent NAP, virtual offices, duplicate listings, prohibited content, or review manipulation.</div>
+                </div>
+                <div class="faq-item glass">
+                    <div class="faq-question">
+                        <span>How long does recovery take?</span>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">Most businesses get reinstated within 48-72 hours with our proven process, depending on the type of suspension and Google's response time.</div>
+                </div>
+                <div class="faq-item glass">
+                    <div class="faq-question">
+                        <span>Do you guarantee reinstatement?</span>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">While we cannot guarantee reinstatement, we have a 98% success rate. We give our full effort and expertise to every case.</div>
+                </div>
+                <div class="faq-item glass">
+                    <div class="faq-question">
+                        <span>What documents do I need?</span>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">You'll need your business license, utility bills showing your address, business insurance, and official business correspondence.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+    OTHER SERVICES (Kept Original)
     ============================================ -->
     <section class="glass" style="border-left:none; border-right:none; border-radius:0;">
         <div class="container">
@@ -1107,46 +1318,6 @@
                     <h4>Landing Page Design</h4>
                     <p>Convert visitors into leads</p>
                 </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- ============================================
-    FAQ SECTION
-    ============================================ -->
-    <section>
-        <div class="container">
-            <h2 class="section-title">Frequently Asked <span class="text-gradient">Questions</span></h2>
-            <p class="section-subtitle">Clear, straightforward answers about our <strong>GMB Suspension Recovery</strong> service.</p>
-            <div class="faq-grid">
-                <div class="faq-item glass">
-                    <div class="faq-question">
-                        <span>What causes a GMB suspension?</span>
-                        <span class="faq-toggle">+</span>
-                    </div>
-                    <div class="faq-answer">Suspensions are usually triggered by keyword stuffing, inconsistent NAP, virtual offices, duplicate listings, prohibited content, or review manipulation.</div>
-                </div>
-                <div class="faq-item glass">
-                    <div class="faq-question">
-                        <span>How long does recovery take?</span>
-                        <span class="faq-toggle">+</span>
-                    </div>
-                    <div class="faq-answer">Most businesses get reinstated within 48-72 hours with our proven process, depending on the type of suspension and Google's response time.</div>
-                </div>
-                <div class="faq-item glass">
-                    <div class="faq-question">
-                        <span>Do you guarantee reinstatement?</span>
-                        <span class="faq-toggle">+</span>
-                    </div>
-                    <div class="faq-answer">While we cannot guarantee reinstatement, we have a 98% success rate. We give our full effort and expertise to every case.</div>
-                </div>
-                <div class="faq-item glass">
-                    <div class="faq-question">
-                        <span>What documents do I need?</span>
-                        <span class="faq-toggle">+</span>
-                    </div>
-                    <div class="faq-answer">You'll need your business license, utility bills showing your address, business insurance, and official business correspondence.</div>
-                </div>
             </div>
         </div>
     </section>
@@ -1225,7 +1396,19 @@
         <button class="sticky-action-trigger sticky-btn-top" id="back-to-top">↑</button>
     </div>
 
-    <!-- JavaScript -->
+    <!-- ====== FORMPREE AJAX ====== -->
+    <script src="https://unpkg.com/@formspree/ajax@1" defer></script>
+    <script>
+        window.formspree = window.formspree || function () {
+            (formspree.q = formspree.q || []).push(arguments);
+        };
+        formspree('initForm', {
+            formElement: '#audit-form',
+            formId: 'xqpzvpvd'
+        });
+    </script>
+
+    <!-- ====== JAVASCRIPT ====== -->
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             const loader = document.getElementById('loader');
@@ -1307,5 +1490,6 @@
             });
         });
     </script>
+
 </body>
 </html>
