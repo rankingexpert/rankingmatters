@@ -1673,7 +1673,28 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             }
         }
 
-    </head>
+    
+<style id="performance-optimization">
+/* Lightweight performance pass: preserve the design, reduce mobile rendering cost */
+img, video, iframe { max-width: 100%; }
+@media (max-width: 768px) {
+  * {
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .01ms !important;
+    scroll-behavior: auto !important;
+  }
+  .hero-visual img,
+  .about-image img,
+  .portfolio-card img {
+    transform: none !important;
+    filter: none !important;
+  }
+}
+</style>
+
+<span id="perf-preconnect" hidden></span><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+</head>
 <body>
     <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KBHRF986"
