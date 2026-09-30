@@ -107,7 +107,6 @@
         "latitude": "31.5204",
         "longitude": "74.3587"
       },
-      "priceRange": "₨ 50,000 - ₨ 90,000",
       "openingHoursSpecification": {
         "@type": "OpeningHoursSpecification",
         "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
@@ -513,14 +512,6 @@
         .case-stat-lbl { font-size: 0.8rem; color: var(--text-muted); text-transform: uppercase; font-weight: 600; margin-top: 4px; }
 
         /* PRICING */
-        .pricing-toggle { display: flex; align-items: center; justify-content: center; gap: 16px; margin-bottom: 56px; }
-        .pricing-toggle span { font-weight: 600; font-size: 1rem; }
-        .switch { position: relative; display: inline-block; width: 64px; height: 36px; }
-        .switch input { opacity: 0; width: 0; height: 0; }
-        .slider { position: absolute; cursor: pointer; inset: 0; background-color: var(--border); border-radius: 34px; transition: 0.4s cubic-bezier(0.16,1,0.3,1); }
-        .slider:before { position: absolute; content: ""; height: 28px; width: 28px; left: 4px; bottom: 4px; background-color: white; border-radius: 50%; transition: 0.4s cubic-bezier(0.16,1,0.3,1); box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
-        input:checked + .slider { background-color: var(--primary); }
-        input:checked + .slider:before { transform: translateX(28px); }
         .pricing-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 32px; align-items: stretch; }
         .pricing-card { display: flex; flex-direction: column; justify-content: space-between; }
         .pricing-card.popular { border-color: var(--primary); box-shadow: 0 30px 60px -15px rgba(37,99,235,0.15); }
@@ -528,8 +519,8 @@
         @media(max-width:480px){ .pricing-card.popular::before { right: 12px; font-size: 0.6rem; padding: 4px 10px; } }
         .plan-name { font-size: 1.25rem; font-weight: 700; margin-bottom: 8px; }
         .plan-desc { color: var(--text-muted); font-size: 0.9rem; margin-bottom: 32px; }
-        .plan-price { font-size: 3rem; font-weight: 800; letter-spacing: -0.04em; margin-bottom: 32px; display: flex; align-items: baseline; }
-        .plan-price span { font-size: 1rem; color: var(--text-muted); font-weight: 500; margin-left: 8px; }
+        .plan-price { font-size: 1.85rem; line-height: 1.2; letter-spacing: -0.02em; font-weight: 700; display: block; margin-bottom: 16px; }
+        .plan-price span { font-size: 0.9rem; display: block; margin-left: 0; font-weight: 500; color: var(--text-muted); margin-top: 6px; }
         .plan-features { list-style: none; display: flex; flex-direction: column; gap: 16px; margin-bottom: 40px; border-top: 1px solid var(--border); padding-top: 32px; }
         .plan-features li { display: flex; align-items: center; gap: 12px; font-size: 0.95rem; }
         .plan-features li::before { content: '✓'; color: var(--accent); font-weight: 900; }
@@ -1069,22 +1060,15 @@
     <!-- Pricing -->
     <section id="pricing">
         <div class="container">
-            <h2 class="section-title">Predictable <span class="text-gradient">ROI Pricing</span></h2>
-            <p class="section-subtitle">No long-term contracts. No useless vanity metrics. Just pure, aggressive optimization mechanics built to scale local businesses.</p>
-            <div class="pricing-toggle">
-                <span>Monthly Rate</span>
-                <label class="switch">
-                    <input type="checkbox" id="billing-toggle">
-                    <span class="slider"></span>
-                </label>
-                <span>Annual Saver <style>.pricing-toggle span:last-child::after{content:' (-20%)'; color:var(--accent); font-size:0.85rem; font-weight:700;}</style></span>
-            </div>
+            <h2 class="section-title">Predictable <span class="text-gradient">ROI Packages</span></h2>
+            <p class="section-subtitle">No long-term contracts. No useless vanity metrics. Just pure, aggressive optimization mechanics built to scale local businesses — with transparent pricing tailored to your market.</p>
             <div class="pricing-grid">
                 <div class="card glass pricing-card">
                     <div>
                         <div class="plan-name">Local Spark</div>
                         <p class="plan-desc">Perfect for small brick-and-mortar storefronts looking to capture immediate local traffic.</p>
-                        <div class="plan-price">₨ 50,000<span>/mo</span></div>
+                        <div class="plan-price">Custom Quote<span>Based on Your Market</span></div>
+                        <p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.55; margin-bottom: 32px; font-weight: 400;">Har business ka market different hai. Hum tumhare area, competition aur goals dekh kar transparent fixed monthly pricing dete hain.</p>
                         <ul class="plan-features">
                             <li>Google Business Profile Setup</li>
                             <li>Targeted Core Citation Building</li>
@@ -1092,13 +1076,14 @@
                             <li>Monthly Core Rank Monitoring</li>
                         </ul>
                     </div>
-                    <a href="contact.html" class="btn btn-secondary">Get Started</a>
+                    <a href="contact.html" class="btn btn-secondary">Get My Custom Quote</a>
                 </div>
                 <div class="card glass pricing-card popular">
                     <div>
                         <div class="plan-name">Map Dominator</div>
                         <p class="plan-desc">Engineered for service area businesses and contractors targeting rapid regional growth.</p>
-                        <div class="plan-price">₨ 70,000<span>/mo</span></div>
+                        <div class="plan-price">Custom Quote<span>Based on Your Market</span></div>
+                        <p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.55; margin-bottom: 32px; font-weight: 400;">Har business ka market different hai. Hum tumhare area, competition aur goals dekh kar transparent fixed monthly pricing dete hain.</p>
                         <ul class="plan-features">
                             <li>Advanced Georadial Mapping</li>
                             <li>Tailored Local Schema Deployment</li>
@@ -1106,13 +1091,14 @@
                             <li>Suspension Guard Monitoring</li>
                         </ul>
                     </div>
-                    <a href="contact.html" class="btn btn-primary">Dominate Locally</a>
+                    <a href="contact.html" class="btn btn-primary">Get My Custom Quote</a>
                 </div>
                 <div class="card glass pricing-card">
                     <div>
                         <div class="plan-name">Enterprise Market Takeover</div>
                         <p class="plan-desc">For multi-location corporate entities wanting complete market takeover across multiple cities.</p>
-                        <div class="plan-price">₨ 90,000<span>/mo</span></div>
+                        <div class="plan-price">Custom Quote<span>Based on Your Market</span></div>
+                        <p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.55; margin-bottom: 32px; font-weight: 400;">Har business ka market different hai. Hum tumhare area, competition aur goals dekh kar transparent fixed monthly pricing dete hain.</p>
                         <ul class="plan-features">
                             <li>Multi-Profile Network Structuring</li>
                             <li>High-Stakes Priority Support Line</li>
@@ -1120,7 +1106,7 @@
                             <li>Premium Dedicated Link Campaign</li>
                         </ul>
                     </div>
-                    <a href="contact.html" class="btn btn-secondary">Contact Enterprise</a>
+                    <a href="contact.html" class="btn btn-secondary">Get My Custom Quote</a>
                 </div>
             </div>
         </div>
@@ -1598,23 +1584,6 @@
                     });
                 });
             });
-
-            /* ---------- Pricing toggle ---------- */
-            const billingToggle = document.getElementById('billing-toggle');
-            const pricingVals = document.querySelectorAll('.plan-price');
-            const standardPrices = [50000, 70000, 90000];
-            if (billingToggle) {
-                billingToggle.addEventListener('change', function () {
-                    pricingVals.forEach(function (p, idx) {
-                        if (billingToggle.checked) {
-                            const discounted = Math.floor(standardPrices[idx] * 0.8);
-                            p.innerHTML = '₨ ' + discounted.toLocaleString() + '<span>/mo</span>';
-                        } else {
-                            p.innerHTML = '₨ ' + standardPrices[idx].toLocaleString() + '<span>/mo</span>';
-                        }
-                    });
-                });
-            }
 
             /* ---------- FAQ ---------- */
             document.querySelectorAll('.faq-trigger').forEach(function (t) {
