@@ -366,13 +366,14 @@
         /* ----- PRICING ----- */
         .pricing-table-services { display: grid; grid-template-columns: repeat(3,1fr); gap: 32px; margin-top: 40px; }
         .pricing-card-service { text-align: center; padding: 48px 32px; }
-        .pricing-card-service .price { font-size: 3rem; font-weight: 800; color: var(--primary); margin: 16px 0; }
-        .pricing-card-service .price span { font-size: 1rem; color: var(--text-muted); font-weight: 400; }
+        .pricing-card-service .price { font-size: 1.85rem; font-weight: 800; color: var(--primary); margin: 16px 0; line-height: 1.2; letter-spacing: -0.02em; }
+        .pricing-card-service .price span { display: block; font-size: 0.9rem; color: var(--text-muted); font-weight: 500; margin-top: 6px; }
         .pricing-card-service ul { list-style: none; padding: 0; margin: 24px 0; }
         .pricing-card-service ul li { padding: 8px 0; color: var(--text-muted); display: flex; align-items: center; justify-content: center; gap: 10px; font-size: 0.95rem; }
         .pricing-card-service ul li::before { content: '✓'; color: var(--accent); font-weight: 700; }
         .pricing-card-service.popular { border-color: var(--primary); box-shadow: 0 30px 60px -15px rgba(37,99,235,0.15); }
         .pricing-card-service.popular::before { content: 'Most Popular'; position: absolute; top: 24px; right: 24px; background: var(--primary); color: #fff; padding: 6px 14px; border-radius: 100px; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; }
+        .pricing-card-service .quote-note { font-size: 0.88rem; color: var(--text-muted); line-height: 1.55; margin: 16px 0 24px; text-align: left; font-weight: 400; }
 
         /* ----- PROCESS ----- */
         .process-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 32px; }
@@ -813,16 +814,17 @@
         </div>
     </section>
 
-    <!-- ====== PRICING SECTION (existing) ====== -->
+    <!-- ====== PRICING SECTION ====== -->
     <section class="glass" style="border-left:none; border-right:none; border-radius:0;">
         <div class="container">
             <h2 class="section-title">Service <span class="text-gradient">Packages</span></h2>
-            <p class="section-subtitle">Choose the package that fits your business needs. All plans include our signature local SEO expertise. <a href="/rankingmatters/contact.html" style="color:var(--primary); text-decoration:none; font-weight:500;">Contact us for custom pricing →</a></p>
+            <p class="section-subtitle">Choose the package that fits your business needs. All plans include our signature local SEO expertise — with transparent pricing tailored to your market.</p>
             <div class="pricing-table-services">
                 <div class="card glass pricing-card-service">
                     <h3>Local Spark</h3>
                     <p style="color:var(--text-muted);">Perfect for small businesses</p>
-                    <div class="price">₨ 50,000 <span>/mo</span></div>
+                    <div class="price">Custom Quote<span>Based on Your Market</span></div>
+                    <p class="quote-note">Har business ka market different hai. Hum tumhare area, competition aur goals dekh kar transparent fixed monthly pricing dete hain.</p>
                     <ul>
                         <li>Google Business Profile Setup</li>
                         <li>Targeted Core Citation Building</li>
@@ -830,12 +832,13 @@
                         <li>Monthly Core Rank Monitoring</li>
                         <li>Basic Review Management</li>
                     </ul>
-                    <a href="/rankingmatters/contact.html" class="btn btn-secondary">Get Started</a>
+                    <a href="/rankingmatters/contact.html" class="btn btn-secondary">Get My Custom Quote</a>
                 </div>
                 <div class="card glass pricing-card-service popular">
                     <h3>Map Dominator</h3>
                     <p style="color:var(--text-muted);">Most popular for service areas</p>
-                    <div class="price">₨ 70,000 <span>/mo</span></div>
+                    <div class="price">Custom Quote<span>Based on Your Market</span></div>
+                    <p class="quote-note">Har business ka market different hai. Hum tumhare area, competition aur goals dekh kar transparent fixed monthly pricing dete hain.</p>
                     <ul>
                         <li>Advanced Georadial Mapping</li>
                         <li>Tailored Local Schema Deployment</li>
@@ -844,12 +847,13 @@
                         <li>Advanced Review Management</li>
                         <li>Monthly Strategy Calls</li>
                     </ul>
-                    <a href="/rankingmatters/contact.html" class="btn btn-primary">Dominate Locally</a>
+                    <a href="/rankingmatters/contact.html" class="btn btn-primary">Get My Custom Quote</a>
                 </div>
                 <div class="card glass pricing-card-service">
                     <h3>Enterprise Takeover</h3>
                     <p style="color:var(--text-muted);">For multi-location businesses</p>
-                    <div class="price">₨ 90,000 <span>/mo</span></div>
+                    <div class="price">Custom Quote<span>Based on Your Market</span></div>
+                    <p class="quote-note">Har business ka market different hai. Hum tumhare area, competition aur goals dekh kar transparent fixed monthly pricing dete hain.</p>
                     <ul>
                         <li>Multi-Profile Network Structuring</li>
                         <li>High-Stakes Priority Support Line</li>
@@ -858,7 +862,7 @@
                         <li>Full-Service Review Management</li>
                         <li>Dedicated Account Manager</li>
                     </ul>
-                    <a href="/rankingmatters/contact.html" class="btn btn-secondary">Contact Enterprise</a>
+                    <a href="/rankingmatters/contact.html" class="btn btn-secondary">Get My Custom Quote</a>
                 </div>
             </div>
         </div>
