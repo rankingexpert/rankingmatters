@@ -50,6 +50,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="dns-prefetch" href="https://images.unsplash.com" />
+    <link rel="dns-prefetch" href="https://www.google.com" />
 
     <!-- ====== PRELOAD LCP HERO IMAGE ====== -->
     <link rel="preload" as="image" href="https://i.ibb.co/N2k6rfHy/Chat-GPT-Image-Jul-14-2026-11-47-57-PM.png" fetchpriority="high" />
@@ -241,10 +242,9 @@
     </script>
 
     <!-- ============================================================ -->
-    <!-- ====== ALL CSS (normal style tag, NOT injected) ====== -->
+    <!-- ====== ALL CSS ====== -->
     <!-- ============================================================ -->
     <style>
-        /* --- Critical CSS Variables --- */
         :root {
             --bg-dark: #07070a;
             --surface-dark: rgba(18,18,26,0.7);
@@ -292,7 +292,6 @@
             --nav-bg: rgba(249,250,251,0.75);
         }
 
-        /* GLOBAL RESET */
         *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
         html, body { max-width: 100%; overflow-x: hidden; }
         html { scroll-behavior: smooth; }
@@ -325,7 +324,6 @@
 
         #scroll-progress { position: fixed; top: 0; left: 0; height: 3px; background: linear-gradient(90deg, var(--primary), var(--accent)); width: 0%; z-index: 2000; transition: width 0.1s ease; }
 
-        /* Lightweight loader */
         #loader { position: fixed; inset: 0; background: var(--bg-dark); z-index: 3000; display: flex; justify-content: center; align-items: center; transition: opacity 0.4s ease, visibility 0.4s ease; }
         #loader.hidden { opacity: 0; visibility: hidden; pointer-events: none; }
         .loader-logo { font-size: 2rem; font-weight: 800; letter-spacing: -1px; color: #fff; animation: pulse 1.5s infinite; }
@@ -355,7 +353,6 @@
 
         .blob { position: absolute; border-radius: 50%; filter: blur(120px); z-index: -1; opacity: 0.15; pointer-events: none; }
 
-        /* HEADER */
         header { position: fixed; top: 0; left: 0; width: 100%; z-index: 1000; background: var(--nav-bg); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border-bottom: 1px solid var(--border); transition: var(--transition); }
         @media(max-width:768px) {
             header { background: var(--surface-pure) !important; backdrop-filter: blur(10px) !important; -webkit-backdrop-filter: blur(10px) !important; border-bottom: 2px solid var(--border); }
@@ -391,7 +388,6 @@
         .theme-btn { background: none; border: 1px solid var(--border); width: 44px; height: 44px; border-radius: var(--radius-sm); display: flex; align-items: center; justify-content: center; cursor: pointer; color: var(--text); transition: var(--transition); font-size: 1.2rem; }
         .theme-btn:hover { background: var(--border); }
 
-        /* BURGER */
         .burger { display: none; align-items: center; gap: 10px; background: var(--surface-pure); padding: 8px 16px 8px 12px; border-radius: var(--radius-sm); border: 1px solid var(--border); box-shadow: 0 4px 12px rgba(0,0,0,0.1); transition: var(--transition); cursor: pointer; }
         .burger:hover { background: var(--primary); border-color: var(--primary); }
         .burger:hover .burger-label { color: #fff; }
@@ -400,7 +396,6 @@
         .burger-icon span { display: block; width: 22px; height: 2.5px; background: var(--text); border-radius: 2px; transition: var(--transition); }
         .burger-label { font-size: 0.65rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-muted); transition: var(--transition); }
 
-        /* MOBILE NAV */
         @media (max-width: 768px) {
             .nav-menu {
                 position: absolute !important; top: 90px !important; left: 0 !important; right: 0 !important;
@@ -418,7 +413,6 @@
             .nav-dropdown .dropdown-content a { white-space: normal !important; word-break: break-word !important; display: block !important; width: 100% !important; box-sizing: border-box !important; padding: 8px 0 !important; }
         }
 
-        /* HERO */
         .hero-wrapper { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 60px; align-items: center; min-height: calc(100vh - 90px); padding-top: 40px; }
         .hero-title { font-size: clamp(2rem, 5vw, 4.5rem); font-weight: 800; letter-spacing: -0.04em; margin-bottom: 32px; line-height: 1.05; }
         @media(max-width:480px){ .hero-title { font-size: clamp(1.8rem, 8vw, 2.8rem); } }
@@ -441,7 +435,6 @@
         @media(max-width:480px){ .section-title { font-size: clamp(1.8rem, 7vw, 2.5rem); } }
         .section-subtitle { font-size: clamp(1.1rem, 1.5vw, 1.35rem); color: var(--text-muted); text-align: center; max-width: 700px; margin: 0 auto 80px; font-weight: 400; line-height: 1.5; }
 
-        /* ABOUT */
         .about-grid { display: grid; grid-template-columns: 0.9fr 1.1fr; gap: 80px; align-items: center; }
         .about-visual { position: relative; border-radius: var(--radius-lg); overflow: hidden; height: 600px; box-shadow: var(--shadow); background: var(--surface-pure); }
         @media(max-width:768px){ .about-visual { height: 400px; } }
@@ -450,14 +443,12 @@
         .about-tag { font-weight: 700; color: var(--primary); text-transform: uppercase; letter-spacing: 0.1em; font-size: 0.9rem; margin-bottom: 16px; display: block; }
         .about-text p { font-size: 1.15rem; color: var(--text-muted); margin-bottom: 32px; line-height: 1.6; }
 
-        /* WHY */
         .why-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 32px; }
         .why-card .icon-box { width: 64px; height: 64px; border-radius: var(--radius-md); background: var(--primary-glow); display: flex; align-items: center; justify-content: center; margin-bottom: 32px; color: var(--primary); font-size: 1.5rem; font-weight: bold; }
         .why-card h3 { font-size: 1.5rem; margin-bottom: 16px; }
         .why-card h3 a { color: var(--text); text-decoration: none; }
         .why-card p { color: var(--text-muted); line-height: 1.5; }
 
-        /* SERVICES */
         .services-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 32px; }
         .service-card { display: flex; flex-direction: column; height: 100%; text-decoration: none; color: var(--text); }
         .service-card .icon { font-size: 2.25rem; margin-bottom: 24px; display: block; }
@@ -470,7 +461,6 @@
         .service-card:hover .learn-more { color: var(--accent); padding-left: 4px; }
         .card:hover { transform: translateY(-8px); border-color: rgba(37,99,235,0.3); }
 
-        /* TIMELINE */
         .timeline-container { position: relative; max-width: 1000px; margin: 0 auto; }
         .timeline-container::before { content: ''; position: absolute; left: 50%; top: 0; width: 2px; height: 100%; background: var(--border); transform: translateX(-50%); }
         .timeline-step { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; margin-bottom: 100px; position: relative; }
@@ -482,12 +472,10 @@
         .timeline-content h3 { font-size: 1.5rem; margin-bottom: 16px; }
         .timeline-content p { color: var(--text-muted); font-size: 0.95rem; line-height: 1.6; max-width: 100%; }
 
-        /* INDUSTRIES */
         .industries-container { display: flex; flex-wrap: wrap; gap: 16px; justify-content: center; max-width: 1100px; margin: 0 auto; }
         .industry-pill { padding: 16px 32px; border-radius: 100px; font-weight: 600; font-size: 1rem; transition: var(--transition); cursor: default; border: 1px solid var(--border); }
         .industry-pill:hover { background: var(--primary); color: #fff; border-color: var(--primary); transform: scale(1.05); }
 
-        /* PORTFOLIO */
         .portfolio-filter { display: flex; justify-content: center; gap: 12px; margin-bottom: 48px; flex-wrap: wrap; }
         .filter-btn { padding: 12px 24px; border-radius: 100px; background: transparent; border: 1px solid var(--border); color: var(--text-muted); font-weight: 600; font-size: 0.9rem; transition: var(--transition); cursor: pointer; }
         .filter-btn.active, .filter-btn:hover { background: var(--primary); color: #fff; border-color: var(--primary); }
@@ -503,7 +491,6 @@
         .portfolio-client { font-size: 0.85rem; font-weight: 700; color: var(--primary); text-transform: uppercase; letter-spacing: 0.05em; }
         .portfolio-growth { padding: 6px 14px; background: var(--accent-glow); color: var(--accent); border-radius: 100px; font-weight: 700; font-size: 0.85rem; }
 
-        /* CASE */
         .case-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 40px; }
         .case-card h3 { font-size: 1.75rem; margin: 24px 0 16px; }
         .case-card p { color: var(--text-muted); line-height: 1.6; margin-bottom: 32px; }
@@ -511,7 +498,6 @@
         .case-stat-val { font-size: 2rem; font-weight: 800; color: var(--accent); }
         .case-stat-lbl { font-size: 0.8rem; color: var(--text-muted); text-transform: uppercase; font-weight: 600; margin-top: 4px; }
 
-        /* PRICING */
         .pricing-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 32px; align-items: stretch; }
         .pricing-card { display: flex; flex-direction: column; justify-content: space-between; }
         .pricing-card.popular { border-color: var(--primary); box-shadow: 0 30px 60px -15px rgba(37,99,235,0.15); }
@@ -525,7 +511,6 @@
         .plan-features li { display: flex; align-items: center; gap: 12px; font-size: 0.95rem; }
         .plan-features li::before { content: '✓'; color: var(--accent); font-weight: 900; }
 
-        /* TESTIMONIALS */
         .testimonial-outer { max-width: 900px; margin: 0 auto; position: relative; }
         .testimonial-wrapper { overflow: hidden; width: 100%; }
         .testimonial-track { display: flex; transition: transform 0.6s cubic-bezier(0.16,1,0.3,1); width: 100%; }
@@ -539,7 +524,6 @@
         .slider-btn { width: 52px; height: 52px; border-radius: 50%; background: var(--surface-pure); border: 1px solid var(--border); color: var(--text); display: flex; align-items: center; justify-content: center; cursor: pointer; transition: var(--transition); font-size: 1.2rem; }
         .slider-btn:hover { background: var(--primary); color: #fff; border-color: var(--primary); }
 
-        /* REVIEWS */
         .reviews-summary { display: flex; align-items: center; justify-content: center; gap: 40px; margin-bottom: 56px; border-bottom: 1px solid var(--border); padding-bottom: 40px; flex-wrap: wrap; }
         .rating-huge { font-size: 4rem; font-weight: 800; color: var(--text); line-height: 1; }
         .rating-stars { color: #f59e0b; font-size: 1.5rem; margin-bottom: 4px; }
@@ -552,26 +536,22 @@
         .reviewer-meta { font-size: 0.8rem; color: var(--text-muted); }
         .review-text { font-size: 0.9rem; color: var(--text-muted); line-height: 1.6; }
 
-        /* SKILLS */
         .skills-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 40px; }
         .skill-item h4 { font-size: 1.1rem; margin-bottom: 12px; display: flex; justify-content: space-between; }
         .skill-bar-bg { height: 6px; background: var(--border); border-radius: 10px; overflow: hidden; }
         .skill-bar-fill { height: 100%; background: linear-gradient(90deg, var(--primary), var(--accent)); width: 0%; transition: width 2s cubic-bezier(0.16,1,0.3,1); border-radius: 10px; }
 
-        /* CERTS */
         .cert-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 24px; text-align: center; }
         .cert-card { padding: 32px; border-radius: var(--radius-md); display: flex; flex-direction: column; align-items: center; justify-content: center; }
         .cert-icon { font-size: 2.5rem; color: var(--primary); margin-bottom: 16px; }
         .cert-card h4 { font-size: 1.1rem; font-weight: 700; margin-bottom: 4px; }
         .cert-card p { font-size: 0.85rem; color: var(--text-muted); }
 
-        /* TOOLS */
         .tools-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 24px; }
         .tool-card { display: flex; align-items: center; gap: 20px; padding: 24px; border-radius: var(--radius-md); }
         .tool-avatar-box { width: 48px; height: 48px; border-radius: var(--radius-sm); background: var(--surface-pure); border: 1px solid var(--border); display: flex; align-items: center; justify-content: center; font-weight: 800; color: var(--primary); font-size: 1.25rem; flex-shrink: 0; }
         .tool-card h4 { font-size: 1.1rem; font-weight: 600; }
 
-        /* FAQ */
         .faq-max { max-width: 850px; margin: 0 auto; display: flex; flex-direction: column; gap: 16px; }
         .faq-item { border-radius: var(--radius-md); overflow: hidden; border: 1px solid var(--border); transition: var(--transition); }
         .faq-trigger { width: 100%; padding: 28px 32px; background: var(--surface-pure); border: none; text-align: left; color: var(--text); font-size: 1.2rem; font-weight: 700; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 24px; }
@@ -581,7 +561,6 @@
         .faq-item.open { border-color: var(--primary); }
         .faq-item.open .faq-icon-state { transform: rotate(45deg); color: var(--primary); }
 
-        /* BLOG */
         .blog-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 32px; }
         .blog-card { overflow: hidden; text-decoration: none; color: var(--text); transition: var(--transition); border-radius: var(--radius-lg); background: var(--surface); border: 1px solid var(--border); display: block; }
         .blog-card:hover { transform: translateY(-8px); border-color: rgba(37,99,235,0.3); }
@@ -595,7 +574,6 @@
         .blog-card .read-more-link { color: var(--primary); font-weight: 600; font-size: 0.9rem; display: inline-flex; align-items: center; gap: 6px; transition: var(--transition); }
         .blog-card .read-more-link:hover { color: var(--accent); gap: 10px; }
 
-        /* CONTACT */
         .contact-grid { display: grid; grid-template-columns: 0.8fr 1.2fr; gap: 80px; }
         .contact-panel-title { font-size: 2.25rem; font-weight: 800; margin-bottom: 24px; }
         .contact-lead-desc { color: var(--text-muted); font-size: 1.1rem; line-height: 1.6; margin-bottom: 40px; }
@@ -614,7 +592,6 @@
         .form-control { background: var(--surface-pure); border: 1px solid var(--border); padding: 16px 20px; border-radius: var(--radius-sm); color: var(--text); font-family: var(--font-sans); font-size: 0.95rem; transition: var(--transition); width: 100%; }
         .form-control:focus { outline: none; border-color: var(--primary); box-shadow: 0 0 0 3px var(--primary-glow); }
 
-        /* FOOTER */
         footer { background: var(--surface-pure); border-top: 1px solid var(--border); padding: 100px 0 40px; }
         .footer-grid { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 60px; margin-bottom: 80px; }
         .footer-brand p { color: var(--text-muted); font-size: 0.95rem; line-height: 1.6; margin-top: 16px; max-width: 320px; }
@@ -635,21 +612,22 @@
         .footer-links-grid ul a { text-decoration: none; color: var(--text-muted); font-size: 0.9rem; transition: var(--transition); }
         .footer-links-grid ul a:hover { color: var(--primary); padding-left: 4px; }
 
-        /* MAP PLACEHOLDER (CLICK TO LOAD) */
-        .map-placeholder {
-            position: relative; width: 100%; height: 280px; background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
-            border-radius: var(--radius-md); display: flex; flex-direction: column; align-items: center; justify-content: center;
-            cursor: pointer; color: #fff; gap: 12px; border: 1px solid var(--border);
-            transition: var(--transition);
+        /* MAP SKELETON (auto-load with smooth fade-in) */
+        .map-skeleton {
+            position: relative; width: 100%; height: 280px;
+            background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+            border-radius: var(--radius-md); display: flex; flex-direction: column;
+            align-items: center; justify-content: center; color: #fff; gap: 12px;
+            border: 1px solid var(--border); overflow: hidden;
         }
-        .map-placeholder:hover { background: linear-gradient(135deg, #2563eb 0%, #1e40af 100%); }
-        .map-placeholder-icon { font-size: 2.5rem; }
-        .map-placeholder-text { font-weight: 600; font-size: 0.95rem; text-align: center; padding: 0 20px; }
-        .map-placeholder-sub { font-size: 0.8rem; opacity: 0.7; }
-        @media(max-width:768px){ .map-placeholder { height: 220px; } }
-        @media(max-width:480px){ .map-placeholder { height: 180px; } }
+        @media(max-width:768px){ .map-skeleton { height: 220px; } }
+        @media(max-width:480px){ .map-skeleton { height: 180px; } }
+        .map-skeleton-icon { font-size: 2rem; animation: mapPulse 1.8s ease-in-out infinite; }
+        .map-skeleton-text { font-weight: 500; font-size: 0.9rem; opacity: 0.85; }
+        @keyframes mapPulse { 0%,100%{ opacity: 0.5; transform: scale(0.96); } 50%{ opacity: 1; transform: scale(1); } }
+        .map-loaded iframe { animation: mapFadeIn 0.6s ease; }
+        @keyframes mapFadeIn { from{ opacity: 0; } to{ opacity: 1; } }
 
-        /* FIXED ACTIONS */
         #fixed-actions-container { position: fixed; bottom: 32px; right: 32px; display: flex; flex-direction: column; gap: 12px; z-index: 1500; }
         .sticky-action-trigger { width: 56px; height: 56px; border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer; text-decoration: none; box-shadow: 0 10px 25px rgba(0,0,0,0.2); transition: var(--transition); font-weight: 600; border: none; }
         .sticky-btn-whatsapp { background: #25D366; color: #fff; width: auto; padding: 0 24px; border-radius: 100px; font-size: 0.9rem; gap: 8px; }
@@ -658,7 +636,6 @@
         .sticky-btn-top:hover { transform: translateY(-4px); }
         .sticky-btn-whatsapp svg { width: 20px; height: 20px; fill: #fff; }
 
-        /* RESPONSIVE BREAKPOINTS */
         @media(max-width:1200px){
             .why-grid, .services-grid, .reviews-grid, .blog-grid { grid-template-columns: repeat(2,1fr); }
             .tools-grid, .cert-grid { grid-template-columns: repeat(3,1fr); }
@@ -701,7 +678,6 @@
             .btn { padding: 14px 24px; font-size: 0.85rem; }
         }
 
-        /* MOBILE SPEED FIX */
         @media (max-width: 768px) {
             header .nav-actions > .btn-whatsapp,
             header .nav-actions > .whatsapp-btn { display: none !important; }
@@ -710,7 +686,6 @@
             .btn-group { width: 100%; }
             .btn-group .btn { min-width: 0; }
             input, textarea, select { font-size: 16px !important; }
-            /* Reduce GPU heavy effects on mobile */
             .blob { display: none; }
             .glass { backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); }
             #mouse-glow { display: none; }
@@ -727,25 +702,20 @@
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KBHRF986" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
-    <!-- Scroll Progress -->
     <div id="scroll-progress"></div>
 
-    <!-- Loader -->
     <div id="loader">
         <div class="loader-logo">Ranking<span>Matters</span></div>
     </div>
 
-    <!-- Mouse Glow -->
     <div id="mouse-glow"></div>
 
-    <!-- WhatsApp SVG Symbol (reused everywhere) -->
     <svg width="0" height="0" style="position:absolute" aria-hidden="true">
         <symbol id="whatsapp-icon" viewBox="0 0 24 24">
             <path fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
         </symbol>
     </svg>
 
-    <!-- Header -->
     <header>
         <div class="container nav-container">
             <a href="index.html" class="logo">Ranking<span>Matters</span></a>
@@ -785,7 +755,6 @@
         </div>
     </header>
 
-    <!-- Hero -->
     <section id="home">
         <div class="blob" style="width: 500px; height: 500px; background: var(--primary); top: 10%; left: -10%;"></div>
         <div class="container hero-wrapper">
@@ -821,7 +790,6 @@
         </div>
     </section>
 
-    <!-- About -->
     <section id="about" class="glass" style="border-left:none; border-right:none; border-radius:0;">
         <div class="container about-grid">
             <div class="about-visual">
@@ -843,7 +811,6 @@
         </div>
     </section>
 
-    <!-- Why Choose -->
     <section>
         <div class="container">
             <h2 class="section-title">Engineered For <span class="text-gradient">Local Domination</span></h2>
@@ -868,7 +835,6 @@
         </div>
     </section>
 
-    <!-- Services -->
     <section id="services" class="glass" style="border-left:none; border-right:none; border-radius:0;">
         <div class="container">
             <h2 class="section-title">Our Tactical <span class="text-gradient">SEO Services</span></h2>
@@ -947,7 +913,6 @@
         </div>
     </section>
 
-    <!-- Process -->
     <section>
         <div class="container">
             <h2 class="section-title">The Blueprint To <span class="text-gradient">The Top Spot</span></h2>
@@ -978,7 +943,6 @@
         </div>
     </section>
 
-    <!-- Industries -->
     <section class="glass" style="border-left:none; border-right:none; border-radius:0;">
         <div class="container">
             <h2 class="section-title">Industries We <span class="text-gradient">Completely Dominate</span></h2>
@@ -994,7 +958,6 @@
         </div>
     </section>
 
-    <!-- Portfolio -->
     <section id="case-studies">
         <div class="container">
             <h2 class="section-title">Real Proven <span class="text-gradient">Client Results</span></h2>
@@ -1031,7 +994,6 @@
         </div>
     </section>
 
-    <!-- Case Studies -->
     <section class="glass" style="border-left:none; border-right:none; border-radius:0;">
         <div class="container">
             <div class="case-grid">
@@ -1057,7 +1019,6 @@
         </div>
     </section>
 
-    <!-- Pricing -->
     <section id="pricing">
         <div class="container">
             <h2 class="section-title">Predictable <span class="text-gradient">ROI Packages</span></h2>
@@ -1112,7 +1073,6 @@
         </div>
     </section>
 
-    <!-- Testimonials -->
     <section class="glass" style="border-left:none; border-right:none; border-radius:0;">
         <div class="container">
             <h2 class="section-title">What Our Partner <span class="text-gradient">Networks Say</span></h2>
@@ -1142,7 +1102,6 @@
         </div>
     </section>
 
-    <!-- Reviews -->
     <section>
         <div class="container">
             <div class="reviews-summary">
@@ -1193,7 +1152,6 @@
         </div>
     </section>
 
-    <!-- Skills -->
     <section class="glass" style="border-left:none; border-right:none; border-radius:0;">
         <div class="container">
             <h2 class="section-title">Our Technical <span class="text-gradient">Competence Matrix</span></h2>
@@ -1219,7 +1177,6 @@
         </div>
     </section>
 
-    <!-- Certifications -->
     <section>
         <div class="container">
             <div class="cert-grid">
@@ -1247,7 +1204,6 @@
         </div>
     </section>
 
-    <!-- Tools -->
     <section class="glass" style="border-left:none; border-right:none; border-radius:0;">
         <div class="container">
             <h2 class="section-title">Enterprise Tools We Deploy</h2>
@@ -1261,7 +1217,6 @@
         </div>
     </section>
 
-    <!-- FAQ -->
     <section id="faq">
         <div class="container">
             <h2 class="section-title">Frequently Asked <span class="text-gradient">Questions</span></h2>
@@ -1283,7 +1238,6 @@
         </div>
     </section>
 
-    <!-- Blog -->
     <section id="blog" class="glass" style="border-left:none; border-right:none; border-radius:0;">
         <div class="container">
             <h2 class="section-title">Our Local <span class="text-gradient">SEO Insights</span></h2>
@@ -1329,7 +1283,6 @@
         </div>
     </section>
 
-    <!-- Contact -->
     <section id="contact">
         <div class="container contact-grid">
             <div class="contact-panel-info">
@@ -1401,7 +1354,6 @@
         </div>
     </section>
 
-    <!-- Footer -->
     <footer>
         <div class="container">
             <div class="footer-grid">
@@ -1452,10 +1404,9 @@
 
                 <div>
                     <h4 style="font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 16px; color: var(--text);">Find Us On Google Maps</h4>
-                    <div id="map-placeholder" class="map-placeholder" role="button" tabindex="0" aria-label="Load interactive Google Map">
-                        <div class="map-placeholder-icon">📍</div>
-                        <div class="map-placeholder-text">Click to Load Interactive Map</div>
-                        <div class="map-placeholder-sub">Saves ~500KB on first load</div>
+                    <div id="map-container" class="map-skeleton" aria-label="Loading Google Map">
+                        <div class="map-skeleton-icon">📍</div>
+                        <div class="map-skeleton-text">Loading map...</div>
                     </div>
                     <p class="footer-map-label">📍 <strong>Ranking Matters</strong> — Thokar, Lahore, Pakistan</p>
                 </div>
@@ -1471,7 +1422,6 @@
         </div>
     </footer>
 
-    <!-- Fixed Actions -->
     <div id="fixed-actions-container">
         <a href="https://wa.me/923314349664" target="_blank" rel="noopener" class="sticky-action-trigger sticky-btn-whatsapp">
             <svg width="20" height="20" style="color:#fff"><use href="#whatsapp-icon"/></svg>
@@ -1656,12 +1606,22 @@
                 fillBars.forEach(function (b) { skillObs.observe(b); });
             }
 
-            /* ---------- Map click-to-load ---------- */
-            const mapPlaceholder = document.getElementById('map-placeholder');
-            if (mapPlaceholder) {
+            /* ============================================================
+               MAP AUTO-LOAD (Speed Optimized)
+               - Map sirf tab load hota hai jab user footer ke paas scroll kare
+               - 300px pehle se pre-load (rootMargin) taake user ko loading na dikhe
+               - Agar IntersectionObserver support na ho to 5s baad fallback load
+               ============================================================ */
+            const mapContainer = document.getElementById('map-container');
+            if (mapContainer) {
+                let mapLoaded = false;
+
                 const loadMap = function () {
+                    if (mapLoaded) return;
+                    mapLoaded = true;
+
                     const iframe = document.createElement('iframe');
-                    iframe.src = 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3599701.2877120697!2d70.60231495!3d28.227561999999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x84f3df43ef28b013%3A0x722879e737c0b535!2sRanking%20Matters%7C%20Local%20Seo%20Expert%20in%20Lahore!5e0!3m2!1sen!2s!4v1784304112769!5m2!1sen!2s';
+                    iframe.src = 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d158535.06683510746!2d74.2292243!3d31.462108949999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x84f3df43ef28b013%3A0x722879e737c0b535!2sRanking%20Matters%7C%20Local%20Seo%20Expert%20in%20Lahore!5e1!3m2!1sen!2s!4v1790890481830!5m2!1sen!2s';
                     iframe.width = '100%';
                     iframe.height = '280';
                     iframe.style.border = '0';
@@ -1670,12 +1630,34 @@
                     iframe.setAttribute('loading', 'lazy');
                     iframe.setAttribute('referrerpolicy', 'strict-origin-when-cross-origin');
                     iframe.setAttribute('title', 'Ranking Matters Location on Google Maps');
-                    mapPlaceholder.replaceWith(iframe);
+
+                    // Skeleton hatao aur iframe lagao
+                    mapContainer.innerHTML = '';
+                    mapContainer.classList.remove('map-skeleton');
+                    mapContainer.classList.add('map-loaded');
+                    mapContainer.style.background = 'transparent';
+                    mapContainer.style.border = 'none';
+                    mapContainer.appendChild(iframe);
                 };
-                mapPlaceholder.addEventListener('click', loadMap);
-                mapPlaceholder.addEventListener('keydown', function (e) {
-                    if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); loadMap(); }
-                });
+
+                // Modern browsers: IntersectionObserver se auto-load
+                if ('IntersectionObserver' in window) {
+                    const mapObserver = new IntersectionObserver(function (entries) {
+                        entries.forEach(function (entry) {
+                            if (entry.isIntersecting) {
+                                loadMap();
+                                mapObserver.disconnect();
+                            }
+                        });
+                    }, { rootMargin: '300px 0px', threshold: 0.01 });
+                    mapObserver.observe(mapContainer);
+                } else {
+                    // Fallback: purane browsers ke liye 5 second baad load
+                    setTimeout(loadMap, 5000);
+                }
+
+                // Click fallback (agar koi user click kare)
+                mapContainer.addEventListener('click', loadMap);
             }
         });
     </script>
