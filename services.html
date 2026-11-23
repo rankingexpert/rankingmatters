@@ -8,8 +8,7 @@
     <meta name="google-site-verification" content="google03b0f2c466ca5be5" />
 
     <!-- ====== GOOGLE ANALYTICS ====== -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z3PRC6PLMM">
-    </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z3PRC6PLMM"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag() { dataLayer.push(arguments); }
@@ -66,6 +65,7 @@
                     "name": "Ranking Matters",
                     "address": {
                         "@type": "PostalAddress",
+                        "streetAddress": "Thokar Niaz Baig",
                         "addressLocality": "Lahore",
                         "addressCountry": "PK"
                     },
@@ -89,7 +89,7 @@
         }
     </script>
 
-    <!-- ====== SCHEMA – SERVICES LIST (only your 7 services) ====== -->
+    <!-- ====== SCHEMA – SERVICES LIST ====== -->
     <script type="application/ld+json">
         {
             "@context": "https://schema.org",
@@ -141,10 +141,10 @@
             "@type": "Organization",
             "name": "Ranking Matters",
             "url": "https://rankingexpert.github.io/rankingmatters",
-            "logo": "https://rankingexpert.github.io/rankingmatters/images/logo.png",
-            "description": "Ranking Matters is the #1 Local SEO Expert in Lahore, offering comprehensive local search and Google Maps services.",
+            "description": "Ranking Matters is a Local SEO Expert in Lahore, offering comprehensive local search and Google Maps services.",
             "address": {
                 "@type": "PostalAddress",
+                "streetAddress": "Thokar Niaz Baig",
                 "addressLocality": "Lahore",
                 "addressCountry": "PK"
             },
@@ -153,12 +153,7 @@
                 "telephone": "+923314349664",
                 "contactType": "sales",
                 "availableLanguage": ["English", "Urdu"]
-            },
-            "sameAs": [
-                "https://www.facebook.com/rankingmatters",
-                "https://www.linkedin.com/company/ranking-matters",
-                "https://www.youtube.com/@rankingmatters"
-            ]
+            }
         }
     </script>
 
@@ -169,7 +164,6 @@
 
     <!-- ====== CSS ====== -->
     <style>
-        /* ---------- SAME CSS AS BEFORE (keeping design consistent) ---------- */
         * { margin: 0; padding: 0; box-sizing: border-box; }
         :root {
             --bg-dark: #07070a;
@@ -248,7 +242,7 @@
         .btn-whatsapp svg { margin-right: 10px; }
         .blob { position: absolute; border-radius: 50%; filter: blur(120px); z-index: -1; opacity: 0.15; pointer-events: none; transition: var(--transition); }
 
-        /* ----- HEADER (same) ----- */
+        /* ----- HEADER ----- */
         header { position: fixed; top: 0; left: 0; width: 100%; z-index: 1000; background: var(--nav-bg); backdrop-filter: blur(24px) saturate(1.2); -webkit-backdrop-filter: blur(24px) saturate(1.2); border-bottom: 1px solid var(--border); transition: var(--transition); }
         header.scrolled { background: var(--nav-bg); box-shadow: 0 8px 32px rgba(0,0,0,0.3); border-bottom-color: rgba(37,99,235,0.15); }
         header::after { content: ''; position: absolute; bottom: -1px; left: 0; width: 100%; height: 1px; background: linear-gradient(90deg, transparent, var(--primary), var(--accent), var(--primary), transparent); opacity: 0; transition: var(--transition); }
@@ -334,7 +328,7 @@
         .service-card-full .learn-more { display: inline-block; margin-top: 16px; color: var(--primary); font-weight: 600; text-decoration: none; transition: var(--transition); }
         .service-card-full .learn-more:hover { color: var(--accent); padding-left: 4px; }
 
-        /* ----- DETAILED SERVICES (only 7) ----- */
+        /* ----- DETAILED SERVICES ----- */
         .detailed-services .service-block { margin-bottom: 60px; padding: 48px; border-radius: var(--radius-lg); background: var(--surface); border: 1px solid var(--border); transition: var(--transition); }
         .detailed-services .service-block:hover { border-color: rgba(37,99,235,0.25); }
         .detailed-services .service-block h2 { font-size: clamp(1.6rem, 2.5vw, 2.2rem); margin-bottom: 16px; }
@@ -363,18 +357,6 @@
         .breadcrumb .separator { color: var(--text-muted); opacity: 0.5; }
         .breadcrumb .current { color: var(--text); font-weight: 500; }
 
-        /* ----- PRICING ----- */
-        .pricing-table-services { display: grid; grid-template-columns: repeat(3,1fr); gap: 32px; margin-top: 40px; }
-        .pricing-card-service { text-align: center; padding: 48px 32px; }
-        .pricing-card-service .price { font-size: 1.85rem; font-weight: 800; color: var(--primary); margin: 16px 0; line-height: 1.2; letter-spacing: -0.02em; }
-        .pricing-card-service .price span { display: block; font-size: 0.9rem; color: var(--text-muted); font-weight: 500; margin-top: 6px; }
-        .pricing-card-service ul { list-style: none; padding: 0; margin: 24px 0; }
-        .pricing-card-service ul li { padding: 8px 0; color: var(--text-muted); display: flex; align-items: center; justify-content: center; gap: 10px; font-size: 0.95rem; }
-        .pricing-card-service ul li::before { content: '✓'; color: var(--accent); font-weight: 700; }
-        .pricing-card-service.popular { border-color: var(--primary); box-shadow: 0 30px 60px -15px rgba(37,99,235,0.15); }
-        .pricing-card-service.popular::before { content: 'Most Popular'; position: absolute; top: 24px; right: 24px; background: var(--primary); color: #fff; padding: 6px 14px; border-radius: 100px; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; }
-        .pricing-card-service .quote-note { font-size: 0.88rem; color: var(--text-muted); line-height: 1.55; margin: 16px 0 24px; text-align: left; font-weight: 400; }
-
         /* ----- PROCESS ----- */
         .process-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 32px; }
         .process-step { text-align: center; padding: 32px 24px; }
@@ -387,7 +369,7 @@
         .cta-section-services h2 { font-size: clamp(2rem,3vw,2.8rem); margin-bottom: 20px; }
         .cta-section-services p { color: var(--text-muted); font-size: 1.1rem; max-width: 600px; margin: 0 auto 32px; line-height: 1.6; }
 
-        /* ----- FOOTER (UPDATED WITH MAP) ----- */
+        /* ----- FOOTER ----- */
         footer { background: var(--surface-pure); border-top: 1px solid var(--border); padding: 100px 0 40px; }
         .footer-grid {
             display: grid;
@@ -441,10 +423,9 @@
         .sticky-btn-top:hover { transform: translateY(-4px); }
         .sticky-btn-whatsapp svg { width: 20px; height: 20px; fill: #fff; }
 
-        /* ----- RESPONSIVE (updated for map) ----- */
+        /* ----- RESPONSIVE ----- */
         @media(max-width:1200px) {
             .services-grid-full { grid-template-columns: repeat(2,1fr); }
-            .pricing-table-services { grid-template-columns: 1fr; max-width: 550px; margin: 40px auto 0; }
             .process-grid { grid-template-columns: repeat(2,1fr); }
         }
         @media(max-width:992px) {
@@ -529,12 +510,12 @@
         <div class="blob-service-2"></div>
         <div class="container">
             <h1>Our <span class="text-gradient">Local SEO &amp; Google Maps</span> Services</h1>
-            <p>Ranking Matters is the <strong>#1 Local SEO Expert in Lahore</strong>, specializing in Google Business Profile optimization, Google Maps ranking, citation building, GMB recovery, and high-converting landing pages. We help local businesses dominate the Google 3‑Pack and attract high‑intent customers.</p>
+            <p>Ranking Matters is a trusted <strong>Local SEO Expert in Lahore</strong>, specializing in Google Business Profile optimization, Google Maps ranking, citation building, GMB recovery, and high-converting landing pages. We help local businesses dominate the Google 3‑Pack and attract high‑intent customers.</p>
             <p style="margin-top:16px;">Whether you need to recover a suspended GMB profile or rank your business on the first page of Google Maps, we have the proven strategies to get you there. <a href="/rankingmatters/about.html" style="color:var(--primary); text-decoration:none; font-weight:500;">Learn about our approach →</a></p>
         </div>
     </section>
 
-    <!-- ====== QUICK SERVICES GRID (7 services) ====== -->
+    <!-- ====== QUICK SERVICES GRID ====== -->
     <section style="padding-top:0;">
         <div class="container">
             <h2 class="section-title">Our <span class="text-gradient">Core Services</span></h2>
@@ -621,9 +602,7 @@
         </div>
     </section>
 
-    <!-- ================================================================
-         DETAILED SERVICES (only these 7)
-         ================================================================ -->
+    <!-- ====== DETAILED SERVICES ====== -->
     <section class="detailed-services">
         <div class="container">
             <h2 class="section-title">Complete <span class="text-gradient">Service Breakdown</span></h2>
@@ -692,7 +671,7 @@
                 <h3>Our citation services:</h3>
                 <ul>
                     <li><strong>Aggressive NAP cleanup</strong> – we find and fix inconsistent citations across the web.</li>
-                    <li><strong>Premium local network placement</strong> – we list your business on high‑authority local directories (Yellow Pages, Zameen, OLX, etc.).</li>
+                    <li><strong>Premium local network placement</strong> – we list your business on high‑authority local directories.</li>
                     <li><strong>Hyper‑localized backlink auditing</strong> – we ensure your citations also serve as quality backlinks.</li>
                     <li><strong>Continuous monitoring</strong> – we keep your citations accurate as your business evolves.</li>
                 </ul>
@@ -773,7 +752,7 @@
                     <h3 itemprop="name">Can you recover a suspended GMB profile?</h3>
                     <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
                         <div class="faq-answer" itemprop="text">
-                            <p>Yes! We specialise in GMB suspension recovery. We’ve successfully reinstated dozens of suspended profiles by identifying the violation, cleaning up the data, and filing a well‑documented appeal through our direct Google support channels.</p>
+                            <p>Yes! We specialise in GMB suspension recovery. We’ve successfully reinstated suspended profiles by identifying the violation, cleaning up the data, and filing a well‑documented appeal through our direct Google support channels.</p>
                         </div>
                     </div>
                 </div>
@@ -800,7 +779,7 @@
             <!-- ====== FINAL CTA ====== -->
             <div class="cta-section-services glass" style="margin-top:40px;">
                 <h2>Ready to <span class="text-gradient">Dominate</span> Your Local Market?</h2>
-                <p>Don’t let your competitors take all the local leads. <strong>Ranking Matters</strong> is the #1 Local SEO expert in Lahore — we have the tools and experience to get you on the first page of Google Maps.</p>
+                <p>Don’t let your competitors take all the local leads. <strong>Ranking Matters</strong> is a trusted Local SEO expert in Lahore — we have the tools and experience to get you on the first page of Google Maps.</p>
                 <p style="font-weight:600; font-size:1.2rem; margin-bottom:24px;">Contact us today for a <strong>FREE Local SEO audit</strong>! We’ll analyse your GBP and local presence and give you a clear roadmap to success.</p>
                 <div style="display:flex; flex-wrap:wrap; gap:16px; justify-content:center;">
                     <a href="/rankingmatters/contact.html" class="btn btn-primary" style="padding:18px 44px; font-size:1.05rem;">👉 Get My Free Audit Now</a>
@@ -814,80 +793,26 @@
         </div>
     </section>
 
-    <!-- ====== PRICING SECTION ====== -->
-    <section class="glass" style="border-left:none; border-right:none; border-radius:0;">
-        <div class="container">
-            <h2 class="section-title">Service <span class="text-gradient">Packages</span></h2>
-            <p class="section-subtitle">Choose the package that fits your business needs. All plans include our signature local SEO expertise — with transparent pricing tailored to your market.</p>
-            <div class="pricing-table-services">
-                <div class="card glass pricing-card-service">
-                    <h3>Local Spark</h3>
-                    <p style="color:var(--text-muted);">Perfect for small businesses</p>
-                    <div class="price">Custom Quote<span>Based on Your Market</span></div>
-                    <p class="quote-note">Har business ka market different hai. Hum tumhare area, competition aur goals dekh kar transparent fixed monthly pricing dete hain.</p>
-                    <ul>
-                        <li>Google Business Profile Setup</li>
-                        <li>Targeted Core Citation Building</li>
-                        <li>Standard Geo-Tag Asset Postings</li>
-                        <li>Monthly Core Rank Monitoring</li>
-                        <li>Basic Review Management</li>
-                    </ul>
-                    <a href="/rankingmatters/contact.html" class="btn btn-secondary">Get My Custom Quote</a>
-                </div>
-                <div class="card glass pricing-card-service popular">
-                    <h3>Map Dominator</h3>
-                    <p style="color:var(--text-muted);">Most popular for service areas</p>
-                    <div class="price">Custom Quote<span>Based on Your Market</span></div>
-                    <p class="quote-note">Har business ka market different hai. Hum tumhare area, competition aur goals dekh kar transparent fixed monthly pricing dete hain.</p>
-                    <ul>
-                        <li>Advanced Georadial Mapping</li>
-                        <li>Tailored Local Schema Deployment</li>
-                        <li>Deep Tier-1 Citation Cleanup</li>
-                        <li>Suspension Guard Monitoring</li>
-                        <li>Advanced Review Management</li>
-                        <li>Monthly Strategy Calls</li>
-                    </ul>
-                    <a href="/rankingmatters/contact.html" class="btn btn-primary">Get My Custom Quote</a>
-                </div>
-                <div class="card glass pricing-card-service">
-                    <h3>Enterprise Takeover</h3>
-                    <p style="color:var(--text-muted);">For multi-location businesses</p>
-                    <div class="price">Custom Quote<span>Based on Your Market</span></div>
-                    <p class="quote-note">Har business ka market different hai. Hum tumhare area, competition aur goals dekh kar transparent fixed monthly pricing dete hain.</p>
-                    <ul>
-                        <li>Multi-Profile Network Structuring</li>
-                        <li>High-Stakes Priority Support Line</li>
-                        <li>Custom Organic Landing Pages</li>
-                        <li>Premium Dedicated Link Campaign</li>
-                        <li>Full-Service Review Management</li>
-                        <li>Dedicated Account Manager</li>
-                    </ul>
-                    <a href="/rankingmatters/contact.html" class="btn btn-secondary">Get My Custom Quote</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- ====== WHY CHOOSE US ====== -->
     <section>
         <div class="container">
             <h2 class="section-title">Why <span class="text-gradient">Ranking Matters</span></h2>
-            <p class="section-subtitle">Here's why businesses trust us as their <strong>Local SEO expert</strong> in Lahore. <a href="/rankingmatters/blog.html" style="color:var(--primary); text-decoration:none; font-weight:500;">Read our success stories →</a></p>
+            <p class="section-subtitle">Here's why businesses trust us as their <strong>Local SEO expert</strong> in Lahore.</p>
             <div class="services-grid-full" style="grid-template-columns: repeat(3,1fr);">
                 <div class="service-card-full glass">
-                    <span class="icon">🏆</span>
-                    <h3>Proven Track Record</h3>
-                    <p>We've helped 500+ businesses achieve #1 rankings on Google Maps. Our <a href="/rankingmatters/blog.html" style="color:var(--primary); text-decoration:none; font-weight:500;">case studies</a> and client testimonials speak for themselves.</p>
+                    <span class="icon">📍</span>
+                    <h3>Truly Local Presence</h3>
+                    <p>Based right in <strong>Thokar Niaz Baig, Lahore</strong>, we understand the local market dynamics better than anyone else.</p>
                 </div>
                 <div class="service-card-full glass">
                     <span class="icon">🔬</span>
                     <h3>Data-Driven Approach</h3>
-                    <p>Every decision is backed by data and analytics. No guesswork — just results. <a href="/rankingmatters/about.html" style="color:var(--primary); text-decoration:none; font-weight:500;">Our methodology →</a></p>
+                    <p>Every decision is backed by data and analytics. No guesswork — just results that actually impact your bottom line.</p>
                 </div>
                 <div class="service-card-full glass">
                     <span class="icon">💎</span>
                     <h3>Transparent Reporting</h3>
-                    <p>We provide clear, monthly reports showing exactly what we're doing and the results we're achieving for you. <a href="/rankingmatters/contact.html" style="color:var(--primary); text-decoration:none; font-weight:500;">Get a free consultation →</a></p>
+                    <p>We provide clear, monthly reports showing exactly what we're doing and the results we're achieving for you.</p>
                 </div>
             </div>
         </div>
@@ -921,7 +846,7 @@
         </div>
     </section>
 
-    <!-- ====== FOOTER (UPDATED WITH GMB MAP) ====== -->
+    <!-- ====== FOOTER ====== -->
     <footer>
         <div class="container footer-grid">
             <!-- Column 1: Brand -->
@@ -956,10 +881,9 @@
                 </ul>
             </div>
 
-            <!-- Column 4: GMB MAP + Contact (Right Side) -->
+            <!-- Column 4: GMB MAP + Contact -->
             <div class="footer-col footer-map">
                 <h4>Find Us on Google Maps</h4>
-                <!-- Your GMB Embed Code (responsive) -->
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d158535.06683510746!2d74.2292243!3d31.462108949999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x84f3df43ef28b013%3A0x722879e737c0b535!2sRanking%20Matters%7C%20Local%20Seo%20Expert%20in%20Lahore!5e1!3m2!1sen!2s!4v1785884365369!5m2!1sen!2s" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
                 
                 <div class="contact-mini">
@@ -992,11 +916,9 @@
     <!-- ====== JAVASCRIPT ====== -->
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            // Loader
             const loader = document.getElementById('loader');
             setTimeout(function() { loader.classList.add('hidden'); }, 800);
 
-            // Scroll progress + header + back-to-top
             window.addEventListener('scroll', function() {
                 const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
                 const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
@@ -1015,7 +937,6 @@
                 window.scrollTo({ top: 0, behavior: 'smooth' });
             });
 
-            // Mobile menu
             const menuToggle = document.getElementById('menu-toggle');
             const navMenu = document.getElementById('navMenu');
             menuToggle.addEventListener('click', function() {
@@ -1029,14 +950,12 @@
                 });
             });
 
-            // Theme toggle
             const themeToggle = document.getElementById('theme-toggle');
             themeToggle.addEventListener('click', function() {
                 document.body.classList.toggle('dark-mode');
                 document.body.classList.toggle('light-mode');
             });
 
-            // Mobile dropdown
             const dropdownTriggers = document.querySelectorAll('.nav-dropdown > a');
             dropdownTriggers.forEach(function(trigger) {
                 trigger.addEventListener('click', function(e) {
@@ -1058,7 +977,6 @@
                 }
             });
 
-            // FAQ accordion
             const faqItems = document.querySelectorAll('.faq-item');
             faqItems.forEach(function(item) {
                 item.addEventListener('click', function() {
