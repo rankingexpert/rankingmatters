@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-      <!-- ====== GOOGLE SEARCH CONSOLE VERIFICATION ====== -->
+    <!-- ====== GOOGLE SEARCH CONSOLE VERIFICATION ====== -->
     <meta name="google-site-verification" content="google03b0f2c466ca5be5" />
     
     <!-- ====== GOOGLE ANALYTICS (gtag.js) ====== -->
@@ -16,17 +16,64 @@
         gtag('config', 'G-Z3PRC6PLMM');
     </script>
     
-    <title>About Us - Ranking Matters | #1 Local SEO Expert in Lahore</title>
-    <meta name="description" content="Learn about Ranking Matters, the leading local SEO expert in Lahore. We help businesses rank #1 on Google Maps with data-driven strategies and proven results.">
-    <link rel="canonical" href="https://rankingexpert.github.io/rankingmatters/about.html">
+    <title>About Us - Ranking Matters | Local SEO Expert in Lahore</title>
+    <meta name="description" content="Learn about Ranking Matters, a local SEO expert in Lahore. We help businesses rank on Google Maps with data-driven strategies and proven results.">
+    <link rel="canonical" href="https://rankingexpert.github.io/rankingmatters/about.html" />
     <meta name="robots" content="index, follow">
     <meta name="theme-color" content="#0a0a12">
 
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://rankingexpert.github.io/rankingmatters/about.html">
-    <meta property="og:title" content="About Us - Ranking Matters | #1 Local SEO Expert in Lahore">
-    <meta property="og:description" content="Learn about Ranking Matters, the leading local SEO expert in Lahore. We help businesses rank #1 on Google Maps with data-driven strategies.">
+    <meta property="og:url" content="https://rankingexpert.github.io/rankingmatters/about.html" />
+    <meta property="og:title" content="About Us - Ranking Matters | Local SEO Expert in Lahore">
+    <meta property="og:description" content="Learn about Ranking Matters, a local SEO expert in Lahore. We help businesses rank on Google Maps with data-driven strategies.">
     <meta property="og:image" content="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=80">
+
+    <!-- ====== SCHEMA: PERSON (FOR E-E-A-T) ====== -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Muhammad Arslan",
+      "jobTitle": "Founder & Lead SEO Strategist",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Ranking Matters",
+        "url": "https://rankingexpert.github.io/rankingmatters/"
+      },
+      "url": "https://rankingexpert.github.io/rankingmatters/about.html",
+      "sameAs": [
+        "https://www.linkedin.com/in/muhammad-arslan-6128b621b/"
+      ],
+      "knowsAbout": [
+        "Local SEO",
+        "Google Business Profile Optimization",
+        "Google Maps Ranking",
+        "GMB Suspension Recovery",
+        "Local Citation Building"
+      ],
+      "description": "Muhammad Arslan is a Local SEO Expert based in Lahore, Pakistan. He is the founder of Ranking Matters and specializes in helping businesses dominate local search results."
+    }
+    </script>
+
+    <!-- ====== SCHEMA: ORGANIZATION ====== -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Ranking Matters",
+      "url": "https://rankingexpert.github.io/rankingmatters/",
+      "founder": {
+        "@type": "Person",
+        "name": "Muhammad Arslan"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Thokar Niaz Baig",
+        "addressLocality": "Lahore",
+        "addressCountry": "PK"
+      }
+    }
+    </script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -87,12 +134,7 @@
             --nav-bg: rgba(249, 250, 251, 0.75);
         }
 
-        /* GLOBAL FIX: Body ko horizontal scroll se bachayein */
-        html, body {
-            overflow-x: hidden !important;
-            max-width: 100% !important;
-        }
-
+        html, body { overflow-x: hidden !important; max-width: 100% !important; }
         html { scroll-behavior: smooth; }
         body { font-family: var(--font-sans); background-color: var(--bg); color: var(--text); transition: background-color 0.4s ease, color 0.4s ease; -webkit-font-smoothing: antialiased; }
         
@@ -105,11 +147,7 @@
 
         #scroll-progress { position: fixed; top: 0; left: 0; height: 3px; background: linear-gradient(90deg, var(--primary), var(--accent)); width: 0%; z-index: 2000; transition: width 0.1s ease; }
 
-        #loader { 
-            position: fixed; inset: 0; background: var(--bg-dark); z-index: 3000; 
-            display: flex; justify-content: center; align-items: center; 
-            transition: opacity 0.8s ease, visibility 0.8s ease; 
-        }
+        #loader { position: fixed; inset: 0; background: var(--bg-dark); z-index: 3000; display: flex; justify-content: center; align-items: center; transition: opacity 0.8s ease, visibility 0.8s ease; }
         #loader.hidden { opacity: 0; visibility: hidden; pointer-events: none; }
         .loader-logo { font-size: 2rem; font-weight: 800; letter-spacing: -1px; color: #fff; }
         .loader-logo span { color: var(--primary); }
@@ -143,12 +181,7 @@
 
         header { position: fixed; top: 0; left: 0; width: 100%; z-index: 1000; background: var(--nav-bg); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border-bottom: 1px solid var(--border); transition: var(--transition); }
         @media(max-width: 768px) {
-            header {
-                background: var(--surface-pure) !important;
-                backdrop-filter: blur(20px) !important;
-                -webkit-backdrop-filter: blur(20px) !important;
-                border-bottom: 2px solid var(--border);
-            }
+            header { background: var(--surface-pure) !important; backdrop-filter: blur(20px) !important; -webkit-backdrop-filter: blur(20px) !important; border-bottom: 2px solid var(--border); }
         }
         .nav-container { display: flex; justify-content: space-between; align-items: center; height: 90px; }
         .logo { font-size: 1.35rem; font-weight: 800; letter-spacing: -0.04em; text-decoration: none; color: var(--text); display: flex; align-items: center; gap: 8px; }
@@ -185,298 +218,62 @@
         .theme-btn:hover { background: var(--border); }
 
         /* ===== IMPROVED BURGER MENU ===== */
-        .burger {
-            display: none;
-            align-items: center;
-            gap: 10px;
-            background: var(--surface-pure);
-            padding: 8px 16px 8px 12px;
-            border-radius: var(--radius-sm);
-            border: 1px solid var(--border);
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-            transition: var(--transition);
-            cursor: pointer;
-        }
-        .burger:hover {
-            background: var(--primary);
-            border-color: var(--primary);
-        }
-        .burger:hover .burger-label {
-            color: #fff;
-        }
-        .burger:hover .burger-icon span {
-            background: #fff;
-        }
-        .burger-icon {
-            display: flex;
-            flex-direction: column;
-            gap: 4px;
-        }
-        .burger-icon span {
-            display: block;
-            width: 22px;
-            height: 2.5px;
-            background: var(--text);
-            border-radius: 2px;
-            transition: var(--transition);
-        }
-        .burger-label {
-            font-size: 0.65rem;
-            font-weight: 800;
-            text-transform: uppercase;
-            letter-spacing: 0.08em;
-            color: var(--text-muted);
-            transition: var(--transition);
-        }
-        .nav-dropdown .dropdown-arrow {
-            font-size: 0.7rem;
-            margin-left: 6px;
-            background: var(--primary-glow);
-            padding: 2px 10px;
-            border-radius: 20px;
-            color: var(--primary);
-            font-weight: 700;
-        }
+        .burger { display: none; align-items: center; gap: 10px; background: var(--surface-pure); padding: 8px 16px 8px 12px; border-radius: var(--radius-sm); border: 1px solid var(--border); box-shadow: 0 4px 12px rgba(0,0,0,0.1); transition: var(--transition); cursor: pointer; }
+        .burger:hover { background: var(--primary); border-color: var(--primary); }
+        .burger:hover .burger-label { color: #fff; }
+        .burger:hover .burger-icon span { background: #fff; }
+        .burger-icon { display: flex; flex-direction: column; gap: 4px; }
+        .burger-icon span { display: block; width: 22px; height: 2.5px; background: var(--text); border-radius: 2px; transition: var(--transition); }
+        .burger-label { font-size: 0.65rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-muted); transition: var(--transition); }
+        .nav-dropdown .dropdown-arrow { font-size: 0.7rem; margin-left: 6px; background: var(--primary-glow); padding: 2px 10px; border-radius: 20px; color: var(--primary); font-weight: 700; }
 
-        /* ===== FINAL MOBILE NAV FIX - SCREEN SE BAHAR NAHI JAYEGA ===== */
+        /* ===== FINAL MOBILE NAV FIX ===== */
         @media (max-width: 768px) {
-            .nav-menu {
-                position: absolute !important;
-                top: 90px !important;
-                left: 0 !important;
-                right: 0 !important;
-                width: 100% !important;
-                max-width: 100vw !important;
-                margin: 0 !important;
-                padding: 30px 20px !important;
-                background: var(--surface-pure) !important;
-                border-bottom: 2px solid var(--border) !important;
-                display: none !important;
-                flex-direction: column !important;
-                gap: 20px !important;
-                text-align: center !important;
-                box-sizing: border-box !important;
-                box-shadow: 0 20px 40px rgba(0,0,0,0.3) !important;
-                z-index: 9999 !important;
-                list-style: none !important;
-                overflow: hidden !important;
-            }
-            .nav-menu.active {
-                display: flex !important;
-            }
-            .burger {
-                display: flex !important;
-            }
-            .nav-menu .nav-link,
-            .nav-menu .nav-dropdown > a {
-                white-space: normal !important;
-                word-break: break-word !important;
-                display: inline-block !important;
-                width: auto !important;
-                box-sizing: border-box !important;
-            }
-            .nav-dropdown .dropdown-content {
-                width: 100% !important;
-                padding: 8px 16px !important;
-                box-sizing: border-box !important;
-                text-align: center !important;
-            }
-            .nav-dropdown .dropdown-content a {
-                white-space: normal !important;
-                word-break: break-word !important;
-                display: block !important;
-                width: 100% !important;
-                box-sizing: border-box !important;
-                padding: 8px 0 !important;
-            }
+            .nav-menu { position: absolute !important; top: 90px !important; left: 0 !important; right: 0 !important; width: 100% !important; max-width: 100vw !important; margin: 0 !important; padding: 30px 20px !important; background: var(--surface-pure) !important; border-bottom: 2px solid var(--border) !important; display: none !important; flex-direction: column !important; gap: 20px !important; text-align: center !important; box-sizing: border-box !important; box-shadow: 0 20px 40px rgba(0,0,0,0.3) !important; z-index: 9999 !important; list-style: none !important; overflow: hidden !important; }
+            .nav-menu.active { display: flex !important; }
+            .burger { display: flex !important; }
+            .nav-menu .nav-link, .nav-menu .nav-dropdown > a { white-space: normal !important; word-break: break-word !important; display: inline-block !important; width: auto !important; box-sizing: border-box !important; }
+            .nav-dropdown .dropdown-content { width: 100% !important; padding: 8px 16px !important; box-sizing: border-box !important; text-align: center !important; }
+            .nav-dropdown .dropdown-content a { white-space: normal !important; word-break: break-word !important; display: block !important; width: 100% !important; box-sizing: border-box !important; padding: 8px 0 !important; }
         }
 
         /* About Page Specific Styles */
-        .about-hero {
-            padding-top: 160px;
-            padding-bottom: 80px;
-            text-align: center;
-            position: relative;
-        }
-        .about-hero h1 {
-            font-size: clamp(3rem, 5vw, 4.5rem);
-            font-weight: 800;
-            margin-bottom: 24px;
-            line-height: 1.05;
-        }
+        .about-hero { padding-top: 160px; padding-bottom: 80px; text-align: center; position: relative; }
+        .about-hero h1 { font-size: clamp(3rem, 5vw, 4.5rem); font-weight: 800; margin-bottom: 24px; line-height: 1.05; }
         @media(max-width: 480px){ .about-hero h1 { font-size: clamp(2rem, 8vw, 2.8rem); } }
-        .about-hero p {
-            font-size: clamp(1.1rem, 1.8vw, 1.3rem);
-            color: var(--text-muted);
-            max-width: 750px;
-            margin: 0 auto;
-            line-height: 1.6;
-        }
-        .about-hero .blob-about {
-            position: absolute;
-            width: 400px;
-            height: 400px;
-            background: var(--primary);
-            border-radius: 50%;
-            filter: blur(140px);
-            opacity: 0.1;
-            top: -20%;
-            right: -10%;
-            z-index: -1;
-        }
-        .about-hero .blob-about-2 {
-            position: absolute;
-            width: 300px;
-            height: 300px;
-            background: var(--accent);
-            border-radius: 50%;
-            filter: blur(120px);
-            opacity: 0.08;
-            bottom: -10%;
-            left: -5%;
-            z-index: -1;
-        }
+        .about-hero p { font-size: clamp(1.1rem, 1.8vw, 1.3rem); color: var(--text-muted); max-width: 750px; margin: 0 auto; line-height: 1.6; }
+        .about-hero .blob-about { position: absolute; width: 400px; height: 400px; background: var(--primary); border-radius: 50%; filter: blur(140px); opacity: 0.1; top: -20%; right: -10%; z-index: -1; }
+        .about-hero .blob-about-2 { position: absolute; width: 300px; height: 300px; background: var(--accent); border-radius: 50%; filter: blur(120px); opacity: 0.08; bottom: -10%; left: -5%; z-index: -1; }
 
-        .about-mission-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 32px;
-        }
-        .mission-card {
-            text-align: center;
-            padding: 48px 32px;
-        }
-        .mission-card .icon-box {
-            width: 72px;
-            height: 72px;
-            border-radius: 50%;
-            background: var(--primary-glow);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 24px;
-            font-size: 2rem;
-        }
-        .mission-card h3 {
-            font-size: 1.4rem;
-            margin-bottom: 16px;
-        }
-        .mission-card p {
-            color: var(--text-muted);
-            line-height: 1.6;
-        }
+        .about-mission-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; }
+        .mission-card { text-align: center; padding: 48px 32px; }
+        .mission-card .icon-box { width: 72px; height: 72px; border-radius: 50%; background: var(--primary-glow); display: flex; align-items: center; justify-content: center; margin: 0 auto 24px; font-size: 2rem; }
+        .mission-card h3 { font-size: 1.4rem; margin-bottom: 16px; }
+        .mission-card p { color: var(--text-muted); line-height: 1.6; }
 
-        .about-story-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 80px;
-            align-items: center;
-        }
-        .about-story-image {
-            position: relative;
-            border-radius: var(--radius-lg);
-            overflow: hidden;
-            height: 500px;
-            box-shadow: var(--shadow);
-            background: var(--surface-pure);
-        }
-        .about-story-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-        .about-story-content .tag {
-            font-weight: 700;
-            color: var(--primary);
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-            font-size: 0.9rem;
-            margin-bottom: 16px;
-            display: block;
-        }
-        .about-story-content h2 {
-            font-size: clamp(2rem, 3vw, 2.8rem);
-            margin-bottom: 24px;
-        }
-        .about-story-content p {
-            color: var(--text-muted);
-            font-size: 1.1rem;
-            line-height: 1.7;
-            margin-bottom: 20px;
-        }
+        .about-story-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
+        .about-story-image { position: relative; border-radius: var(--radius-lg); overflow: hidden; height: 500px; box-shadow: var(--shadow); background: var(--surface-pure); }
+        .about-story-image img { width: 100%; height: 100%; object-fit: cover; }
+        .about-story-content .tag { font-weight: 700; color: var(--primary); text-transform: uppercase; letter-spacing: 0.1em; font-size: 0.9rem; margin-bottom: 16px; display: block; }
+        .about-story-content h2 { font-size: clamp(2rem, 3vw, 2.8rem); margin-bottom: 24px; }
+        .about-story-content p { color: var(--text-muted); font-size: 1.1rem; line-height: 1.7; margin-bottom: 20px; }
 
-        .team-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 32px;
-        }
-        .team-card {
-            text-align: center;
-            padding: 40px 32px;
-        }
-        .team-card .avatar {
-            width: 120px;
-            height: 120px;
-            border-radius: 50%;
-            background: var(--primary-glow);
-            margin: 0 auto 20px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 3rem;
-            font-weight: 700;
-            color: var(--primary);
-            border: 3px solid var(--primary);
-        }
-        .team-card h3 {
-            font-size: 1.3rem;
-            margin-bottom: 4px;
-        }
-        .team-card .role {
-            color: var(--primary);
-            font-weight: 600;
-            font-size: 0.9rem;
-            margin-bottom: 12px;
-        }
-        .team-card p {
-            color: var(--text-muted);
-            font-size: 0.95rem;
-            line-height: 1.5;
-        }
+        .team-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; }
+        .team-card { text-align: center; padding: 40px 32px; }
+        .team-card .avatar { width: 120px; height: 120px; border-radius: 50%; background: var(--primary-glow); margin: 0 auto 20px; display: flex; align-items: center; justify-content: center; font-size: 3rem; font-weight: 700; color: var(--primary); border: 3px solid var(--primary); }
+        .team-card h3 { font-size: 1.3rem; margin-bottom: 4px; }
+        .team-card .role { color: var(--primary); font-weight: 600; font-size: 0.9rem; margin-bottom: 12px; }
+        .team-card p { color: var(--text-muted); font-size: 0.95rem; line-height: 1.5; }
+        .team-card .social-link { display: inline-flex; align-items: center; justify-content: center; gap: 8px; margin-top: 16px; padding: 8px 16px; background: var(--primary-glow); color: var(--primary); text-decoration: none; border-radius: var(--radius-sm); font-weight: 600; font-size: 0.85rem; transition: var(--transition); }
+        .team-card .social-link:hover { background: var(--primary); color: #fff; }
 
-        .stats-grid-about {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 32px;
-            text-align: center;
-        }
-        .stats-grid-about .stat-item h4 {
-            font-size: 3rem;
-            font-weight: 800;
-            color: var(--primary);
-        }
-        .stats-grid-about .stat-item p {
-            color: var(--text-muted);
-            font-size: 1rem;
-            margin-top: 4px;
-        }
+        .stats-grid-about { display: grid; grid-template-columns: repeat(4, 1fr); gap: 32px; text-align: center; }
+        .stats-grid-about .stat-item h4 { font-size: 3rem; font-weight: 800; color: var(--primary); }
+        .stats-grid-about .stat-item p { color: var(--text-muted); font-size: 1rem; margin-top: 4px; }
 
-        .cta-section-about {
-            text-align: center;
-            padding: 80px 40px;
-            border-radius: var(--radius-lg);
-        }
-        .cta-section-about h2 {
-            font-size: clamp(2rem, 3vw, 2.8rem);
-            margin-bottom: 20px;
-        }
-        .cta-section-about p {
-            color: var(--text-muted);
-            font-size: 1.1rem;
-            max-width: 600px;
-            margin: 0 auto 32px;
-            line-height: 1.6;
-        }
+        .cta-section-about { text-align: center; padding: 80px 40px; border-radius: var(--radius-lg); }
+        .cta-section-about h2 { font-size: clamp(2rem, 3vw, 2.8rem); margin-bottom: 20px; }
+        .cta-section-about p { color: var(--text-muted); font-size: 1.1rem; max-width: 600px; margin: 0 auto 32px; line-height: 1.6; }
 
         /* Footer */
         footer { background: var(--surface-pure); border-top: 1px solid var(--border); padding: 80px 0 40px; }
@@ -538,10 +335,8 @@
 </head>
 <body class="dark-mode">
 
-    <!-- Scroll Progress -->
     <div id="scroll-progress"></div>
 
-    <!-- Loader -->
     <div id="loader">
         <div class="loader-content">
             <div class="loader-spinner"></div>
@@ -549,10 +344,8 @@
         </div>
     </div>
 
-    <!-- Mouse Glow System -->
     <div id="mouse-glow" style="position: fixed; width: 400px; height: 400px; background: radial-gradient(circle, rgba(37,99,235,0.08) 0%, transparent 70%); pointer-events: none; z-index: 1; transform: translate(-50%, -50%); opacity: 0; transition: opacity 0.3s ease; will-change: transform, opacity;"></div>
 
-    <!-- Header -->
     <header>
         <div class="container nav-container">
             <a href="/rankingmatters/index.html" class="logo">Ranking<span>Matters</span></a>
@@ -580,7 +373,6 @@
                     <svg viewBox="0 0 24 24" width="18" height="18" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
                     WhatsApp
                 </a>
-                <!-- ===== IMPROVED BURGER WITH "MENU" LABEL ===== -->
                 <button class="burger" id="menu-toggle">
                     <div class="burger-icon">
                         <span></span>
@@ -593,17 +385,15 @@
         </div>
     </header>
 
-    <!-- About Hero -->
     <section class="about-hero">
         <div class="blob-about"></div>
         <div class="blob-about-2"></div>
         <div class="container">
             <h1>About <span class="text-gradient">Ranking Matters</span></h1>
-            <p>We are a performance-driven <strong>Local SEO</strong> and digital optimization agency specializing in helping local businesses claim the #1 spot on Google Maps. Our data-driven approach transforms <a href="/rankingmatters/gbp-optimization.html" style="color: var(--primary); text-decoration: none; font-weight: 500;">Google Business Profiles</a> into high-converting lead generation machines.</p>
+            <p>We are a performance-driven <strong>Local SEO</strong> and digital optimization agency specializing in helping local businesses claim top visibility on Google Maps. Our data-driven approach transforms <a href="/rankingmatters/gbp-optimization.html" style="color: var(--primary); text-decoration: none; font-weight: 500;">Google Business Profiles</a> into high-converting lead generation machines.</p>
         </div>
     </section>
 
-    <!-- Mission Section -->
     <section class="glass" style="border-left:none; border-right:none; border-radius:0;">
         <div class="container">
             <h2 class="section-title">Our <span class="text-gradient">Mission & Values</span></h2>
@@ -628,7 +418,6 @@
         </div>
     </section>
 
-    <!-- Our Story -->
     <section>
         <div class="container about-story-grid">
             <div class="about-story-image">
@@ -638,7 +427,7 @@
                 <span class="tag">Our Story</span>
                 <h2>The Journey Behind <span class="text-gradient">Ranking Matters</span></h2>
                 <p><strong>Ranking Matters</strong> was founded with a simple mission: to help local businesses in Lahore and across Pakistan dominate the <a href="/rankingmatters/google-maps-ranking.html" style="color: var(--primary); text-decoration: none; font-weight: 500;">Google Maps pack</a> and generate high-quality leads. We saw too many businesses struggling with invisible listings, <a href="/rankingmatters/gmb-recovery.html" style="color: var(--primary); text-decoration: none; font-weight: 500;">GMB suspensions</a>, and outdated SEO tactics.</p>
-                <p>Today, <strong>Ranking Matters</strong> is recognized as the <strong>#1 Local SEO Expert in Lahore</strong>. We've helped hundreds of businesses across diverse industries — from HVAC contractors to bridal studios — achieve top rankings on Google Maps and explode their local revenue.</p>
+                <p>Today, <strong>Ranking Matters</strong> is recognized as a trusted Local SEO Expert in Lahore. We help businesses across diverse industries — from HVAC contractors to bridal studios — achieve top rankings on Google Maps and grow their local revenue.</p>
                 <p>Our team of <strong>local SEO experts</strong> uses cutting-edge techniques like <a href="/rankingmatters/google-maps-ranking.html" style="color: var(--primary); text-decoration: none; font-weight: 500;">georadial mapping</a>, <a href="/rankingmatters/blog/mastering-json-ld-setup.html" style="color: var(--primary); text-decoration: none; font-weight: 500;">JSON-LD schema architecture</a>, <a href="/rankingmatters/gbp-optimization.html" style="color: var(--primary); text-decoration: none; font-weight: 500;">Google Business Profile optimization</a>, and <a href="/rankingmatters/landing-pages.html" style="color: var(--primary); text-decoration: none; font-weight: 500;">high-converting landing page design</a> to deliver results that matter.</p>
                 <a href="https://wa.me/923314349664" target="_blank" class="btn btn-whatsapp">
                     <svg viewBox="0 0 24 24" width="20" height="20" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
@@ -648,70 +437,62 @@
         </div>
     </section>
 
-    <!-- Stats -->
+    <!-- ====== E-E-A-T AUTHOR SECTION ====== -->
     <section class="glass" style="border-left:none; border-right:none; border-radius:0;">
         <div class="container">
-            <h2 class="section-title">Our <span class="text-gradient">Impact in Numbers</span></h2>
-            <p class="section-subtitle">Real results that speak for themselves. Here's what we've achieved for our clients.</p>
-            <div class="stats-grid-about">
-                <div class="stat-item">
-                    <h4>150+</h4>
-                    <p><a href="/rankingmatters/gmb-recovery.html" style="color: var(--text); text-decoration: none;">GMB Suspensions Fixed</a></p>
-                </div>
-                <div class="stat-item">
-                    <h4>87%</h4>
-                    <p>Average Call Volume Boost</p>
-                </div>
-                <div class="stat-item">
-                    <h4>12M+</h4>
-                    <p>Leads Generated</p>
-                </div>
-                <div class="stat-item">
-                    <h4>500+</h4>
-                    <p>Happy Clients Served</p>
+            <h2 class="section-title">Meet Our <span class="text-gradient">Expert</span></h2>
+            <p class="section-subtitle">The passionate <strong>local SEO expert</strong> behind <strong>Ranking Matters</strong>, dedicated to your success.</p>
+            <div class="team-grid" style="grid-template-columns: 1fr; max-width: 600px; margin: 0 auto;">
+                <div class="card glass team-card">
+                    <div class="avatar">MA</div>
+                    <h3>Muhammad Arslan</h3>
+                    <div class="role">Founder & Lead SEO Strategist</div>
+                    <p>Muhammad Arslan specializes in <a href="/rankingmatters/gbp-optimization.html" style="color: var(--primary); text-decoration: none; font-weight: 500;">Google Business Profile optimization</a>, <a href="/rankingmatters/gmb-recovery.html" style="color: var(--primary); text-decoration: none; font-weight: 500;">GMB suspension recovery</a>, and advanced local search strategies.</p>
+                    
+                    <!-- Verified LinkedIn Link -->
+                    <a href="https://www.linkedin.com/in/muhammad-arslan-6128b621b/" target="_blank" rel="noopener noreferrer" class="social-link">
+                        <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                        Connect on LinkedIn
+                    </a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Team Section -->
     <section>
         <div class="container">
-            <h2 class="section-title">Meet Our <span class="text-gradient">Expert Team</span></h2>
-            <p class="section-subtitle">The passionate <strong>local SEO experts</strong> behind <strong>Ranking Matters</strong>, dedicated to your success.</p>
-            <div class="team-grid">
-                <div class="card glass team-card">
-                    <div class="avatar">AY</div>
-                    <h3>Arslan Yaqoob</h3>
-                    <div class="role">Founder & Lead SEO Strategist</div>
-                    <p>With over 8 years of experience in <a href="/rankingmatters/local-seo.html" style="color: var(--primary); text-decoration: none; font-weight: 500;">local SEO</a>, Arslan specializes in <a href="/rankingmatters/gbp-optimization.html" style="color: var(--primary); text-decoration: none; font-weight: 500;">Google Business Profile optimization</a> and <a href="/rankingmatters/gmb-recovery.html" style="color: var(--primary); text-decoration: none; font-weight: 500;">GMB suspension recovery</a>.</p>
+            <h2 class="section-title">Our <span class="text-gradient">Commitment</span></h2>
+            <p class="section-subtitle">We focus on real results and transparent strategies. Here is what we bring to the table.</p>
+            <div class="stats-grid-about">
+                <div class="stat-item">
+                    <h4>100%</h4>
+                    <p>Transparent Reporting</p>
                 </div>
-                <div class="card glass team-card">
-                    <div class="avatar">BA</div>
-                    <h3>Bilal Azeem</h3>
-                    <div class="role">Senior Local SEO Specialist</div>
-                    <p>Bilal is an expert in <a href="/rankingmatters/google-maps-ranking.html" style="color: var(--primary); text-decoration: none; font-weight: 500;">georadial mapping</a> and <a href="/rankingmatters/local-citations.html" style="color: var(--primary); text-decoration: none; font-weight: 500;">local citation engineering</a>, helping businesses expand their reach across multiple zip codes.</p>
+                <div class="stat-item">
+                    <h4>Data</h4>
+                    <p>Driven Strategies</p>
                 </div>
-                <div class="card glass team-card">
-                    <div class="avatar">MF</div>
-                    <h3>Muhammad Faizan</h3>
-                    <div class="role">Technical SEO & Schema Expert</div>
-                    <p>Faizan specializes in <a href="/rankingmatters/blog/mastering-json-ld-setup.html" style="color: var(--primary); text-decoration: none; font-weight: 500;">JSON-LD schema architecture</a>, <a href="/rankingmatters/landing-pages.html" style="color: var(--primary); text-decoration: none; font-weight: 500;">landing page design</a>, and advanced technical SEO, ensuring your website communicates perfectly with Google's algorithms.</p>
+                <div class="stat-item">
+                    <h4>Local</h4>
+                    <p>Lahore Based Agency</p>
+                </div>
+                <div class="stat-item">
+                    <h4>1-on-1</h4>
+                    <p>Client Support</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Why Choose Us -->
     <section class="glass" style="border-left:none; border-right:none; border-radius:0;">
         <div class="container">
             <h2 class="section-title">Why Choose <span class="text-gradient">Ranking Matters</span></h2>
-            <p class="section-subtitle">We are not just another SEO agency. We are your partners in local market domination.</p>
+            <p class="section-subtitle">We are not just another SEO agency. We are your partners in local market growth.</p>
             <div class="about-mission-grid">
                 <div class="card glass mission-card">
                     <div class="icon-box">🏆</div>
-                    <h3>Proven Track Record</h3>
-                    <p>We've helped hundreds of businesses achieve #1 rankings on <a href="/rankingmatters/google-maps-ranking.html" style="color: var(--primary); text-decoration: none; font-weight: 500;">Google Maps</a>. Our <a href="/rankingmatters/blog.html" style="color: var(--primary); text-decoration: none; font-weight: 500;">case studies</a> speak for themselves.</p>
+                    <h3>Proven Strategies</h3>
+                    <p>We use tested and proven methods to help businesses achieve top rankings on <a href="/rankingmatters/google-maps-ranking.html" style="color: var(--primary); text-decoration: none; font-weight: 500;">Google Maps</a>.</p>
                 </div>
                 <div class="card glass mission-card">
                     <div class="icon-box">🔬</div>
@@ -727,12 +508,11 @@
         </div>
     </section>
 
-    <!-- CTA Section -->
     <section>
         <div class="container">
             <div class="card glass cta-section-about">
-                <h2>Ready to <span class="text-gradient">Dominate</span> Your Local Market?</h2>
-                <p>Partner with <strong>Ranking Matters</strong> — the <strong>#1 Local SEO Expert in Lahore</strong> — and watch your business grow.</p>
+                <h2>Ready to <span class="text-gradient">Grow</span> Your Local Market?</h2>
+                <p>Partner with <strong>Ranking Matters</strong> — a trusted Local SEO Expert in Lahore — and watch your business grow.</p>
                 <a href="https://wa.me/923314349664" target="_blank" class="btn btn-whatsapp" style="padding: 18px 44px; font-size: 1.05rem;">
                     <svg viewBox="0 0 24 24" width="22" height="22" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
                     Chat on WhatsApp
@@ -741,7 +521,6 @@
         </div>
     </section>
 
-    <!-- Footer -->
     <footer>
         <div class="container">
             <div class="footer-grid">
@@ -783,7 +562,6 @@
                     </div>
                 </div>
 
-                <!-- ====== GMB EMBED ====== -->
                 <div>
                     <h4 style="font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 16px; color: var(--text);">Find Us On Google Maps</h4>
                     <div class="footer-map-wrapper">
@@ -797,7 +575,7 @@
                             referrerpolicy="strict-origin-when-cross-origin">
                         </iframe>
                     </div>
-                    <p class="footer-map-label">📍 <strong>Ranking Matters</strong> — Thokar, Lahore, Pakistan</p>
+                    <p class="footer-map-label">📍 <strong>Ranking Matters</strong> — Thokar Niaz Baig, Lahore, Pakistan</p>
                 </div>
             </div>
 
@@ -810,7 +588,7 @@
                 </div>
                 <div class="footer-socials">
                     <a href="#" aria-label="Facebook">fb</a>
-                    <a href="#" aria-label="LinkedIn">in</a>
+                    <a href="https://www.linkedin.com/in/muhammad-arslan-6128b621b/" target="_blank" aria-label="LinkedIn">in</a>
                     <a href="#" aria-label="Instagram">ig</a>
                     <a href="#" aria-label="Twitter">tw</a>
                 </div>
@@ -822,7 +600,6 @@
         </div>
     </footer>
 
-    <!-- Fixed Actions -->
     <div id="fixed-actions-container">
         <a href="https://wa.me/923314349664" target="_blank" class="sticky-action-trigger sticky-btn-whatsapp">
             <svg viewBox="0 0 24 24" width="20" height="20" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
@@ -831,15 +608,11 @@
         <button class="sticky-action-trigger sticky-btn-top" id="back-to-top">↑</button>
     </div>
 
-    <!-- JavaScript -->
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             const loader = document.getElementById('loader');
-            setTimeout(function() {
-                loader.classList.add('hidden');
-            }, 800);
+            setTimeout(function() { loader.classList.add('hidden'); }, 800);
 
-            // Scroll progress
             window.addEventListener('scroll', function() {
                 const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
                 const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
@@ -847,43 +620,32 @@
                 document.getElementById('scroll-progress').style.width = scrolled + '%';
                 
                 const btt = document.getElementById('back-to-top');
-                if (window.scrollY > 600) {
-                    btt.classList.add('show');
-                } else {
-                    btt.classList.remove('show');
-                }
+                if (window.scrollY > 600) btt.classList.add('show');
+                else btt.classList.remove('show');
             });
 
             document.getElementById('back-to-top').addEventListener('click', function() {
                 window.scrollTo({ top: 0, behavior: 'smooth' });
             });
 
-            // Mobile Menu Toggle
             const menuToggle = document.getElementById('menu-toggle');
             const navMenu = document.querySelector('.nav-menu');
-            menuToggle.addEventListener('click', function() {
-                navMenu.classList.toggle('active');
-            });
+            menuToggle.addEventListener('click', function() { navMenu.classList.toggle('active'); });
 
-            // Theme Toggle
             const themeToggle = document.getElementById('theme-toggle');
             themeToggle.addEventListener('click', function() {
                 document.body.classList.toggle('dark-mode');
                 document.body.classList.toggle('light-mode');
             });
 
-            // Mouse Glow
             const glow = document.getElementById('mouse-glow');
             document.addEventListener('mousemove', function(e) {
                 glow.style.opacity = '1';
                 glow.style.left = e.clientX + 'px';
                 glow.style.top = e.clientY + 'px';
             });
-            document.addEventListener('mouseleave', function() {
-                glow.style.opacity = '0';
-            });
+            document.addEventListener('mouseleave', function() { glow.style.opacity = '0'; });
 
-            // Mobile Dropdown Toggle for Services
             const dropdownTriggers = document.querySelectorAll('.nav-dropdown > a');
             dropdownTriggers.forEach(function(trigger) {
                 trigger.addEventListener('click', function(e) {
